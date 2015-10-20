@@ -334,12 +334,6 @@ namespace iPro.SDK.Client
             };
         }
 
-        private void btnBookingCalc_Click(object sender, EventArgs e)
-        {
-            var formContent = new FormUrlEncodedContent(this.GetBookingProperties());
-            this.PostContent(this.txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
-        }
-
         private void btnPostEnquiry_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(new[]
@@ -513,6 +507,25 @@ namespace iPro.SDK.Client
             });
 
             PostContent(txtUpdatePropertyApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
+        }
+
+        private void btnCalcBooking_Click(object sender, EventArgs e)
+        {
+            var formContent = new FormUrlEncodedContent(this.GetBookingCalcProperties());
+            this.PostContent(this.txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
+        }
+
+        private IEnumerable<KeyValuePair<string, string>> GetBookingCalcProperties()
+        {
+            return new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("Properties[0].Id", this.txtPropertyCalcPropertyId.Text),
+                new KeyValuePair<string, string>("Properties[0].Checkin", this.txtPropertyCalcCheckIn.Text),
+                new KeyValuePair<string, string>("Properties[0].Checkout", this.txtPropertyCalcCheckOut.Text),
+                new KeyValuePair<string, string>("Properties[0].Adults", this.txtPropertyCalcAdults.Text),
+                new KeyValuePair<string, string>("Properties[0].Children", this.txtPropertyCalcChildren.Text),
+                new KeyValuePair<string, string>("Properties[0].Infants", this.txtPropertyCalcInfants.Text),
+            };
         }
     }
 }
