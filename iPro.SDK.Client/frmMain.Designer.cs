@@ -133,6 +133,8 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.label99 = new System.Windows.Forms.Label();
+            this.txtRenterBalance = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.txtBookingSource = new System.Windows.Forms.TextBox();
             this.txtBookingEnquiryId = new System.Windows.Forms.TextBox();
@@ -281,8 +283,6 @@
             this.txtPropertyCalcCheckIn = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
-            this.label99 = new System.Windows.Forms.Label();
-            this.txtRenterBalance = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -644,7 +644,9 @@
             this.txtPropertySearchApi.Name = "txtPropertySearchApi";
             this.txtPropertySearchApi.Size = new System.Drawing.Size(335, 20);
             this.txtPropertySearchApi.TabIndex = 49;
-            this.txtPropertySearchApi.Text = "/apis/propertysearch?size=15&index=1&checkIn=2015-09-21&checkout=2015-10-21";
+            this.txtPropertySearchApi.Text = "/apis/propertysearch?size=15&index=1&checkIn=2015-09-21&checkout=2015-10-21&Adult" +
+    "s=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&WeeklyPri" +
+    "ceRange=";
             // 
             // btnPropertySearch
             // 
@@ -1400,6 +1402,23 @@
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(524, 17);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(78, 13);
+            this.label99.TabIndex = 43;
+            this.label99.Text = "RenterBalance";
+            // 
+            // txtRenterBalance
+            // 
+            this.txtRenterBalance.Location = new System.Drawing.Point(624, 14);
+            this.txtRenterBalance.Name = "txtRenterBalance";
+            this.txtRenterBalance.Size = new System.Drawing.Size(90, 20);
+            this.txtRenterBalance.TabIndex = 42;
+            this.txtRenterBalance.Text = "300.00";
             // 
             // label56
             // 
@@ -2799,23 +2818,6 @@
             this.txtPropertyCalcPropertyId.Size = new System.Drawing.Size(100, 20);
             this.txtPropertyCalcPropertyId.TabIndex = 22;
             this.txtPropertyCalcPropertyId.Text = "8849";
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(524, 17);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(78, 13);
-            this.label99.TabIndex = 43;
-            this.label99.Text = "RenterBalance";
-            // 
-            // txtRenterBalance
-            // 
-            this.txtRenterBalance.Location = new System.Drawing.Point(624, 14);
-            this.txtRenterBalance.Name = "txtRenterBalance";
-            this.txtRenterBalance.Size = new System.Drawing.Size(90, 20);
-            this.txtRenterBalance.TabIndex = 42;
-            this.txtRenterBalance.Text = "300.00";
             // 
             // frmMain
             // 
