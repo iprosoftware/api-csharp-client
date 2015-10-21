@@ -84,13 +84,7 @@ namespace iPro.SDK.Client
 
             sb.AppendLine("");
 
-            //if (ex.Status == WebExceptionStatus.ProtocolError)
-            //{
-            //    sb.AppendLine(string.Format("StatusCode:{0}", ex.Response.StatusCode));
-            //    sb.AppendLine(string.Format("Status:{0}", ex.StatusDescription));
-            //}
-            //else
-            //{
+ 
             using (WebResponse response = ex.Response)
             {
                 try
@@ -109,7 +103,6 @@ namespace iPro.SDK.Client
                 {
                 }
             }
-            //}
             sb.AppendLine("");
 
             outputTextBox.Text = sb.ToString();
@@ -129,7 +122,7 @@ namespace iPro.SDK.Client
         {
             try
             {
-                HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
+                var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
 
 
@@ -137,57 +130,15 @@ namespace iPro.SDK.Client
                 var response = httpRequest.GetResponse();
 
 
-                //  this.txtHttpRequest.Text = SharedTraceListener.Logs.ToString();
-
-                StreamReader reader = new StreamReader(response.GetResponseStream());
+                var reader = new StreamReader(response.GetResponseStream());
 
 
                 outputTextBox.Text = reader.ReadToEnd();
-
-
-
-                //var requestReader = new StreamReader(httpRequest.GetRequestStream());
-                //this.txtHttpRequest.Text = requestReader.ReadToEnd();
-
 
             }
             catch (WebException ex)
             {
                 HandleWebException(ex);
-                //StringBuilder sb = new StringBuilder();
-                //sb.AppendLine("-------------Error-------------");
-                //sb.AppendLine(ex.ToString());
-
-                //sb.AppendLine("");
-                //using (WebResponse response = ex.Response)
-                //{
-                //    HttpWebResponse httpResponse = (HttpWebResponse)response;
-
-
-                //    sb.AppendLine(string.Format("-------------Message-------------"));
-                //    sb.AppendLine(string.Format("StatusCode:{0}", httpResponse.StatusCode));
-                //    sb.AppendLine(string.Format("Status:{0}", httpResponse.StatusDescription));
-                //    using (Stream data = response.GetResponseStream())
-                //    {
-                //        string text = new StreamReader(data).ReadToEnd();
-                //        sb.AppendLine(text);
-                //    }
-
-                //    try
-                //    {
-                //        using (Stream data = response.GetResponseStream())
-                //        {
-                //            string text = new StreamReader(data).ReadToEnd();
-                //            sb.AppendLine(text);
-                //        }
-                //    }
-                //    catch
-                //    {
-                //    }
-                //}
-                //sb.AppendLine("");
-
-                //outputTextBox.Text = sb.ToString();
             }
             catch (Exception ex)
             {
@@ -279,7 +230,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("BookingTagIds", this.txtBookingTagIds.Text),
                 new KeyValuePair<string, string>("EnquiryId", this.txtBookingEnquiryId.Text),
                 new KeyValuePair<string, string>("Source", this.txtBookingSource.Text),
-
+                new KeyValuePair<string, string>("RenterBalance", this.txtRenterBalance.Text),
+                
                 new KeyValuePair<string, string>("Contact.ContactId", this.txtBookingContactId.Text),
                 new KeyValuePair<string, string>("Contact.Title", this.txtBookingContactTitle.Text),
                 new KeyValuePair<string, string>("Contact.FirstName", this.txtBookingContactFirstName.Text),
@@ -365,7 +317,6 @@ namespace iPro.SDK.Client
                 HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
                 httpRequest.Method = "POST";
 
-                //var buffer = System.Text.UTF8Encoding.UTF8.GetBytes(content);
                 httpRequest.ContentLength = buffer.Length;
                 httpRequest.ContentType = "application/x-www-form-urlencoded";
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
@@ -377,10 +328,6 @@ namespace iPro.SDK.Client
                     postStream.Close();
                 }
 
-
-                //var requestReader = new StreamReader(httpRequest.GetRequestStream());
-                //this.txtHttpRequest.Text = requestReader.ReadToEnd();
-
                 var response = httpRequest.GetResponse();
 
                 StreamReader reader = new StreamReader(response.GetResponseStream());
@@ -391,40 +338,6 @@ namespace iPro.SDK.Client
             catch (WebException ex)
             {
                 HandleWebException(ex);
-                //StringBuilder sb = new StringBuilder();
-                //sb.AppendLine("-------------Error-------------");
-                //sb.AppendLine(ex.ToString());
-
-                //sb.AppendLine("");
-                //using (WebResponse response = ex.Response)
-                //{
-                //    HttpWebResponse httpResponse = (HttpWebResponse)response;
-
-
-                //    sb.AppendLine(string.Format("-------------Message-------------"));
-                //    sb.AppendLine(string.Format("StatusCode:{0}", httpResponse.StatusCode));
-                //    sb.AppendLine(string.Format("Status:{0}", httpResponse.StatusDescription));
-                //    using (Stream data = response.GetResponseStream())
-                //    {
-                //        string text = new StreamReader(data).ReadToEnd();
-                //        sb.AppendLine(text);
-                //    }
-
-                //    try
-                //    {
-                //        using (Stream data = response.GetResponseStream())
-                //        {
-                //            string text = new StreamReader(data).ReadToEnd();
-                //            sb.AppendLine(text);
-                //        }
-                //    }
-                //    catch
-                //    {
-                //    }
-                //}
-                //sb.AppendLine("");
-
-                //outputTextBox.Text = sb.ToString();
             }
             catch (Exception ex)
             {
