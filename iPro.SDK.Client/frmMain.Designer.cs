@@ -283,6 +283,7 @@
             this.txtPropertyCalcCheckIn = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
+            this.lblTimeCost = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -413,7 +414,7 @@
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.outputTextBox.Size = new System.Drawing.Size(632, 345);
+            this.outputTextBox.Size = new System.Drawing.Size(632, 301);
             this.outputTextBox.TabIndex = 3;
             this.outputTextBox.Text = "(HTTP responses and API data will be logged here)";
             // 
@@ -1329,7 +1330,7 @@
             this.txtHttpRequest.Multiline = true;
             this.txtHttpRequest.Name = "txtHttpRequest";
             this.txtHttpRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHttpRequest.Size = new System.Drawing.Size(553, 345);
+            this.txtHttpRequest.Size = new System.Drawing.Size(553, 301);
             this.txtHttpRequest.TabIndex = 33;
             this.txtHttpRequest.Text = "(HTTP reques will be logged here)";
             // 
@@ -2819,11 +2820,21 @@
             this.txtPropertyCalcPropertyId.TabIndex = 22;
             this.txtPropertyCalcPropertyId.Text = "8849";
             // 
+            // lblTimeCost
+            // 
+            this.lblTimeCost.AutoSize = true;
+            this.lblTimeCost.ForeColor = System.Drawing.Color.Red;
+            this.lblTimeCost.Location = new System.Drawing.Point(825, 157);
+            this.lblTimeCost.Name = "lblTimeCost";
+            this.lblTimeCost.Size = new System.Drawing.Size(0, 13);
+            this.lblTimeCost.TabIndex = 35;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1215, 773);
+            this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtHttpRequest);
             this.Controls.Add(this.txtHost);
@@ -3142,6 +3153,7 @@
         private System.Windows.Forms.TextBox txtPropertyCalcPropertyId;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.TextBox txtRenterBalance;
+        private System.Windows.Forms.Label lblTimeCost;
     }
 }
 

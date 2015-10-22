@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -19,17 +20,24 @@ namespace iPro.SDK.Client
 
             CustomStringWriter.Instance.OnWrited = line =>
             {
-                this.txtHttpRequest.AppendText(line + Environment.NewLine);
+                try
+                {
+                    txtHttpRequest.AppendText(line + Environment.NewLine);
+                }
+                catch (Exception)
+                {
+                    // ignored
+                }
             };
 
             var now = DateTime.Now;
-            this.txtCreatedate.Text = now.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            txtCreatedate.Text = now.ToUniversalTime().ToString("o");
 
-            this.txtStartDate.Text = now.AddMonths(1).ToString("yyyy-MM-dd");
-            this.txtEndDate.Text = now.AddMonths(1).AddDays(7).ToString("yyyy-MM-dd");
+            txtStartDate.Text = now.AddMonths(1).ToString("yyyy-MM-dd");
+            txtEndDate.Text = now.AddMonths(1).AddDays(7).ToString("yyyy-MM-dd");
 
-            this.txtBookingProperty1Checkin.Text = now.AddMonths(1).ToString("yyyy-MM-dd");
-            this.txtBookingProperty1Checkout.Text = now.AddMonths(1).AddDays(7).ToString("yyyy-MM-dd");
+            txtBookingProperty1Checkin.Text = now.AddMonths(1).ToString("yyyy-MM-dd");
+            txtBookingProperty1Checkout.Text = now.AddMonths(1).AddDays(7).ToString("yyyy-MM-dd");
         }
 
         public void UpdateFields()
@@ -43,9 +51,16 @@ namespace iPro.SDK.Client
         {
             try
             {
+                var stopwatch = new Stopwatch();
+                stopwatch.Start();
+
                 var client = CreateOAuth2Client();
                 authState = client.GetClientAccessToken();
                 UpdateFields();
+
+                stopwatch.Stop();
+
+                lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
             }
             catch (WebException ex)
             {
@@ -77,7 +92,7 @@ namespace iPro.SDK.Client
 
         private void HandleWebException(WebException ex)
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.AppendLine("-------------Error-------------");
 
             sb.AppendLine(ex.ToString());
@@ -85,7 +100,7 @@ namespace iPro.SDK.Client
             sb.AppendLine("");
 
  
-            using (WebResponse response = ex.Response)
+            using (var response = ex.Response)
             {
                 try
                 {
@@ -122,10 +137,11 @@ namespace iPro.SDK.Client
         {
             try
             {
+                var stopwatch = new Stopwatch();
+                stopwatch.Start();
+
                 var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
-
-
 
                 var response = httpRequest.GetResponse();
 
@@ -135,6 +151,9 @@ namespace iPro.SDK.Client
 
                 outputTextBox.Text = reader.ReadToEnd();
 
+                stopwatch.Stop();
+
+                lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
             }
             catch (WebException ex)
             {
@@ -314,7 +333,10 @@ namespace iPro.SDK.Client
         {
             try
             {
-                HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
+                var stopwatch = new Stopwatch();
+                stopwatch.Start();
+
+                var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
                 httpRequest.Method = "POST";
 
                 httpRequest.ContentLength = buffer.Length;
@@ -330,10 +352,13 @@ namespace iPro.SDK.Client
 
                 var response = httpRequest.GetResponse();
 
-                StreamReader reader = new StreamReader(response.GetResponseStream());
+                var reader = new StreamReader(response.GetResponseStream());
 
                 outputTextBox.Text = reader.ReadToEnd();
 
+                stopwatch.Stop();
+
+                lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
             }
             catch (WebException ex)
             {
