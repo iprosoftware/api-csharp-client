@@ -143,13 +143,14 @@ namespace iPro.SDK.Client
                 var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
 
-                var response = httpRequest.GetResponse();
+                httpRequest.Headers.Add("version", "2.0");
 
+                var response = httpRequest.GetResponse();
 
                 var reader = new StreamReader(response.GetResponseStream());
 
-
-                outputTextBox.Text = reader.ReadToEnd();
+                outputTextBox.Text = string.Format("Satus Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
+                outputTextBox.Text += reader.ReadToEnd();
 
                 stopwatch.Stop();
 
@@ -338,6 +339,7 @@ namespace iPro.SDK.Client
 
                 var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
                 httpRequest.Method = "POST";
+                httpRequest.Headers.Add("version", "2.0");
 
                 httpRequest.ContentLength = buffer.Length;
                 httpRequest.ContentType = "application/x-www-form-urlencoded";
@@ -354,7 +356,8 @@ namespace iPro.SDK.Client
 
                 var reader = new StreamReader(response.GetResponseStream());
 
-                outputTextBox.Text = reader.ReadToEnd();
+                outputTextBox.Text = string.Format("Satus Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
+                outputTextBox.Text += reader.ReadToEnd();
 
                 stopwatch.Stop();
 
