@@ -284,6 +284,8 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.lblTimeCost = new System.Windows.Forms.Label();
+            this.txtIfModifiedSince = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -823,6 +825,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label100);
+            this.groupBox3.Controls.Add(this.txtIfModifiedSince);
             this.groupBox3.Controls.Add(this.btnAmenities);
             this.groupBox3.Controls.Add(this.txtAmenities);
             this.groupBox3.Controls.Add(this.label80);
@@ -2829,6 +2833,23 @@
             this.lblTimeCost.Size = new System.Drawing.Size(0, 13);
             this.lblTimeCost.TabIndex = 35;
             // 
+            // txtIfModifiedSince
+            // 
+            this.txtIfModifiedSince.Location = new System.Drawing.Point(653, 91);
+            this.txtIfModifiedSince.Name = "txtIfModifiedSince";
+            this.txtIfModifiedSince.Size = new System.Drawing.Size(311, 20);
+            this.txtIfModifiedSince.TabIndex = 48;
+            this.txtIfModifiedSince.Text = "2015-10-29T15:17:36";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(549, 94);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(86, 13);
+            this.label100.TabIndex = 49;
+            this.label100.Text = "If-Modified-Since";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3154,6 +3175,8 @@
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.TextBox txtRenterBalance;
         private System.Windows.Forms.Label lblTimeCost;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.TextBox txtIfModifiedSince;
     }
 }
 

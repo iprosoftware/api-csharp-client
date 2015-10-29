@@ -144,6 +144,10 @@ namespace iPro.SDK.Client
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
 
                 httpRequest.Headers.Add("version", "2.0");
+                if (!string.IsNullOrEmpty(txtIfModifiedSince.Text))
+                {
+                    httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
+                }
 
                 var response = httpRequest.GetResponse();
 
