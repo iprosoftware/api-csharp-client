@@ -76,6 +76,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.txtIfModifiedSince = new System.Windows.Forms.TextBox();
             this.btnAmenities = new System.Windows.Forms.Button();
             this.txtAmenities = new System.Windows.Forms.TextBox();
             this.label80 = new System.Windows.Forms.Label();
@@ -284,8 +286,17 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.lblTimeCost = new System.Windows.Forms.Label();
-            this.txtIfModifiedSince = new System.Windows.Forms.TextBox();
-            this.label100 = new System.Windows.Forms.Label();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtPropertyExtra1Qty = new System.Windows.Forms.TextBox();
+            this.label101 = new System.Windows.Forms.Label();
+            this.txtPropertyExtra1Id = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txtPropertyExtra2Qty = new System.Windows.Forms.TextBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.txtPropertyExtra2Id = new System.Windows.Forms.TextBox();
+            this.label104 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -309,6 +320,9 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -851,6 +865,23 @@
             this.groupBox3.Size = new System.Drawing.Size(1177, 240);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(549, 94);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(86, 13);
+            this.label100.TabIndex = 49;
+            this.label100.Text = "If-Modified-Since";
+            // 
+            // txtIfModifiedSince
+            // 
+            this.txtIfModifiedSince.Location = new System.Drawing.Point(653, 91);
+            this.txtIfModifiedSince.Name = "txtIfModifiedSince";
+            this.txtIfModifiedSince.Size = new System.Drawing.Size(311, 20);
+            this.txtIfModifiedSince.TabIndex = 48;
+            this.txtIfModifiedSince.Text = "2015-10-29T15:17:36";
             // 
             // btnAmenities
             // 
@@ -2684,6 +2715,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.tabControl5);
             this.tabPage3.Controls.Add(this.btnCalcBooking);
             this.tabPage3.Controls.Add(this.txtApiBookingCalc);
             this.tabPage3.Controls.Add(this.label85);
@@ -2833,22 +2865,111 @@
             this.lblTimeCost.Size = new System.Drawing.Size(0, 13);
             this.lblTimeCost.TabIndex = 35;
             // 
-            // txtIfModifiedSince
+            // tabControl5
             // 
-            this.txtIfModifiedSince.Location = new System.Drawing.Point(653, 91);
-            this.txtIfModifiedSince.Name = "txtIfModifiedSince";
-            this.txtIfModifiedSince.Size = new System.Drawing.Size(311, 20);
-            this.txtIfModifiedSince.TabIndex = 48;
-            this.txtIfModifiedSince.Text = "2015-10-29T15:17:36";
+            this.tabControl5.Controls.Add(this.tabPage4);
+            this.tabControl5.Controls.Add(this.tabPage5);
+            this.tabControl5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tabControl5.Location = new System.Drawing.Point(900, 3);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(280, 240);
+            this.tabControl5.TabIndex = 46;
             // 
-            // label100
+            // tabPage4
             // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(549, 94);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(86, 13);
-            this.label100.TabIndex = 49;
-            this.label100.Text = "If-Modified-Since";
+            this.tabPage4.Controls.Add(this.txtPropertyExtra1Qty);
+            this.tabPage4.Controls.Add(this.label101);
+            this.tabPage4.Controls.Add(this.txtPropertyExtra1Id);
+            this.tabPage4.Controls.Add(this.label102);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(272, 214);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "Extra1";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtPropertyExtra1Qty
+            // 
+            this.txtPropertyExtra1Qty.Location = new System.Drawing.Point(62, 47);
+            this.txtPropertyExtra1Qty.Name = "txtPropertyExtra1Qty";
+            this.txtPropertyExtra1Qty.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra1Qty.TabIndex = 23;
+            this.txtPropertyExtra1Qty.Text = "1";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(24, 50);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(23, 13);
+            this.label101.TabIndex = 22;
+            this.label101.Text = "Qty";
+            // 
+            // txtPropertyExtra1Id
+            // 
+            this.txtPropertyExtra1Id.Location = new System.Drawing.Point(62, 14);
+            this.txtPropertyExtra1Id.Name = "txtPropertyExtra1Id";
+            this.txtPropertyExtra1Id.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra1Id.TabIndex = 21;
+            this.txtPropertyExtra1Id.Text = "8297";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(24, 17);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(16, 13);
+            this.label102.TabIndex = 20;
+            this.label102.Text = "Id";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.txtPropertyExtra2Qty);
+            this.tabPage5.Controls.Add(this.label103);
+            this.tabPage5.Controls.Add(this.txtPropertyExtra2Id);
+            this.tabPage5.Controls.Add(this.label104);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(272, 214);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Extra2";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // txtPropertyExtra2Qty
+            // 
+            this.txtPropertyExtra2Qty.Location = new System.Drawing.Point(62, 47);
+            this.txtPropertyExtra2Qty.Name = "txtPropertyExtra2Qty";
+            this.txtPropertyExtra2Qty.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra2Qty.TabIndex = 27;
+            this.txtPropertyExtra2Qty.Text = "1";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(24, 50);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(23, 13);
+            this.label103.TabIndex = 26;
+            this.label103.Text = "Qty";
+            // 
+            // txtPropertyExtra2Id
+            // 
+            this.txtPropertyExtra2Id.Location = new System.Drawing.Point(62, 14);
+            this.txtPropertyExtra2Id.Name = "txtPropertyExtra2Id";
+            this.txtPropertyExtra2Id.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra2Id.TabIndex = 25;
+            this.txtPropertyExtra2Id.Text = "9240";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(24, 17);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(16, 13);
+            this.label104.TabIndex = 24;
+            this.label104.Text = "Id";
             // 
             // frmMain
             // 
@@ -2907,6 +3028,11 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3177,6 +3303,17 @@
         private System.Windows.Forms.Label lblTimeCost;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.TextBox txtIfModifiedSince;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox txtPropertyExtra1Qty;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.TextBox txtPropertyExtra1Id;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox txtPropertyExtra2Qty;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.TextBox txtPropertyExtra2Id;
+        private System.Windows.Forms.Label label104;
     }
 }
 

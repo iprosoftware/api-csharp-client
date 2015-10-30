@@ -470,6 +470,10 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Adults", this.txtPropertyCalcAdults.Text),
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtPropertyCalcChildren.Text),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtPropertyCalcInfants.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtPropertyExtra1Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtPropertyExtra1Qty.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtPropertyExtra2Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtPropertyExtra2Qty.Text)
             };
         }
     }
