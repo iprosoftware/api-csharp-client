@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using DotNetOpenAuth.OAuth2;
 
@@ -99,7 +100,7 @@ namespace iPro.SDK.Client
 
             sb.AppendLine("");
 
- 
+
             using (var response = ex.Response)
             {
                 try
@@ -133,10 +134,11 @@ namespace iPro.SDK.Client
             return (client);
         }
 
-        void LoadContent(string api)
+        private async Task LoadContent(string api)
         {
             try
             {
+                lblTimeCost.Text = @"Waiting for server response...";
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
 
@@ -149,7 +151,7 @@ namespace iPro.SDK.Client
                     httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
                 }
 
-                var response = httpRequest.GetResponse();
+                var response = await httpRequest.GetResponseAsync();
 
                 var reader = new StreamReader(response.GetResponseStream());
 
@@ -177,77 +179,77 @@ namespace iPro.SDK.Client
             }
         }
 
-        private void getResourceButton_Click(object sender, EventArgs e)
+        private async void getResourceButton_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyApi.Text);
+            await LoadContent(this.txtPropertyApi.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertImagesApi.Text);
+            await LoadContent(this.txtPropertImagesApi.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyEnquiresApi.Text);
+            await LoadContent(this.txtPropertyEnquiresApi.Text);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyRatesApi.Text);
+            await LoadContent(this.txtPropertyRatesApi.Text);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private async void button4_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyAvailabilityApi.Text);
+            await LoadContent(this.txtPropertyAvailabilityApi.Text);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private async void button5_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertiesApi.Text);
+            await LoadContent(this.txtPropertiesApi.Text);
         }
 
-        private void btnPropertyAll_Click(object sender, EventArgs e)
+        private async void btnPropertyAll_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyAllApi.Text);
+            await LoadContent(this.txtPropertyAllApi.Text);
         }
 
-        private void btnBookingRules_Click(object sender, EventArgs e)
+        private async void btnBookingRules_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtBookingRules.Text);
+            await LoadContent(this.txtBookingRules.Text);
         }
 
-        private void btnBookingTags_Click(object sender, EventArgs e)
+        private async void btnBookingTags_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtBookingTags.Text);
+            await LoadContent(this.txtBookingTags.Text);
         }
 
-        private void btnPropertyExtras_Click(object sender, EventArgs e)
+        private async void btnPropertyExtras_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyExtras.Text);
+            await LoadContent(this.txtPropertyExtras.Text);
         }
 
-        private void btnGetSources_Click(object sender, EventArgs e)
+        private async void btnGetSources_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtSources.Text);
+            await LoadContent(this.txtSources.Text);
         }
 
-        private void btnContacts_Click(object sender, EventArgs e)
+        private async void btnContacts_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtContacts.Text);
+            await LoadContent(this.txtContacts.Text);
         }
 
-        private void btnPropertyRooms_Click(object sender, EventArgs e)
+        private async void btnPropertyRooms_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyRoomsApi.Text);
+            await LoadContent(this.txtPropertyRoomsApi.Text);
         }
 
-        private void btnPropertyDistance_Click(object sender, EventArgs e)
+        private async void btnPropertyDistance_Click(object sender, EventArgs e)
         {
-            this.LoadContent(this.txtPropertyDistanceApi.Text);
+            await LoadContent(this.txtPropertyDistanceApi.Text);
         }
 
-        private void btnPostBooking_Click(object sender, EventArgs e)
+        private async void btnPostBooking_Click(object sender, EventArgs e)
         {
             var values = new List<KeyValuePair<string, string>>
             {
@@ -275,7 +277,7 @@ namespace iPro.SDK.Client
 
             values.AddRange(this.GetBookingProperties());
             var formContent = new FormUrlEncodedContent(values);
-            this.PostContent(this.txtApiBooking.Text, formContent.ReadAsByteArrayAsync().Result);
+            await PostContent(this.txtApiBooking.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
         private IEnumerable<KeyValuePair<string, string>> GetBookingProperties()
@@ -310,7 +312,7 @@ namespace iPro.SDK.Client
             };
         }
 
-        private void btnPostEnquiry_Click(object sender, EventArgs e)
+        private async void btnPostEnquiry_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
@@ -331,13 +333,15 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("createdate", this.txtCreatedate.Text)
             });
 
-            this.PostContent(this.txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
+            await PostContent(this.txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        void PostContent(string api, byte[] buffer)
+        private async Task PostContent(string api, byte[] buffer)
         {
             try
             {
+                lblTimeCost.Text = @"Waiting for server response...";
+
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
 
@@ -356,7 +360,7 @@ namespace iPro.SDK.Client
                     postStream.Close();
                 }
 
-                var response = httpRequest.GetResponse();
+                var response = await httpRequest.GetResponseAsync();
 
                 var reader = new StreamReader(response.GetResponseStream());
 
@@ -384,12 +388,12 @@ namespace iPro.SDK.Client
             }
         }
 
-        private void btnGetReviews_Click(object sender, EventArgs e)
+        private async void btnGetReviews_Click(object sender, EventArgs e)
         {
-            this.LoadContent(txtReviewsApi.Text);
+            await LoadContent(txtReviewsApi.Text);
         }
 
-        private void btnAddReview_Click(object sender, EventArgs e)
+        private async void btnAddReview_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
@@ -404,27 +408,27 @@ namespace iPro.SDK.Client
             PostContent(txtReviewsApi.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        private void btnPropertySearch_Click(object sender, EventArgs e)
+        private async void btnPropertySearch_Click(object sender, EventArgs e)
         {
             LoadContent(txtPropertySearchApi.Text);
         }
 
-        private void btnLocations_Click(object sender, EventArgs e)
+        private async void btnLocations_Click(object sender, EventArgs e)
         {
             LoadContent(txtLocations.Text);
         }
 
-        private void btnDayAvailability_Click(object sender, EventArgs e)
+        private async void btnDayAvailability_Click(object sender, EventArgs e)
         {
             LoadContent(txtDayAvailability.Text);
         }
 
-        private void btnAmenities_Click(object sender, EventArgs e)
+        private async void btnAmenities_Click(object sender, EventArgs e)
         {
             LoadContent(txtAmenities.Text);
         }
 
-        private void btnAddPayment_Click(object sender, EventArgs e)
+        private async void btnAddPayment_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
@@ -444,7 +448,7 @@ namespace iPro.SDK.Client
             PostContent(txtPaymentApi.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        private void btnUpdatePropertyApi_Click(object sender, EventArgs e)
+        private async void btnUpdatePropertyApi_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
@@ -454,10 +458,10 @@ namespace iPro.SDK.Client
             PostContent(txtUpdatePropertyApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        private void btnCalcBooking_Click(object sender, EventArgs e)
+        private async void btnCalcBooking_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(this.GetBookingCalcProperties());
-            this.PostContent(this.txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
+            await PostContent(this.txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
         private IEnumerable<KeyValuePair<string, string>> GetBookingCalcProperties()
