@@ -155,7 +155,7 @@ namespace iPro.SDK.Client
 
                 var reader = new StreamReader(response.GetResponseStream());
 
-                outputTextBox.Text = string.Format("Satus Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
+                outputTextBox.Text = string.Format("Status Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
                 outputTextBox.Text += reader.ReadToEnd();
 
                 stopwatch.Stop();
@@ -364,7 +364,7 @@ namespace iPro.SDK.Client
 
                 var reader = new StreamReader(response.GetResponseStream());
 
-                outputTextBox.Text = string.Format("Satus Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
+                outputTextBox.Text = string.Format("Status Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
                 outputTextBox.Text += reader.ReadToEnd();
 
                 stopwatch.Stop();
