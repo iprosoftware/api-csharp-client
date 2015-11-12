@@ -256,7 +256,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("BookingTagIds", this.txtBookingTagIds.Text),
                 new KeyValuePair<string, string>("EnquiryId", this.txtBookingEnquiryId.Text),
                 new KeyValuePair<string, string>("Source", this.txtBookingSource.Text),
-                new KeyValuePair<string, string>("RenterBalance", this.txtRenterBalance.Text),
+                new KeyValuePair<string, string>("PaidAmount", this.txtPaidAmount.Text),
                 new KeyValuePair<string, string>("SendEmail", this.cbBookingSendEmail.Checked.ToString()),
                 new KeyValuePair<string, string>("Contact.ContactId", this.txtBookingContactId.Text),
                 new KeyValuePair<string, string>("Contact.Title", this.txtBookingContactTitle.Text),

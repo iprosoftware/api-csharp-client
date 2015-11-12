@@ -135,8 +135,9 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.cbBookingSendEmail = new System.Windows.Forms.CheckBox();
             this.label99 = new System.Windows.Forms.Label();
-            this.txtRenterBalance = new System.Windows.Forms.TextBox();
+            this.txtPaidAmount = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.txtBookingSource = new System.Windows.Forms.TextBox();
             this.txtBookingEnquiryId = new System.Windows.Forms.TextBox();
@@ -297,7 +298,6 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.lblTimeCost = new System.Windows.Forms.Label();
-            this.cbBookingSendEmail = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1423,7 +1423,7 @@
             // 
             this.tabBooking.Controls.Add(this.cbBookingSendEmail);
             this.tabBooking.Controls.Add(this.label99);
-            this.tabBooking.Controls.Add(this.txtRenterBalance);
+            this.tabBooking.Controls.Add(this.txtPaidAmount);
             this.tabBooking.Controls.Add(this.label56);
             this.tabBooking.Controls.Add(this.txtBookingSource);
             this.tabBooking.Controls.Add(this.txtBookingEnquiryId);
@@ -1441,22 +1441,32 @@
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
             // 
+            // cbBookingSendEmail
+            // 
+            this.cbBookingSendEmail.AutoSize = true;
+            this.cbBookingSendEmail.Location = new System.Drawing.Point(752, 17);
+            this.cbBookingSendEmail.Name = "cbBookingSendEmail";
+            this.cbBookingSendEmail.Size = new System.Drawing.Size(79, 17);
+            this.cbBookingSendEmail.TabIndex = 44;
+            this.cbBookingSendEmail.Text = "Send Email";
+            this.cbBookingSendEmail.UseVisualStyleBackColor = true;
+            // 
             // label99
             // 
             this.label99.AutoSize = true;
             this.label99.Location = new System.Drawing.Point(524, 17);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(78, 13);
+            this.label99.Size = new System.Drawing.Size(64, 13);
             this.label99.TabIndex = 43;
-            this.label99.Text = "RenterBalance";
+            this.label99.Text = "PaidAmount";
             // 
-            // txtRenterBalance
+            // txtPaidAmount
             // 
-            this.txtRenterBalance.Location = new System.Drawing.Point(624, 14);
-            this.txtRenterBalance.Name = "txtRenterBalance";
-            this.txtRenterBalance.Size = new System.Drawing.Size(90, 20);
-            this.txtRenterBalance.TabIndex = 42;
-            this.txtRenterBalance.Text = "300.00";
+            this.txtPaidAmount.Location = new System.Drawing.Point(624, 14);
+            this.txtPaidAmount.Name = "txtPaidAmount";
+            this.txtPaidAmount.Size = new System.Drawing.Size(90, 20);
+            this.txtPaidAmount.TabIndex = 42;
+            this.txtPaidAmount.Text = "300.00";
             // 
             // label56
             // 
@@ -2973,16 +2983,6 @@
             this.lblTimeCost.Size = new System.Drawing.Size(0, 13);
             this.lblTimeCost.TabIndex = 35;
             // 
-            // cbBookingSendEmail
-            // 
-            this.cbBookingSendEmail.AutoSize = true;
-            this.cbBookingSendEmail.Location = new System.Drawing.Point(752, 17);
-            this.cbBookingSendEmail.Name = "cbBookingSendEmail";
-            this.cbBookingSendEmail.Size = new System.Drawing.Size(79, 17);
-            this.cbBookingSendEmail.TabIndex = 44;
-            this.cbBookingSendEmail.Text = "Send Email";
-            this.cbBookingSendEmail.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3311,7 +3311,7 @@
         private System.Windows.Forms.TextBox txtPropertyCalcCheckOut;
         private System.Windows.Forms.TextBox txtPropertyCalcPropertyId;
         private System.Windows.Forms.Label label99;
-        private System.Windows.Forms.TextBox txtRenterBalance;
+        private System.Windows.Forms.TextBox txtPaidAmount;
         private System.Windows.Forms.Label lblTimeCost;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.TextBox txtIfModifiedSince;
