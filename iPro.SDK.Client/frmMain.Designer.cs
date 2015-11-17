@@ -135,6 +135,8 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.label105 = new System.Windows.Forms.Label();
+            this.txtPaymentToken = new System.Windows.Forms.TextBox();
             this.cbBookingSendEmail = new System.Windows.Forms.CheckBox();
             this.label99 = new System.Windows.Forms.Label();
             this.txtPaidAmount = new System.Windows.Forms.TextBox();
@@ -298,6 +300,8 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.lblTimeCost = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.txtCardPartialNumbers = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -329,59 +333,59 @@
             // tokenEndpointLabel
             // 
             this.tokenEndpointLabel.AutoSize = true;
-            this.tokenEndpointLabel.Location = new System.Drawing.Point(6, 28);
+            this.tokenEndpointLabel.Location = new System.Drawing.Point(6, 26);
             this.tokenEndpointLabel.Name = "tokenEndpointLabel";
-            this.tokenEndpointLabel.Size = new System.Drawing.Size(125, 13);
+            this.tokenEndpointLabel.Size = new System.Drawing.Size(137, 12);
             this.tokenEndpointLabel.TabIndex = 0;
             this.tokenEndpointLabel.Text = "OAuth2 Token Endpoint:";
             // 
             // tokenEndpointTextBox
             // 
-            this.tokenEndpointTextBox.Location = new System.Drawing.Point(153, 22);
+            this.tokenEndpointTextBox.Location = new System.Drawing.Point(153, 20);
             this.tokenEndpointTextBox.Name = "tokenEndpointTextBox";
-            this.tokenEndpointTextBox.Size = new System.Drawing.Size(210, 20);
+            this.tokenEndpointTextBox.Size = new System.Drawing.Size(210, 21);
             this.tokenEndpointTextBox.TabIndex = 1;
             this.tokenEndpointTextBox.Text = "/oauth/2.0/token";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 54);
+            this.label1.Location = new System.Drawing.Point(6, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(107, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "OAuth2 Client ID:";
             // 
             // oauth2ClientIdTextBox
             // 
-            this.oauth2ClientIdTextBox.Location = new System.Drawing.Point(153, 51);
+            this.oauth2ClientIdTextBox.Location = new System.Drawing.Point(153, 47);
             this.oauth2ClientIdTextBox.Name = "oauth2ClientIdTextBox";
-            this.oauth2ClientIdTextBox.Size = new System.Drawing.Size(210, 20);
+            this.oauth2ClientIdTextBox.Size = new System.Drawing.Size(210, 21);
             this.oauth2ClientIdTextBox.TabIndex = 1;
             this.oauth2ClientIdTextBox.Text = "1000";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 80);
+            this.label2.Location = new System.Drawing.Point(6, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 13);
+            this.label2.Size = new System.Drawing.Size(131, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "OAuth2 Client Secret:";
             // 
             // oauth2ClientSecretTextBox
             // 
-            this.oauth2ClientSecretTextBox.Location = new System.Drawing.Point(153, 77);
+            this.oauth2ClientSecretTextBox.Location = new System.Drawing.Point(153, 71);
             this.oauth2ClientSecretTextBox.Name = "oauth2ClientSecretTextBox";
-            this.oauth2ClientSecretTextBox.Size = new System.Drawing.Size(210, 20);
+            this.oauth2ClientSecretTextBox.Size = new System.Drawing.Size(210, 21);
             this.oauth2ClientSecretTextBox.TabIndex = 1;
             this.oauth2ClientSecretTextBox.Text = "c4d77c88e8975d241d75bfe660eeef0f";
             // 
             // exchangeCredentialsButton
             // 
-            this.exchangeCredentialsButton.Location = new System.Drawing.Point(519, 152);
+            this.exchangeCredentialsButton.Location = new System.Drawing.Point(519, 140);
             this.exchangeCredentialsButton.Name = "exchangeCredentialsButton";
-            this.exchangeCredentialsButton.Size = new System.Drawing.Size(223, 23);
+            this.exchangeCredentialsButton.Size = new System.Drawing.Size(223, 21);
             this.exchangeCredentialsButton.TabIndex = 2;
             this.exchangeCredentialsButton.Text = "GET Access Token";
             this.exchangeCredentialsButton.UseVisualStyleBackColor = true;
@@ -390,35 +394,35 @@
             // accessTokenLabel
             // 
             this.accessTokenLabel.AutoSize = true;
-            this.accessTokenLabel.Location = new System.Drawing.Point(393, 88);
+            this.accessTokenLabel.Location = new System.Drawing.Point(393, 81);
             this.accessTokenLabel.Name = "accessTokenLabel";
-            this.accessTokenLabel.Size = new System.Drawing.Size(118, 13);
+            this.accessTokenLabel.Size = new System.Drawing.Size(125, 12);
             this.accessTokenLabel.TabIndex = 0;
             this.accessTokenLabel.Text = "OAuth2 Access Token:";
             // 
             // accessTokenTextBox
             // 
-            this.accessTokenTextBox.Location = new System.Drawing.Point(519, 85);
+            this.accessTokenTextBox.Location = new System.Drawing.Point(519, 78);
             this.accessTokenTextBox.Name = "accessTokenTextBox";
             this.accessTokenTextBox.ReadOnly = true;
-            this.accessTokenTextBox.Size = new System.Drawing.Size(223, 20);
+            this.accessTokenTextBox.Size = new System.Drawing.Size(223, 21);
             this.accessTokenTextBox.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(393, 117);
+            this.label5.Location = new System.Drawing.Point(393, 108);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
+            this.label5.Size = new System.Drawing.Size(125, 12);
             this.label5.TabIndex = 0;
             this.label5.Text = "OAuth2 Token Expiry:";
             // 
             // tokenExpiryTextBox
             // 
-            this.tokenExpiryTextBox.Location = new System.Drawing.Point(519, 114);
+            this.tokenExpiryTextBox.Location = new System.Drawing.Point(519, 105);
             this.tokenExpiryTextBox.Name = "tokenExpiryTextBox";
             this.tokenExpiryTextBox.ReadOnly = true;
-            this.tokenExpiryTextBox.Size = new System.Drawing.Size(223, 20);
+            this.tokenExpiryTextBox.Size = new System.Drawing.Size(223, 21);
             this.tokenExpiryTextBox.TabIndex = 1;
             // 
             // outputTextBox
@@ -427,19 +431,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.outputTextBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTextBox.Location = new System.Drawing.Point(571, 460);
+            this.outputTextBox.Location = new System.Drawing.Point(571, 485);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.outputTextBox.Size = new System.Drawing.Size(632, 301);
+            this.outputTextBox.Size = new System.Drawing.Size(632, 365);
             this.outputTextBox.TabIndex = 3;
             this.outputTextBox.Text = "(HTTP responses and API data will be logged here)";
             // 
             // getResourceButton
             // 
-            this.getResourceButton.Location = new System.Drawing.Point(519, 54);
+            this.getResourceButton.Location = new System.Drawing.Point(519, 50);
             this.getResourceButton.Name = "getResourceButton";
-            this.getResourceButton.Size = new System.Drawing.Size(54, 23);
+            this.getResourceButton.Size = new System.Drawing.Size(54, 21);
             this.getResourceButton.TabIndex = 2;
             this.getResourceButton.Text = "GET";
             this.getResourceButton.UseVisualStyleBackColor = true;
@@ -453,34 +457,34 @@
             this.groupBox1.Controls.Add(this.oauth2ClientIdTextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.oauth2ClientSecretTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 63);
+            this.groupBox1.Location = new System.Drawing.Point(12, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 112);
+            this.groupBox1.Size = new System.Drawing.Size(375, 103);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OAuth2 Authorization Server Details";
             // 
             // txtPropertyApi
             // 
-            this.txtPropertyApi.Location = new System.Drawing.Point(178, 54);
+            this.txtPropertyApi.Location = new System.Drawing.Point(178, 50);
             this.txtPropertyApi.Name = "txtPropertyApi";
-            this.txtPropertyApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyApi.TabIndex = 9;
             this.txtPropertyApi.Text = "/apis/property/8849";
             // 
             // txtPropertImagesApi
             // 
-            this.txtPropertImagesApi.Location = new System.Drawing.Point(178, 83);
+            this.txtPropertImagesApi.Location = new System.Drawing.Point(178, 77);
             this.txtPropertImagesApi.Name = "txtPropertImagesApi";
-            this.txtPropertImagesApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertImagesApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertImagesApi.TabIndex = 12;
             this.txtPropertImagesApi.Text = "/apis/property/8849/images";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(519, 82);
+            this.button1.Location = new System.Drawing.Point(519, 76);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 23);
+            this.button1.Size = new System.Drawing.Size(54, 21);
             this.button1.TabIndex = 10;
             this.button1.Text = "GET";
             this.button1.UseVisualStyleBackColor = true;
@@ -488,17 +492,17 @@
             // 
             // txtPropertyEnquiresApi
             // 
-            this.txtPropertyEnquiresApi.Location = new System.Drawing.Point(748, 142);
+            this.txtPropertyEnquiresApi.Location = new System.Drawing.Point(748, 131);
             this.txtPropertyEnquiresApi.Name = "txtPropertyEnquiresApi";
-            this.txtPropertyEnquiresApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyEnquiresApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyEnquiresApi.TabIndex = 15;
             this.txtPropertyEnquiresApi.Text = "/apis/property/8849/enquiries?size=15&index=1";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1089, 141);
+            this.button2.Location = new System.Drawing.Point(1089, 130);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 23);
+            this.button2.Size = new System.Drawing.Size(54, 21);
             this.button2.TabIndex = 13;
             this.button2.Text = "GET";
             this.button2.UseVisualStyleBackColor = true;
@@ -506,17 +510,17 @@
             // 
             // txtPropertyRatesApi
             // 
-            this.txtPropertyRatesApi.Location = new System.Drawing.Point(178, 142);
+            this.txtPropertyRatesApi.Location = new System.Drawing.Point(178, 131);
             this.txtPropertyRatesApi.Name = "txtPropertyRatesApi";
-            this.txtPropertyRatesApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyRatesApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyRatesApi.TabIndex = 18;
             this.txtPropertyRatesApi.Text = "/apis/property/8849/rates";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(519, 141);
+            this.button3.Location = new System.Drawing.Point(519, 130);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 23);
+            this.button3.Size = new System.Drawing.Size(54, 21);
             this.button3.TabIndex = 16;
             this.button3.Text = "GET";
             this.button3.UseVisualStyleBackColor = true;
@@ -524,17 +528,17 @@
             // 
             // txtPropertyAvailabilityApi
             // 
-            this.txtPropertyAvailabilityApi.Location = new System.Drawing.Point(178, 171);
+            this.txtPropertyAvailabilityApi.Location = new System.Drawing.Point(178, 158);
             this.txtPropertyAvailabilityApi.Name = "txtPropertyAvailabilityApi";
-            this.txtPropertyAvailabilityApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyAvailabilityApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyAvailabilityApi.TabIndex = 21;
             this.txtPropertyAvailabilityApi.Text = "/apis/property/8849/availability";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(519, 170);
+            this.button4.Location = new System.Drawing.Point(519, 157);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 23);
+            this.button4.Size = new System.Drawing.Size(54, 21);
             this.button4.TabIndex = 19;
             this.button4.Text = "GET";
             this.button4.UseVisualStyleBackColor = true;
@@ -542,17 +546,17 @@
             // 
             // txtPropertiesApi
             // 
-            this.txtPropertiesApi.Location = new System.Drawing.Point(178, 25);
+            this.txtPropertiesApi.Location = new System.Drawing.Point(178, 23);
             this.txtPropertiesApi.Name = "txtPropertiesApi";
-            this.txtPropertiesApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertiesApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertiesApi.TabIndex = 24;
             this.txtPropertiesApi.Text = "/apis/properties";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(519, 25);
+            this.button5.Location = new System.Drawing.Point(519, 23);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 23);
+            this.button5.Size = new System.Drawing.Size(54, 21);
             this.button5.TabIndex = 22;
             this.button5.Text = "GET";
             this.button5.UseVisualStyleBackColor = true;
@@ -561,17 +565,17 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 35);
+            this.label10.Location = new System.Drawing.Point(18, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 13);
+            this.label10.Size = new System.Drawing.Size(113, 12);
             this.label10.TabIndex = 25;
             this.label10.Text = "OAuth2 Server Host";
             // 
             // txtHost
             // 
-            this.txtHost.Location = new System.Drawing.Point(165, 31);
+            this.txtHost.Location = new System.Drawing.Point(165, 29);
             this.txtHost.Name = "txtHost";
-            this.txtHost.Size = new System.Drawing.Size(577, 20);
+            this.txtHost.Size = new System.Drawing.Size(577, 21);
             this.txtHost.TabIndex = 26;
             this.txtHost.Text = "http://azores.demo.i-pro3.co.uk";
             // 
@@ -616,32 +620,32 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1177, 240);
+            this.groupBox2.Size = new System.Drawing.Size(1177, 279);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(12, 206);
+            this.label79.Location = new System.Drawing.Point(12, 190);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(118, 13);
+            this.label79.Size = new System.Drawing.Size(161, 12);
             this.label79.TabIndex = 53;
             this.label79.Text = "property day availablility";
             // 
             // txtDayAvailability
             // 
-            this.txtDayAvailability.Location = new System.Drawing.Point(178, 202);
+            this.txtDayAvailability.Location = new System.Drawing.Point(178, 186);
             this.txtDayAvailability.Name = "txtDayAvailability";
-            this.txtDayAvailability.Size = new System.Drawing.Size(335, 20);
+            this.txtDayAvailability.Size = new System.Drawing.Size(335, 21);
             this.txtDayAvailability.TabIndex = 52;
             this.txtDayAvailability.Text = "/apis/property/8849/dayavailability";
             // 
             // btnDayAvailability
             // 
-            this.btnDayAvailability.Location = new System.Drawing.Point(519, 202);
+            this.btnDayAvailability.Location = new System.Drawing.Point(519, 186);
             this.btnDayAvailability.Name = "btnDayAvailability";
-            this.btnDayAvailability.Size = new System.Drawing.Size(54, 23);
+            this.btnDayAvailability.Size = new System.Drawing.Size(54, 21);
             this.btnDayAvailability.TabIndex = 51;
             this.btnDayAvailability.Text = "GET";
             this.btnDayAvailability.UseVisualStyleBackColor = true;
@@ -650,17 +654,17 @@
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(630, 117);
+            this.label77.Location = new System.Drawing.Point(630, 108);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(80, 13);
+            this.label77.Size = new System.Drawing.Size(95, 12);
             this.label77.TabIndex = 50;
             this.label77.Text = "property search";
             // 
             // txtPropertySearchApi
             // 
-            this.txtPropertySearchApi.Location = new System.Drawing.Point(748, 113);
+            this.txtPropertySearchApi.Location = new System.Drawing.Point(748, 104);
             this.txtPropertySearchApi.Name = "txtPropertySearchApi";
-            this.txtPropertySearchApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertySearchApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertySearchApi.TabIndex = 49;
             this.txtPropertySearchApi.Text = "/apis/propertysearch?size=15&index=1&checkIn=2015-11-21&checkout=2015-12-21&Adult" +
     "s=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&WeeklyPri" +
@@ -668,9 +672,9 @@
             // 
             // btnPropertySearch
             // 
-            this.btnPropertySearch.Location = new System.Drawing.Point(1089, 113);
+            this.btnPropertySearch.Location = new System.Drawing.Point(1089, 104);
             this.btnPropertySearch.Name = "btnPropertySearch";
-            this.btnPropertySearch.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertySearch.Size = new System.Drawing.Size(54, 21);
             this.btnPropertySearch.TabIndex = 48;
             this.btnPropertySearch.Text = "GET";
             this.btnPropertySearch.UseVisualStyleBackColor = true;
@@ -679,25 +683,25 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(630, 28);
+            this.label69.Location = new System.Drawing.Point(630, 26);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(76, 13);
+            this.label69.Size = new System.Drawing.Size(89, 12);
             this.label69.TabIndex = 47;
             this.label69.Text = "property rooms";
             // 
             // txtPropertyRoomsApi
             // 
-            this.txtPropertyRoomsApi.Location = new System.Drawing.Point(748, 25);
+            this.txtPropertyRoomsApi.Location = new System.Drawing.Point(748, 23);
             this.txtPropertyRoomsApi.Name = "txtPropertyRoomsApi";
-            this.txtPropertyRoomsApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyRoomsApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyRoomsApi.TabIndex = 46;
             this.txtPropertyRoomsApi.Text = "/apis/property/8849/rooms";
             // 
             // btnPropertyRooms
             // 
-            this.btnPropertyRooms.Location = new System.Drawing.Point(1089, 25);
+            this.btnPropertyRooms.Location = new System.Drawing.Point(1089, 23);
             this.btnPropertyRooms.Name = "btnPropertyRooms";
-            this.btnPropertyRooms.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertyRooms.Size = new System.Drawing.Size(54, 21);
             this.btnPropertyRooms.TabIndex = 45;
             this.btnPropertyRooms.Text = "GET";
             this.btnPropertyRooms.UseVisualStyleBackColor = true;
@@ -706,25 +710,25 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(630, 56);
+            this.label68.Location = new System.Drawing.Point(630, 52);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(93, 13);
+            this.label68.Size = new System.Drawing.Size(113, 12);
             this.label68.TabIndex = 44;
             this.label68.Text = "property distances";
             // 
             // txtPropertyDistanceApi
             // 
-            this.txtPropertyDistanceApi.Location = new System.Drawing.Point(748, 53);
+            this.txtPropertyDistanceApi.Location = new System.Drawing.Point(748, 49);
             this.txtPropertyDistanceApi.Name = "txtPropertyDistanceApi";
-            this.txtPropertyDistanceApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyDistanceApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyDistanceApi.TabIndex = 43;
             this.txtPropertyDistanceApi.Text = "/apis/property/8849/distances";
             // 
             // btnPropertyDistance
             // 
-            this.btnPropertyDistance.Location = new System.Drawing.Point(1089, 53);
+            this.btnPropertyDistance.Location = new System.Drawing.Point(1089, 49);
             this.btnPropertyDistance.Name = "btnPropertyDistance";
-            this.btnPropertyDistance.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertyDistance.Size = new System.Drawing.Size(54, 21);
             this.btnPropertyDistance.TabIndex = 42;
             this.btnPropertyDistance.Text = "GET";
             this.btnPropertyDistance.UseVisualStyleBackColor = true;
@@ -733,25 +737,25 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(630, 86);
+            this.label67.Location = new System.Drawing.Point(630, 79);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(58, 13);
+            this.label67.Size = new System.Drawing.Size(77, 12);
             this.label67.TabIndex = 41;
             this.label67.Text = "property all";
             // 
             // txtPropertyAllApi
             // 
-            this.txtPropertyAllApi.Location = new System.Drawing.Point(748, 82);
+            this.txtPropertyAllApi.Location = new System.Drawing.Point(748, 76);
             this.txtPropertyAllApi.Name = "txtPropertyAllApi";
-            this.txtPropertyAllApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyAllApi.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyAllApi.TabIndex = 40;
             this.txtPropertyAllApi.Text = "/apis/property/8849/all";
             // 
             // btnPropertyAll
             // 
-            this.btnPropertyAll.Location = new System.Drawing.Point(1089, 82);
+            this.btnPropertyAll.Location = new System.Drawing.Point(1089, 76);
             this.btnPropertyAll.Name = "btnPropertyAll";
-            this.btnPropertyAll.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertyAll.Size = new System.Drawing.Size(54, 21);
             this.btnPropertyAll.TabIndex = 39;
             this.btnPropertyAll.Text = "GET";
             this.btnPropertyAll.UseVisualStyleBackColor = true;
@@ -760,25 +764,25 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(41, 116);
+            this.label28.Location = new System.Drawing.Point(41, 107);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(76, 13);
+            this.label28.Size = new System.Drawing.Size(95, 12);
             this.label28.TabIndex = 38;
             this.label28.Text = "property extras";
             // 
             // txtPropertyExtras
             // 
-            this.txtPropertyExtras.Location = new System.Drawing.Point(178, 113);
+            this.txtPropertyExtras.Location = new System.Drawing.Point(178, 104);
             this.txtPropertyExtras.Name = "txtPropertyExtras";
-            this.txtPropertyExtras.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyExtras.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyExtras.TabIndex = 37;
             this.txtPropertyExtras.Text = "/apis/property/8849/extras";
             // 
             // btnPropertyExtras
             // 
-            this.btnPropertyExtras.Location = new System.Drawing.Point(519, 112);
+            this.btnPropertyExtras.Location = new System.Drawing.Point(519, 103);
             this.btnPropertyExtras.Name = "btnPropertyExtras";
-            this.btnPropertyExtras.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertyExtras.Size = new System.Drawing.Size(54, 21);
             this.btnPropertyExtras.TabIndex = 36;
             this.btnPropertyExtras.Text = "GET";
             this.btnPropertyExtras.UseVisualStyleBackColor = true;
@@ -787,54 +791,54 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 174);
+            this.label9.Location = new System.Drawing.Point(11, 161);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 13);
+            this.label9.Size = new System.Drawing.Size(137, 12);
             this.label9.TabIndex = 35;
             this.label9.Text = "property availablility";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(41, 145);
+            this.label8.Location = new System.Drawing.Point(41, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.Size = new System.Drawing.Size(89, 12);
             this.label8.TabIndex = 34;
             this.label8.Text = "property rates";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(630, 145);
+            this.label7.Location = new System.Drawing.Point(630, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.Size = new System.Drawing.Size(113, 12);
             this.label7.TabIndex = 33;
             this.label7.Text = "property enquiries";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(41, 87);
+            this.label6.Location = new System.Drawing.Point(41, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.Size = new System.Drawing.Size(95, 12);
             this.label6.TabIndex = 32;
             this.label6.Text = "property images";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 57);
+            this.label4.Location = new System.Drawing.Point(41, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(95, 12);
             this.label4.TabIndex = 31;
             this.label4.Text = "property detail";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 29);
+            this.label3.Location = new System.Drawing.Point(41, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(83, 12);
             this.label3.TabIndex = 30;
             this.label3.Text = "property list";
             // 
@@ -863,32 +867,32 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1177, 240);
+            this.groupBox3.Size = new System.Drawing.Size(1177, 279);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             // 
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(549, 94);
+            this.label100.Location = new System.Drawing.Point(549, 87);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(86, 13);
+            this.label100.Size = new System.Drawing.Size(107, 12);
             this.label100.TabIndex = 49;
             this.label100.Text = "If-Modified-Since";
             // 
             // txtIfModifiedSince
             // 
-            this.txtIfModifiedSince.Location = new System.Drawing.Point(653, 91);
+            this.txtIfModifiedSince.Location = new System.Drawing.Point(653, 84);
             this.txtIfModifiedSince.Name = "txtIfModifiedSince";
-            this.txtIfModifiedSince.Size = new System.Drawing.Size(311, 20);
+            this.txtIfModifiedSince.Size = new System.Drawing.Size(311, 21);
             this.txtIfModifiedSince.TabIndex = 48;
             this.txtIfModifiedSince.Text = "2015-10-29T15:17:36";
             // 
             // btnAmenities
             // 
-            this.btnAmenities.Location = new System.Drawing.Point(435, 165);
+            this.btnAmenities.Location = new System.Drawing.Point(435, 152);
             this.btnAmenities.Name = "btnAmenities";
-            this.btnAmenities.Size = new System.Drawing.Size(54, 25);
+            this.btnAmenities.Size = new System.Drawing.Size(54, 23);
             this.btnAmenities.TabIndex = 47;
             this.btnAmenities.Text = "GET";
             this.btnAmenities.UseVisualStyleBackColor = true;
@@ -896,26 +900,26 @@
             // 
             // txtAmenities
             // 
-            this.txtAmenities.Location = new System.Drawing.Point(118, 167);
+            this.txtAmenities.Location = new System.Drawing.Point(118, 154);
             this.txtAmenities.Name = "txtAmenities";
-            this.txtAmenities.Size = new System.Drawing.Size(311, 20);
+            this.txtAmenities.Size = new System.Drawing.Size(311, 21);
             this.txtAmenities.TabIndex = 46;
             this.txtAmenities.Text = "/apis/amenities";
             // 
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(29, 170);
+            this.label80.Location = new System.Drawing.Point(29, 157);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(52, 13);
+            this.label80.Size = new System.Drawing.Size(59, 12);
             this.label80.TabIndex = 45;
             this.label80.Text = "Amenities";
             // 
             // btnLocations
             // 
-            this.btnLocations.Location = new System.Drawing.Point(435, 135);
+            this.btnLocations.Location = new System.Drawing.Point(435, 125);
             this.btnLocations.Name = "btnLocations";
-            this.btnLocations.Size = new System.Drawing.Size(54, 25);
+            this.btnLocations.Size = new System.Drawing.Size(54, 23);
             this.btnLocations.TabIndex = 44;
             this.btnLocations.Text = "GET";
             this.btnLocations.UseVisualStyleBackColor = true;
@@ -923,26 +927,26 @@
             // 
             // txtLocations
             // 
-            this.txtLocations.Location = new System.Drawing.Point(118, 138);
+            this.txtLocations.Location = new System.Drawing.Point(118, 127);
             this.txtLocations.Name = "txtLocations";
-            this.txtLocations.Size = new System.Drawing.Size(311, 20);
+            this.txtLocations.Size = new System.Drawing.Size(311, 21);
             this.txtLocations.TabIndex = 43;
             this.txtLocations.Text = "/apis/locations";
             // 
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(29, 141);
+            this.label78.Location = new System.Drawing.Point(29, 130);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(53, 13);
+            this.label78.Size = new System.Drawing.Size(59, 12);
             this.label78.TabIndex = 42;
             this.label78.Text = "Locations";
             // 
             // btnContacts
             // 
-            this.btnContacts.Location = new System.Drawing.Point(435, 106);
+            this.btnContacts.Location = new System.Drawing.Point(435, 98);
             this.btnContacts.Name = "btnContacts";
-            this.btnContacts.Size = new System.Drawing.Size(54, 25);
+            this.btnContacts.Size = new System.Drawing.Size(54, 23);
             this.btnContacts.TabIndex = 41;
             this.btnContacts.Text = "GET";
             this.btnContacts.UseVisualStyleBackColor = true;
@@ -950,35 +954,35 @@
             // 
             // txtContacts
             // 
-            this.txtContacts.Location = new System.Drawing.Point(118, 108);
+            this.txtContacts.Location = new System.Drawing.Point(118, 100);
             this.txtContacts.Name = "txtContacts";
-            this.txtContacts.Size = new System.Drawing.Size(311, 20);
+            this.txtContacts.Size = new System.Drawing.Size(311, 21);
             this.txtContacts.TabIndex = 40;
             this.txtContacts.Text = "/apis/contacts?size=15&index=1&term=";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(29, 112);
+            this.label29.Location = new System.Drawing.Point(29, 103);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(49, 13);
+            this.label29.Size = new System.Drawing.Size(53, 12);
             this.label29.TabIndex = 39;
             this.label29.Text = "Contacts";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(29, 82);
+            this.label27.Location = new System.Drawing.Point(29, 76);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(73, 13);
+            this.label27.Size = new System.Drawing.Size(77, 12);
             this.label27.TabIndex = 38;
             this.label27.Text = "Booking Tags";
             // 
             // btnBookingTags
             // 
-            this.btnBookingTags.Location = new System.Drawing.Point(435, 77);
+            this.btnBookingTags.Location = new System.Drawing.Point(435, 71);
             this.btnBookingTags.Name = "btnBookingTags";
-            this.btnBookingTags.Size = new System.Drawing.Size(54, 25);
+            this.btnBookingTags.Size = new System.Drawing.Size(54, 23);
             this.btnBookingTags.TabIndex = 37;
             this.btnBookingTags.Text = "GET";
             this.btnBookingTags.UseVisualStyleBackColor = true;
@@ -986,34 +990,34 @@
             // 
             // txtBookingTags
             // 
-            this.txtBookingTags.Location = new System.Drawing.Point(118, 79);
+            this.txtBookingTags.Location = new System.Drawing.Point(118, 73);
             this.txtBookingTags.Name = "txtBookingTags";
-            this.txtBookingTags.Size = new System.Drawing.Size(311, 20);
+            this.txtBookingTags.Size = new System.Drawing.Size(311, 21);
             this.txtBookingTags.TabIndex = 36;
             this.txtBookingTags.Text = "/apis/bookingtags";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(29, 24);
+            this.label25.Location = new System.Drawing.Point(29, 22);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.Size = new System.Drawing.Size(47, 12);
             this.label25.TabIndex = 35;
             this.label25.Text = "Sources";
             // 
             // txtSources
             // 
-            this.txtSources.Location = new System.Drawing.Point(118, 21);
+            this.txtSources.Location = new System.Drawing.Point(118, 19);
             this.txtSources.Name = "txtSources";
-            this.txtSources.Size = new System.Drawing.Size(311, 20);
+            this.txtSources.Size = new System.Drawing.Size(311, 21);
             this.txtSources.TabIndex = 34;
             this.txtSources.Text = "/apis/sources";
             // 
             // btnGetSources
             // 
-            this.btnGetSources.Location = new System.Drawing.Point(435, 20);
+            this.btnGetSources.Location = new System.Drawing.Point(435, 18);
             this.btnGetSources.Name = "btnGetSources";
-            this.btnGetSources.Size = new System.Drawing.Size(54, 23);
+            this.btnGetSources.Size = new System.Drawing.Size(54, 21);
             this.btnGetSources.TabIndex = 33;
             this.btnGetSources.Text = "GET";
             this.btnGetSources.UseVisualStyleBackColor = true;
@@ -1022,25 +1026,25 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 53);
+            this.label11.Location = new System.Drawing.Point(29, 49);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 13);
+            this.label11.Size = new System.Drawing.Size(83, 12);
             this.label11.TabIndex = 32;
             this.label11.Text = "Booking Rules";
             // 
             // txtBookingRules
             // 
-            this.txtBookingRules.Location = new System.Drawing.Point(118, 50);
+            this.txtBookingRules.Location = new System.Drawing.Point(118, 46);
             this.txtBookingRules.Name = "txtBookingRules";
-            this.txtBookingRules.Size = new System.Drawing.Size(311, 20);
+            this.txtBookingRules.Size = new System.Drawing.Size(311, 21);
             this.txtBookingRules.TabIndex = 31;
             this.txtBookingRules.Text = "/apis/bookingrules";
             // 
             // btnBookingRules
             // 
-            this.btnBookingRules.Location = new System.Drawing.Point(435, 49);
+            this.btnBookingRules.Location = new System.Drawing.Point(435, 45);
             this.btnBookingRules.Name = "btnBookingRules";
-            this.btnBookingRules.Size = new System.Drawing.Size(54, 23);
+            this.btnBookingRules.Size = new System.Drawing.Size(54, 21);
             this.btnBookingRules.TabIndex = 30;
             this.btnBookingRules.Text = "GET";
             this.btnBookingRules.UseVisualStyleBackColor = true;
@@ -1083,31 +1087,31 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1177, 240);
+            this.groupBox4.Size = new System.Drawing.Size(1177, 279);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
             // txtCreatedate
             // 
-            this.txtCreatedate.Location = new System.Drawing.Point(475, 153);
+            this.txtCreatedate.Location = new System.Drawing.Point(475, 141);
             this.txtCreatedate.Name = "txtCreatedate";
-            this.txtCreatedate.Size = new System.Drawing.Size(179, 20);
+            this.txtCreatedate.Size = new System.Drawing.Size(179, 21);
             this.txtCreatedate.TabIndex = 33;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(403, 153);
+            this.label26.Location = new System.Drawing.Point(403, 141);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(58, 13);
+            this.label26.Size = new System.Drawing.Size(65, 12);
             this.label26.TabIndex = 32;
             this.label26.Text = "createdate";
             // 
             // btnPostEnquiry
             // 
-            this.btnPostEnquiry.Location = new System.Drawing.Point(660, 182);
+            this.btnPostEnquiry.Location = new System.Drawing.Point(660, 168);
             this.btnPostEnquiry.Name = "btnPostEnquiry";
-            this.btnPostEnquiry.Size = new System.Drawing.Size(46, 23);
+            this.btnPostEnquiry.Size = new System.Drawing.Size(46, 21);
             this.btnPostEnquiry.TabIndex = 31;
             this.btnPostEnquiry.Text = "POST";
             this.btnPostEnquiry.UseVisualStyleBackColor = true;
@@ -1115,244 +1119,244 @@
             // 
             // txtApiImportEnquiry
             // 
-            this.txtApiImportEnquiry.Location = new System.Drawing.Point(474, 182);
+            this.txtApiImportEnquiry.Location = new System.Drawing.Point(474, 168);
             this.txtApiImportEnquiry.Name = "txtApiImportEnquiry";
-            this.txtApiImportEnquiry.Size = new System.Drawing.Size(180, 20);
+            this.txtApiImportEnquiry.Size = new System.Drawing.Size(180, 21);
             this.txtApiImportEnquiry.TabIndex = 28;
             this.txtApiImportEnquiry.Text = "/apis/enquiry";
             // 
             // txtComments
             // 
-            this.txtComments.Location = new System.Drawing.Point(62, 158);
+            this.txtComments.Location = new System.Drawing.Point(62, 146);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(326, 61);
+            this.txtComments.Size = new System.Drawing.Size(326, 57);
             this.txtComments.TabIndex = 27;
             this.txtComments.Text = "Test from iPro";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 161);
+            this.label24.Location = new System.Drawing.Point(3, 149);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(55, 13);
+            this.label24.Size = new System.Drawing.Size(53, 12);
             this.label24.TabIndex = 26;
             this.label24.Text = "comments";
             // 
             // txtSource
             // 
-            this.txtSource.Location = new System.Drawing.Point(475, 124);
+            this.txtSource.Location = new System.Drawing.Point(475, 114);
             this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(179, 20);
+            this.txtSource.Size = new System.Drawing.Size(179, 21);
             this.txtSource.TabIndex = 25;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(415, 127);
+            this.label23.Location = new System.Drawing.Point(415, 117);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 13);
+            this.label23.Size = new System.Drawing.Size(41, 12);
             this.label23.TabIndex = 24;
             this.label23.Text = "source";
             // 
             // txtPropertyIDs
             // 
-            this.txtPropertyIDs.Location = new System.Drawing.Point(474, 28);
+            this.txtPropertyIDs.Location = new System.Drawing.Point(474, 26);
             this.txtPropertyIDs.Name = "txtPropertyIDs";
-            this.txtPropertyIDs.Size = new System.Drawing.Size(180, 20);
+            this.txtPropertyIDs.Size = new System.Drawing.Size(180, 21);
             this.txtPropertyIDs.TabIndex = 23;
             this.txtPropertyIDs.Text = "8849,8862";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(397, 31);
+            this.label22.Location = new System.Drawing.Point(397, 29);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 13);
+            this.label22.Size = new System.Drawing.Size(71, 12);
             this.label22.TabIndex = 22;
             this.label22.Text = "propertyids";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(474, 91);
+            this.txtEmail.Location = new System.Drawing.Point(474, 84);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(180, 20);
+            this.txtEmail.Size = new System.Drawing.Size(180, 21);
             this.txtEmail.TabIndex = 21;
             this.txtEmail.Text = "dayi@ipro-software.com";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(534, 66);
+            this.label21.Location = new System.Drawing.Point(534, 61);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(40, 13);
+            this.label21.Size = new System.Drawing.Size(41, 12);
             this.label21.TabIndex = 20;
             this.label21.Text = "budget";
             // 
             // txtBudget
             // 
-            this.txtBudget.Location = new System.Drawing.Point(576, 62);
+            this.txtBudget.Location = new System.Drawing.Point(576, 57);
             this.txtBudget.Name = "txtBudget";
-            this.txtBudget.Size = new System.Drawing.Size(78, 20);
+            this.txtBudget.Size = new System.Drawing.Size(78, 21);
             this.txtBudget.TabIndex = 19;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(433, 98);
+            this.label20.Location = new System.Drawing.Point(433, 90);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 13);
+            this.label20.Size = new System.Drawing.Size(35, 12);
             this.label20.TabIndex = 18;
             this.label20.Text = "email";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(252, 91);
+            this.txtPhone.Location = new System.Drawing.Point(252, 84);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(136, 20);
+            this.txtPhone.Size = new System.Drawing.Size(136, 21);
             this.txtPhone.TabIndex = 17;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(213, 98);
+            this.label19.Location = new System.Drawing.Point(213, 90);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 13);
+            this.label19.Size = new System.Drawing.Size(35, 12);
             this.label19.TabIndex = 16;
             this.label19.Text = "phone";
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(62, 91);
+            this.txtMobile.Location = new System.Drawing.Point(62, 84);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(133, 20);
+            this.txtMobile.Size = new System.Drawing.Size(133, 21);
             this.txtMobile.TabIndex = 15;
             this.txtMobile.Text = "13599927367";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(16, 98);
+            this.label18.Location = new System.Drawing.Point(16, 90);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 13);
+            this.label18.Size = new System.Drawing.Size(41, 12);
             this.label18.TabIndex = 14;
             this.label18.Text = "mobile";
             // 
             // txtEndDate
             // 
-            this.txtEndDate.Location = new System.Drawing.Point(252, 62);
+            this.txtEndDate.Location = new System.Drawing.Point(252, 57);
             this.txtEndDate.Name = "txtEndDate";
-            this.txtEndDate.Size = new System.Drawing.Size(136, 20);
+            this.txtEndDate.Size = new System.Drawing.Size(136, 21);
             this.txtEndDate.TabIndex = 13;
             this.txtEndDate.Text = "yyyy-MM-ddTHH:mm:ssZ";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(205, 65);
+            this.label17.Location = new System.Drawing.Point(205, 60);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 13);
+            this.label17.Size = new System.Drawing.Size(47, 12);
             this.label17.TabIndex = 12;
             this.label17.Text = "enddate";
             // 
             // txtDays
             // 
-            this.txtDays.Location = new System.Drawing.Point(474, 62);
+            this.txtDays.Location = new System.Drawing.Point(474, 57);
             this.txtDays.Name = "txtDays";
-            this.txtDays.Size = new System.Drawing.Size(54, 20);
+            this.txtDays.Size = new System.Drawing.Size(54, 21);
             this.txtDays.TabIndex = 11;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(439, 66);
+            this.label16.Location = new System.Drawing.Point(439, 61);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(29, 13);
+            this.label16.Size = new System.Drawing.Size(29, 12);
             this.label16.TabIndex = 10;
             this.label16.Text = "days";
             // 
             // txtStartDate
             // 
-            this.txtStartDate.Location = new System.Drawing.Point(62, 62);
+            this.txtStartDate.Location = new System.Drawing.Point(62, 57);
             this.txtStartDate.Name = "txtStartDate";
-            this.txtStartDate.Size = new System.Drawing.Size(133, 20);
+            this.txtStartDate.Size = new System.Drawing.Size(133, 21);
             this.txtStartDate.TabIndex = 9;
             this.txtStartDate.Text = "yyyy-MM-ddTHH:mm:ssZ";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(2, 65);
+            this.label15.Location = new System.Drawing.Point(2, 60);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.Size = new System.Drawing.Size(59, 12);
             this.label15.TabIndex = 8;
             this.label15.Text = "startdate";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(252, 28);
+            this.txtLastName.Location = new System.Drawing.Point(252, 26);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(136, 20);
+            this.txtLastName.Size = new System.Drawing.Size(136, 21);
             this.txtLastName.TabIndex = 7;
             this.txtLastName.Text = "Chen";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(199, 31);
+            this.label14.Location = new System.Drawing.Point(199, 29);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 6;
             this.label14.Text = "lastname";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(62, 28);
+            this.txtFirstName.Location = new System.Drawing.Point(62, 26);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(133, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(133, 21);
             this.txtFirstName.TabIndex = 5;
             this.txtFirstName.Text = "Dayi";
             // 
             // lblfirttname
             // 
             this.lblfirttname.AutoSize = true;
-            this.lblfirttname.Location = new System.Drawing.Point(2, 31);
+            this.lblfirttname.Location = new System.Drawing.Point(2, 29);
             this.lblfirttname.Name = "lblfirttname";
-            this.lblfirttname.Size = new System.Drawing.Size(49, 13);
+            this.lblfirttname.Size = new System.Drawing.Size(59, 12);
             this.lblfirttname.TabIndex = 4;
             this.lblfirttname.Text = "firstname";
             // 
             // txtChildren
             // 
-            this.txtChildren.Location = new System.Drawing.Point(252, 124);
+            this.txtChildren.Location = new System.Drawing.Point(252, 114);
             this.txtChildren.Name = "txtChildren";
-            this.txtChildren.Size = new System.Drawing.Size(136, 20);
+            this.txtChildren.Size = new System.Drawing.Size(136, 21);
             this.txtChildren.TabIndex = 3;
             this.txtChildren.Text = "1";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(199, 127);
+            this.label13.Location = new System.Drawing.Point(199, 117);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 13);
+            this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 2;
             this.label13.Text = "children";
             // 
             // txtAdults
             // 
-            this.txtAdults.Location = new System.Drawing.Point(62, 124);
+            this.txtAdults.Location = new System.Drawing.Point(62, 114);
             this.txtAdults.Name = "txtAdults";
-            this.txtAdults.Size = new System.Drawing.Size(133, 20);
+            this.txtAdults.Size = new System.Drawing.Size(133, 21);
             this.txtAdults.TabIndex = 1;
             this.txtAdults.Text = "2";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 127);
+            this.label12.Location = new System.Drawing.Point(16, 117);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.Size = new System.Drawing.Size(41, 12);
             this.label12.TabIndex = 0;
             this.label12.Text = "adults";
             // 
@@ -1362,11 +1366,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHttpRequest.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHttpRequest.Location = new System.Drawing.Point(12, 460);
+            this.txtHttpRequest.Location = new System.Drawing.Point(12, 485);
             this.txtHttpRequest.Multiline = true;
             this.txtHttpRequest.Name = "txtHttpRequest";
             this.txtHttpRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHttpRequest.Size = new System.Drawing.Size(553, 301);
+            this.txtHttpRequest.Size = new System.Drawing.Size(553, 365);
             this.txtHttpRequest.TabIndex = 33;
             this.txtHttpRequest.Text = "(HTTP reques will be logged here)";
             // 
@@ -1380,10 +1384,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 182);
+            this.tabControl1.Location = new System.Drawing.Point(12, 168);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1191, 272);
+            this.tabControl1.Size = new System.Drawing.Size(1191, 311);
             this.tabControl1.TabIndex = 34;
             // 
             // tabSettings
@@ -1392,7 +1396,7 @@
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettings.Size = new System.Drawing.Size(1183, 246);
+            this.tabSettings.Size = new System.Drawing.Size(1183, 285);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -1403,7 +1407,7 @@
             this.tabProperty.Location = new System.Drawing.Point(4, 22);
             this.tabProperty.Name = "tabProperty";
             this.tabProperty.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProperty.Size = new System.Drawing.Size(1183, 246);
+            this.tabProperty.Size = new System.Drawing.Size(1183, 285);
             this.tabProperty.TabIndex = 0;
             this.tabProperty.Text = "Property";
             this.tabProperty.UseVisualStyleBackColor = true;
@@ -1414,13 +1418,17 @@
             this.tabEnquiry.Location = new System.Drawing.Point(4, 22);
             this.tabEnquiry.Name = "tabEnquiry";
             this.tabEnquiry.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnquiry.Size = new System.Drawing.Size(1183, 246);
+            this.tabEnquiry.Size = new System.Drawing.Size(1183, 285);
             this.tabEnquiry.TabIndex = 1;
             this.tabEnquiry.Text = "Import Enquiry";
             this.tabEnquiry.UseVisualStyleBackColor = true;
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.label106);
+            this.tabBooking.Controls.Add(this.txtCardPartialNumbers);
+            this.tabBooking.Controls.Add(this.label105);
+            this.tabBooking.Controls.Add(this.txtPaymentToken);
             this.tabBooking.Controls.Add(this.cbBookingSendEmail);
             this.tabBooking.Controls.Add(this.label99);
             this.tabBooking.Controls.Add(this.txtPaidAmount);
@@ -1436,17 +1444,34 @@
             this.tabBooking.Location = new System.Drawing.Point(4, 22);
             this.tabBooking.Name = "tabBooking";
             this.tabBooking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooking.Size = new System.Drawing.Size(1183, 246);
+            this.tabBooking.Size = new System.Drawing.Size(1183, 285);
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
             // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(6, 55);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(77, 12);
+            this.label105.TabIndex = 46;
+            this.label105.Text = "PaymentToken";
+            // 
+            // txtPaymentToken
+            // 
+            this.txtPaymentToken.Location = new System.Drawing.Point(95, 52);
+            this.txtPaymentToken.Name = "txtPaymentToken";
+            this.txtPaymentToken.Size = new System.Drawing.Size(219, 21);
+            this.txtPaymentToken.TabIndex = 45;
+            this.txtPaymentToken.Text = "d7124bc2-7276-473e-9c37-a1b154b8404e";
+            // 
             // cbBookingSendEmail
             // 
             this.cbBookingSendEmail.AutoSize = true;
-            this.cbBookingSendEmail.Location = new System.Drawing.Point(752, 17);
+            this.cbBookingSendEmail.Location = new System.Drawing.Point(752, 16);
             this.cbBookingSendEmail.Name = "cbBookingSendEmail";
-            this.cbBookingSendEmail.Size = new System.Drawing.Size(79, 17);
+            this.cbBookingSendEmail.Size = new System.Drawing.Size(84, 16);
             this.cbBookingSendEmail.TabIndex = 44;
             this.cbBookingSendEmail.Text = "Send Email";
             this.cbBookingSendEmail.UseVisualStyleBackColor = true;
@@ -1454,57 +1479,57 @@
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(524, 17);
+            this.label99.Location = new System.Drawing.Point(524, 16);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(64, 13);
+            this.label99.Size = new System.Drawing.Size(65, 12);
             this.label99.TabIndex = 43;
             this.label99.Text = "PaidAmount";
             // 
             // txtPaidAmount
             // 
-            this.txtPaidAmount.Location = new System.Drawing.Point(624, 14);
+            this.txtPaidAmount.Location = new System.Drawing.Point(624, 13);
             this.txtPaidAmount.Name = "txtPaidAmount";
-            this.txtPaidAmount.Size = new System.Drawing.Size(90, 20);
+            this.txtPaidAmount.Size = new System.Drawing.Size(90, 21);
             this.txtPaidAmount.TabIndex = 42;
             this.txtPaidAmount.Text = "300.00";
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(364, 17);
+            this.label56.Location = new System.Drawing.Point(364, 16);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(41, 13);
+            this.label56.Size = new System.Drawing.Size(41, 12);
             this.label56.TabIndex = 41;
             this.label56.Text = "Source";
             // 
             // txtBookingSource
             // 
-            this.txtBookingSource.Location = new System.Drawing.Point(429, 14);
+            this.txtBookingSource.Location = new System.Drawing.Point(429, 13);
             this.txtBookingSource.Name = "txtBookingSource";
-            this.txtBookingSource.Size = new System.Drawing.Size(60, 20);
+            this.txtBookingSource.Size = new System.Drawing.Size(60, 21);
             this.txtBookingSource.TabIndex = 40;
             // 
             // txtBookingEnquiryId
             // 
-            this.txtBookingEnquiryId.Location = new System.Drawing.Point(276, 14);
+            this.txtBookingEnquiryId.Location = new System.Drawing.Point(276, 13);
             this.txtBookingEnquiryId.Name = "txtBookingEnquiryId";
-            this.txtBookingEnquiryId.Size = new System.Drawing.Size(60, 20);
+            this.txtBookingEnquiryId.Size = new System.Drawing.Size(60, 21);
             this.txtBookingEnquiryId.TabIndex = 39;
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(204, 17);
+            this.label55.Location = new System.Drawing.Point(204, 16);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(51, 13);
+            this.label55.Size = new System.Drawing.Size(59, 12);
             this.label55.TabIndex = 38;
             this.label55.Text = "EnquiryId";
             // 
             // btnPostBooking
             // 
-            this.btnPostBooking.Location = new System.Drawing.Point(1076, 19);
+            this.btnPostBooking.Location = new System.Drawing.Point(1076, 18);
             this.btnPostBooking.Name = "btnPostBooking";
-            this.btnPostBooking.Size = new System.Drawing.Size(46, 23);
+            this.btnPostBooking.Size = new System.Drawing.Size(46, 21);
             this.btnPostBooking.TabIndex = 33;
             this.btnPostBooking.Text = "POST";
             this.btnPostBooking.UseVisualStyleBackColor = true;
@@ -1512,25 +1537,25 @@
             // 
             // txtApiBooking
             // 
-            this.txtApiBooking.Location = new System.Drawing.Point(904, 23);
+            this.txtApiBooking.Location = new System.Drawing.Point(904, 21);
             this.txtApiBooking.Name = "txtApiBooking";
-            this.txtApiBooking.Size = new System.Drawing.Size(157, 20);
+            this.txtApiBooking.Size = new System.Drawing.Size(157, 21);
             this.txtApiBooking.TabIndex = 32;
             this.txtApiBooking.Text = "/apis/booking";
             // 
             // txtBookingTagIds
             // 
-            this.txtBookingTagIds.Location = new System.Drawing.Point(95, 14);
+            this.txtBookingTagIds.Location = new System.Drawing.Point(95, 13);
             this.txtBookingTagIds.Name = "txtBookingTagIds";
-            this.txtBookingTagIds.Size = new System.Drawing.Size(80, 20);
+            this.txtBookingTagIds.Size = new System.Drawing.Size(80, 21);
             this.txtBookingTagIds.TabIndex = 36;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(6, 17);
+            this.label45.Location = new System.Drawing.Point(6, 16);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(79, 13);
+            this.label45.Size = new System.Drawing.Size(83, 12);
             this.label45.TabIndex = 37;
             this.label45.Text = "BookingTagIds";
             // 
@@ -1539,11 +1564,11 @@
             this.tabControl2.Controls.Add(this.tabCustomer);
             this.tabControl2.Controls.Add(this.tabProperty1);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl2.Location = new System.Drawing.Point(3, 46);
+            this.tabControl2.Location = new System.Drawing.Point(3, 100);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1177, 197);
+            this.tabControl2.Size = new System.Drawing.Size(1177, 182);
             this.tabControl2.TabIndex = 1;
             // 
             // tabCustomer
@@ -1581,7 +1606,7 @@
             this.tabCustomer.Location = new System.Drawing.Point(4, 22);
             this.tabCustomer.Name = "tabCustomer";
             this.tabCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCustomer.Size = new System.Drawing.Size(1169, 171);
+            this.tabCustomer.Size = new System.Drawing.Size(1169, 156);
             this.tabCustomer.TabIndex = 0;
             this.tabCustomer.Text = "Customer";
             this.tabCustomer.UseVisualStyleBackColor = true;
@@ -1589,248 +1614,248 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(635, 134);
+            this.label44.Location = new System.Drawing.Point(635, 124);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(41, 13);
+            this.label44.Size = new System.Drawing.Size(41, 12);
             this.label44.TabIndex = 29;
             this.label44.Text = "Source";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(635, 105);
+            this.label43.Location = new System.Drawing.Point(635, 97);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(43, 13);
+            this.label43.Size = new System.Drawing.Size(47, 12);
             this.label43.TabIndex = 28;
             this.label43.Text = "Country";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(635, 76);
+            this.label42.Location = new System.Drawing.Point(635, 70);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(52, 13);
+            this.label42.Size = new System.Drawing.Size(53, 12);
             this.label42.TabIndex = 27;
             this.label42.Text = "Postcode";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(635, 47);
+            this.label41.Location = new System.Drawing.Point(635, 43);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(40, 13);
+            this.label41.Size = new System.Drawing.Size(41, 12);
             this.label41.TabIndex = 26;
             this.label41.Text = "County";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(635, 17);
+            this.label40.Location = new System.Drawing.Point(635, 16);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(24, 13);
+            this.label40.Size = new System.Drawing.Size(29, 12);
             this.label40.TabIndex = 25;
             this.label40.Text = "City";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(332, 135);
+            this.label39.Location = new System.Drawing.Point(332, 125);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(51, 13);
+            this.label39.Size = new System.Drawing.Size(53, 12);
             this.label39.TabIndex = 24;
             this.label39.Text = "Address2";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(332, 105);
+            this.label38.Location = new System.Drawing.Point(332, 97);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(51, 13);
+            this.label38.Size = new System.Drawing.Size(53, 12);
             this.label38.TabIndex = 23;
             this.label38.Text = "Address1";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(332, 76);
+            this.label37.Location = new System.Drawing.Point(332, 70);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(38, 13);
+            this.label37.Size = new System.Drawing.Size(41, 12);
             this.label37.TabIndex = 22;
             this.label37.Text = "Mobile";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(332, 47);
+            this.label36.Location = new System.Drawing.Point(332, 43);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 13);
+            this.label36.Size = new System.Drawing.Size(59, 12);
             this.label36.TabIndex = 21;
             this.label36.Text = "Telephone";
             // 
             // txtBookingContactSource
             // 
-            this.txtBookingContactSource.Location = new System.Drawing.Point(700, 131);
+            this.txtBookingContactSource.Location = new System.Drawing.Point(700, 121);
             this.txtBookingContactSource.Name = "txtBookingContactSource";
-            this.txtBookingContactSource.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactSource.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactSource.TabIndex = 20;
             // 
             // txtBookingContactCountry
             // 
-            this.txtBookingContactCountry.Location = new System.Drawing.Point(700, 102);
+            this.txtBookingContactCountry.Location = new System.Drawing.Point(700, 94);
             this.txtBookingContactCountry.Name = "txtBookingContactCountry";
-            this.txtBookingContactCountry.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactCountry.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactCountry.TabIndex = 19;
             // 
             // txtBookingContactPostcode
             // 
-            this.txtBookingContactPostcode.Location = new System.Drawing.Point(700, 73);
+            this.txtBookingContactPostcode.Location = new System.Drawing.Point(700, 67);
             this.txtBookingContactPostcode.Name = "txtBookingContactPostcode";
-            this.txtBookingContactPostcode.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactPostcode.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactPostcode.TabIndex = 18;
             this.txtBookingContactPostcode.Text = "361000";
             // 
             // txtBookingContactCounty
             // 
-            this.txtBookingContactCounty.Location = new System.Drawing.Point(700, 43);
+            this.txtBookingContactCounty.Location = new System.Drawing.Point(700, 40);
             this.txtBookingContactCounty.Name = "txtBookingContactCounty";
-            this.txtBookingContactCounty.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactCounty.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactCounty.TabIndex = 17;
             // 
             // txtBookingContactCity
             // 
-            this.txtBookingContactCity.Location = new System.Drawing.Point(700, 14);
+            this.txtBookingContactCity.Location = new System.Drawing.Point(700, 13);
             this.txtBookingContactCity.Name = "txtBookingContactCity";
-            this.txtBookingContactCity.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactCity.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactCity.TabIndex = 16;
             this.txtBookingContactCity.Text = "xiamen";
             // 
             // txtBookingContactAddress2
             // 
-            this.txtBookingContactAddress2.Location = new System.Drawing.Point(397, 131);
+            this.txtBookingContactAddress2.Location = new System.Drawing.Point(397, 121);
             this.txtBookingContactAddress2.Name = "txtBookingContactAddress2";
-            this.txtBookingContactAddress2.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactAddress2.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactAddress2.TabIndex = 15;
             // 
             // txtBookingContactAddress1
             // 
-            this.txtBookingContactAddress1.Location = new System.Drawing.Point(397, 102);
+            this.txtBookingContactAddress1.Location = new System.Drawing.Point(397, 94);
             this.txtBookingContactAddress1.Name = "txtBookingContactAddress1";
-            this.txtBookingContactAddress1.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactAddress1.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactAddress1.TabIndex = 14;
             // 
             // txtBookingContactMobile
             // 
-            this.txtBookingContactMobile.Location = new System.Drawing.Point(397, 73);
+            this.txtBookingContactMobile.Location = new System.Drawing.Point(397, 67);
             this.txtBookingContactMobile.Name = "txtBookingContactMobile";
-            this.txtBookingContactMobile.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactMobile.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactMobile.TabIndex = 13;
             this.txtBookingContactMobile.Text = "15078248863";
             // 
             // txtBookingContactTelephone
             // 
-            this.txtBookingContactTelephone.Location = new System.Drawing.Point(397, 43);
+            this.txtBookingContactTelephone.Location = new System.Drawing.Point(397, 40);
             this.txtBookingContactTelephone.Name = "txtBookingContactTelephone";
-            this.txtBookingContactTelephone.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactTelephone.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactTelephone.TabIndex = 12;
             this.txtBookingContactTelephone.Text = "0592539975";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(332, 17);
+            this.label35.Location = new System.Drawing.Point(332, 16);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(38, 13);
+            this.label35.Size = new System.Drawing.Size(41, 12);
             this.label35.TabIndex = 11;
             this.label35.Text = "Email1";
             // 
             // txtBookingContactEmail1
             // 
-            this.txtBookingContactEmail1.Location = new System.Drawing.Point(397, 14);
+            this.txtBookingContactEmail1.Location = new System.Drawing.Point(397, 13);
             this.txtBookingContactEmail1.Name = "txtBookingContactEmail1";
-            this.txtBookingContactEmail1.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactEmail1.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactEmail1.TabIndex = 10;
             // 
             // txtBookingContactId
             // 
-            this.txtBookingContactId.Location = new System.Drawing.Point(80, 14);
+            this.txtBookingContactId.Location = new System.Drawing.Point(80, 13);
             this.txtBookingContactId.Name = "txtBookingContactId";
-            this.txtBookingContactId.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactId.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactId.TabIndex = 1;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(15, 135);
+            this.label34.Location = new System.Drawing.Point(15, 125);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(32, 13);
+            this.label34.Size = new System.Drawing.Size(35, 12);
             this.label34.TabIndex = 9;
             this.label34.Text = "Email";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(15, 17);
+            this.label30.Location = new System.Drawing.Point(15, 16);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 13);
+            this.label30.Size = new System.Drawing.Size(59, 12);
             this.label30.TabIndex = 0;
             this.label30.Text = "ContactId";
             // 
             // txtBookingContactEmail
             // 
-            this.txtBookingContactEmail.Location = new System.Drawing.Point(80, 131);
+            this.txtBookingContactEmail.Location = new System.Drawing.Point(80, 121);
             this.txtBookingContactEmail.Name = "txtBookingContactEmail";
-            this.txtBookingContactEmail.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactEmail.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactEmail.TabIndex = 8;
             this.txtBookingContactEmail.Text = "rulee@ipro-software.com";
             // 
             // txtBookingContactTitle
             // 
-            this.txtBookingContactTitle.Location = new System.Drawing.Point(80, 43);
+            this.txtBookingContactTitle.Location = new System.Drawing.Point(80, 40);
             this.txtBookingContactTitle.Name = "txtBookingContactTitle";
-            this.txtBookingContactTitle.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactTitle.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactTitle.TabIndex = 2;
             this.txtBookingContactTitle.Text = "Mr";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(15, 105);
+            this.label33.Location = new System.Drawing.Point(15, 97);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(55, 13);
+            this.label33.Size = new System.Drawing.Size(53, 12);
             this.label33.TabIndex = 7;
             this.label33.Text = "LastName";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(15, 47);
+            this.label31.Location = new System.Drawing.Point(15, 43);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(27, 13);
+            this.label31.Size = new System.Drawing.Size(35, 12);
             this.label31.TabIndex = 3;
             this.label31.Text = "Title";
             // 
             // txtBookingContactLastName
             // 
-            this.txtBookingContactLastName.Location = new System.Drawing.Point(80, 102);
+            this.txtBookingContactLastName.Location = new System.Drawing.Point(80, 94);
             this.txtBookingContactLastName.Name = "txtBookingContactLastName";
-            this.txtBookingContactLastName.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactLastName.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactLastName.TabIndex = 6;
             this.txtBookingContactLastName.Text = "Chen";
             // 
             // txtBookingContactFirstName
             // 
-            this.txtBookingContactFirstName.Location = new System.Drawing.Point(80, 73);
+            this.txtBookingContactFirstName.Location = new System.Drawing.Point(80, 67);
             this.txtBookingContactFirstName.Name = "txtBookingContactFirstName";
-            this.txtBookingContactFirstName.Size = new System.Drawing.Size(145, 20);
+            this.txtBookingContactFirstName.Size = new System.Drawing.Size(145, 21);
             this.txtBookingContactFirstName.TabIndex = 4;
             this.txtBookingContactFirstName.Text = "Ronglin";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(15, 76);
+            this.label32.Location = new System.Drawing.Point(15, 70);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 13);
+            this.label32.Size = new System.Drawing.Size(59, 12);
             this.label32.TabIndex = 5;
             this.label32.Text = "FirstName";
             // 
@@ -1859,16 +1884,16 @@
             this.tabProperty1.Location = new System.Drawing.Point(4, 22);
             this.tabProperty1.Name = "tabProperty1";
             this.tabProperty1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProperty1.Size = new System.Drawing.Size(1169, 171);
+            this.tabProperty1.Size = new System.Drawing.Size(1169, 156);
             this.tabProperty1.TabIndex = 1;
             this.tabProperty1.Text = "Property1";
             this.tabProperty1.UseVisualStyleBackColor = true;
             // 
             // txtBookingProperty1LeadGuestAge
             // 
-            this.txtBookingProperty1LeadGuestAge.Location = new System.Drawing.Point(460, 57);
+            this.txtBookingProperty1LeadGuestAge.Location = new System.Drawing.Point(460, 53);
             this.txtBookingProperty1LeadGuestAge.Name = "txtBookingProperty1LeadGuestAge";
-            this.txtBookingProperty1LeadGuestAge.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1LeadGuestAge.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1LeadGuestAge.TabIndex = 7;
             // 
             // tabControl4
@@ -1879,7 +1904,7 @@
             this.tabControl4.Location = new System.Drawing.Point(606, 3);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(280, 165);
+            this.tabControl4.Size = new System.Drawing.Size(280, 150);
             this.tabControl4.TabIndex = 24;
             // 
             // tabGuest1
@@ -1893,7 +1918,7 @@
             this.tabGuest1.Location = new System.Drawing.Point(4, 22);
             this.tabGuest1.Name = "tabGuest1";
             this.tabGuest1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGuest1.Size = new System.Drawing.Size(272, 139);
+            this.tabGuest1.Size = new System.Drawing.Size(272, 124);
             this.tabGuest1.TabIndex = 1;
             this.tabGuest1.Text = "Guest1";
             this.tabGuest1.UseVisualStyleBackColor = true;
@@ -1901,49 +1926,49 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(28, 76);
+            this.label63.Location = new System.Drawing.Point(28, 70);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(48, 13);
+            this.label63.Size = new System.Drawing.Size(53, 12);
             this.label63.TabIndex = 21;
             this.label63.Text = "Passport";
             // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(28, 47);
+            this.label64.Location = new System.Drawing.Point(28, 43);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(26, 13);
+            this.label64.Size = new System.Drawing.Size(23, 12);
             this.label64.TabIndex = 20;
             this.label64.Text = "Age";
             // 
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(28, 17);
+            this.label65.Location = new System.Drawing.Point(28, 16);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(35, 13);
+            this.label65.Size = new System.Drawing.Size(29, 12);
             this.label65.TabIndex = 19;
             this.label65.Text = "Name";
             // 
             // txtBookingProperty1Guest1Age
             // 
-            this.txtBookingProperty1Guest1Age.Location = new System.Drawing.Point(87, 43);
+            this.txtBookingProperty1Guest1Age.Location = new System.Drawing.Point(87, 40);
             this.txtBookingProperty1Guest1Age.Name = "txtBookingProperty1Guest1Age";
-            this.txtBookingProperty1Guest1Age.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Guest1Age.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Guest1Age.TabIndex = 18;
             // 
             // txtBookingProperty1Guest1Passport
             // 
-            this.txtBookingProperty1Guest1Passport.Location = new System.Drawing.Point(87, 73);
+            this.txtBookingProperty1Guest1Passport.Location = new System.Drawing.Point(87, 67);
             this.txtBookingProperty1Guest1Passport.Name = "txtBookingProperty1Guest1Passport";
-            this.txtBookingProperty1Guest1Passport.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Guest1Passport.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Guest1Passport.TabIndex = 17;
             // 
             // txtBookingProperty1Guest1Name
             // 
-            this.txtBookingProperty1Guest1Name.Location = new System.Drawing.Point(87, 14);
+            this.txtBookingProperty1Guest1Name.Location = new System.Drawing.Point(87, 13);
             this.txtBookingProperty1Guest1Name.Name = "txtBookingProperty1Guest1Name";
-            this.txtBookingProperty1Guest1Name.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Guest1Name.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Guest1Name.TabIndex = 16;
             this.txtBookingProperty1Guest1Name.Text = "Bruce Lee";
             // 
@@ -1957,7 +1982,7 @@
             this.tabGuest2.Controls.Add(this.txtBookingProperty1Guest2Name);
             this.tabGuest2.Location = new System.Drawing.Point(4, 22);
             this.tabGuest2.Name = "tabGuest2";
-            this.tabGuest2.Size = new System.Drawing.Size(272, 139);
+            this.tabGuest2.Size = new System.Drawing.Size(272, 124);
             this.tabGuest2.TabIndex = 3;
             this.tabGuest2.Text = "Guest2";
             this.tabGuest2.UseVisualStyleBackColor = true;
@@ -1965,65 +1990,65 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(28, 76);
+            this.label57.Location = new System.Drawing.Point(28, 70);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(48, 13);
+            this.label57.Size = new System.Drawing.Size(53, 12);
             this.label57.TabIndex = 27;
             this.label57.Text = "Passport";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(28, 47);
+            this.label58.Location = new System.Drawing.Point(28, 43);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(26, 13);
+            this.label58.Size = new System.Drawing.Size(23, 12);
             this.label58.TabIndex = 26;
             this.label58.Text = "Age";
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(28, 17);
+            this.label61.Location = new System.Drawing.Point(28, 16);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(35, 13);
+            this.label61.Size = new System.Drawing.Size(29, 12);
             this.label61.TabIndex = 25;
             this.label61.Text = "Name";
             // 
             // txtBookingProperty1Guest2Age
             // 
-            this.txtBookingProperty1Guest2Age.Location = new System.Drawing.Point(87, 43);
+            this.txtBookingProperty1Guest2Age.Location = new System.Drawing.Point(87, 40);
             this.txtBookingProperty1Guest2Age.Name = "txtBookingProperty1Guest2Age";
-            this.txtBookingProperty1Guest2Age.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Guest2Age.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Guest2Age.TabIndex = 24;
             // 
             // txtBookingProperty1Guest2Passport
             // 
-            this.txtBookingProperty1Guest2Passport.Location = new System.Drawing.Point(87, 73);
+            this.txtBookingProperty1Guest2Passport.Location = new System.Drawing.Point(87, 67);
             this.txtBookingProperty1Guest2Passport.Name = "txtBookingProperty1Guest2Passport";
-            this.txtBookingProperty1Guest2Passport.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Guest2Passport.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Guest2Passport.TabIndex = 23;
             // 
             // txtBookingProperty1Guest2Name
             // 
-            this.txtBookingProperty1Guest2Name.Location = new System.Drawing.Point(87, 14);
+            this.txtBookingProperty1Guest2Name.Location = new System.Drawing.Point(87, 13);
             this.txtBookingProperty1Guest2Name.Name = "txtBookingProperty1Guest2Name";
-            this.txtBookingProperty1Guest2Name.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Guest2Name.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Guest2Name.TabIndex = 22;
             this.txtBookingProperty1Guest2Name.Text = "Wen Ye";
             // 
             // txtBookingProperty1LeadGuestName
             // 
-            this.txtBookingProperty1LeadGuestName.Location = new System.Drawing.Point(460, 28);
+            this.txtBookingProperty1LeadGuestName.Location = new System.Drawing.Point(460, 26);
             this.txtBookingProperty1LeadGuestName.Name = "txtBookingProperty1LeadGuestName";
-            this.txtBookingProperty1LeadGuestName.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1LeadGuestName.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1LeadGuestName.TabIndex = 1;
             this.txtBookingProperty1LeadGuestName.Text = "Rulee Chen";
             // 
             // txtBookingProperty1LeadGuestPassport
             // 
-            this.txtBookingProperty1LeadGuestPassport.Location = new System.Drawing.Point(460, 87);
+            this.txtBookingProperty1LeadGuestPassport.Location = new System.Drawing.Point(460, 80);
             this.txtBookingProperty1LeadGuestPassport.Name = "txtBookingProperty1LeadGuestPassport";
-            this.txtBookingProperty1LeadGuestPassport.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1LeadGuestPassport.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1LeadGuestPassport.TabIndex = 6;
             // 
             // tabControl3
@@ -2034,7 +2059,7 @@
             this.tabControl3.Location = new System.Drawing.Point(886, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(280, 165);
+            this.tabControl3.Size = new System.Drawing.Size(280, 150);
             this.tabControl3.TabIndex = 22;
             // 
             // tabExtra1
@@ -2046,42 +2071,42 @@
             this.tabExtra1.Location = new System.Drawing.Point(4, 22);
             this.tabExtra1.Name = "tabExtra1";
             this.tabExtra1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabExtra1.Size = new System.Drawing.Size(272, 139);
+            this.tabExtra1.Size = new System.Drawing.Size(272, 124);
             this.tabExtra1.TabIndex = 0;
             this.tabExtra1.Text = "Extra1";
             this.tabExtra1.UseVisualStyleBackColor = true;
             // 
             // txtBookingProperty1Extra1Qty
             // 
-            this.txtBookingProperty1Extra1Qty.Location = new System.Drawing.Point(62, 47);
+            this.txtBookingProperty1Extra1Qty.Location = new System.Drawing.Point(62, 43);
             this.txtBookingProperty1Extra1Qty.Name = "txtBookingProperty1Extra1Qty";
-            this.txtBookingProperty1Extra1Qty.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Extra1Qty.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Extra1Qty.TabIndex = 23;
             this.txtBookingProperty1Extra1Qty.Text = "1";
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(24, 50);
+            this.label60.Location = new System.Drawing.Point(24, 46);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(23, 13);
+            this.label60.Size = new System.Drawing.Size(23, 12);
             this.label60.TabIndex = 22;
             this.label60.Text = "Qty";
             // 
             // txtBookingProperty1Extra1Id
             // 
-            this.txtBookingProperty1Extra1Id.Location = new System.Drawing.Point(62, 14);
+            this.txtBookingProperty1Extra1Id.Location = new System.Drawing.Point(62, 13);
             this.txtBookingProperty1Extra1Id.Name = "txtBookingProperty1Extra1Id";
-            this.txtBookingProperty1Extra1Id.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Extra1Id.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Extra1Id.TabIndex = 21;
             this.txtBookingProperty1Extra1Id.Text = "8297";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(24, 17);
+            this.label59.Location = new System.Drawing.Point(24, 16);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(16, 13);
+            this.label59.Size = new System.Drawing.Size(17, 12);
             this.label59.TabIndex = 20;
             this.label59.Text = "Id";
             // 
@@ -2093,169 +2118,169 @@
             this.tabExtra2.Controls.Add(this.label66);
             this.tabExtra2.Location = new System.Drawing.Point(4, 22);
             this.tabExtra2.Name = "tabExtra2";
-            this.tabExtra2.Size = new System.Drawing.Size(272, 139);
+            this.tabExtra2.Size = new System.Drawing.Size(272, 124);
             this.tabExtra2.TabIndex = 2;
             this.tabExtra2.Text = "Extra2";
             this.tabExtra2.UseVisualStyleBackColor = true;
             // 
             // txtBookingProperty1Extra2Qty
             // 
-            this.txtBookingProperty1Extra2Qty.Location = new System.Drawing.Point(62, 47);
+            this.txtBookingProperty1Extra2Qty.Location = new System.Drawing.Point(62, 43);
             this.txtBookingProperty1Extra2Qty.Name = "txtBookingProperty1Extra2Qty";
-            this.txtBookingProperty1Extra2Qty.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Extra2Qty.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Extra2Qty.TabIndex = 27;
             this.txtBookingProperty1Extra2Qty.Text = "1";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(24, 50);
+            this.label62.Location = new System.Drawing.Point(24, 46);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(23, 13);
+            this.label62.Size = new System.Drawing.Size(23, 12);
             this.label62.TabIndex = 26;
             this.label62.Text = "Qty";
             // 
             // txtBookingProperty1Extra2Id
             // 
-            this.txtBookingProperty1Extra2Id.Location = new System.Drawing.Point(62, 14);
+            this.txtBookingProperty1Extra2Id.Location = new System.Drawing.Point(62, 13);
             this.txtBookingProperty1Extra2Id.Name = "txtBookingProperty1Extra2Id";
-            this.txtBookingProperty1Extra2Id.Size = new System.Drawing.Size(134, 20);
+            this.txtBookingProperty1Extra2Id.Size = new System.Drawing.Size(134, 21);
             this.txtBookingProperty1Extra2Id.TabIndex = 25;
             this.txtBookingProperty1Extra2Id.Text = "9240";
             // 
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(24, 17);
+            this.label66.Location = new System.Drawing.Point(24, 16);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(16, 13);
+            this.label66.Size = new System.Drawing.Size(17, 12);
             this.label66.TabIndex = 24;
             this.label66.Text = "Id";
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(347, 31);
+            this.label49.Location = new System.Drawing.Point(347, 29);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(87, 13);
+            this.label49.Size = new System.Drawing.Size(83, 12);
             this.label49.TabIndex = 13;
             this.label49.Text = "LeadGuestName";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(347, 61);
+            this.label50.Location = new System.Drawing.Point(347, 56);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(78, 13);
+            this.label50.Size = new System.Drawing.Size(77, 12);
             this.label50.TabIndex = 14;
             this.label50.Text = "LeadGuestAge";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(203, 90);
+            this.label52.Location = new System.Drawing.Point(203, 83);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(39, 13);
+            this.label52.Size = new System.Drawing.Size(47, 12);
             this.label52.TabIndex = 21;
             this.label52.Text = "Infants";
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(347, 90);
+            this.label51.Location = new System.Drawing.Point(347, 83);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(100, 13);
+            this.label51.Size = new System.Drawing.Size(107, 12);
             this.label51.TabIndex = 15;
             this.label51.Text = "LeadGuestPassport";
             // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(203, 61);
+            this.label53.Location = new System.Drawing.Point(203, 56);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(45, 13);
+            this.label53.Size = new System.Drawing.Size(53, 12);
             this.label53.TabIndex = 20;
             this.label53.Text = "Children";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(203, 31);
+            this.label54.Location = new System.Drawing.Point(203, 29);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(36, 13);
+            this.label54.Size = new System.Drawing.Size(41, 12);
             this.label54.TabIndex = 19;
             this.label54.Text = "Adults";
             // 
             // txtBookingProperty1Children
             // 
-            this.txtBookingProperty1Children.Location = new System.Drawing.Point(262, 57);
+            this.txtBookingProperty1Children.Location = new System.Drawing.Point(262, 53);
             this.txtBookingProperty1Children.Name = "txtBookingProperty1Children";
-            this.txtBookingProperty1Children.Size = new System.Drawing.Size(66, 20);
+            this.txtBookingProperty1Children.Size = new System.Drawing.Size(66, 21);
             this.txtBookingProperty1Children.TabIndex = 18;
             // 
             // txtBookingProperty1Infants
             // 
-            this.txtBookingProperty1Infants.Location = new System.Drawing.Point(262, 87);
+            this.txtBookingProperty1Infants.Location = new System.Drawing.Point(262, 80);
             this.txtBookingProperty1Infants.Name = "txtBookingProperty1Infants";
-            this.txtBookingProperty1Infants.Size = new System.Drawing.Size(66, 20);
+            this.txtBookingProperty1Infants.Size = new System.Drawing.Size(66, 21);
             this.txtBookingProperty1Infants.TabIndex = 17;
             // 
             // txtBookingProperty1Adults
             // 
-            this.txtBookingProperty1Adults.Location = new System.Drawing.Point(262, 28);
+            this.txtBookingProperty1Adults.Location = new System.Drawing.Point(262, 26);
             this.txtBookingProperty1Adults.Name = "txtBookingProperty1Adults";
-            this.txtBookingProperty1Adults.Size = new System.Drawing.Size(66, 20);
+            this.txtBookingProperty1Adults.Size = new System.Drawing.Size(66, 21);
             this.txtBookingProperty1Adults.TabIndex = 16;
             this.txtBookingProperty1Adults.Text = "1";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(13, 90);
+            this.label48.Location = new System.Drawing.Point(13, 83);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(53, 13);
+            this.label48.Size = new System.Drawing.Size(53, 12);
             this.label48.TabIndex = 12;
             this.label48.Text = "Checkout";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(13, 61);
+            this.label47.Location = new System.Drawing.Point(13, 56);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(46, 13);
+            this.label47.Size = new System.Drawing.Size(47, 12);
             this.label47.TabIndex = 11;
             this.label47.Text = "Checkin";
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(13, 31);
+            this.label46.Location = new System.Drawing.Point(13, 29);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(16, 13);
+            this.label46.Size = new System.Drawing.Size(17, 12);
             this.label46.TabIndex = 10;
             this.label46.Text = "Id";
             // 
             // txtBookingProperty1Checkin
             // 
-            this.txtBookingProperty1Checkin.Location = new System.Drawing.Point(70, 57);
+            this.txtBookingProperty1Checkin.Location = new System.Drawing.Point(70, 53);
             this.txtBookingProperty1Checkin.Name = "txtBookingProperty1Checkin";
-            this.txtBookingProperty1Checkin.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingProperty1Checkin.Size = new System.Drawing.Size(100, 21);
             this.txtBookingProperty1Checkin.TabIndex = 9;
             this.txtBookingProperty1Checkin.Text = "yyyy-MM-dd";
             // 
             // txtBookingProperty1Checkout
             // 
-            this.txtBookingProperty1Checkout.Location = new System.Drawing.Point(70, 87);
+            this.txtBookingProperty1Checkout.Location = new System.Drawing.Point(70, 80);
             this.txtBookingProperty1Checkout.Name = "txtBookingProperty1Checkout";
-            this.txtBookingProperty1Checkout.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingProperty1Checkout.Size = new System.Drawing.Size(100, 21);
             this.txtBookingProperty1Checkout.TabIndex = 8;
             this.txtBookingProperty1Checkout.Text = "yyyy-MM-dd";
             // 
             // txtBookingProperty1Id
             // 
-            this.txtBookingProperty1Id.Location = new System.Drawing.Point(70, 28);
+            this.txtBookingProperty1Id.Location = new System.Drawing.Point(70, 26);
             this.txtBookingProperty1Id.Name = "txtBookingProperty1Id";
-            this.txtBookingProperty1Id.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingProperty1Id.Size = new System.Drawing.Size(100, 21);
             this.txtBookingProperty1Id.TabIndex = 0;
             this.txtBookingProperty1Id.Text = "8849";
             // 
@@ -2265,7 +2290,7 @@
             this.tabReview.Location = new System.Drawing.Point(4, 22);
             this.tabReview.Name = "tabReview";
             this.tabReview.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReview.Size = new System.Drawing.Size(1183, 246);
+            this.tabReview.Size = new System.Drawing.Size(1183, 285);
             this.tabReview.TabIndex = 4;
             this.tabReview.Text = "Review";
             this.tabReview.UseVisualStyleBackColor = true;
@@ -2291,14 +2316,14 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1177, 240);
+            this.groupBox5.Size = new System.Drawing.Size(1177, 279);
             this.groupBox5.TabIndex = 31;
             this.groupBox5.TabStop = false;
             // 
             // cbIsApproved
             // 
             this.cbIsApproved.AutoSize = true;
-            this.cbIsApproved.Location = new System.Drawing.Point(178, 192);
+            this.cbIsApproved.Location = new System.Drawing.Point(178, 177);
             this.cbIsApproved.Name = "cbIsApproved";
             this.cbIsApproved.Size = new System.Drawing.Size(15, 14);
             this.cbIsApproved.TabIndex = 43;
@@ -2307,17 +2332,17 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(41, 197);
+            this.label76.Location = new System.Drawing.Point(41, 182);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(61, 13);
+            this.label76.Size = new System.Drawing.Size(65, 12);
             this.label76.TabIndex = 42;
             this.label76.Text = "IsApproved";
             // 
             // btnAddReview
             // 
-            this.btnAddReview.Location = new System.Drawing.Point(746, 197);
+            this.btnAddReview.Location = new System.Drawing.Point(746, 182);
             this.btnAddReview.Name = "btnAddReview";
-            this.btnAddReview.Size = new System.Drawing.Size(54, 23);
+            this.btnAddReview.Size = new System.Drawing.Size(54, 21);
             this.btnAddReview.TabIndex = 41;
             this.btnAddReview.Text = "POST";
             this.btnAddReview.UseVisualStyleBackColor = true;
@@ -2325,112 +2350,112 @@
             // 
             // txtReviewDescription
             // 
-            this.txtReviewDescription.Location = new System.Drawing.Point(746, 126);
+            this.txtReviewDescription.Location = new System.Drawing.Point(746, 116);
             this.txtReviewDescription.Multiline = true;
             this.txtReviewDescription.Name = "txtReviewDescription";
-            this.txtReviewDescription.Size = new System.Drawing.Size(335, 53);
+            this.txtReviewDescription.Size = new System.Drawing.Size(335, 49);
             this.txtReviewDescription.TabIndex = 40;
             this.txtReviewDescription.Text = "This is a test review content";
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(609, 129);
+            this.label75.Location = new System.Drawing.Point(609, 119);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(96, 13);
+            this.label75.Size = new System.Drawing.Size(107, 12);
             this.label75.TabIndex = 39;
             this.label75.Text = "ReviewDescription";
             // 
             // txtReviewerName
             // 
-            this.txtReviewerName.Location = new System.Drawing.Point(746, 76);
+            this.txtReviewerName.Location = new System.Drawing.Point(746, 70);
             this.txtReviewerName.Name = "txtReviewerName";
-            this.txtReviewerName.Size = new System.Drawing.Size(335, 20);
+            this.txtReviewerName.Size = new System.Drawing.Size(335, 21);
             this.txtReviewerName.TabIndex = 38;
             this.txtReviewerName.Text = "John";
             // 
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(609, 79);
+            this.label74.Location = new System.Drawing.Point(609, 73);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(80, 13);
+            this.label74.Size = new System.Drawing.Size(77, 12);
             this.label74.TabIndex = 37;
             this.label74.Text = "ReviewerName";
             // 
             // txtReviewTitle
             // 
-            this.txtReviewTitle.Location = new System.Drawing.Point(178, 144);
+            this.txtReviewTitle.Location = new System.Drawing.Point(178, 133);
             this.txtReviewTitle.Name = "txtReviewTitle";
-            this.txtReviewTitle.Size = new System.Drawing.Size(335, 20);
+            this.txtReviewTitle.Size = new System.Drawing.Size(335, 21);
             this.txtReviewTitle.TabIndex = 36;
             this.txtReviewTitle.Text = "test review title";
             // 
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(41, 151);
+            this.label73.Location = new System.Drawing.Point(41, 139);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(63, 13);
+            this.label73.Size = new System.Drawing.Size(71, 12);
             this.label73.TabIndex = 35;
             this.label73.Text = "ReviewTitle";
             // 
             // txtRating
             // 
-            this.txtRating.Location = new System.Drawing.Point(178, 104);
+            this.txtRating.Location = new System.Drawing.Point(178, 96);
             this.txtRating.Name = "txtRating";
-            this.txtRating.Size = new System.Drawing.Size(335, 20);
+            this.txtRating.Size = new System.Drawing.Size(335, 21);
             this.txtRating.TabIndex = 34;
             this.txtRating.Text = "4";
             // 
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(41, 111);
+            this.label72.Location = new System.Drawing.Point(41, 102);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(38, 13);
+            this.label72.Size = new System.Drawing.Size(41, 12);
             this.label72.TabIndex = 33;
             this.label72.Text = "Rating";
             // 
             // txtPropertyId
             // 
-            this.txtPropertyId.Location = new System.Drawing.Point(178, 62);
+            this.txtPropertyId.Location = new System.Drawing.Point(178, 57);
             this.txtPropertyId.Name = "txtPropertyId";
-            this.txtPropertyId.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyId.Size = new System.Drawing.Size(335, 21);
             this.txtPropertyId.TabIndex = 32;
             this.txtPropertyId.Text = "8849";
             // 
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(41, 69);
+            this.label71.Location = new System.Drawing.Point(41, 64);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(55, 13);
+            this.label71.Size = new System.Drawing.Size(65, 12);
             this.label71.TabIndex = 31;
             this.label71.Text = "PropertyId";
             // 
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(41, 29);
+            this.label70.Location = new System.Drawing.Point(41, 27);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(53, 13);
+            this.label70.Size = new System.Drawing.Size(71, 12);
             this.label70.TabIndex = 30;
             this.label70.Text = "review list";
             // 
             // txtReviewsApi
             // 
-            this.txtReviewsApi.Location = new System.Drawing.Point(178, 25);
+            this.txtReviewsApi.Location = new System.Drawing.Point(178, 23);
             this.txtReviewsApi.Name = "txtReviewsApi";
-            this.txtReviewsApi.Size = new System.Drawing.Size(335, 20);
+            this.txtReviewsApi.Size = new System.Drawing.Size(335, 21);
             this.txtReviewsApi.TabIndex = 24;
             this.txtReviewsApi.Text = "/apis/reviews?propertyid=8849";
             // 
             // btnGetReviews
             // 
-            this.btnGetReviews.Location = new System.Drawing.Point(519, 25);
+            this.btnGetReviews.Location = new System.Drawing.Point(519, 23);
             this.btnGetReviews.Name = "btnGetReviews";
-            this.btnGetReviews.Size = new System.Drawing.Size(54, 23);
+            this.btnGetReviews.Size = new System.Drawing.Size(54, 21);
             this.btnGetReviews.TabIndex = 22;
             this.btnGetReviews.Text = "GET";
             this.btnGetReviews.UseVisualStyleBackColor = true;
@@ -2465,49 +2490,49 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1183, 246);
+            this.tabPage1.Size = new System.Drawing.Size(1183, 285);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Payments";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // txtPaymentPropertyId
             // 
-            this.txtPaymentPropertyId.Location = new System.Drawing.Point(88, 118);
+            this.txtPaymentPropertyId.Location = new System.Drawing.Point(88, 109);
             this.txtPaymentPropertyId.Name = "txtPaymentPropertyId";
-            this.txtPaymentPropertyId.Size = new System.Drawing.Size(133, 20);
+            this.txtPaymentPropertyId.Size = new System.Drawing.Size(133, 21);
             this.txtPaymentPropertyId.TabIndex = 67;
             // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(22, 121);
+            this.label83.Location = new System.Drawing.Point(22, 112);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(55, 13);
+            this.label83.Size = new System.Drawing.Size(65, 12);
             this.label83.TabIndex = 66;
             this.label83.Text = "PropertyId";
             // 
             // txtPaymentDate
             // 
-            this.txtPaymentDate.Location = new System.Drawing.Point(599, 91);
+            this.txtPaymentDate.Location = new System.Drawing.Point(599, 84);
             this.txtPaymentDate.Name = "txtPaymentDate";
-            this.txtPaymentDate.Size = new System.Drawing.Size(133, 20);
+            this.txtPaymentDate.Size = new System.Drawing.Size(133, 21);
             this.txtPaymentDate.TabIndex = 65;
             this.txtPaymentDate.Text = "2016-08-22";
             // 
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(512, 94);
+            this.label81.Location = new System.Drawing.Point(512, 87);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(71, 13);
+            this.label81.Size = new System.Drawing.Size(71, 12);
             this.label81.TabIndex = 64;
             this.label81.Text = "PaymentDate";
             // 
             // btnAddPayment
             // 
-            this.btnAddPayment.Location = new System.Drawing.Point(686, 151);
+            this.btnAddPayment.Location = new System.Drawing.Point(686, 139);
             this.btnAddPayment.Name = "btnAddPayment";
-            this.btnAddPayment.Size = new System.Drawing.Size(46, 23);
+            this.btnAddPayment.Size = new System.Drawing.Size(46, 21);
             this.btnAddPayment.TabIndex = 63;
             this.btnAddPayment.Text = "POST";
             this.btnAddPayment.UseVisualStyleBackColor = true;
@@ -2515,163 +2540,163 @@
             // 
             // txtPaymentApi
             // 
-            this.txtPaymentApi.Location = new System.Drawing.Point(487, 151);
+            this.txtPaymentApi.Location = new System.Drawing.Point(487, 139);
             this.txtPaymentApi.Name = "txtPaymentApi";
-            this.txtPaymentApi.Size = new System.Drawing.Size(180, 20);
+            this.txtPaymentApi.Size = new System.Drawing.Size(180, 21);
             this.txtPaymentApi.TabIndex = 62;
             this.txtPaymentApi.Text = "/apis/payments";
             // 
             // txtPaymentComments
             // 
-            this.txtPaymentComments.Location = new System.Drawing.Point(88, 151);
+            this.txtPaymentComments.Location = new System.Drawing.Point(88, 139);
             this.txtPaymentComments.Multiline = true;
             this.txtPaymentComments.Name = "txtPaymentComments";
-            this.txtPaymentComments.Size = new System.Drawing.Size(326, 61);
+            this.txtPaymentComments.Size = new System.Drawing.Size(326, 57);
             this.txtPaymentComments.TabIndex = 61;
             this.txtPaymentComments.Text = "Test from iPro";
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(29, 154);
+            this.label82.Location = new System.Drawing.Point(29, 142);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(55, 13);
+            this.label82.Size = new System.Drawing.Size(53, 12);
             this.label82.TabIndex = 60;
             this.label82.Text = "comments";
             // 
             // txtPaymentMethod
             // 
-            this.txtPaymentMethod.Location = new System.Drawing.Point(323, 91);
+            this.txtPaymentMethod.Location = new System.Drawing.Point(323, 84);
             this.txtPaymentMethod.Name = "txtPaymentMethod";
-            this.txtPaymentMethod.Size = new System.Drawing.Size(136, 20);
+            this.txtPaymentMethod.Size = new System.Drawing.Size(136, 21);
             this.txtPaymentMethod.TabIndex = 51;
             this.txtPaymentMethod.Text = "PayPal";
             // 
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(227, 91);
+            this.label87.Location = new System.Drawing.Point(227, 84);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(84, 13);
+            this.label87.Size = new System.Drawing.Size(83, 12);
             this.label87.TabIndex = 50;
             this.label87.Text = "PaymentMethod";
             // 
             // txtPaymentCategoryId
             // 
-            this.txtPaymentCategoryId.Location = new System.Drawing.Point(599, 18);
+            this.txtPaymentCategoryId.Location = new System.Drawing.Point(599, 17);
             this.txtPaymentCategoryId.Name = "txtPaymentCategoryId";
-            this.txtPaymentCategoryId.Size = new System.Drawing.Size(133, 20);
+            this.txtPaymentCategoryId.Size = new System.Drawing.Size(133, 21);
             this.txtPaymentCategoryId.TabIndex = 49;
             this.txtPaymentCategoryId.Text = "1";
             // 
             // label88
             // 
             this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(484, 21);
+            this.label88.Location = new System.Drawing.Point(484, 19);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(99, 13);
+            this.label88.Size = new System.Drawing.Size(107, 12);
             this.label88.TabIndex = 48;
             this.label88.Text = "PaymentCategoryId";
             // 
             // txtCurrency
             // 
-            this.txtCurrency.Location = new System.Drawing.Point(323, 56);
+            this.txtCurrency.Location = new System.Drawing.Point(323, 52);
             this.txtCurrency.Name = "txtCurrency";
-            this.txtCurrency.Size = new System.Drawing.Size(136, 20);
+            this.txtCurrency.Size = new System.Drawing.Size(136, 21);
             this.txtCurrency.TabIndex = 47;
             this.txtCurrency.Text = "€";
             // 
             // label89
             // 
             this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(262, 58);
+            this.label89.Location = new System.Drawing.Point(262, 54);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(49, 13);
+            this.label89.Size = new System.Drawing.Size(53, 12);
             this.label89.TabIndex = 46;
             this.label89.Text = "Currency";
             // 
             // txtCharges
             // 
-            this.txtCharges.Location = new System.Drawing.Point(88, 55);
+            this.txtCharges.Location = new System.Drawing.Point(88, 51);
             this.txtCharges.Name = "txtCharges";
-            this.txtCharges.Size = new System.Drawing.Size(133, 20);
+            this.txtCharges.Size = new System.Drawing.Size(133, 21);
             this.txtCharges.TabIndex = 43;
             this.txtCharges.Text = "10";
             // 
             // label91
             // 
             this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(31, 59);
+            this.label91.Location = new System.Drawing.Point(31, 54);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(46, 13);
+            this.label91.Size = new System.Drawing.Size(47, 12);
             this.label91.TabIndex = 42;
             this.label91.Text = "Charges";
             // 
             // txtBookingId
             // 
-            this.txtBookingId.Location = new System.Drawing.Point(323, 21);
+            this.txtBookingId.Location = new System.Drawing.Point(323, 19);
             this.txtBookingId.Name = "txtBookingId";
-            this.txtBookingId.Size = new System.Drawing.Size(136, 20);
+            this.txtBookingId.Size = new System.Drawing.Size(136, 21);
             this.txtBookingId.TabIndex = 41;
             this.txtBookingId.Text = "4354";
             // 
             // label92
             // 
             this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(262, 24);
+            this.label92.Location = new System.Drawing.Point(262, 22);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(55, 13);
+            this.label92.Size = new System.Drawing.Size(59, 12);
             this.label92.TabIndex = 40;
             this.label92.Text = "BookingId";
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(88, 21);
+            this.txtAmount.Location = new System.Drawing.Point(88, 19);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(133, 20);
+            this.txtAmount.Size = new System.Drawing.Size(133, 21);
             this.txtAmount.TabIndex = 39;
             this.txtAmount.Text = "200";
             // 
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(34, 24);
+            this.label93.Location = new System.Drawing.Point(34, 22);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(43, 13);
+            this.label93.Size = new System.Drawing.Size(41, 12);
             this.label93.TabIndex = 38;
             this.label93.Text = "Amount";
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(88, 88);
+            this.txtStatus.Location = new System.Drawing.Point(88, 81);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(133, 20);
+            this.txtStatus.Size = new System.Drawing.Size(133, 21);
             this.txtStatus.TabIndex = 37;
             this.txtStatus.Text = "1";
             // 
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(40, 91);
+            this.label94.Location = new System.Drawing.Point(40, 84);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(37, 13);
+            this.label94.Size = new System.Drawing.Size(41, 12);
             this.label94.TabIndex = 36;
             this.label94.Text = "Status";
             // 
             // txtPaymentTypeId
             // 
-            this.txtPaymentTypeId.Location = new System.Drawing.Point(599, 55);
+            this.txtPaymentTypeId.Location = new System.Drawing.Point(599, 51);
             this.txtPaymentTypeId.Name = "txtPaymentTypeId";
-            this.txtPaymentTypeId.Size = new System.Drawing.Size(133, 20);
+            this.txtPaymentTypeId.Size = new System.Drawing.Size(133, 21);
             this.txtPaymentTypeId.TabIndex = 35;
             this.txtPaymentTypeId.Text = "2";
             // 
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(502, 58);
+            this.label95.Location = new System.Drawing.Point(502, 54);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(81, 13);
+            this.label95.Size = new System.Drawing.Size(83, 12);
             this.label95.TabIndex = 34;
             this.label95.Text = "PaymentTypeId";
             // 
@@ -2684,7 +2709,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1183, 246);
+            this.tabPage2.Size = new System.Drawing.Size(1183, 285);
             this.tabPage2.TabIndex = 6;
             this.tabPage2.Text = "Update Properties";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2692,26 +2717,26 @@
             // label84
             // 
             this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(25, 90);
+            this.label84.Location = new System.Drawing.Point(25, 83);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(84, 13);
+            this.label84.Size = new System.Drawing.Size(89, 12);
             this.label84.TabIndex = 66;
             this.label84.Text = "liveWebsiteURL";
             // 
             // txtLiveWebsiteURL
             // 
-            this.txtLiveWebsiteURL.Location = new System.Drawing.Point(131, 87);
+            this.txtLiveWebsiteURL.Location = new System.Drawing.Point(131, 80);
             this.txtLiveWebsiteURL.Name = "txtLiveWebsiteURL";
-            this.txtLiveWebsiteURL.Size = new System.Drawing.Size(583, 20);
+            this.txtLiveWebsiteURL.Size = new System.Drawing.Size(583, 21);
             this.txtLiveWebsiteURL.TabIndex = 65;
             this.txtLiveWebsiteURL.Text = "https://www.azureholidays.com/algarve/dunas-douradas-villas/luxury-4-bed-dunas-do" +
     "uradas-very-close-to-beach/";
             // 
             // btnUpdatePropertyApi
             // 
-            this.btnUpdatePropertyApi.Location = new System.Drawing.Point(398, 28);
+            this.btnUpdatePropertyApi.Location = new System.Drawing.Point(398, 26);
             this.btnUpdatePropertyApi.Name = "btnUpdatePropertyApi";
-            this.btnUpdatePropertyApi.Size = new System.Drawing.Size(46, 23);
+            this.btnUpdatePropertyApi.Size = new System.Drawing.Size(46, 21);
             this.btnUpdatePropertyApi.TabIndex = 64;
             this.btnUpdatePropertyApi.Text = "POST";
             this.btnUpdatePropertyApi.UseVisualStyleBackColor = true;
@@ -2719,9 +2744,9 @@
             // 
             // txtUpdatePropertyApiUrl
             // 
-            this.txtUpdatePropertyApiUrl.Location = new System.Drawing.Point(28, 28);
+            this.txtUpdatePropertyApiUrl.Location = new System.Drawing.Point(28, 26);
             this.txtUpdatePropertyApiUrl.Name = "txtUpdatePropertyApiUrl";
-            this.txtUpdatePropertyApiUrl.Size = new System.Drawing.Size(364, 20);
+            this.txtUpdatePropertyApiUrl.Size = new System.Drawing.Size(364, 21);
             this.txtUpdatePropertyApiUrl.TabIndex = 63;
             this.txtUpdatePropertyApiUrl.Text = "/apis/property/8849";
             // 
@@ -2745,7 +2770,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1183, 246);
+            this.tabPage3.Size = new System.Drawing.Size(1183, 285);
             this.tabPage3.TabIndex = 7;
             this.tabPage3.Text = "Booking Calc";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2758,7 +2783,7 @@
             this.tabControl5.Location = new System.Drawing.Point(900, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(280, 240);
+            this.tabControl5.Size = new System.Drawing.Size(280, 279);
             this.tabControl5.TabIndex = 46;
             // 
             // tabPage4
@@ -2770,42 +2795,42 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(272, 214);
+            this.tabPage4.Size = new System.Drawing.Size(272, 253);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Extra1";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // txtPropertyExtra1Qty
             // 
-            this.txtPropertyExtra1Qty.Location = new System.Drawing.Point(62, 47);
+            this.txtPropertyExtra1Qty.Location = new System.Drawing.Point(62, 43);
             this.txtPropertyExtra1Qty.Name = "txtPropertyExtra1Qty";
-            this.txtPropertyExtra1Qty.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra1Qty.Size = new System.Drawing.Size(134, 21);
             this.txtPropertyExtra1Qty.TabIndex = 23;
             this.txtPropertyExtra1Qty.Text = "1";
             // 
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(24, 50);
+            this.label101.Location = new System.Drawing.Point(24, 46);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(23, 13);
+            this.label101.Size = new System.Drawing.Size(23, 12);
             this.label101.TabIndex = 22;
             this.label101.Text = "Qty";
             // 
             // txtPropertyExtra1Id
             // 
-            this.txtPropertyExtra1Id.Location = new System.Drawing.Point(62, 14);
+            this.txtPropertyExtra1Id.Location = new System.Drawing.Point(62, 13);
             this.txtPropertyExtra1Id.Name = "txtPropertyExtra1Id";
-            this.txtPropertyExtra1Id.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra1Id.Size = new System.Drawing.Size(134, 21);
             this.txtPropertyExtra1Id.TabIndex = 21;
             this.txtPropertyExtra1Id.Text = "8297";
             // 
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(24, 17);
+            this.label102.Location = new System.Drawing.Point(24, 16);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(16, 13);
+            this.label102.Size = new System.Drawing.Size(17, 12);
             this.label102.TabIndex = 20;
             this.label102.Text = "Id";
             // 
@@ -2817,50 +2842,50 @@
             this.tabPage5.Controls.Add(this.label104);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(272, 214);
+            this.tabPage5.Size = new System.Drawing.Size(272, 193);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Extra2";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // txtPropertyExtra2Qty
             // 
-            this.txtPropertyExtra2Qty.Location = new System.Drawing.Point(62, 47);
+            this.txtPropertyExtra2Qty.Location = new System.Drawing.Point(62, 43);
             this.txtPropertyExtra2Qty.Name = "txtPropertyExtra2Qty";
-            this.txtPropertyExtra2Qty.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra2Qty.Size = new System.Drawing.Size(134, 21);
             this.txtPropertyExtra2Qty.TabIndex = 27;
             this.txtPropertyExtra2Qty.Text = "1";
             // 
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(24, 50);
+            this.label103.Location = new System.Drawing.Point(24, 46);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(23, 13);
+            this.label103.Size = new System.Drawing.Size(23, 12);
             this.label103.TabIndex = 26;
             this.label103.Text = "Qty";
             // 
             // txtPropertyExtra2Id
             // 
-            this.txtPropertyExtra2Id.Location = new System.Drawing.Point(62, 14);
+            this.txtPropertyExtra2Id.Location = new System.Drawing.Point(62, 13);
             this.txtPropertyExtra2Id.Name = "txtPropertyExtra2Id";
-            this.txtPropertyExtra2Id.Size = new System.Drawing.Size(134, 20);
+            this.txtPropertyExtra2Id.Size = new System.Drawing.Size(134, 21);
             this.txtPropertyExtra2Id.TabIndex = 25;
             this.txtPropertyExtra2Id.Text = "9240";
             // 
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(24, 17);
+            this.label104.Location = new System.Drawing.Point(24, 16);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(16, 13);
+            this.label104.Size = new System.Drawing.Size(17, 12);
             this.label104.TabIndex = 24;
             this.label104.Text = "Id";
             // 
             // btnCalcBooking
             // 
-            this.btnCalcBooking.Location = new System.Drawing.Point(568, 40);
+            this.btnCalcBooking.Location = new System.Drawing.Point(568, 37);
             this.btnCalcBooking.Name = "btnCalcBooking";
-            this.btnCalcBooking.Size = new System.Drawing.Size(46, 23);
+            this.btnCalcBooking.Size = new System.Drawing.Size(46, 21);
             this.btnCalcBooking.TabIndex = 45;
             this.btnCalcBooking.Text = "Calc";
             this.btnCalcBooking.UseVisualStyleBackColor = true;
@@ -2868,109 +2893,109 @@
             // 
             // txtApiBookingCalc
             // 
-            this.txtApiBookingCalc.Location = new System.Drawing.Point(405, 40);
+            this.txtApiBookingCalc.Location = new System.Drawing.Point(405, 37);
             this.txtApiBookingCalc.Name = "txtApiBookingCalc";
-            this.txtApiBookingCalc.Size = new System.Drawing.Size(157, 20);
+            this.txtApiBookingCalc.Size = new System.Drawing.Size(157, 21);
             this.txtApiBookingCalc.TabIndex = 44;
             this.txtApiBookingCalc.Text = "/apis/booking/calc";
             // 
             // label85
             // 
             this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(219, 102);
+            this.label85.Location = new System.Drawing.Point(219, 94);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(39, 13);
+            this.label85.Size = new System.Drawing.Size(47, 12);
             this.label85.TabIndex = 33;
             this.label85.Text = "Infants";
             // 
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(219, 73);
+            this.label86.Location = new System.Drawing.Point(219, 67);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(45, 13);
+            this.label86.Size = new System.Drawing.Size(53, 12);
             this.label86.TabIndex = 32;
             this.label86.Text = "Children";
             // 
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(219, 43);
+            this.label90.Location = new System.Drawing.Point(219, 40);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(36, 13);
+            this.label90.Size = new System.Drawing.Size(41, 12);
             this.label90.TabIndex = 31;
             this.label90.Text = "Adults";
             // 
             // txtPropertyCalcChildren
             // 
-            this.txtPropertyCalcChildren.Location = new System.Drawing.Point(278, 69);
+            this.txtPropertyCalcChildren.Location = new System.Drawing.Point(278, 64);
             this.txtPropertyCalcChildren.Name = "txtPropertyCalcChildren";
-            this.txtPropertyCalcChildren.Size = new System.Drawing.Size(66, 20);
+            this.txtPropertyCalcChildren.Size = new System.Drawing.Size(66, 21);
             this.txtPropertyCalcChildren.TabIndex = 30;
             // 
             // txtPropertyCalcInfants
             // 
-            this.txtPropertyCalcInfants.Location = new System.Drawing.Point(278, 99);
+            this.txtPropertyCalcInfants.Location = new System.Drawing.Point(278, 91);
             this.txtPropertyCalcInfants.Name = "txtPropertyCalcInfants";
-            this.txtPropertyCalcInfants.Size = new System.Drawing.Size(66, 20);
+            this.txtPropertyCalcInfants.Size = new System.Drawing.Size(66, 21);
             this.txtPropertyCalcInfants.TabIndex = 29;
             // 
             // txtPropertyCalcAdults
             // 
-            this.txtPropertyCalcAdults.Location = new System.Drawing.Point(278, 40);
+            this.txtPropertyCalcAdults.Location = new System.Drawing.Point(278, 37);
             this.txtPropertyCalcAdults.Name = "txtPropertyCalcAdults";
-            this.txtPropertyCalcAdults.Size = new System.Drawing.Size(66, 20);
+            this.txtPropertyCalcAdults.Size = new System.Drawing.Size(66, 21);
             this.txtPropertyCalcAdults.TabIndex = 28;
             this.txtPropertyCalcAdults.Text = "1";
             // 
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(29, 102);
+            this.label96.Location = new System.Drawing.Point(29, 94);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(53, 13);
+            this.label96.Size = new System.Drawing.Size(53, 12);
             this.label96.TabIndex = 27;
             this.label96.Text = "Checkout";
             // 
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(29, 73);
+            this.label97.Location = new System.Drawing.Point(29, 67);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(46, 13);
+            this.label97.Size = new System.Drawing.Size(47, 12);
             this.label97.TabIndex = 26;
             this.label97.Text = "Checkin";
             // 
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(29, 43);
+            this.label98.Location = new System.Drawing.Point(29, 40);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(16, 13);
+            this.label98.Size = new System.Drawing.Size(17, 12);
             this.label98.TabIndex = 25;
             this.label98.Text = "Id";
             // 
             // txtPropertyCalcCheckIn
             // 
-            this.txtPropertyCalcCheckIn.Location = new System.Drawing.Point(86, 69);
+            this.txtPropertyCalcCheckIn.Location = new System.Drawing.Point(86, 64);
             this.txtPropertyCalcCheckIn.Name = "txtPropertyCalcCheckIn";
-            this.txtPropertyCalcCheckIn.Size = new System.Drawing.Size(100, 20);
+            this.txtPropertyCalcCheckIn.Size = new System.Drawing.Size(100, 21);
             this.txtPropertyCalcCheckIn.TabIndex = 24;
             this.txtPropertyCalcCheckIn.Text = "2016-11-15";
             // 
             // txtPropertyCalcCheckOut
             // 
-            this.txtPropertyCalcCheckOut.Location = new System.Drawing.Point(86, 99);
+            this.txtPropertyCalcCheckOut.Location = new System.Drawing.Point(86, 91);
             this.txtPropertyCalcCheckOut.Name = "txtPropertyCalcCheckOut";
-            this.txtPropertyCalcCheckOut.Size = new System.Drawing.Size(100, 20);
+            this.txtPropertyCalcCheckOut.Size = new System.Drawing.Size(100, 21);
             this.txtPropertyCalcCheckOut.TabIndex = 23;
             this.txtPropertyCalcCheckOut.Text = "2016-11-25";
             // 
             // txtPropertyCalcPropertyId
             // 
-            this.txtPropertyCalcPropertyId.Location = new System.Drawing.Point(86, 40);
+            this.txtPropertyCalcPropertyId.Location = new System.Drawing.Point(86, 37);
             this.txtPropertyCalcPropertyId.Name = "txtPropertyCalcPropertyId";
-            this.txtPropertyCalcPropertyId.Size = new System.Drawing.Size(100, 20);
+            this.txtPropertyCalcPropertyId.Size = new System.Drawing.Size(100, 21);
             this.txtPropertyCalcPropertyId.TabIndex = 22;
             this.txtPropertyCalcPropertyId.Text = "8849";
             // 
@@ -2978,16 +3003,33 @@
             // 
             this.lblTimeCost.AutoSize = true;
             this.lblTimeCost.ForeColor = System.Drawing.Color.Red;
-            this.lblTimeCost.Location = new System.Drawing.Point(825, 157);
+            this.lblTimeCost.Location = new System.Drawing.Point(825, 145);
             this.lblTimeCost.Name = "lblTimeCost";
-            this.lblTimeCost.Size = new System.Drawing.Size(0, 13);
+            this.lblTimeCost.Size = new System.Drawing.Size(0, 12);
             this.lblTimeCost.TabIndex = 35;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(340, 58);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(113, 12);
+            this.label106.TabIndex = 48;
+            this.label106.Text = "CardPartialNumbers";
+            // 
+            // txtCardPartialNumbers
+            // 
+            this.txtCardPartialNumbers.Location = new System.Drawing.Point(476, 55);
+            this.txtCardPartialNumbers.Name = "txtCardPartialNumbers";
+            this.txtCardPartialNumbers.Size = new System.Drawing.Size(219, 21);
+            this.txtCardPartialNumbers.TabIndex = 47;
+            this.txtCardPartialNumbers.Text = "1234";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 773);
+            this.ClientSize = new System.Drawing.Size(1215, 861);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtHttpRequest);
@@ -3327,6 +3369,10 @@
         private System.Windows.Forms.TextBox txtPropertyExtra2Id;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.CheckBox cbBookingSendEmail;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.TextBox txtPaymentToken;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.TextBox txtCardPartialNumbers;
     }
 }
 
