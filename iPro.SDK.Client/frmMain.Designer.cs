@@ -135,6 +135,8 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.label106 = new System.Windows.Forms.Label();
+            this.txtCardPartialNumbers = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
             this.txtPaymentToken = new System.Windows.Forms.TextBox();
             this.cbBookingSendEmail = new System.Windows.Forms.CheckBox();
@@ -300,8 +302,6 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.lblTimeCost = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
-            this.txtCardPartialNumbers = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -668,7 +668,7 @@
             this.txtPropertySearchApi.TabIndex = 49;
             this.txtPropertySearchApi.Text = "/apis/propertysearch?size=15&index=1&checkIn=2015-11-21&checkout=2015-12-21&Adult" +
     "s=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&WeeklyPri" +
-    "ceRange=";
+    "ceRange=&sort=price&sortdirection=asc";
             // 
             // btnPropertySearch
             // 
@@ -1448,6 +1448,23 @@
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(340, 58);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(113, 12);
+            this.label106.TabIndex = 48;
+            this.label106.Text = "CardPartialNumbers";
+            // 
+            // txtCardPartialNumbers
+            // 
+            this.txtCardPartialNumbers.Location = new System.Drawing.Point(476, 55);
+            this.txtCardPartialNumbers.Name = "txtCardPartialNumbers";
+            this.txtCardPartialNumbers.Size = new System.Drawing.Size(219, 21);
+            this.txtCardPartialNumbers.TabIndex = 47;
+            this.txtCardPartialNumbers.Text = "1234";
             // 
             // label105
             // 
@@ -2842,7 +2859,7 @@
             this.tabPage5.Controls.Add(this.label104);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(272, 193);
+            this.tabPage5.Size = new System.Drawing.Size(272, 253);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Extra2";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -3007,23 +3024,6 @@
             this.lblTimeCost.Name = "lblTimeCost";
             this.lblTimeCost.Size = new System.Drawing.Size(0, 12);
             this.lblTimeCost.TabIndex = 35;
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(340, 58);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(113, 12);
-            this.label106.TabIndex = 48;
-            this.label106.Text = "CardPartialNumbers";
-            // 
-            // txtCardPartialNumbers
-            // 
-            this.txtCardPartialNumbers.Location = new System.Drawing.Point(476, 55);
-            this.txtCardPartialNumbers.Name = "txtCardPartialNumbers";
-            this.txtCardPartialNumbers.Size = new System.Drawing.Size(219, 21);
-            this.txtCardPartialNumbers.TabIndex = 47;
-            this.txtCardPartialNumbers.Text = "1234";
             // 
             // frmMain
             // 
