@@ -3573,6 +3573,7 @@
             this.btnContacts.TabIndex = 44;
             this.btnContacts.Text = "GET";
             this.btnContacts.UseVisualStyleBackColor = true;
+            this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
             // 
             // txtContacts
             // 
