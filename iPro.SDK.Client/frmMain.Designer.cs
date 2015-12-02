@@ -84,9 +84,6 @@
             this.btnLocations = new System.Windows.Forms.Button();
             this.txtLocations = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
-            this.btnContacts = new System.Windows.Forms.Button();
-            this.txtContacts = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.btnBookingTags = new System.Windows.Forms.Button();
             this.txtBookingTags = new System.Windows.Forms.TextBox();
@@ -301,6 +298,61 @@
             this.txtPropertyCalcCheckIn = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnContactTypes = new System.Windows.Forms.Button();
+            this.txtContactTypesUrl = new System.Windows.Forms.TextBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.txtContactTypeId = new System.Windows.Forms.TextBox();
+            this.btnContactPost = new System.Windows.Forms.Button();
+            this.txtContactPostUrl = new System.Windows.Forms.TextBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.txtContactBalance = new System.Windows.Forms.TextBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.txtContactRetainer = new System.Windows.Forms.TextBox();
+            this.lblContactCommision = new System.Windows.Forms.Label();
+            this.txtContactCommision = new System.Windows.Forms.TextBox();
+            this.cbContactOnEmailList = new System.Windows.Forms.CheckBox();
+            this.cbContactDoNotPhone = new System.Windows.Forms.CheckBox();
+            this.cbContactDoNotEmail = new System.Windows.Forms.CheckBox();
+            this.cbContactDoNotMail = new System.Windows.Forms.CheckBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.txtContactComments = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.txtContactCompanyName = new System.Windows.Forms.TextBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.txtContactCountryCode = new System.Windows.Forms.TextBox();
+            this.label120 = new System.Windows.Forms.Label();
+            this.txtContactCountyArea = new System.Windows.Forms.TextBox();
+            this.label119 = new System.Windows.Forms.Label();
+            this.txtContactCity = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
+            this.txtContactStreetName = new System.Windows.Forms.TextBox();
+            this.label117 = new System.Windows.Forms.Label();
+            this.txtContactAddress = new System.Windows.Forms.TextBox();
+            this.label116 = new System.Windows.Forms.Label();
+            this.txtContactPostcode = new System.Windows.Forms.TextBox();
+            this.label115 = new System.Windows.Forms.Label();
+            this.txtContactMobile = new System.Windows.Forms.TextBox();
+            this.label114 = new System.Windows.Forms.Label();
+            this.txtContactTelephoneAlt = new System.Windows.Forms.TextBox();
+            this.label113 = new System.Windows.Forms.Label();
+            this.txtContactTelephone = new System.Windows.Forms.TextBox();
+            this.label112 = new System.Windows.Forms.Label();
+            this.txtContactEmailAlt1 = new System.Windows.Forms.TextBox();
+            this.label111 = new System.Windows.Forms.Label();
+            this.txtContactEmailAlt = new System.Windows.Forms.TextBox();
+            this.label110 = new System.Windows.Forms.Label();
+            this.txtContactEmail = new System.Windows.Forms.TextBox();
+            this.label109 = new System.Windows.Forms.Label();
+            this.txtContactLastName = new System.Windows.Forms.TextBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.ddlContactTitle = new System.Windows.Forms.ComboBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.txtContactFirstName = new System.Windows.Forms.TextBox();
+            this.btnContacts = new System.Windows.Forms.Button();
+            this.txtContacts = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -328,6 +380,7 @@
             this.tabControl5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -852,9 +905,6 @@
             this.groupBox3.Controls.Add(this.btnLocations);
             this.groupBox3.Controls.Add(this.txtLocations);
             this.groupBox3.Controls.Add(this.label78);
-            this.groupBox3.Controls.Add(this.btnContacts);
-            this.groupBox3.Controls.Add(this.txtContacts);
-            this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.btnBookingTags);
             this.groupBox3.Controls.Add(this.txtBookingTags);
@@ -890,7 +940,7 @@
             // 
             // btnAmenities
             // 
-            this.btnAmenities.Location = new System.Drawing.Point(435, 152);
+            this.btnAmenities.Location = new System.Drawing.Point(435, 125);
             this.btnAmenities.Name = "btnAmenities";
             this.btnAmenities.Size = new System.Drawing.Size(54, 23);
             this.btnAmenities.TabIndex = 47;
@@ -900,7 +950,7 @@
             // 
             // txtAmenities
             // 
-            this.txtAmenities.Location = new System.Drawing.Point(118, 154);
+            this.txtAmenities.Location = new System.Drawing.Point(118, 127);
             this.txtAmenities.Name = "txtAmenities";
             this.txtAmenities.Size = new System.Drawing.Size(311, 21);
             this.txtAmenities.TabIndex = 46;
@@ -909,7 +959,7 @@
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(29, 157);
+            this.label80.Location = new System.Drawing.Point(29, 130);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(59, 12);
             this.label80.TabIndex = 45;
@@ -917,7 +967,7 @@
             // 
             // btnLocations
             // 
-            this.btnLocations.Location = new System.Drawing.Point(435, 125);
+            this.btnLocations.Location = new System.Drawing.Point(435, 98);
             this.btnLocations.Name = "btnLocations";
             this.btnLocations.Size = new System.Drawing.Size(54, 23);
             this.btnLocations.TabIndex = 44;
@@ -927,7 +977,7 @@
             // 
             // txtLocations
             // 
-            this.txtLocations.Location = new System.Drawing.Point(118, 127);
+            this.txtLocations.Location = new System.Drawing.Point(118, 100);
             this.txtLocations.Name = "txtLocations";
             this.txtLocations.Size = new System.Drawing.Size(311, 21);
             this.txtLocations.TabIndex = 43;
@@ -936,38 +986,11 @@
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(29, 130);
+            this.label78.Location = new System.Drawing.Point(29, 103);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(59, 12);
             this.label78.TabIndex = 42;
             this.label78.Text = "Locations";
-            // 
-            // btnContacts
-            // 
-            this.btnContacts.Location = new System.Drawing.Point(435, 98);
-            this.btnContacts.Name = "btnContacts";
-            this.btnContacts.Size = new System.Drawing.Size(54, 23);
-            this.btnContacts.TabIndex = 41;
-            this.btnContacts.Text = "GET";
-            this.btnContacts.UseVisualStyleBackColor = true;
-            this.btnContacts.Click += new System.EventHandler(this.btnContacts_Click);
-            // 
-            // txtContacts
-            // 
-            this.txtContacts.Location = new System.Drawing.Point(118, 100);
-            this.txtContacts.Name = "txtContacts";
-            this.txtContacts.Size = new System.Drawing.Size(311, 21);
-            this.txtContacts.TabIndex = 40;
-            this.txtContacts.Text = "/apis/contacts?size=15&index=1&term=";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(29, 103);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 12);
-            this.label29.TabIndex = 39;
-            this.label29.Text = "Contacts";
             // 
             // label27
             // 
@@ -1384,6 +1407,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 168);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -3016,6 +3040,557 @@
             this.txtPropertyCalcPropertyId.TabIndex = 22;
             this.txtPropertyCalcPropertyId.Text = "8849";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.btnContactTypes);
+            this.tabPage6.Controls.Add(this.txtContactTypesUrl);
+            this.tabPage6.Controls.Add(this.label127);
+            this.tabPage6.Controls.Add(this.txtContactTypeId);
+            this.tabPage6.Controls.Add(this.btnContactPost);
+            this.tabPage6.Controls.Add(this.txtContactPostUrl);
+            this.tabPage6.Controls.Add(this.label126);
+            this.tabPage6.Controls.Add(this.txtContactBalance);
+            this.tabPage6.Controls.Add(this.label125);
+            this.tabPage6.Controls.Add(this.txtContactRetainer);
+            this.tabPage6.Controls.Add(this.lblContactCommision);
+            this.tabPage6.Controls.Add(this.txtContactCommision);
+            this.tabPage6.Controls.Add(this.cbContactOnEmailList);
+            this.tabPage6.Controls.Add(this.cbContactDoNotPhone);
+            this.tabPage6.Controls.Add(this.cbContactDoNotEmail);
+            this.tabPage6.Controls.Add(this.cbContactDoNotMail);
+            this.tabPage6.Controls.Add(this.label124);
+            this.tabPage6.Controls.Add(this.label123);
+            this.tabPage6.Controls.Add(this.txtContactComments);
+            this.tabPage6.Controls.Add(this.label122);
+            this.tabPage6.Controls.Add(this.txtContactCompanyName);
+            this.tabPage6.Controls.Add(this.label121);
+            this.tabPage6.Controls.Add(this.txtContactCountryCode);
+            this.tabPage6.Controls.Add(this.label120);
+            this.tabPage6.Controls.Add(this.txtContactCountyArea);
+            this.tabPage6.Controls.Add(this.label119);
+            this.tabPage6.Controls.Add(this.txtContactCity);
+            this.tabPage6.Controls.Add(this.label118);
+            this.tabPage6.Controls.Add(this.txtContactStreetName);
+            this.tabPage6.Controls.Add(this.label117);
+            this.tabPage6.Controls.Add(this.txtContactAddress);
+            this.tabPage6.Controls.Add(this.label116);
+            this.tabPage6.Controls.Add(this.txtContactPostcode);
+            this.tabPage6.Controls.Add(this.label115);
+            this.tabPage6.Controls.Add(this.txtContactMobile);
+            this.tabPage6.Controls.Add(this.label114);
+            this.tabPage6.Controls.Add(this.txtContactTelephoneAlt);
+            this.tabPage6.Controls.Add(this.label113);
+            this.tabPage6.Controls.Add(this.txtContactTelephone);
+            this.tabPage6.Controls.Add(this.label112);
+            this.tabPage6.Controls.Add(this.txtContactEmailAlt1);
+            this.tabPage6.Controls.Add(this.label111);
+            this.tabPage6.Controls.Add(this.txtContactEmailAlt);
+            this.tabPage6.Controls.Add(this.label110);
+            this.tabPage6.Controls.Add(this.txtContactEmail);
+            this.tabPage6.Controls.Add(this.label109);
+            this.tabPage6.Controls.Add(this.txtContactLastName);
+            this.tabPage6.Controls.Add(this.label108);
+            this.tabPage6.Controls.Add(this.ddlContactTitle);
+            this.tabPage6.Controls.Add(this.label107);
+            this.tabPage6.Controls.Add(this.txtContactFirstName);
+            this.tabPage6.Controls.Add(this.btnContacts);
+            this.tabPage6.Controls.Add(this.txtContacts);
+            this.tabPage6.Controls.Add(this.label29);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1183, 285);
+            this.tabPage6.TabIndex = 8;
+            this.tabPage6.Text = "Contacts";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // btnContactTypes
+            // 
+            this.btnContactTypes.Location = new System.Drawing.Point(423, 52);
+            this.btnContactTypes.Name = "btnContactTypes";
+            this.btnContactTypes.Size = new System.Drawing.Size(54, 23);
+            this.btnContactTypes.TabIndex = 97;
+            this.btnContactTypes.Text = "GET";
+            this.btnContactTypes.UseVisualStyleBackColor = true;
+            this.btnContactTypes.Click += new System.EventHandler(this.btnContactTypes_Click);
+            // 
+            // txtContactTypesUrl
+            // 
+            this.txtContactTypesUrl.Location = new System.Drawing.Point(106, 54);
+            this.txtContactTypesUrl.Name = "txtContactTypesUrl";
+            this.txtContactTypesUrl.Size = new System.Drawing.Size(311, 21);
+            this.txtContactTypesUrl.TabIndex = 96;
+            this.txtContactTypesUrl.Text = "/apis/contacttypes";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(17, 59);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(77, 12);
+            this.label127.TabIndex = 95;
+            this.label127.Text = "ContactTypes";
+            // 
+            // txtContactTypeId
+            // 
+            this.txtContactTypeId.Location = new System.Drawing.Point(605, 253);
+            this.txtContactTypeId.Name = "txtContactTypeId";
+            this.txtContactTypeId.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContactTypeId.Size = new System.Drawing.Size(121, 21);
+            this.txtContactTypeId.TabIndex = 94;
+            this.txtContactTypeId.Text = "1";
+            // 
+            // btnContactPost
+            // 
+            this.btnContactPost.Location = new System.Drawing.Point(1083, 54);
+            this.btnContactPost.Name = "btnContactPost";
+            this.btnContactPost.Size = new System.Drawing.Size(54, 23);
+            this.btnContactPost.TabIndex = 93;
+            this.btnContactPost.Text = "Post";
+            this.btnContactPost.UseVisualStyleBackColor = true;
+            this.btnContactPost.Click += new System.EventHandler(this.btnContactPost_Click);
+            // 
+            // txtContactPostUrl
+            // 
+            this.txtContactPostUrl.Location = new System.Drawing.Point(766, 56);
+            this.txtContactPostUrl.Name = "txtContactPostUrl";
+            this.txtContactPostUrl.Size = new System.Drawing.Size(311, 21);
+            this.txtContactPostUrl.TabIndex = 92;
+            this.txtContactPostUrl.Text = "/apis/contacts";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(776, 199);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(47, 12);
+            this.label126.TabIndex = 91;
+            this.label126.Text = "Balance";
+            // 
+            // txtContactBalance
+            // 
+            this.txtContactBalance.Location = new System.Drawing.Point(865, 196);
+            this.txtContactBalance.Name = "txtContactBalance";
+            this.txtContactBalance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContactBalance.Size = new System.Drawing.Size(121, 21);
+            this.txtContactBalance.TabIndex = 90;
+            this.txtContactBalance.Text = "10";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(776, 261);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(53, 12);
+            this.label125.TabIndex = 89;
+            this.label125.Text = "Retainer";
+            // 
+            // txtContactRetainer
+            // 
+            this.txtContactRetainer.Location = new System.Drawing.Point(865, 258);
+            this.txtContactRetainer.Name = "txtContactRetainer";
+            this.txtContactRetainer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContactRetainer.Size = new System.Drawing.Size(121, 21);
+            this.txtContactRetainer.TabIndex = 88;
+            this.txtContactRetainer.Text = "10";
+            // 
+            // lblContactCommision
+            // 
+            this.lblContactCommision.AutoSize = true;
+            this.lblContactCommision.Location = new System.Drawing.Point(776, 229);
+            this.lblContactCommision.Name = "lblContactCommision";
+            this.lblContactCommision.Size = new System.Drawing.Size(59, 12);
+            this.lblContactCommision.TabIndex = 87;
+            this.lblContactCommision.Text = "Commision";
+            // 
+            // txtContactCommision
+            // 
+            this.txtContactCommision.Location = new System.Drawing.Point(865, 226);
+            this.txtContactCommision.Name = "txtContactCommision";
+            this.txtContactCommision.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContactCommision.Size = new System.Drawing.Size(121, 21);
+            this.txtContactCommision.TabIndex = 86;
+            this.txtContactCommision.Text = "10";
+            // 
+            // cbContactOnEmailList
+            // 
+            this.cbContactOnEmailList.AutoSize = true;
+            this.cbContactOnEmailList.Location = new System.Drawing.Point(890, 159);
+            this.cbContactOnEmailList.Name = "cbContactOnEmailList";
+            this.cbContactOnEmailList.Size = new System.Drawing.Size(90, 16);
+            this.cbContactOnEmailList.TabIndex = 85;
+            this.cbContactOnEmailList.Text = "OnEmailList";
+            this.cbContactOnEmailList.UseVisualStyleBackColor = true;
+            // 
+            // cbContactDoNotPhone
+            // 
+            this.cbContactDoNotPhone.AutoSize = true;
+            this.cbContactDoNotPhone.Location = new System.Drawing.Point(890, 125);
+            this.cbContactDoNotPhone.Name = "cbContactDoNotPhone";
+            this.cbContactDoNotPhone.Size = new System.Drawing.Size(84, 16);
+            this.cbContactDoNotPhone.TabIndex = 84;
+            this.cbContactDoNotPhone.Text = "DoNotPhone";
+            this.cbContactDoNotPhone.UseVisualStyleBackColor = true;
+            // 
+            // cbContactDoNotEmail
+            // 
+            this.cbContactDoNotEmail.AutoSize = true;
+            this.cbContactDoNotEmail.Location = new System.Drawing.Point(778, 160);
+            this.cbContactDoNotEmail.Name = "cbContactDoNotEmail";
+            this.cbContactDoNotEmail.Size = new System.Drawing.Size(84, 16);
+            this.cbContactDoNotEmail.TabIndex = 83;
+            this.cbContactDoNotEmail.Text = "DoNotEmail";
+            this.cbContactDoNotEmail.UseVisualStyleBackColor = true;
+            // 
+            // cbContactDoNotMail
+            // 
+            this.cbContactDoNotMail.AutoSize = true;
+            this.cbContactDoNotMail.Location = new System.Drawing.Point(778, 124);
+            this.cbContactDoNotMail.Name = "cbContactDoNotMail";
+            this.cbContactDoNotMail.Size = new System.Drawing.Size(78, 16);
+            this.cbContactDoNotMail.TabIndex = 82;
+            this.cbContactDoNotMail.Text = "DoNotMail";
+            this.cbContactDoNotMail.UseVisualStyleBackColor = true;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(516, 253);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(41, 12);
+            this.label124.TabIndex = 80;
+            this.label124.Text = "TypeId";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(516, 226);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(53, 12);
+            this.label123.TabIndex = 78;
+            this.label123.Text = "Comments";
+            // 
+            // txtContactComments
+            // 
+            this.txtContactComments.Location = new System.Drawing.Point(605, 223);
+            this.txtContactComments.Name = "txtContactComments";
+            this.txtContactComments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContactComments.Size = new System.Drawing.Size(121, 21);
+            this.txtContactComments.TabIndex = 77;
+            this.txtContactComments.Text = "Comments";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(516, 195);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(71, 12);
+            this.label122.TabIndex = 76;
+            this.label122.Text = "CompanyName";
+            // 
+            // txtContactCompanyName
+            // 
+            this.txtContactCompanyName.Location = new System.Drawing.Point(605, 192);
+            this.txtContactCompanyName.Name = "txtContactCompanyName";
+            this.txtContactCompanyName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContactCompanyName.Size = new System.Drawing.Size(121, 21);
+            this.txtContactCompanyName.TabIndex = 75;
+            this.txtContactCompanyName.Text = "CompanyName";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(516, 164);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(71, 12);
+            this.label121.TabIndex = 74;
+            this.label121.Text = "CountryCode";
+            // 
+            // txtContactCountryCode
+            // 
+            this.txtContactCountryCode.Location = new System.Drawing.Point(605, 161);
+            this.txtContactCountryCode.Name = "txtContactCountryCode";
+            this.txtContactCountryCode.Size = new System.Drawing.Size(121, 21);
+            this.txtContactCountryCode.TabIndex = 73;
+            this.txtContactCountryCode.Text = "GB";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(516, 128);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(65, 12);
+            this.label120.TabIndex = 72;
+            this.label120.Text = "CountyArea";
+            // 
+            // txtContactCountyArea
+            // 
+            this.txtContactCountyArea.Location = new System.Drawing.Point(605, 125);
+            this.txtContactCountyArea.Name = "txtContactCountyArea";
+            this.txtContactCountyArea.Size = new System.Drawing.Size(121, 21);
+            this.txtContactCountyArea.TabIndex = 71;
+            this.txtContactCountyArea.Text = "CountyArea";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(516, 98);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(53, 12);
+            this.label119.TabIndex = 70;
+            this.label119.Text = "TownCity";
+            // 
+            // txtContactCity
+            // 
+            this.txtContactCity.Location = new System.Drawing.Point(605, 95);
+            this.txtContactCity.Name = "txtContactCity";
+            this.txtContactCity.Size = new System.Drawing.Size(121, 21);
+            this.txtContactCity.TabIndex = 69;
+            this.txtContactCity.Text = "City";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(255, 250);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(65, 12);
+            this.label118.TabIndex = 68;
+            this.label118.Text = "StreetName";
+            // 
+            // txtContactStreetName
+            // 
+            this.txtContactStreetName.Location = new System.Drawing.Point(344, 247);
+            this.txtContactStreetName.Name = "txtContactStreetName";
+            this.txtContactStreetName.Size = new System.Drawing.Size(121, 21);
+            this.txtContactStreetName.TabIndex = 67;
+            this.txtContactStreetName.Text = "Address2";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Location = new System.Drawing.Point(255, 223);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(47, 12);
+            this.label117.TabIndex = 66;
+            this.label117.Text = "Address";
+            // 
+            // txtContactAddress
+            // 
+            this.txtContactAddress.Location = new System.Drawing.Point(344, 220);
+            this.txtContactAddress.Name = "txtContactAddress";
+            this.txtContactAddress.Size = new System.Drawing.Size(121, 21);
+            this.txtContactAddress.TabIndex = 65;
+            this.txtContactAddress.Text = "Address1";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Location = new System.Drawing.Point(255, 192);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(53, 12);
+            this.label116.TabIndex = 64;
+            this.label116.Text = "Postcode";
+            // 
+            // txtContactPostcode
+            // 
+            this.txtContactPostcode.Location = new System.Drawing.Point(344, 187);
+            this.txtContactPostcode.Name = "txtContactPostcode";
+            this.txtContactPostcode.Size = new System.Drawing.Size(121, 21);
+            this.txtContactPostcode.TabIndex = 63;
+            this.txtContactPostcode.Text = "1234AA";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Location = new System.Drawing.Point(255, 165);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(41, 12);
+            this.label115.TabIndex = 62;
+            this.label115.Text = "Mobile";
+            // 
+            // txtContactMobile
+            // 
+            this.txtContactMobile.Location = new System.Drawing.Point(344, 160);
+            this.txtContactMobile.Name = "txtContactMobile";
+            this.txtContactMobile.Size = new System.Drawing.Size(121, 21);
+            this.txtContactMobile.TabIndex = 61;
+            this.txtContactMobile.Text = "123456";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Location = new System.Drawing.Point(255, 131);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(77, 12);
+            this.label114.TabIndex = 60;
+            this.label114.Text = "TelephoneAlt";
+            // 
+            // txtContactTelephoneAlt
+            // 
+            this.txtContactTelephoneAlt.Location = new System.Drawing.Point(344, 126);
+            this.txtContactTelephoneAlt.Name = "txtContactTelephoneAlt";
+            this.txtContactTelephoneAlt.Size = new System.Drawing.Size(121, 21);
+            this.txtContactTelephoneAlt.TabIndex = 59;
+            this.txtContactTelephoneAlt.Text = "123456";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(255, 100);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(59, 12);
+            this.label113.TabIndex = 58;
+            this.label113.Text = "Telephone";
+            // 
+            // txtContactTelephone
+            // 
+            this.txtContactTelephone.Location = new System.Drawing.Point(344, 95);
+            this.txtContactTelephone.Name = "txtContactTelephone";
+            this.txtContactTelephone.Size = new System.Drawing.Size(121, 21);
+            this.txtContactTelephone.TabIndex = 57;
+            this.txtContactTelephone.Text = "123456";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Location = new System.Drawing.Point(17, 250);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(59, 12);
+            this.label112.TabIndex = 56;
+            this.label112.Text = "EmailAlt1";
+            // 
+            // txtContactEmailAlt1
+            // 
+            this.txtContactEmailAlt1.Location = new System.Drawing.Point(106, 245);
+            this.txtContactEmailAlt1.Name = "txtContactEmailAlt1";
+            this.txtContactEmailAlt1.Size = new System.Drawing.Size(121, 21);
+            this.txtContactEmailAlt1.TabIndex = 55;
+            this.txtContactEmailAlt1.Text = "test2@gmail.com";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(17, 223);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(53, 12);
+            this.label111.TabIndex = 54;
+            this.label111.Text = "EmailAlt";
+            // 
+            // txtContactEmailAlt
+            // 
+            this.txtContactEmailAlt.Location = new System.Drawing.Point(106, 218);
+            this.txtContactEmailAlt.Name = "txtContactEmailAlt";
+            this.txtContactEmailAlt.Size = new System.Drawing.Size(121, 21);
+            this.txtContactEmailAlt.TabIndex = 53;
+            this.txtContactEmailAlt.Text = "test1@gmail.com";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(17, 196);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(35, 12);
+            this.label110.TabIndex = 52;
+            this.label110.Text = "Email";
+            // 
+            // txtContactEmail
+            // 
+            this.txtContactEmail.Location = new System.Drawing.Point(106, 191);
+            this.txtContactEmail.Name = "txtContactEmail";
+            this.txtContactEmail.Size = new System.Drawing.Size(121, 21);
+            this.txtContactEmail.TabIndex = 51;
+            this.txtContactEmail.Text = "test@gmail.com";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(17, 163);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(53, 12);
+            this.label109.TabIndex = 50;
+            this.label109.Text = "LastName";
+            // 
+            // txtContactLastName
+            // 
+            this.txtContactLastName.Location = new System.Drawing.Point(106, 160);
+            this.txtContactLastName.Name = "txtContactLastName";
+            this.txtContactLastName.Size = new System.Drawing.Size(121, 21);
+            this.txtContactLastName.TabIndex = 49;
+            this.txtContactLastName.Text = "Green";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(17, 129);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(59, 12);
+            this.label108.TabIndex = 48;
+            this.label108.Text = "FirstName";
+            // 
+            // ddlContactTitle
+            // 
+            this.ddlContactTitle.FormattingEnabled = true;
+            this.ddlContactTitle.Items.AddRange(new object[] {
+            "",
+            "Mr",
+            "Mrs",
+            "Mr & Mrs",
+            "Ms",
+            "Miss",
+            "Sir",
+            "Dr",
+            "Dame",
+            "Lady",
+            "Lord",
+            "Master"});
+            this.ddlContactTitle.Location = new System.Drawing.Point(106, 95);
+            this.ddlContactTitle.Name = "ddlContactTitle";
+            this.ddlContactTitle.Size = new System.Drawing.Size(121, 20);
+            this.ddlContactTitle.TabIndex = 47;
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(17, 98);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(35, 12);
+            this.label107.TabIndex = 46;
+            this.label107.Text = "Title";
+            // 
+            // txtContactFirstName
+            // 
+            this.txtContactFirstName.Location = new System.Drawing.Point(106, 126);
+            this.txtContactFirstName.Name = "txtContactFirstName";
+            this.txtContactFirstName.Size = new System.Drawing.Size(121, 21);
+            this.txtContactFirstName.TabIndex = 45;
+            this.txtContactFirstName.Text = "John";
+            // 
+            // btnContacts
+            // 
+            this.btnContacts.Location = new System.Drawing.Point(423, 17);
+            this.btnContacts.Name = "btnContacts";
+            this.btnContacts.Size = new System.Drawing.Size(54, 23);
+            this.btnContacts.TabIndex = 44;
+            this.btnContacts.Text = "GET";
+            this.btnContacts.UseVisualStyleBackColor = true;
+            // 
+            // txtContacts
+            // 
+            this.txtContacts.Location = new System.Drawing.Point(106, 19);
+            this.txtContacts.Name = "txtContacts";
+            this.txtContacts.Size = new System.Drawing.Size(311, 21);
+            this.txtContacts.TabIndex = 43;
+            this.txtContacts.Text = "/apis/contacts?size=15&index=1&term=";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(17, 22);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(53, 12);
+            this.label29.TabIndex = 42;
+            this.label29.Text = "Contacts";
+            // 
             // lblTimeCost
             // 
             this.lblTimeCost.AutoSize = true;
@@ -3087,6 +3662,8 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3180,9 +3757,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txtPropertyExtras;
         private System.Windows.Forms.Button btnPropertyExtras;
-        private System.Windows.Forms.Button btnContacts;
-        private System.Windows.Forms.TextBox txtContacts;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtBookingContactTitle;
         private System.Windows.Forms.TextBox txtBookingContactId;
@@ -3373,6 +3947,61 @@
         private System.Windows.Forms.TextBox txtPaymentToken;
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.TextBox txtCardPartialNumbers;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button btnContacts;
+        private System.Windows.Forms.TextBox txtContacts;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox ddlContactTitle;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.TextBox txtContactFirstName;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.TextBox txtContactLastName;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.TextBox txtContactEmail;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.TextBox txtContactEmailAlt1;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.TextBox txtContactEmailAlt;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.TextBox txtContactTelephone;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.TextBox txtContactTelephoneAlt;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.TextBox txtContactPostcode;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.TextBox txtContactMobile;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.TextBox txtContactStreetName;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.TextBox txtContactAddress;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.TextBox txtContactCity;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.TextBox txtContactCountyArea;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.TextBox txtContactCountryCode;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.TextBox txtContactCompanyName;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.TextBox txtContactComments;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.CheckBox cbContactDoNotMail;
+        private System.Windows.Forms.CheckBox cbContactDoNotEmail;
+        private System.Windows.Forms.CheckBox cbContactDoNotPhone;
+        private System.Windows.Forms.CheckBox cbContactOnEmailList;
+        private System.Windows.Forms.Label lblContactCommision;
+        private System.Windows.Forms.TextBox txtContactCommision;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.TextBox txtContactBalance;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.TextBox txtContactRetainer;
+        private System.Windows.Forms.Button btnContactPost;
+        private System.Windows.Forms.TextBox txtContactPostUrl;
+        private System.Windows.Forms.TextBox txtContactTypeId;
+        private System.Windows.Forms.Button btnContactTypes;
+        private System.Windows.Forms.TextBox txtContactTypesUrl;
+        private System.Windows.Forms.Label label127;
     }
 }
 

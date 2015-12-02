@@ -39,6 +39,8 @@ namespace iPro.SDK.Client
 
             txtBookingProperty1Checkin.Text = now.AddMonths(1).ToString("yyyy-MM-dd");
             txtBookingProperty1Checkout.Text = now.AddMonths(1).AddDays(7).ToString("yyyy-MM-dd");
+
+            ddlContactTitle.SelectedText = "Mr";
         }
 
         public void UpdateFields()
@@ -463,7 +465,7 @@ namespace iPro.SDK.Client
         private async void btnCalcBooking_Click(object sender, EventArgs e)
         {
             var formContent = new FormUrlEncodedContent(this.GetBookingCalcProperties());
-            await PostContent(this.txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
+            await PostContent(txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
         private IEnumerable<KeyValuePair<string, string>> GetBookingCalcProperties()
@@ -481,6 +483,45 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtPropertyExtra2Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtPropertyExtra2Qty.Text)
             };
+        }
+
+        private void btnContactPost_Click(object sender, EventArgs e)
+        {
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("Title", ddlContactTitle.SelectedText), 
+                new KeyValuePair<string, string>("FirstName", txtContactFirstName.Text), 
+                new KeyValuePair<string, string>("LastName", txtContactLastName.Text), 
+                new KeyValuePair<string, string>("Email", txtContactEmail.Text), 
+                new KeyValuePair<string, string>("EmailAlt",txtContactEmailAlt.Text),
+                new KeyValuePair<string, string>("EmailAlt1",txtContactEmailAlt1.Text),
+                new KeyValuePair<string, string>("Telephone",txtContactTelephone.Text),
+                new KeyValuePair<string, string>("TelephoneAlt",txtContactTelephoneAlt.Text),
+                new KeyValuePair<string, string>("Mobile",txtContactMobile.Text),
+                new KeyValuePair<string, string>("Postcode",txtContactPostcode.Text),
+                new KeyValuePair<string, string>("Address",txtContactAddress.Text),
+                new KeyValuePair<string, string>("StreetName",txtContactStreetName.Text),
+                new KeyValuePair<string, string>("TownCity",txtContactCity.Text),
+                new KeyValuePair<string, string>("CountyArea",txtContactCountyArea.Text),
+                new KeyValuePair<string, string>("CountryCode",txtContactCountryCode.Text),
+                new KeyValuePair<string, string>("CompanyName",txtContactCompanyName.Text),
+                new KeyValuePair<string, string>("Comments",txtContactComments.Text),
+                new KeyValuePair<string, string>("TypeId",txtContactTypeId.Text),
+                new KeyValuePair<string, string>("DoNotMail",cbContactDoNotMail.Checked.ToString()),
+                new KeyValuePair<string, string>("DoNotEmail",cbContactDoNotEmail.Checked.ToString()),
+                new KeyValuePair<string, string>("DoNotPhone",cbContactDoNotPhone.Checked.ToString()),
+                new KeyValuePair<string, string>("OnEmailList",cbContactOnEmailList.Checked.ToString()),
+                new KeyValuePair<string, string>("Commision",txtContactCommision.Text),
+                new KeyValuePair<string, string>("Balance",txtContactBalance.Text),
+                new KeyValuePair<string, string>("Retainer",txtContactRetainer.Text)
+            });
+
+            PostContent(txtContactPostUrl.Text, formContent.ReadAsByteArrayAsync().Result);
+        }
+
+        private void btnContactTypes_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtContactTypesUrl.Text);
         }
     }
 }
