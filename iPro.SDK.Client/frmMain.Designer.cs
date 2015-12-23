@@ -357,6 +357,9 @@
             this.label128 = new System.Windows.Forms.Label();
             this.txtPropertyReferenceLookupApiUrl = new System.Windows.Forms.TextBox();
             this.btnReferenceLookup = new System.Windows.Forms.Button();
+            this.label129 = new System.Windows.Forms.Label();
+            this.txtCustomRatesApiUrl = new System.Windows.Forms.TextBox();
+            this.btnCustomRates = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -637,6 +640,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label129);
+            this.groupBox2.Controls.Add(this.txtCustomRatesApiUrl);
+            this.groupBox2.Controls.Add(this.btnCustomRates);
             this.groupBox2.Controls.Add(this.label128);
             this.groupBox2.Controls.Add(this.txtPropertyReferenceLookupApiUrl);
             this.groupBox2.Controls.Add(this.btnReferenceLookup);
@@ -3634,6 +3640,33 @@
             this.btnReferenceLookup.UseVisualStyleBackColor = true;
             this.btnReferenceLookup.Click += new System.EventHandler(this.btnReferenceLookup_Click);
             // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Location = new System.Drawing.Point(36, 243);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(131, 12);
+            this.label129.TabIndex = 59;
+            this.label129.Text = "property custom rates";
+            // 
+            // txtCustomRatesApiUrl
+            // 
+            this.txtCustomRatesApiUrl.Location = new System.Drawing.Point(178, 240);
+            this.txtCustomRatesApiUrl.Name = "txtCustomRatesApiUrl";
+            this.txtCustomRatesApiUrl.Size = new System.Drawing.Size(335, 21);
+            this.txtCustomRatesApiUrl.TabIndex = 58;
+            this.txtCustomRatesApiUrl.Text = "/apis/property/8849/customrates?latestRates=today";
+            // 
+            // btnCustomRates
+            // 
+            this.btnCustomRates.Location = new System.Drawing.Point(519, 239);
+            this.btnCustomRates.Name = "btnCustomRates";
+            this.btnCustomRates.Size = new System.Drawing.Size(54, 21);
+            this.btnCustomRates.TabIndex = 57;
+            this.btnCustomRates.Text = "GET";
+            this.btnCustomRates.UseVisualStyleBackColor = true;
+            this.btnCustomRates.Click += new System.EventHandler(this.btnCustomRates_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4039,6 +4072,9 @@
         private System.Windows.Forms.Label label128;
         private System.Windows.Forms.TextBox txtPropertyReferenceLookupApiUrl;
         private System.Windows.Forms.Button btnReferenceLookup;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.TextBox txtCustomRatesApiUrl;
+        private System.Windows.Forms.Button btnCustomRates;
     }
 }
 

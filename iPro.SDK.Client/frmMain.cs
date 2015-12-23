@@ -528,5 +528,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertyReferenceLookupApiUrl.Text);
         }
+
+        private void btnCustomRates_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtCustomRatesApiUrl.Text);
+        }
     }
 }
