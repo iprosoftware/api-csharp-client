@@ -523,5 +523,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtContactTypesUrl.Text);
         }
+
+        private void btnReferenceLookup_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertyReferenceLookupApiUrl.Text);
+        }
     }
 }

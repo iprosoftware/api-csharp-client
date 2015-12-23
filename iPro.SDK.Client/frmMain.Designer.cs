@@ -354,6 +354,9 @@
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.lblTimeCost = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.txtPropertyReferenceLookupApiUrl = new System.Windows.Forms.TextBox();
+            this.btnReferenceLookup = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -634,6 +637,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label128);
+            this.groupBox2.Controls.Add(this.txtPropertyReferenceLookupApiUrl);
+            this.groupBox2.Controls.Add(this.btnReferenceLookup);
             this.groupBox2.Controls.Add(this.label79);
             this.groupBox2.Controls.Add(this.txtDayAvailability);
             this.groupBox2.Controls.Add(this.btnDayAvailability);
@@ -3601,6 +3607,33 @@
             this.lblTimeCost.Size = new System.Drawing.Size(0, 12);
             this.lblTimeCost.TabIndex = 35;
             // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(12, 217);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(155, 12);
+            this.label128.TabIndex = 56;
+            this.label128.Text = "property reference lookup";
+            // 
+            // txtPropertyReferenceLookupApiUrl
+            // 
+            this.txtPropertyReferenceLookupApiUrl.Location = new System.Drawing.Point(178, 213);
+            this.txtPropertyReferenceLookupApiUrl.Name = "txtPropertyReferenceLookupApiUrl";
+            this.txtPropertyReferenceLookupApiUrl.Size = new System.Drawing.Size(335, 21);
+            this.txtPropertyReferenceLookupApiUrl.TabIndex = 55;
+            this.txtPropertyReferenceLookupApiUrl.Text = "/apis/properties/reflookup";
+            // 
+            // btnReferenceLookup
+            // 
+            this.btnReferenceLookup.Location = new System.Drawing.Point(519, 213);
+            this.btnReferenceLookup.Name = "btnReferenceLookup";
+            this.btnReferenceLookup.Size = new System.Drawing.Size(54, 21);
+            this.btnReferenceLookup.TabIndex = 54;
+            this.btnReferenceLookup.Text = "GET";
+            this.btnReferenceLookup.UseVisualStyleBackColor = true;
+            this.btnReferenceLookup.Click += new System.EventHandler(this.btnReferenceLookup_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4003,6 +4036,9 @@
         private System.Windows.Forms.Button btnContactTypes;
         private System.Windows.Forms.TextBox txtContactTypesUrl;
         private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.TextBox txtPropertyReferenceLookupApiUrl;
+        private System.Windows.Forms.Button btnReferenceLookup;
     }
 }
 
