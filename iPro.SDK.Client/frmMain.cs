@@ -259,9 +259,17 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("EnquiryId", this.txtBookingEnquiryId.Text),
                 new KeyValuePair<string, string>("Source", this.txtBookingSource.Text),
                 new KeyValuePair<string, string>("PaidAmount", this.txtPaidAmount.Text),
+                new KeyValuePair<string, string>("SendEmail", this.cbBookingSendEmail.Checked.ToString()),
+
                 new KeyValuePair<string, string>("PaymentToken", this.txtPaymentToken.Text),
                 new KeyValuePair<string, string>("CardPartialNumbers", this.txtCardPartialNumbers.Text),
-                new KeyValuePair<string, string>("SendEmail", this.cbBookingSendEmail.Checked.ToString()),
+
+                new KeyValuePair<string, string>("IsDeferredPayment", this.chkIsDeferredPayment.Checked.ToString()),
+                new KeyValuePair<string, string>("SagepaySecurityKey", this.txtSagepaySecurityKey.Text),
+                new KeyValuePair<string, string>("SagepayVendorTxCode", this.txtSagepayVendorTxCode.Text),
+                new KeyValuePair<string, string>("SagepayVPSTxId", this.txtSagepayVPSTxId.Text),
+                new KeyValuePair<string, string>("SagepayTxAuthNo", this.txtSagepayTxAuthNo.Text),
+
                 new KeyValuePair<string, string>("Contact.ContactId", this.txtBookingContactId.Text),
                 new KeyValuePair<string, string>("Contact.Title", this.txtBookingContactTitle.Text),
                 new KeyValuePair<string, string>("Contact.FirstName", this.txtBookingContactFirstName.Text),
