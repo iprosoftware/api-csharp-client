@@ -1567,7 +1567,7 @@
             this.txtBookingPaymentMethod.Name = "txtBookingPaymentMethod";
             this.txtBookingPaymentMethod.Size = new System.Drawing.Size(95, 21);
             this.txtBookingPaymentMethod.TabIndex = 59;
-            this.txtBookingPaymentMethod.Text = "Credit Card";
+            this.txtBookingPaymentMethod.Text = "Debit Card";
             // 
             // label134
             // 
