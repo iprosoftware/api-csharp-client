@@ -1563,7 +1563,7 @@
             // 
             // txtBookingPaymentMethod
             // 
-            this.txtBookingPaymentMethod.Location = new System.Drawing.Point(95, 42);
+            this.txtBookingPaymentMethod.Location = new System.Drawing.Point(269, 42);
             this.txtBookingPaymentMethod.Name = "txtBookingPaymentMethod";
             this.txtBookingPaymentMethod.Size = new System.Drawing.Size(95, 21);
             this.txtBookingPaymentMethod.TabIndex = 59;
@@ -1572,7 +1572,7 @@
             // label134
             // 
             this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(6, 46);
+            this.label134.Location = new System.Drawing.Point(180, 46);
             this.label134.Name = "label134";
             this.label134.Size = new System.Drawing.Size(83, 12);
             this.label134.TabIndex = 58;
@@ -1689,7 +1689,7 @@
             // cbBookingSendEmail
             // 
             this.cbBookingSendEmail.AutoSize = true;
-            this.cbBookingSendEmail.Location = new System.Drawing.Point(706, 14);
+            this.cbBookingSendEmail.Location = new System.Drawing.Point(877, 16);
             this.cbBookingSendEmail.Name = "cbBookingSendEmail";
             this.cbBookingSendEmail.Size = new System.Drawing.Size(84, 16);
             this.cbBookingSendEmail.TabIndex = 44;
@@ -1699,7 +1699,7 @@
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(199, 46);
+            this.label99.Location = new System.Drawing.Point(15, 46);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(65, 12);
             this.label99.TabIndex = 43;
@@ -1707,7 +1707,7 @@
             // 
             // txtPaidAmount
             // 
-            this.txtPaidAmount.Location = new System.Drawing.Point(269, 42);
+            this.txtPaidAmount.Location = new System.Drawing.Point(85, 42);
             this.txtPaidAmount.Name = "txtPaidAmount";
             this.txtPaidAmount.Size = new System.Drawing.Size(90, 21);
             this.txtPaidAmount.TabIndex = 42;
