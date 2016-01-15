@@ -533,5 +533,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtCustomRatesApiUrl.Text);
         }
+
+        private void btnGetReservations_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtReservationsApiUrl.Text);
+        }
     }
 }

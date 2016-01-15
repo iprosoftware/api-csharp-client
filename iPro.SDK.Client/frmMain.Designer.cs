@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tokenEndpointLabel = new System.Windows.Forms.Label();
             this.tokenEndpointTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +52,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label129 = new System.Windows.Forms.Label();
+            this.txtCustomRatesApiUrl = new System.Windows.Forms.TextBox();
+            this.btnCustomRates = new System.Windows.Forms.Button();
+            this.label128 = new System.Windows.Forms.Label();
+            this.txtPropertyReferenceLookupApiUrl = new System.Windows.Forms.TextBox();
+            this.btnReferenceLookup = new System.Windows.Forms.Button();
             this.label79 = new System.Windows.Forms.Label();
             this.txtDayAvailability = new System.Windows.Forms.TextBox();
             this.btnDayAvailability = new System.Windows.Forms.Button();
@@ -353,13 +360,11 @@
             this.btnContacts = new System.Windows.Forms.Button();
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.lblTimeCost = new System.Windows.Forms.Label();
-            this.label128 = new System.Windows.Forms.Label();
-            this.txtPropertyReferenceLookupApiUrl = new System.Windows.Forms.TextBox();
-            this.btnReferenceLookup = new System.Windows.Forms.Button();
-            this.label129 = new System.Windows.Forms.Label();
-            this.txtCustomRatesApiUrl = new System.Windows.Forms.TextBox();
-            this.btnCustomRates = new System.Windows.Forms.Button();
+            this.label130 = new System.Windows.Forms.Label();
+            this.txtReservationsApiUrl = new System.Windows.Forms.TextBox();
+            this.btnGetReservations = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -387,6 +392,7 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -688,6 +694,60 @@
             this.groupBox2.Size = new System.Drawing.Size(1177, 279);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Location = new System.Drawing.Point(36, 243);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(131, 12);
+            this.label129.TabIndex = 59;
+            this.label129.Text = "property custom rates";
+            // 
+            // txtCustomRatesApiUrl
+            // 
+            this.txtCustomRatesApiUrl.Location = new System.Drawing.Point(178, 240);
+            this.txtCustomRatesApiUrl.Name = "txtCustomRatesApiUrl";
+            this.txtCustomRatesApiUrl.Size = new System.Drawing.Size(335, 21);
+            this.txtCustomRatesApiUrl.TabIndex = 58;
+            this.txtCustomRatesApiUrl.Text = "/apis/property/8849/customrates?latestRates=today";
+            // 
+            // btnCustomRates
+            // 
+            this.btnCustomRates.Location = new System.Drawing.Point(519, 239);
+            this.btnCustomRates.Name = "btnCustomRates";
+            this.btnCustomRates.Size = new System.Drawing.Size(54, 21);
+            this.btnCustomRates.TabIndex = 57;
+            this.btnCustomRates.Text = "GET";
+            this.btnCustomRates.UseVisualStyleBackColor = true;
+            this.btnCustomRates.Click += new System.EventHandler(this.btnCustomRates_Click);
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(12, 217);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(155, 12);
+            this.label128.TabIndex = 56;
+            this.label128.Text = "property reference lookup";
+            // 
+            // txtPropertyReferenceLookupApiUrl
+            // 
+            this.txtPropertyReferenceLookupApiUrl.Location = new System.Drawing.Point(178, 213);
+            this.txtPropertyReferenceLookupApiUrl.Name = "txtPropertyReferenceLookupApiUrl";
+            this.txtPropertyReferenceLookupApiUrl.Size = new System.Drawing.Size(335, 21);
+            this.txtPropertyReferenceLookupApiUrl.TabIndex = 55;
+            this.txtPropertyReferenceLookupApiUrl.Text = "/apis/properties/reflookup";
+            // 
+            // btnReferenceLookup
+            // 
+            this.btnReferenceLookup.Location = new System.Drawing.Point(519, 213);
+            this.btnReferenceLookup.Name = "btnReferenceLookup";
+            this.btnReferenceLookup.Size = new System.Drawing.Size(54, 21);
+            this.btnReferenceLookup.TabIndex = 54;
+            this.btnReferenceLookup.Text = "GET";
+            this.btnReferenceLookup.UseVisualStyleBackColor = true;
+            this.btnReferenceLookup.Click += new System.EventHandler(this.btnReferenceLookup_Click);
             // 
             // label79
             // 
@@ -1420,6 +1480,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Location = new System.Drawing.Point(12, 168);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -3604,6 +3665,19 @@
             this.label29.TabIndex = 42;
             this.label29.Text = "Contacts";
             // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.label130);
+            this.tabPage7.Controls.Add(this.txtReservationsApiUrl);
+            this.tabPage7.Controls.Add(this.btnGetReservations);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1183, 285);
+            this.tabPage7.TabIndex = 9;
+            this.tabPage7.Text = "Bookings";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // lblTimeCost
             // 
             this.lblTimeCost.AutoSize = true;
@@ -3613,59 +3687,32 @@
             this.lblTimeCost.Size = new System.Drawing.Size(0, 12);
             this.lblTimeCost.TabIndex = 35;
             // 
-            // label128
+            // label130
             // 
-            this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(12, 217);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(155, 12);
-            this.label128.TabIndex = 56;
-            this.label128.Text = "property reference lookup";
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(30, 33);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(53, 12);
+            this.label130.TabIndex = 33;
+            this.label130.Text = "Bookings";
             // 
-            // txtPropertyReferenceLookupApiUrl
+            // txtReservationsApiUrl
             // 
-            this.txtPropertyReferenceLookupApiUrl.Location = new System.Drawing.Point(178, 213);
-            this.txtPropertyReferenceLookupApiUrl.Name = "txtPropertyReferenceLookupApiUrl";
-            this.txtPropertyReferenceLookupApiUrl.Size = new System.Drawing.Size(335, 21);
-            this.txtPropertyReferenceLookupApiUrl.TabIndex = 55;
-            this.txtPropertyReferenceLookupApiUrl.Text = "/apis/properties/reflookup";
+            this.txtReservationsApiUrl.Location = new System.Drawing.Point(167, 29);
+            this.txtReservationsApiUrl.Name = "txtReservationsApiUrl";
+            this.txtReservationsApiUrl.Size = new System.Drawing.Size(872, 21);
+            this.txtReservationsApiUrl.TabIndex = 32;
+            this.txtReservationsApiUrl.Text = resources.GetString("txtReservationsApiUrl.Text");
             // 
-            // btnReferenceLookup
+            // btnGetReservations
             // 
-            this.btnReferenceLookup.Location = new System.Drawing.Point(519, 213);
-            this.btnReferenceLookup.Name = "btnReferenceLookup";
-            this.btnReferenceLookup.Size = new System.Drawing.Size(54, 21);
-            this.btnReferenceLookup.TabIndex = 54;
-            this.btnReferenceLookup.Text = "GET";
-            this.btnReferenceLookup.UseVisualStyleBackColor = true;
-            this.btnReferenceLookup.Click += new System.EventHandler(this.btnReferenceLookup_Click);
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Location = new System.Drawing.Point(36, 243);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(131, 12);
-            this.label129.TabIndex = 59;
-            this.label129.Text = "property custom rates";
-            // 
-            // txtCustomRatesApiUrl
-            // 
-            this.txtCustomRatesApiUrl.Location = new System.Drawing.Point(178, 240);
-            this.txtCustomRatesApiUrl.Name = "txtCustomRatesApiUrl";
-            this.txtCustomRatesApiUrl.Size = new System.Drawing.Size(335, 21);
-            this.txtCustomRatesApiUrl.TabIndex = 58;
-            this.txtCustomRatesApiUrl.Text = "/apis/property/8849/customrates?latestRates=today";
-            // 
-            // btnCustomRates
-            // 
-            this.btnCustomRates.Location = new System.Drawing.Point(519, 239);
-            this.btnCustomRates.Name = "btnCustomRates";
-            this.btnCustomRates.Size = new System.Drawing.Size(54, 21);
-            this.btnCustomRates.TabIndex = 57;
-            this.btnCustomRates.Text = "GET";
-            this.btnCustomRates.UseVisualStyleBackColor = true;
-            this.btnCustomRates.Click += new System.EventHandler(this.btnCustomRates_Click);
+            this.btnGetReservations.Location = new System.Drawing.Point(1058, 29);
+            this.btnGetReservations.Name = "btnGetReservations";
+            this.btnGetReservations.Size = new System.Drawing.Size(54, 21);
+            this.btnGetReservations.TabIndex = 31;
+            this.btnGetReservations.Text = "GET";
+            this.btnGetReservations.UseVisualStyleBackColor = true;
+            this.btnGetReservations.Click += new System.EventHandler(this.btnGetReservations_Click);
             // 
             // frmMain
             // 
@@ -3731,6 +3778,8 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4075,6 +4124,10 @@
         private System.Windows.Forms.Label label129;
         private System.Windows.Forms.TextBox txtCustomRatesApiUrl;
         private System.Windows.Forms.Button btnCustomRates;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.TextBox txtReservationsApiUrl;
+        private System.Windows.Forms.Button btnGetReservations;
     }
 }
 
