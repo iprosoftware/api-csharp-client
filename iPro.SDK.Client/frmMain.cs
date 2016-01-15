@@ -264,6 +264,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("PaymentMethod", this.txtBookingPaymentMethod.Text),
                 new KeyValuePair<string, string>("PaymentToken", this.txtBookingPaymentToken.Text),
                 new KeyValuePair<string, string>("CardPartialNumbers", this.txtBookingCardPartialNumbers.Text),
+                new KeyValuePair<string, string>("CardType", this.txtCreateBookingCardType.Text),
 
                 new KeyValuePair<string, string>("IsDeferredPayment", this.chkBookingIsDeferredPayment.Checked.ToString()),
                 new KeyValuePair<string, string>("SagepaySecurityKey", this.txtBookingSagepaySecurityKey.Text),

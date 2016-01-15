@@ -377,6 +377,8 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.label136 = new System.Windows.Forms.Label();
+            this.txtCreateBookingCardType = new System.Windows.Forms.TextBox();
+            this.label137 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1534,6 +1536,8 @@
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.label137);
+            this.tabBooking.Controls.Add(this.txtCreateBookingCardType);
             this.tabBooking.Controls.Add(this.label136);
             this.tabBooking.Controls.Add(this.txtBookingPaymentMethod);
             this.tabBooking.Controls.Add(this.label134);
@@ -3837,6 +3841,23 @@
             this.label136.TabIndex = 60;
             this.label136.Text = "SagepayVPSTxId";
             // 
+            // txtCreateBookingCardType
+            // 
+            this.txtCreateBookingCardType.Location = new System.Drawing.Point(1054, 46);
+            this.txtCreateBookingCardType.Name = "txtCreateBookingCardType";
+            this.txtCreateBookingCardType.Size = new System.Drawing.Size(106, 21);
+            this.txtCreateBookingCardType.TabIndex = 61;
+            this.txtCreateBookingCardType.Text = "VISA";
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(982, 49);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(53, 12);
+            this.label137.TabIndex = 62;
+            this.label137.Text = "CardType";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4263,6 +4284,8 @@
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.TextBox txtBookingPaymentMethod;
         private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.TextBox txtCreateBookingCardType;
     }
 }
 
