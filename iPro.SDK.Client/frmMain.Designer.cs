@@ -139,10 +139,21 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.txtBookingPaymentMethod = new System.Windows.Forms.TextBox();
+            this.label134 = new System.Windows.Forms.Label();
+            this.txtBookingSagepayVendorTxCode = new System.Windows.Forms.TextBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.txtBookingSagepaySecurityKey = new System.Windows.Forms.TextBox();
+            this.label132 = new System.Windows.Forms.Label();
+            this.txtBookingSagepayTxAuthNo = new System.Windows.Forms.TextBox();
+            this.label131 = new System.Windows.Forms.Label();
+            this.txtBookingSagepayVPSTxId = new System.Windows.Forms.TextBox();
+            this.label130 = new System.Windows.Forms.Label();
+            this.chkBookingIsDeferredPayment = new System.Windows.Forms.CheckBox();
             this.label106 = new System.Windows.Forms.Label();
-            this.txtCardPartialNumbers = new System.Windows.Forms.TextBox();
+            this.txtBookingCardPartialNumbers = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
-            this.txtPaymentToken = new System.Windows.Forms.TextBox();
+            this.txtBookingPaymentToken = new System.Windows.Forms.TextBox();
             this.cbBookingSendEmail = new System.Windows.Forms.CheckBox();
             this.label99 = new System.Windows.Forms.Label();
             this.txtPaidAmount = new System.Windows.Forms.TextBox();
@@ -361,10 +372,11 @@
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.lblTimeCost = new System.Windows.Forms.Label();
-            this.label130 = new System.Windows.Forms.Label();
             this.txtReservationsApiUrl = new System.Windows.Forms.TextBox();
             this.btnGetReservations = new System.Windows.Forms.Button();
+            this.lblTimeCost = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label136 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -500,7 +512,7 @@
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.outputTextBox.Size = new System.Drawing.Size(632, 365);
+            this.outputTextBox.Size = new System.Drawing.Size(632, 284);
             this.outputTextBox.TabIndex = 3;
             this.outputTextBox.Text = "(HTTP responses and API data will be logged here)";
             // 
@@ -1465,7 +1477,7 @@
             this.txtHttpRequest.Multiline = true;
             this.txtHttpRequest.Name = "txtHttpRequest";
             this.txtHttpRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHttpRequest.Size = new System.Drawing.Size(553, 365);
+            this.txtHttpRequest.Size = new System.Drawing.Size(553, 284);
             this.txtHttpRequest.TabIndex = 33;
             this.txtHttpRequest.Text = "(HTTP reques will be logged here)";
             // 
@@ -1522,10 +1534,21 @@
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.label136);
+            this.tabBooking.Controls.Add(this.txtBookingPaymentMethod);
+            this.tabBooking.Controls.Add(this.label134);
+            this.tabBooking.Controls.Add(this.txtBookingSagepayVendorTxCode);
+            this.tabBooking.Controls.Add(this.label133);
+            this.tabBooking.Controls.Add(this.txtBookingSagepaySecurityKey);
+            this.tabBooking.Controls.Add(this.label132);
+            this.tabBooking.Controls.Add(this.txtBookingSagepayTxAuthNo);
+            this.tabBooking.Controls.Add(this.label131);
+            this.tabBooking.Controls.Add(this.txtBookingSagepayVPSTxId);
+            this.tabBooking.Controls.Add(this.chkBookingIsDeferredPayment);
             this.tabBooking.Controls.Add(this.label106);
-            this.tabBooking.Controls.Add(this.txtCardPartialNumbers);
+            this.tabBooking.Controls.Add(this.txtBookingCardPartialNumbers);
             this.tabBooking.Controls.Add(this.label105);
-            this.tabBooking.Controls.Add(this.txtPaymentToken);
+            this.tabBooking.Controls.Add(this.txtBookingPaymentToken);
             this.tabBooking.Controls.Add(this.cbBookingSendEmail);
             this.tabBooking.Controls.Add(this.label99);
             this.tabBooking.Controls.Add(this.txtPaidAmount);
@@ -1546,44 +1569,135 @@
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
             // 
+            // txtBookingPaymentMethod
+            // 
+            this.txtBookingPaymentMethod.Location = new System.Drawing.Point(269, 42);
+            this.txtBookingPaymentMethod.Name = "txtBookingPaymentMethod";
+            this.txtBookingPaymentMethod.Size = new System.Drawing.Size(95, 21);
+            this.txtBookingPaymentMethod.TabIndex = 59;
+            this.txtBookingPaymentMethod.Text = "Debit Card";
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(180, 46);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(83, 12);
+            this.label134.TabIndex = 58;
+            this.label134.Text = "PaymentMethod";
+            // 
+            // txtBookingSagepayVendorTxCode
+            // 
+            this.txtBookingSagepayVendorTxCode.Location = new System.Drawing.Point(943, 70);
+            this.txtBookingSagepayVendorTxCode.Name = "txtBookingSagepayVendorTxCode";
+            this.txtBookingSagepayVendorTxCode.Size = new System.Drawing.Size(106, 21);
+            this.txtBookingSagepayVendorTxCode.TabIndex = 57;
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(817, 73);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(119, 12);
+            this.label133.TabIndex = 56;
+            this.label133.Text = "SagepayVendorTxCode";
+            // 
+            // txtBookingSagepaySecurityKey
+            // 
+            this.txtBookingSagepaySecurityKey.Location = new System.Drawing.Point(692, 70);
+            this.txtBookingSagepaySecurityKey.Name = "txtBookingSagepaySecurityKey";
+            this.txtBookingSagepaySecurityKey.Size = new System.Drawing.Size(106, 21);
+            this.txtBookingSagepaySecurityKey.TabIndex = 55;
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Location = new System.Drawing.Point(573, 73);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(113, 12);
+            this.label132.TabIndex = 54;
+            this.label132.Text = "SagepaySecurityKey";
+            // 
+            // txtBookingSagepayTxAuthNo
+            // 
+            this.txtBookingSagepayTxAuthNo.Location = new System.Drawing.Point(453, 70);
+            this.txtBookingSagepayTxAuthNo.Name = "txtBookingSagepayTxAuthNo";
+            this.txtBookingSagepayTxAuthNo.Size = new System.Drawing.Size(106, 21);
+            this.txtBookingSagepayTxAuthNo.TabIndex = 53;
+            // 
+            // label131
+            // 
+            this.label131.AutoSize = true;
+            this.label131.Location = new System.Drawing.Point(350, 73);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(95, 12);
+            this.label131.TabIndex = 52;
+            this.label131.Text = "SagepayTxAuthNo";
+            // 
+            // txtBookingSagepayVPSTxId
+            // 
+            this.txtBookingSagepayVPSTxId.Location = new System.Drawing.Point(234, 70);
+            this.txtBookingSagepayVPSTxId.Name = "txtBookingSagepayVPSTxId";
+            this.txtBookingSagepayVPSTxId.Size = new System.Drawing.Size(106, 21);
+            this.txtBookingSagepayVPSTxId.TabIndex = 51;
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(44, 32);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(53, 12);
+            this.label130.TabIndex = 50;
+            this.label130.Text = "Bookings";
+            // 
+            // chkBookingIsDeferredPayment
+            // 
+            this.chkBookingIsDeferredPayment.AutoSize = true;
+            this.chkBookingIsDeferredPayment.Location = new System.Drawing.Point(10, 71);
+            this.chkBookingIsDeferredPayment.Name = "chkBookingIsDeferredPayment";
+            this.chkBookingIsDeferredPayment.Size = new System.Drawing.Size(126, 16);
+            this.chkBookingIsDeferredPayment.TabIndex = 49;
+            this.chkBookingIsDeferredPayment.Text = "IsDeferredPayment";
+            this.chkBookingIsDeferredPayment.UseVisualStyleBackColor = true;
+            // 
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(340, 58);
+            this.label106.Location = new System.Drawing.Point(711, 46);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(113, 12);
             this.label106.TabIndex = 48;
             this.label106.Text = "CardPartialNumbers";
             // 
-            // txtCardPartialNumbers
+            // txtBookingCardPartialNumbers
             // 
-            this.txtCardPartialNumbers.Location = new System.Drawing.Point(476, 55);
-            this.txtCardPartialNumbers.Name = "txtCardPartialNumbers";
-            this.txtCardPartialNumbers.Size = new System.Drawing.Size(219, 21);
-            this.txtCardPartialNumbers.TabIndex = 47;
-            this.txtCardPartialNumbers.Text = "1234";
+            this.txtBookingCardPartialNumbers.Location = new System.Drawing.Point(847, 38);
+            this.txtBookingCardPartialNumbers.Name = "txtBookingCardPartialNumbers";
+            this.txtBookingCardPartialNumbers.Size = new System.Drawing.Size(114, 21);
+            this.txtBookingCardPartialNumbers.TabIndex = 47;
+            this.txtBookingCardPartialNumbers.Text = "1234";
             // 
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(6, 55);
+            this.label105.Location = new System.Drawing.Point(377, 46);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(77, 12);
             this.label105.TabIndex = 46;
             this.label105.Text = "PaymentToken";
             // 
-            // txtPaymentToken
+            // txtBookingPaymentToken
             // 
-            this.txtPaymentToken.Location = new System.Drawing.Point(95, 52);
-            this.txtPaymentToken.Name = "txtPaymentToken";
-            this.txtPaymentToken.Size = new System.Drawing.Size(219, 21);
-            this.txtPaymentToken.TabIndex = 45;
-            this.txtPaymentToken.Text = "d7124bc2-7276-473e-9c37-a1b154b8404e";
+            this.txtBookingPaymentToken.Location = new System.Drawing.Point(466, 42);
+            this.txtBookingPaymentToken.Name = "txtBookingPaymentToken";
+            this.txtBookingPaymentToken.Size = new System.Drawing.Size(219, 21);
+            this.txtBookingPaymentToken.TabIndex = 45;
+            this.txtBookingPaymentToken.Text = "d7124bc2-7276-473e-9c37-a1b154b8404e";
             // 
             // cbBookingSendEmail
             // 
             this.cbBookingSendEmail.AutoSize = true;
-            this.cbBookingSendEmail.Location = new System.Drawing.Point(752, 16);
+            this.cbBookingSendEmail.Location = new System.Drawing.Point(877, 16);
             this.cbBookingSendEmail.Name = "cbBookingSendEmail";
             this.cbBookingSendEmail.Size = new System.Drawing.Size(84, 16);
             this.cbBookingSendEmail.TabIndex = 44;
@@ -1593,7 +1707,7 @@
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(524, 16);
+            this.label99.Location = new System.Drawing.Point(15, 46);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(65, 12);
             this.label99.TabIndex = 43;
@@ -1601,7 +1715,7 @@
             // 
             // txtPaidAmount
             // 
-            this.txtPaidAmount.Location = new System.Drawing.Point(624, 13);
+            this.txtPaidAmount.Location = new System.Drawing.Point(85, 42);
             this.txtPaidAmount.Name = "txtPaidAmount";
             this.txtPaidAmount.Size = new System.Drawing.Size(90, 21);
             this.txtPaidAmount.TabIndex = 42;
@@ -1618,14 +1732,14 @@
             // 
             // txtBookingSource
             // 
-            this.txtBookingSource.Location = new System.Drawing.Point(429, 13);
+            this.txtBookingSource.Location = new System.Drawing.Point(411, 12);
             this.txtBookingSource.Name = "txtBookingSource";
             this.txtBookingSource.Size = new System.Drawing.Size(60, 21);
             this.txtBookingSource.TabIndex = 40;
             // 
             // txtBookingEnquiryId
             // 
-            this.txtBookingEnquiryId.Location = new System.Drawing.Point(276, 13);
+            this.txtBookingEnquiryId.Location = new System.Drawing.Point(269, 12);
             this.txtBookingEnquiryId.Name = "txtBookingEnquiryId";
             this.txtBookingEnquiryId.Size = new System.Drawing.Size(60, 21);
             this.txtBookingEnquiryId.TabIndex = 39;
@@ -1641,7 +1755,7 @@
             // 
             // btnPostBooking
             // 
-            this.btnPostBooking.Location = new System.Drawing.Point(1076, 18);
+            this.btnPostBooking.Location = new System.Drawing.Point(1130, 10);
             this.btnPostBooking.Name = "btnPostBooking";
             this.btnPostBooking.Size = new System.Drawing.Size(46, 21);
             this.btnPostBooking.TabIndex = 33;
@@ -1651,7 +1765,7 @@
             // 
             // txtApiBooking
             // 
-            this.txtApiBooking.Location = new System.Drawing.Point(904, 21);
+            this.txtApiBooking.Location = new System.Drawing.Point(967, 14);
             this.txtApiBooking.Name = "txtApiBooking";
             this.txtApiBooking.Size = new System.Drawing.Size(157, 21);
             this.txtApiBooking.TabIndex = 32;
@@ -1659,7 +1773,7 @@
             // 
             // txtBookingTagIds
             // 
-            this.txtBookingTagIds.Location = new System.Drawing.Point(95, 13);
+            this.txtBookingTagIds.Location = new System.Drawing.Point(95, 12);
             this.txtBookingTagIds.Name = "txtBookingTagIds";
             this.txtBookingTagIds.Size = new System.Drawing.Size(80, 21);
             this.txtBookingTagIds.TabIndex = 36;
@@ -3678,24 +3792,6 @@
             this.tabPage7.Text = "Bookings";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // lblTimeCost
-            // 
-            this.lblTimeCost.AutoSize = true;
-            this.lblTimeCost.ForeColor = System.Drawing.Color.Red;
-            this.lblTimeCost.Location = new System.Drawing.Point(825, 145);
-            this.lblTimeCost.Name = "lblTimeCost";
-            this.lblTimeCost.Size = new System.Drawing.Size(0, 12);
-            this.lblTimeCost.TabIndex = 35;
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(30, 33);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(53, 12);
-            this.label130.TabIndex = 33;
-            this.label130.Text = "Bookings";
-            // 
             // txtReservationsApiUrl
             // 
             this.txtReservationsApiUrl.Location = new System.Drawing.Point(167, 29);
@@ -3714,11 +3810,38 @@
             this.btnGetReservations.UseVisualStyleBackColor = true;
             this.btnGetReservations.Click += new System.EventHandler(this.btnGetReservations_Click);
             // 
+            // lblTimeCost
+            // 
+            this.lblTimeCost.AutoSize = true;
+            this.lblTimeCost.ForeColor = System.Drawing.Color.Red;
+            this.lblTimeCost.Location = new System.Drawing.Point(825, 145);
+            this.lblTimeCost.Name = "lblTimeCost";
+            this.lblTimeCost.Size = new System.Drawing.Size(0, 12);
+            this.lblTimeCost.TabIndex = 35;
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Location = new System.Drawing.Point(30, 33);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(53, 12);
+            this.label135.TabIndex = 33;
+            this.label135.Text = "Bookings";
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(139, 72);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(89, 12);
+            this.label136.TabIndex = 60;
+            this.label136.Text = "SagepayVPSTxId";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 861);
+            this.ClientSize = new System.Drawing.Size(1215, 714);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtHttpRequest);
@@ -4060,9 +4183,9 @@
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.CheckBox cbBookingSendEmail;
         private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.TextBox txtPaymentToken;
+        private System.Windows.Forms.TextBox txtBookingPaymentToken;
         private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.TextBox txtCardPartialNumbers;
+        private System.Windows.Forms.TextBox txtBookingCardPartialNumbers;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button btnContacts;
         private System.Windows.Forms.TextBox txtContacts;
@@ -4124,10 +4247,22 @@
         private System.Windows.Forms.Label label129;
         private System.Windows.Forms.TextBox txtCustomRatesApiUrl;
         private System.Windows.Forms.Button btnCustomRates;
+        private System.Windows.Forms.TextBox txtBookingSagepayVendorTxCode;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.TextBox txtBookingSagepaySecurityKey;
+        private System.Windows.Forms.Label label132;
         private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label135;
         private System.Windows.Forms.TextBox txtReservationsApiUrl;
         private System.Windows.Forms.Button btnGetReservations;
+        private System.Windows.Forms.TextBox txtBookingSagepayTxAuthNo;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.TextBox txtBookingSagepayVPSTxId;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.CheckBox chkBookingIsDeferredPayment;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.TextBox txtBookingPaymentMethod;
+        private System.Windows.Forms.Label label136;
     }
 }
 
