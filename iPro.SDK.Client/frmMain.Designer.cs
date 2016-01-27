@@ -139,6 +139,9 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.label137 = new System.Windows.Forms.Label();
+            this.txtCreateBookingCardType = new System.Windows.Forms.TextBox();
+            this.label136 = new System.Windows.Forms.Label();
             this.txtBookingPaymentMethod = new System.Windows.Forms.TextBox();
             this.label134 = new System.Windows.Forms.Label();
             this.txtBookingSagepayVendorTxCode = new System.Windows.Forms.TextBox();
@@ -148,7 +151,6 @@
             this.txtBookingSagepayTxAuthNo = new System.Windows.Forms.TextBox();
             this.label131 = new System.Windows.Forms.Label();
             this.txtBookingSagepayVPSTxId = new System.Windows.Forms.TextBox();
-            this.label130 = new System.Windows.Forms.Label();
             this.chkBookingIsDeferredPayment = new System.Windows.Forms.CheckBox();
             this.label106 = new System.Windows.Forms.Label();
             this.txtBookingCardPartialNumbers = new System.Windows.Forms.TextBox();
@@ -372,13 +374,11 @@
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label130 = new System.Windows.Forms.Label();
             this.txtReservationsApiUrl = new System.Windows.Forms.TextBox();
             this.btnGetReservations = new System.Windows.Forms.Button();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
-            this.label136 = new System.Windows.Forms.Label();
-            this.txtCreateBookingCardType = new System.Windows.Forms.TextBox();
-            this.label137 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1573,6 +1573,32 @@
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
             // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(982, 49);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(53, 12);
+            this.label137.TabIndex = 62;
+            this.label137.Text = "CardType";
+            // 
+            // txtCreateBookingCardType
+            // 
+            this.txtCreateBookingCardType.Location = new System.Drawing.Point(1054, 46);
+            this.txtCreateBookingCardType.Name = "txtCreateBookingCardType";
+            this.txtCreateBookingCardType.Size = new System.Drawing.Size(106, 21);
+            this.txtCreateBookingCardType.TabIndex = 61;
+            this.txtCreateBookingCardType.Text = "VISA";
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(139, 72);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(89, 12);
+            this.label136.TabIndex = 60;
+            this.label136.Text = "SagepayVPSTxId";
+            // 
             // txtBookingPaymentMethod
             // 
             this.txtBookingPaymentMethod.Location = new System.Drawing.Point(269, 42);
@@ -1644,15 +1670,6 @@
             this.txtBookingSagepayVPSTxId.Name = "txtBookingSagepayVPSTxId";
             this.txtBookingSagepayVPSTxId.Size = new System.Drawing.Size(106, 21);
             this.txtBookingSagepayVPSTxId.TabIndex = 51;
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(44, 32);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(53, 12);
-            this.label130.TabIndex = 50;
-            this.label130.Text = "Bookings";
             // 
             // chkBookingIsDeferredPayment
             // 
@@ -3796,6 +3813,15 @@
             this.tabPage7.Text = "Bookings";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(44, 32);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(53, 12);
+            this.label130.TabIndex = 50;
+            this.label130.Text = "Bookings";
+            // 
             // txtReservationsApiUrl
             // 
             this.txtReservationsApiUrl.Location = new System.Drawing.Point(167, 29);
@@ -3831,32 +3857,6 @@
             this.label135.Size = new System.Drawing.Size(53, 12);
             this.label135.TabIndex = 33;
             this.label135.Text = "Bookings";
-            // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Location = new System.Drawing.Point(139, 72);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(89, 12);
-            this.label136.TabIndex = 60;
-            this.label136.Text = "SagepayVPSTxId";
-            // 
-            // txtCreateBookingCardType
-            // 
-            this.txtCreateBookingCardType.Location = new System.Drawing.Point(1054, 46);
-            this.txtCreateBookingCardType.Name = "txtCreateBookingCardType";
-            this.txtCreateBookingCardType.Size = new System.Drawing.Size(106, 21);
-            this.txtCreateBookingCardType.TabIndex = 61;
-            this.txtCreateBookingCardType.Text = "VISA";
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(982, 49);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(53, 12);
-            this.label137.TabIndex = 62;
-            this.label137.Text = "CardType";
             // 
             // frmMain
             // 

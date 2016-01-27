@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="txtReservationsApiUrl.Text" xml:space="preserve">
-    <value>/apis/bookings?size=15=1&amp;index=1&amp;term=&amp;bookingstatus=3&amp;propertyid=&amp;repid=&amp;balancestatus=&amp;taskstatus=-1&amp;orderDateFrom=&amp;orderDateTo=&amp;checkinfrom=&amp;checkinto=&amp;IncludeBookingTags=&amp;LocationId=&amp;ExcludeBookingTags=&amp;Sort=CreateDate&amp;SortDirection=desc</value>
+    <value>/apis/bookings?size=15=1&amp;index=1&amp;term=&amp;bookingstatus=3&amp;propertyids=&amp;repid=&amp;balancestatus=&amp;taskstatus=-1&amp;orderDateFrom=&amp;orderDateTo=&amp;checkinfrom=&amp;checkinto=&amp;IncludeBookingTags=&amp;LocationId=&amp;ExcludeBookingTags=&amp;Sort=CreateDate&amp;SortDirection=desc</value>
   </data>
 </root>
