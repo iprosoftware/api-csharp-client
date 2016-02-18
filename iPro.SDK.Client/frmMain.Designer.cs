@@ -200,6 +200,8 @@
             this.txtBookingContactFirstName = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.tabProperty1 = new System.Windows.Forms.TabPage();
+            this.label138 = new System.Windows.Forms.Label();
+            this.txtImportBookingInsuranceBreakages = new System.Windows.Forms.TextBox();
             this.txtBookingProperty1LeadGuestAge = new System.Windows.Forms.TextBox();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabGuest1 = new System.Windows.Forms.TabPage();
@@ -381,9 +383,10 @@
             this.btnGetReservations = new System.Windows.Forms.Button();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
-            this.label138 = new System.Windows.Forms.Label();
-            this.txtImportBookingInsuranceBreakages = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label139 = new System.Windows.Forms.Label();
+            this.txtLateDealsApiUrl = new System.Windows.Forms.TextBox();
+            this.btnLateDeals = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -694,6 +697,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnLateDeals);
+            this.groupBox2.Controls.Add(this.txtLateDealsApiUrl);
+            this.groupBox2.Controls.Add(this.label139);
             this.groupBox2.Controls.Add(this.label129);
             this.groupBox2.Controls.Add(this.txtCustomRatesApiUrl);
             this.groupBox2.Controls.Add(this.btnCustomRates);
@@ -2325,6 +2331,25 @@
             this.tabProperty1.TabIndex = 1;
             this.tabProperty1.Text = "Property1";
             this.tabProperty1.UseVisualStyleBackColor = true;
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Location = new System.Drawing.Point(26, 242);
+            this.label138.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(209, 25);
+            this.label138.TabIndex = 50;
+            this.label138.Text = "InsuranceBreakages";
+            // 
+            // txtImportBookingInsuranceBreakages
+            // 
+            this.txtImportBookingInsuranceBreakages.Location = new System.Drawing.Point(252, 242);
+            this.txtImportBookingInsuranceBreakages.Margin = new System.Windows.Forms.Padding(6);
+            this.txtImportBookingInsuranceBreakages.Name = "txtImportBookingInsuranceBreakages";
+            this.txtImportBookingInsuranceBreakages.Size = new System.Drawing.Size(128, 31);
+            this.txtImportBookingInsuranceBreakages.TabIndex = 49;
+            this.txtImportBookingInsuranceBreakages.Text = "0";
             // 
             // txtBookingProperty1LeadGuestAge
             // 
@@ -4246,25 +4271,6 @@
             this.label135.TabIndex = 33;
             this.label135.Text = "Bookings";
             // 
-            // label138
-            // 
-            this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(26, 242);
-            this.label138.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(209, 25);
-            this.label138.TabIndex = 50;
-            this.label138.Text = "InsuranceBreakages";
-            // 
-            // txtImportBookingInsuranceBreakages
-            // 
-            this.txtImportBookingInsuranceBreakages.Location = new System.Drawing.Point(252, 242);
-            this.txtImportBookingInsuranceBreakages.Margin = new System.Windows.Forms.Padding(6);
-            this.txtImportBookingInsuranceBreakages.Name = "txtImportBookingInsuranceBreakages";
-            this.txtImportBookingInsuranceBreakages.Size = new System.Drawing.Size(128, 31);
-            this.txtImportBookingInsuranceBreakages.TabIndex = 49;
-            this.txtImportBookingInsuranceBreakages.Text = "0";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -4278,6 +4284,36 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(2382, 460);
             this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(1264, 346);
+            this.label139.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(99, 25);
+            this.label139.TabIndex = 60;
+            this.label139.Text = "latedeals";
+            // 
+            // txtLateDealsApiUrl
+            // 
+            this.txtLateDealsApiUrl.Location = new System.Drawing.Point(1496, 340);
+            this.txtLateDealsApiUrl.Margin = new System.Windows.Forms.Padding(6);
+            this.txtLateDealsApiUrl.Name = "txtLateDealsApiUrl";
+            this.txtLateDealsApiUrl.Size = new System.Drawing.Size(670, 31);
+            this.txtLateDealsApiUrl.TabIndex = 61;
+            this.txtLateDealsApiUrl.Text = "apis/latedeals?days=15";
+            // 
+            // btnLateDeals
+            // 
+            this.btnLateDeals.Location = new System.Drawing.Point(2178, 333);
+            this.btnLateDeals.Margin = new System.Windows.Forms.Padding(6);
+            this.btnLateDeals.Name = "btnLateDeals";
+            this.btnLateDeals.Size = new System.Drawing.Size(108, 44);
+            this.btnLateDeals.TabIndex = 62;
+            this.btnLateDeals.Text = "GET";
+            this.btnLateDeals.UseVisualStyleBackColor = true;
+            this.btnLateDeals.Click += new System.EventHandler(this.btnLateDeals_Click);
             // 
             // frmMain
             // 
@@ -4714,6 +4750,9 @@
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.TextBox txtImportBookingInsuranceBreakages;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnLateDeals;
+        private System.Windows.Forms.TextBox txtLateDealsApiUrl;
+        private System.Windows.Forms.Label label139;
     }
 }
 

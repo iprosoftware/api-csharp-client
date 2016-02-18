@@ -551,5 +551,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtReservationsApiUrl.Text);
         }
+
+        private void btnLateDeals_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtLateDealsApiUrl.Text);
+        }
     }
 }
