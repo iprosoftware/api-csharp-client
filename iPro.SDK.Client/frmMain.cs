@@ -309,7 +309,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Adults", this.txtBookingProperty1Adults.Text),
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtBookingProperty1Children.Text),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtBookingProperty1Infants.Text),
-                
+                new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", this.txtImportBookingInsuranceBreakages.Text),
+
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Name", this.txtBookingProperty1Guest1Name.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Age", this.txtBookingProperty1Guest1Age.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Passport", this.txtBookingProperty1Guest1Passport.Text),
@@ -321,6 +322,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtBookingProperty1Extra1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtBookingProperty1Extra1Qty.Text),
 
+                
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtBookingProperty1Extra2Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtBookingProperty1Extra2Qty.Text)
             };
@@ -487,6 +489,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Checkout", this.txtPropertyCalcCheckOut.Text),
                 new KeyValuePair<string, string>("Properties[0].Adults", this.txtPropertyCalcAdults.Text),
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtPropertyCalcChildren.Text),
+                new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", this.txtInsuranceBreakages.Text),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtPropertyCalcInfants.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtPropertyExtra1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtPropertyExtra1Qty.Text),
