@@ -453,9 +453,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Charges", txtCharges.Text), 
                 new KeyValuePair<string, string>("Currency", txtCurrency.Text), 
                 new KeyValuePair<string, string>("Comments",txtComments.Text),
-                new KeyValuePair<string, string>("PaymentCategoryId",txtPaymentCategoryId.Text),
+                new KeyValuePair<string, string>("PaymentScheduleIds",txtPaymentScheduleIds.Text),
                 new KeyValuePair<string, string>("PaymentMethod",txtPaymentMethod.Text),
-                new KeyValuePair<string, string>("PaymentTypeId",txtPaymentTypeId.Text),
                 new KeyValuePair<string, string>("PaymentDate",txtPaymentDate.Text),
                 new KeyValuePair<string, string>("Status",txtStatus.Text),
                 new KeyValuePair<string, string>("PropertyId",txtPaymentPropertyId.Text)

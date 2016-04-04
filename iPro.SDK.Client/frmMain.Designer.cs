@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLateDeals = new System.Windows.Forms.Button();
+            this.txtLateDealsApiUrl = new System.Windows.Forms.TextBox();
+            this.label139 = new System.Windows.Forms.Label();
             this.label129 = new System.Windows.Forms.Label();
             this.txtCustomRatesApiUrl = new System.Windows.Forms.TextBox();
             this.btnCustomRates = new System.Windows.Forms.Button();
@@ -275,7 +278,7 @@
             this.label82 = new System.Windows.Forms.Label();
             this.txtPaymentMethod = new System.Windows.Forms.TextBox();
             this.label87 = new System.Windows.Forms.Label();
-            this.txtPaymentCategoryId = new System.Windows.Forms.TextBox();
+            this.txtPaymentScheduleIds = new System.Windows.Forms.TextBox();
             this.label88 = new System.Windows.Forms.Label();
             this.txtCurrency = new System.Windows.Forms.TextBox();
             this.label89 = new System.Windows.Forms.Label();
@@ -287,8 +290,6 @@
             this.label93 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label94 = new System.Windows.Forms.Label();
-            this.txtPaymentTypeId = new System.Windows.Forms.TextBox();
-            this.label95 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label84 = new System.Windows.Forms.Label();
             this.txtLiveWebsiteURL = new System.Windows.Forms.TextBox();
@@ -384,9 +385,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label139 = new System.Windows.Forms.Label();
-            this.txtLateDealsApiUrl = new System.Windows.Forms.TextBox();
-            this.btnLateDeals = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -750,6 +748,36 @@
             this.groupBox2.Size = new System.Drawing.Size(2354, 589);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // btnLateDeals
+            // 
+            this.btnLateDeals.Location = new System.Drawing.Point(2178, 333);
+            this.btnLateDeals.Margin = new System.Windows.Forms.Padding(6);
+            this.btnLateDeals.Name = "btnLateDeals";
+            this.btnLateDeals.Size = new System.Drawing.Size(108, 44);
+            this.btnLateDeals.TabIndex = 62;
+            this.btnLateDeals.Text = "GET";
+            this.btnLateDeals.UseVisualStyleBackColor = true;
+            this.btnLateDeals.Click += new System.EventHandler(this.btnLateDeals_Click);
+            // 
+            // txtLateDealsApiUrl
+            // 
+            this.txtLateDealsApiUrl.Location = new System.Drawing.Point(1496, 340);
+            this.txtLateDealsApiUrl.Margin = new System.Windows.Forms.Padding(6);
+            this.txtLateDealsApiUrl.Name = "txtLateDealsApiUrl";
+            this.txtLateDealsApiUrl.Size = new System.Drawing.Size(670, 31);
+            this.txtLateDealsApiUrl.TabIndex = 61;
+            this.txtLateDealsApiUrl.Text = "apis/latedeals?days=15";
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(1264, 346);
+            this.label139.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(99, 25);
+            this.label139.TabIndex = 60;
+            this.label139.Text = "latedeals";
             // 
             // label129
             // 
@@ -2998,7 +3026,7 @@
             this.tabPage1.Controls.Add(this.label82);
             this.tabPage1.Controls.Add(this.txtPaymentMethod);
             this.tabPage1.Controls.Add(this.label87);
-            this.tabPage1.Controls.Add(this.txtPaymentCategoryId);
+            this.tabPage1.Controls.Add(this.txtPaymentScheduleIds);
             this.tabPage1.Controls.Add(this.label88);
             this.tabPage1.Controls.Add(this.txtCurrency);
             this.tabPage1.Controls.Add(this.label89);
@@ -3010,8 +3038,6 @@
             this.tabPage1.Controls.Add(this.label93);
             this.tabPage1.Controls.Add(this.txtStatus);
             this.tabPage1.Controls.Add(this.label94);
-            this.tabPage1.Controls.Add(this.txtPaymentTypeId);
-            this.tabPage1.Controls.Add(this.label95);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
@@ -3117,14 +3143,14 @@
             this.label87.TabIndex = 50;
             this.label87.Text = "PaymentMethod";
             // 
-            // txtPaymentCategoryId
+            // txtPaymentScheduleIds
             // 
-            this.txtPaymentCategoryId.Location = new System.Drawing.Point(1198, 36);
-            this.txtPaymentCategoryId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtPaymentCategoryId.Name = "txtPaymentCategoryId";
-            this.txtPaymentCategoryId.Size = new System.Drawing.Size(262, 31);
-            this.txtPaymentCategoryId.TabIndex = 49;
-            this.txtPaymentCategoryId.Text = "1";
+            this.txtPaymentScheduleIds.Location = new System.Drawing.Point(1198, 36);
+            this.txtPaymentScheduleIds.Margin = new System.Windows.Forms.Padding(6);
+            this.txtPaymentScheduleIds.Name = "txtPaymentScheduleIds";
+            this.txtPaymentScheduleIds.Size = new System.Drawing.Size(262, 31);
+            this.txtPaymentScheduleIds.TabIndex = 49;
+            this.txtPaymentScheduleIds.Text = "1,2";
             // 
             // label88
             // 
@@ -3132,9 +3158,9 @@
             this.label88.Location = new System.Drawing.Point(968, 39);
             this.label88.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(200, 25);
+            this.label88.Size = new System.Drawing.Size(214, 25);
             this.label88.TabIndex = 48;
-            this.label88.Text = "PaymentCategoryId";
+            this.label88.Text = "PaymentScheduleIds";
             // 
             // txtCurrency
             // 
@@ -3230,25 +3256,6 @@
             this.label94.Size = new System.Drawing.Size(73, 25);
             this.label94.TabIndex = 36;
             this.label94.Text = "Status";
-            // 
-            // txtPaymentTypeId
-            // 
-            this.txtPaymentTypeId.Location = new System.Drawing.Point(1198, 106);
-            this.txtPaymentTypeId.Margin = new System.Windows.Forms.Padding(6);
-            this.txtPaymentTypeId.Name = "txtPaymentTypeId";
-            this.txtPaymentTypeId.Size = new System.Drawing.Size(262, 31);
-            this.txtPaymentTypeId.TabIndex = 35;
-            this.txtPaymentTypeId.Text = "2";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(1004, 112);
-            this.label95.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(161, 25);
-            this.label95.TabIndex = 34;
-            this.label95.Text = "PaymentTypeId";
             // 
             // tabPage2
             // 
@@ -4285,36 +4292,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(2382, 460);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label139
-            // 
-            this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(1264, 346);
-            this.label139.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(99, 25);
-            this.label139.TabIndex = 60;
-            this.label139.Text = "latedeals";
-            // 
-            // txtLateDealsApiUrl
-            // 
-            this.txtLateDealsApiUrl.Location = new System.Drawing.Point(1496, 340);
-            this.txtLateDealsApiUrl.Margin = new System.Windows.Forms.Padding(6);
-            this.txtLateDealsApiUrl.Name = "txtLateDealsApiUrl";
-            this.txtLateDealsApiUrl.Size = new System.Drawing.Size(670, 31);
-            this.txtLateDealsApiUrl.TabIndex = 61;
-            this.txtLateDealsApiUrl.Text = "apis/latedeals?days=15";
-            // 
-            // btnLateDeals
-            // 
-            this.btnLateDeals.Location = new System.Drawing.Point(2178, 333);
-            this.btnLateDeals.Margin = new System.Windows.Forms.Padding(6);
-            this.btnLateDeals.Name = "btnLateDeals";
-            this.btnLateDeals.Size = new System.Drawing.Size(108, 44);
-            this.btnLateDeals.TabIndex = 62;
-            this.btnLateDeals.Text = "GET";
-            this.btnLateDeals.UseVisualStyleBackColor = true;
-            this.btnLateDeals.Click += new System.EventHandler(this.btnLateDeals_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -4607,7 +4584,7 @@
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.TextBox txtPaymentMethod;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.TextBox txtPaymentCategoryId;
+        private System.Windows.Forms.TextBox txtPaymentScheduleIds;
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.TextBox txtCurrency;
         private System.Windows.Forms.Label label89;
@@ -4619,8 +4596,6 @@
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.TextBox txtPaymentTypeId;
-        private System.Windows.Forms.Label label95;
         private System.Windows.Forms.TextBox txtPaymentDate;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.TextBox txtPaymentPropertyId;
