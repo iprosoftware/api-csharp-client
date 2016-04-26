@@ -299,8 +299,11 @@
             this.btnUpdatePropertyApi = new System.Windows.Forms.Button();
             this.txtUpdatePropertyApiUrl = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rdoBookingCalcInsuranceBreakages_None = new System.Windows.Forms.RadioButton();
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit = new System.Windows.Forms.RadioButton();
+            this.rdoBookingCalcInsuranceBreakages_Insurance = new System.Windows.Forms.RadioButton();
             this.lblInsuranceBreakages = new System.Windows.Forms.Label();
-            this.txtInsuranceBreakages = new System.Windows.Forms.TextBox();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtPropertyExtra1Qty = new System.Windows.Forms.TextBox();
@@ -412,6 +415,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -3076,8 +3080,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.lblInsuranceBreakages);
-            this.tabPage3.Controls.Add(this.txtInsuranceBreakages);
             this.tabPage3.Controls.Add(this.tabControl5);
             this.tabPage3.Controls.Add(this.btnCalcBooking);
             this.tabPage3.Controls.Add(this.txtApiBookingCalc);
@@ -3101,6 +3105,48 @@
             this.tabPage3.Text = "Booking Calc";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rdoBookingCalcInsuranceBreakages_None);
+            this.panel2.Controls.Add(this.rdoBookingCalcInsuranceBreakages_BreakageDeposit);
+            this.panel2.Controls.Add(this.rdoBookingCalcInsuranceBreakages_Insurance);
+            this.panel2.Location = new System.Drawing.Point(111, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(275, 33);
+            this.panel2.TabIndex = 55;
+            // 
+            // rdoBookingCalcInsuranceBreakages_None
+            // 
+            this.rdoBookingCalcInsuranceBreakages_None.AutoSize = true;
+            this.rdoBookingCalcInsuranceBreakages_None.Location = new System.Drawing.Point(17, 9);
+            this.rdoBookingCalcInsuranceBreakages_None.Name = "rdoBookingCalcInsuranceBreakages_None";
+            this.rdoBookingCalcInsuranceBreakages_None.Size = new System.Drawing.Size(51, 17);
+            this.rdoBookingCalcInsuranceBreakages_None.TabIndex = 51;
+            this.rdoBookingCalcInsuranceBreakages_None.Text = "None";
+            this.rdoBookingCalcInsuranceBreakages_None.UseVisualStyleBackColor = true;
+            // 
+            // rdoBookingCalcInsuranceBreakages_BreakageDeposit
+            // 
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.AutoSize = true;
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.Checked = true;
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.Location = new System.Drawing.Point(152, 9);
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.Name = "rdoBookingCalcInsuranceBreakages_BreakageDeposit";
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.Size = new System.Drawing.Size(112, 17);
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.TabIndex = 53;
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.TabStop = true;
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.Text = "BreakagesDeposit";
+            this.rdoBookingCalcInsuranceBreakages_BreakageDeposit.UseVisualStyleBackColor = true;
+            // 
+            // rdoBookingCalcInsuranceBreakages_Insurance
+            // 
+            this.rdoBookingCalcInsuranceBreakages_Insurance.AutoSize = true;
+            this.rdoBookingCalcInsuranceBreakages_Insurance.Location = new System.Drawing.Point(74, 9);
+            this.rdoBookingCalcInsuranceBreakages_Insurance.Name = "rdoBookingCalcInsuranceBreakages_Insurance";
+            this.rdoBookingCalcInsuranceBreakages_Insurance.Size = new System.Drawing.Size(72, 17);
+            this.rdoBookingCalcInsuranceBreakages_Insurance.TabIndex = 52;
+            this.rdoBookingCalcInsuranceBreakages_Insurance.Text = "Insurance";
+            this.rdoBookingCalcInsuranceBreakages_Insurance.UseVisualStyleBackColor = true;
+            // 
             // lblInsuranceBreakages
             // 
             this.lblInsuranceBreakages.AutoSize = true;
@@ -3109,14 +3155,6 @@
             this.lblInsuranceBreakages.Size = new System.Drawing.Size(105, 13);
             this.lblInsuranceBreakages.TabIndex = 48;
             this.lblInsuranceBreakages.Text = "InsuranceBreakages";
-            // 
-            // txtInsuranceBreakages
-            // 
-            this.txtInsuranceBreakages.Location = new System.Drawing.Point(120, 137);
-            this.txtInsuranceBreakages.Name = "txtInsuranceBreakages";
-            this.txtInsuranceBreakages.Size = new System.Drawing.Size(66, 20);
-            this.txtInsuranceBreakages.TabIndex = 47;
-            this.txtInsuranceBreakages.Text = "0";
             // 
             // tabControl5
             // 
@@ -4025,6 +4063,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tabControl5.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -4397,7 +4437,6 @@
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.TextBox txtCreateBookingCardType;
         private System.Windows.Forms.Label lblInsuranceBreakages;
-        private System.Windows.Forms.TextBox txtInsuranceBreakages;
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnLateDeals;
@@ -4407,6 +4446,10 @@
         private System.Windows.Forms.RadioButton rdoImportBookingInsuranceBreakages_Insurance;
         private System.Windows.Forms.RadioButton rdoImportBookingInsuranceBreakages_None;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton rdoBookingCalcInsuranceBreakages_None;
+        private System.Windows.Forms.RadioButton rdoBookingCalcInsuranceBreakages_BreakageDeposit;
+        private System.Windows.Forms.RadioButton rdoBookingCalcInsuranceBreakages_Insurance;
     }
 }
 

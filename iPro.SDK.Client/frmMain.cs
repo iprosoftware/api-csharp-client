@@ -486,6 +486,11 @@ namespace iPro.SDK.Client
 
         private IEnumerable<KeyValuePair<string, string>> GetBookingCalcProperties()
         {
+            var InsuranceBreakages = string.Empty;
+            if (rdoBookingCalcInsuranceBreakages_None.Checked) { InsuranceBreakages = "None"; }
+            if (rdoBookingCalcInsuranceBreakages_Insurance.Checked) { InsuranceBreakages = "Insurance"; }
+            if (rdoBookingCalcInsuranceBreakages_BreakageDeposit.Checked) { InsuranceBreakages = "BreakageDeposit"; }
+
             return new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("Properties[0].Id", this.txtPropertyCalcPropertyId.Text),
@@ -493,7 +498,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Checkout", this.txtPropertyCalcCheckOut.Text),
                 new KeyValuePair<string, string>("Properties[0].Adults", this.txtPropertyCalcAdults.Text),
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtPropertyCalcChildren.Text),
-                new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", this.txtInsuranceBreakages.Text),
+                new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtPropertyCalcInfants.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtPropertyExtra1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtPropertyExtra1Qty.Text),
