@@ -296,6 +296,11 @@ namespace iPro.SDK.Client
 
         private IEnumerable<KeyValuePair<string, string>> GetBookingProperties()
         {
+            var InsuranceBreakages = string.Empty;
+            if (rdoImportBookingInsuranceBreakages_None.Checked) { InsuranceBreakages = "None"; }
+            if (rdoImportBookingInsuranceBreakages_Insurance.Checked) { InsuranceBreakages = "Insurance"; }
+            if (rdoImportBookingInsuranceBreakages_BreakageDeposit.Checked) { InsuranceBreakages = "BreakageDeposit"; }
+
             return new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("Properties[0].Id", this.txtBookingProperty1Id.Text),
@@ -309,7 +314,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Adults", this.txtBookingProperty1Adults.Text),
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtBookingProperty1Children.Text),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtBookingProperty1Infants.Text),
-                new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", this.txtImportBookingInsuranceBreakages.Text),
+                new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
 
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Name", this.txtBookingProperty1Guest1Name.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Age", this.txtBookingProperty1Guest1Age.Text),
