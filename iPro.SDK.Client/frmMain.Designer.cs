@@ -391,6 +391,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSpecialOffersApiUrl = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.btnGetSpecialOffers = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -675,6 +678,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnGetSpecialOffers);
+            this.groupBox2.Controls.Add(this.txtSpecialOffersApiUrl);
+            this.groupBox2.Controls.Add(this.label95);
             this.groupBox2.Controls.Add(this.btnLateDeals);
             this.groupBox2.Controls.Add(this.txtLateDealsApiUrl);
             this.groupBox2.Controls.Add(this.label139);
@@ -729,7 +735,7 @@
             // 
             // btnLateDeals
             // 
-            this.btnLateDeals.Location = new System.Drawing.Point(1089, 173);
+            this.btnLateDeals.Location = new System.Drawing.Point(1089, 170);
             this.btnLateDeals.Name = "btnLateDeals";
             this.btnLateDeals.Size = new System.Drawing.Size(54, 23);
             this.btnLateDeals.TabIndex = 62;
@@ -739,7 +745,7 @@
             // 
             // txtLateDealsApiUrl
             // 
-            this.txtLateDealsApiUrl.Location = new System.Drawing.Point(748, 177);
+            this.txtLateDealsApiUrl.Location = new System.Drawing.Point(748, 172);
             this.txtLateDealsApiUrl.Name = "txtLateDealsApiUrl";
             this.txtLateDealsApiUrl.Size = new System.Drawing.Size(337, 20);
             this.txtLateDealsApiUrl.TabIndex = 61;
@@ -748,7 +754,7 @@
             // label139
             // 
             this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(632, 180);
+            this.label139.Location = new System.Drawing.Point(630, 175);
             this.label139.Name = "label139";
             this.label139.Size = new System.Drawing.Size(49, 13);
             this.label139.TabIndex = 60;
@@ -4005,6 +4011,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // txtSpecialOffersApiUrl
+            // 
+            this.txtSpecialOffersApiUrl.Location = new System.Drawing.Point(748, 202);
+            this.txtSpecialOffersApiUrl.Name = "txtSpecialOffersApiUrl";
+            this.txtSpecialOffersApiUrl.Size = new System.Drawing.Size(337, 20);
+            this.txtSpecialOffersApiUrl.TabIndex = 64;
+            this.txtSpecialOffersApiUrl.Text = "apis/specialoffers?propertyid=8849&type=EarlyBird";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(630, 205);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(66, 13);
+            this.label95.TabIndex = 63;
+            this.label95.Text = "specialoffers";
+            // 
+            // btnGetSpecialOffers
+            // 
+            this.btnGetSpecialOffers.Location = new System.Drawing.Point(1089, 200);
+            this.btnGetSpecialOffers.Name = "btnGetSpecialOffers";
+            this.btnGetSpecialOffers.Size = new System.Drawing.Size(54, 23);
+            this.btnGetSpecialOffers.TabIndex = 65;
+            this.btnGetSpecialOffers.Text = "GET";
+            this.btnGetSpecialOffers.UseVisualStyleBackColor = true;
+            this.btnGetSpecialOffers.Click += new System.EventHandler(this.btnGetSpecialOffers_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4450,6 +4483,9 @@
         private System.Windows.Forms.RadioButton rdoBookingCalcInsuranceBreakages_None;
         private System.Windows.Forms.RadioButton rdoBookingCalcInsuranceBreakages_BreakageDeposit;
         private System.Windows.Forms.RadioButton rdoBookingCalcInsuranceBreakages_Insurance;
+        private System.Windows.Forms.TextBox txtSpecialOffersApiUrl;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Button btnGetSpecialOffers;
     }
 }
 

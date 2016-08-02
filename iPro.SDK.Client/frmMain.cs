@@ -565,5 +565,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtLateDealsApiUrl.Text);
         }
+
+        private void btnGetSpecialOffers_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtSpecialOffersApiUrl.Text);
+        }
     }
 }
