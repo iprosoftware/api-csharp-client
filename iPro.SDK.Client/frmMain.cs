@@ -144,7 +144,8 @@ namespace iPro.SDK.Client
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
 
-                var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
+                var url = txtHost.Text.TrimEnd('/') + '/' + api.TrimStart('/');
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
 
                 httpRequest.Headers.Add("version", "2.0");
@@ -306,11 +307,11 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Id", this.txtBookingProperty1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Checkin", this.txtBookingProperty1Checkin.Text),
                 new KeyValuePair<string, string>("Properties[0].Checkout", this.txtBookingProperty1Checkout.Text),
-                
+
                 new KeyValuePair<string, string>("Properties[0].LeadGuestName", this.txtBookingProperty1LeadGuestName.Text),
                 new KeyValuePair<string, string>("Properties[0].LeadGuestAge", this.txtBookingProperty1LeadGuestAge.Text),
                 new KeyValuePair<string, string>("Properties[0].LeadGuestPassport", this.txtBookingProperty1LeadGuestPassport.Text),
-                
+
                 new KeyValuePair<string, string>("Properties[0].Adults", this.txtBookingProperty1Adults.Text),
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtBookingProperty1Children.Text),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtBookingProperty1Infants.Text),
@@ -323,11 +324,11 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Guests[1].Name", this.txtBookingProperty1Guest2Name.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[1].Age", this.txtBookingProperty1Guest2Age.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[1].Passport", this.txtBookingProperty1Guest2Passport.Text),
-                
+
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtBookingProperty1Extra1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtBookingProperty1Extra1Qty.Text),
 
-                
+
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtBookingProperty1Extra2Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtBookingProperty1Extra2Qty.Text)
             };
@@ -337,20 +338,20 @@ namespace iPro.SDK.Client
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("firstname", this.txtFirstName.Text), 
-                new KeyValuePair<string, string>("lastname", this.txtLastName.Text), 
-                new KeyValuePair<string, string>("propertyids", this.txtPropertyIDs.Text), 
-                new KeyValuePair<string, string>("startdate", this.txtStartDate.Text), 
-                new KeyValuePair<string, string>("enddate", this.txtEndDate.Text), 
-                new KeyValuePair<string, string>("days", this.txtDays.Text), 
-                new KeyValuePair<string, string>("budget", this.txtBudget.Text), 
-                new KeyValuePair<string, string>("mobile", this.txtMobile.Text), 
-                new KeyValuePair<string, string>("phone", this.txtPhone.Text), 
-                new KeyValuePair<string, string>("email", this.txtEmail.Text), 
-                new KeyValuePair<string, string>("adults", this.txtAdults.Text), 
-                new KeyValuePair<string, string>("children", this.txtChildren.Text), 
-                new KeyValuePair<string, string>("source", this.txtSource.Text), 
-                new KeyValuePair<string, string>("comments", this.txtComments.Text), 
+                new KeyValuePair<string, string>("firstname", this.txtFirstName.Text),
+                new KeyValuePair<string, string>("lastname", this.txtLastName.Text),
+                new KeyValuePair<string, string>("propertyids", this.txtPropertyIDs.Text),
+                new KeyValuePair<string, string>("startdate", this.txtStartDate.Text),
+                new KeyValuePair<string, string>("enddate", this.txtEndDate.Text),
+                new KeyValuePair<string, string>("days", this.txtDays.Text),
+                new KeyValuePair<string, string>("budget", this.txtBudget.Text),
+                new KeyValuePair<string, string>("mobile", this.txtMobile.Text),
+                new KeyValuePair<string, string>("phone", this.txtPhone.Text),
+                new KeyValuePair<string, string>("email", this.txtEmail.Text),
+                new KeyValuePair<string, string>("adults", this.txtAdults.Text),
+                new KeyValuePair<string, string>("children", this.txtChildren.Text),
+                new KeyValuePair<string, string>("source", this.txtSource.Text),
+                new KeyValuePair<string, string>("comments", this.txtComments.Text),
                 new KeyValuePair<string, string>("createdate", this.txtCreatedate.Text)
             });
 
@@ -418,10 +419,10 @@ namespace iPro.SDK.Client
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("ReviewTitle", txtReviewTitle.Text), 
-                new KeyValuePair<string, string>("rating", txtRating.Text), 
-                new KeyValuePair<string, string>("ReviewDescription", txtReviewDescription.Text), 
-                new KeyValuePair<string, string>("ReviewerName", txtReviewerName.Text), 
+                new KeyValuePair<string, string>("ReviewTitle", txtReviewTitle.Text),
+                new KeyValuePair<string, string>("rating", txtRating.Text),
+                new KeyValuePair<string, string>("ReviewDescription", txtReviewDescription.Text),
+                new KeyValuePair<string, string>("ReviewerName", txtReviewerName.Text),
                 new KeyValuePair<string, string>("PropertyId",txtPropertyId.Text),
                 new KeyValuePair<string, string>("IsApproved",cbIsApproved.Checked.ToString())
             });
@@ -453,10 +454,10 @@ namespace iPro.SDK.Client
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Amount", txtAmount.Text), 
-                new KeyValuePair<string, string>("BookingId", txtBookingId.Text), 
-                new KeyValuePair<string, string>("Charges", txtCharges.Text), 
-                new KeyValuePair<string, string>("Currency", txtCurrency.Text), 
+                new KeyValuePair<string, string>("Amount", txtAmount.Text),
+                new KeyValuePair<string, string>("BookingId", txtBookingId.Text),
+                new KeyValuePair<string, string>("Charges", txtCharges.Text),
+                new KeyValuePair<string, string>("Currency", txtCurrency.Text),
                 new KeyValuePair<string, string>("Comments",txtComments.Text),
                 new KeyValuePair<string, string>("PaymentScheduleIds",txtPaymentScheduleIds.Text),
                 new KeyValuePair<string, string>("PaymentMethod",txtPaymentMethod.Text),
@@ -511,10 +512,10 @@ namespace iPro.SDK.Client
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Title", ddlContactTitle.SelectedText), 
-                new KeyValuePair<string, string>("FirstName", txtContactFirstName.Text), 
-                new KeyValuePair<string, string>("LastName", txtContactLastName.Text), 
-                new KeyValuePair<string, string>("Email", txtContactEmail.Text), 
+                new KeyValuePair<string, string>("Title", ddlContactTitle.SelectedText),
+                new KeyValuePair<string, string>("FirstName", txtContactFirstName.Text),
+                new KeyValuePair<string, string>("LastName", txtContactLastName.Text),
+                new KeyValuePair<string, string>("Email", txtContactEmail.Text),
                 new KeyValuePair<string, string>("EmailAlt",txtContactEmailAlt.Text),
                 new KeyValuePair<string, string>("EmailAlt1",txtContactEmailAlt1.Text),
                 new KeyValuePair<string, string>("Telephone",txtContactTelephone.Text),
