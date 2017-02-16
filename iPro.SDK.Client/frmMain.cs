@@ -571,5 +571,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtSpecialOffersApiUrl.Text);
         }
+
+        private void btnExternalContact_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtExternalContactIdUrl.Text);
+        }
     }
 }

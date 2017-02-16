@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGetSpecialOffers = new System.Windows.Forms.Button();
+            this.txtSpecialOffersApiUrl = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
             this.btnLateDeals = new System.Windows.Forms.Button();
             this.txtLateDealsApiUrl = new System.Windows.Forms.TextBox();
             this.label139 = new System.Windows.Forms.Label();
@@ -330,6 +333,8 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.txtExternalContactIdUrl = new System.Windows.Forms.TextBox();
+            this.label140 = new System.Windows.Forms.Label();
             this.btnContactTypes = new System.Windows.Forms.Button();
             this.txtContactTypesUrl = new System.Windows.Forms.TextBox();
             this.label127 = new System.Windows.Forms.Label();
@@ -391,9 +396,7 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtSpecialOffersApiUrl = new System.Windows.Forms.TextBox();
-            this.label95 = new System.Windows.Forms.Label();
-            this.btnGetSpecialOffers = new System.Windows.Forms.Button();
+            this.btnExternalContact = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -732,6 +735,33 @@
             this.groupBox2.Size = new System.Drawing.Size(1177, 305);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // btnGetSpecialOffers
+            // 
+            this.btnGetSpecialOffers.Location = new System.Drawing.Point(1089, 200);
+            this.btnGetSpecialOffers.Name = "btnGetSpecialOffers";
+            this.btnGetSpecialOffers.Size = new System.Drawing.Size(54, 23);
+            this.btnGetSpecialOffers.TabIndex = 65;
+            this.btnGetSpecialOffers.Text = "GET";
+            this.btnGetSpecialOffers.UseVisualStyleBackColor = true;
+            this.btnGetSpecialOffers.Click += new System.EventHandler(this.btnGetSpecialOffers_Click);
+            // 
+            // txtSpecialOffersApiUrl
+            // 
+            this.txtSpecialOffersApiUrl.Location = new System.Drawing.Point(748, 202);
+            this.txtSpecialOffersApiUrl.Name = "txtSpecialOffersApiUrl";
+            this.txtSpecialOffersApiUrl.Size = new System.Drawing.Size(337, 20);
+            this.txtSpecialOffersApiUrl.TabIndex = 64;
+            this.txtSpecialOffersApiUrl.Text = "apis/specialoffers?propertyid=8849&type=EarlyBird";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(630, 205);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(66, 13);
+            this.label95.TabIndex = 63;
+            this.label95.Text = "specialoffers";
             // 
             // btnLateDeals
             // 
@@ -3388,6 +3418,9 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnExternalContact);
+            this.tabPage6.Controls.Add(this.txtExternalContactIdUrl);
+            this.tabPage6.Controls.Add(this.label140);
             this.tabPage6.Controls.Add(this.btnContactTypes);
             this.tabPage6.Controls.Add(this.txtContactTypesUrl);
             this.tabPage6.Controls.Add(this.label127);
@@ -3449,6 +3482,23 @@
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "Contacts";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // txtExternalContactIdUrl
+            // 
+            this.txtExternalContactIdUrl.Location = new System.Drawing.Point(766, 22);
+            this.txtExternalContactIdUrl.Name = "txtExternalContactIdUrl";
+            this.txtExternalContactIdUrl.Size = new System.Drawing.Size(311, 20);
+            this.txtExternalContactIdUrl.TabIndex = 99;
+            this.txtExternalContactIdUrl.Text = "/apis/externalcontactID/1";
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Location = new System.Drawing.Point(629, 25);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(97, 13);
+            this.label140.TabIndex = 98;
+            this.label140.Text = "External Contact Id";
             // 
             // btnContactTypes
             // 
@@ -4011,38 +4061,21 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // txtSpecialOffersApiUrl
+            // btnExternalContact
             // 
-            this.txtSpecialOffersApiUrl.Location = new System.Drawing.Point(748, 202);
-            this.txtSpecialOffersApiUrl.Name = "txtSpecialOffersApiUrl";
-            this.txtSpecialOffersApiUrl.Size = new System.Drawing.Size(337, 20);
-            this.txtSpecialOffersApiUrl.TabIndex = 64;
-            this.txtSpecialOffersApiUrl.Text = "apis/specialoffers?propertyid=8849&type=EarlyBird";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(630, 205);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(66, 13);
-            this.label95.TabIndex = 63;
-            this.label95.Text = "specialoffers";
-            // 
-            // btnGetSpecialOffers
-            // 
-            this.btnGetSpecialOffers.Location = new System.Drawing.Point(1089, 200);
-            this.btnGetSpecialOffers.Name = "btnGetSpecialOffers";
-            this.btnGetSpecialOffers.Size = new System.Drawing.Size(54, 23);
-            this.btnGetSpecialOffers.TabIndex = 65;
-            this.btnGetSpecialOffers.Text = "GET";
-            this.btnGetSpecialOffers.UseVisualStyleBackColor = true;
-            this.btnGetSpecialOffers.Click += new System.EventHandler(this.btnGetSpecialOffers_Click);
+            this.btnExternalContact.Location = new System.Drawing.Point(1084, 19);
+            this.btnExternalContact.Name = "btnExternalContact";
+            this.btnExternalContact.Size = new System.Drawing.Size(53, 25);
+            this.btnExternalContact.TabIndex = 100;
+            this.btnExternalContact.Text = "GET";
+            this.btnExternalContact.UseVisualStyleBackColor = true;
+            this.btnExternalContact.Click += new System.EventHandler(this.btnExternalContact_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 543);
+            this.ClientSize = new System.Drawing.Size(1264, 631);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
@@ -4486,6 +4519,9 @@
         private System.Windows.Forms.TextBox txtSpecialOffersApiUrl;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Button btnGetSpecialOffers;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.TextBox txtExternalContactIdUrl;
+        private System.Windows.Forms.Button btnExternalContact;
     }
 }
 
