@@ -333,6 +333,7 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnExternalContact = new System.Windows.Forms.Button();
             this.txtExternalContactIdUrl = new System.Windows.Forms.TextBox();
             this.label140 = new System.Windows.Forms.Label();
             this.btnContactTypes = new System.Windows.Forms.Button();
@@ -396,7 +397,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExternalContact = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -3483,13 +3483,23 @@
             this.tabPage6.Text = "Contacts";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // btnExternalContact
+            // 
+            this.btnExternalContact.Location = new System.Drawing.Point(1084, 19);
+            this.btnExternalContact.Name = "btnExternalContact";
+            this.btnExternalContact.Size = new System.Drawing.Size(53, 25);
+            this.btnExternalContact.TabIndex = 100;
+            this.btnExternalContact.Text = "GET";
+            this.btnExternalContact.UseVisualStyleBackColor = true;
+            this.btnExternalContact.Click += new System.EventHandler(this.btnExternalContact_Click);
+            // 
             // txtExternalContactIdUrl
             // 
             this.txtExternalContactIdUrl.Location = new System.Drawing.Point(766, 22);
             this.txtExternalContactIdUrl.Name = "txtExternalContactIdUrl";
             this.txtExternalContactIdUrl.Size = new System.Drawing.Size(311, 20);
             this.txtExternalContactIdUrl.TabIndex = 99;
-            this.txtExternalContactIdUrl.Text = "/apis/externalcontactID/1";
+            this.txtExternalContactIdUrl.Text = "/apis/externalcontactID?contactId=&bookingId=";
             // 
             // label140
             // 
@@ -4060,16 +4070,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
-            // 
-            // btnExternalContact
-            // 
-            this.btnExternalContact.Location = new System.Drawing.Point(1084, 19);
-            this.btnExternalContact.Name = "btnExternalContact";
-            this.btnExternalContact.Size = new System.Drawing.Size(53, 25);
-            this.btnExternalContact.TabIndex = 100;
-            this.btnExternalContact.Text = "GET";
-            this.btnExternalContact.UseVisualStyleBackColor = true;
-            this.btnExternalContact.Click += new System.EventHandler(this.btnExternalContact_Click);
             // 
             // frmMain
             // 
