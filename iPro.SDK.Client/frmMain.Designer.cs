@@ -397,6 +397,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnGetContact = new System.Windows.Forms.Button();
+            this.txtGetContactUrl = new System.Windows.Forms.TextBox();
+            this.label141 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -3418,6 +3421,9 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnGetContact);
+            this.tabPage6.Controls.Add(this.txtGetContactUrl);
+            this.tabPage6.Controls.Add(this.label141);
             this.tabPage6.Controls.Add(this.btnExternalContact);
             this.tabPage6.Controls.Add(this.txtExternalContactIdUrl);
             this.tabPage6.Controls.Add(this.label140);
@@ -3485,7 +3491,7 @@
             // 
             // btnExternalContact
             // 
-            this.btnExternalContact.Location = new System.Drawing.Point(1084, 19);
+            this.btnExternalContact.Location = new System.Drawing.Point(1096, 44);
             this.btnExternalContact.Name = "btnExternalContact";
             this.btnExternalContact.Size = new System.Drawing.Size(53, 25);
             this.btnExternalContact.TabIndex = 100;
@@ -3495,7 +3501,7 @@
             // 
             // txtExternalContactIdUrl
             // 
-            this.txtExternalContactIdUrl.Location = new System.Drawing.Point(766, 22);
+            this.txtExternalContactIdUrl.Location = new System.Drawing.Point(778, 47);
             this.txtExternalContactIdUrl.Name = "txtExternalContactIdUrl";
             this.txtExternalContactIdUrl.Size = new System.Drawing.Size(311, 20);
             this.txtExternalContactIdUrl.TabIndex = 99;
@@ -3504,7 +3510,7 @@
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(629, 25);
+            this.label140.Location = new System.Drawing.Point(641, 50);
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(97, 13);
             this.label140.TabIndex = 98;
@@ -3548,7 +3554,7 @@
             // 
             // btnContactPost
             // 
-            this.btnContactPost.Location = new System.Drawing.Point(1083, 58);
+            this.btnContactPost.Location = new System.Drawing.Point(1095, 75);
             this.btnContactPost.Name = "btnContactPost";
             this.btnContactPost.Size = new System.Drawing.Size(54, 25);
             this.btnContactPost.TabIndex = 93;
@@ -3558,7 +3564,7 @@
             // 
             // txtContactPostUrl
             // 
-            this.txtContactPostUrl.Location = new System.Drawing.Point(766, 61);
+            this.txtContactPostUrl.Location = new System.Drawing.Point(778, 78);
             this.txtContactPostUrl.Name = "txtContactPostUrl";
             this.txtContactPostUrl.Size = new System.Drawing.Size(311, 20);
             this.txtContactPostUrl.TabIndex = 92;
@@ -3994,9 +4000,9 @@
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(17, 23);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(49, 13);
+            this.label29.Size = new System.Drawing.Size(86, 13);
             this.label29.TabIndex = 42;
-            this.label29.Text = "Contacts";
+            this.label29.Text = "Search Contacts";
             // 
             // tabPage7
             // 
@@ -4070,6 +4076,33 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // btnGetContact
+            // 
+            this.btnGetContact.Location = new System.Drawing.Point(1095, 15);
+            this.btnGetContact.Name = "btnGetContact";
+            this.btnGetContact.Size = new System.Drawing.Size(54, 25);
+            this.btnGetContact.TabIndex = 103;
+            this.btnGetContact.Text = "GET";
+            this.btnGetContact.UseVisualStyleBackColor = true;
+            this.btnGetContact.Click += new System.EventHandler(this.btnGetContact_Click);
+            // 
+            // txtGetContactUrl
+            // 
+            this.txtGetContactUrl.Location = new System.Drawing.Point(778, 16);
+            this.txtGetContactUrl.Name = "txtGetContactUrl";
+            this.txtGetContactUrl.Size = new System.Drawing.Size(311, 20);
+            this.txtGetContactUrl.TabIndex = 102;
+            this.txtGetContactUrl.Text = "/apis/contact/68";
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(689, 19);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(64, 13);
+            this.label141.TabIndex = 101;
+            this.label141.Text = "Get Contact";
             // 
             // frmMain
             // 
@@ -4522,6 +4555,9 @@
         private System.Windows.Forms.Label label140;
         private System.Windows.Forms.TextBox txtExternalContactIdUrl;
         private System.Windows.Forms.Button btnExternalContact;
+        private System.Windows.Forms.Button btnGetContact;
+        private System.Windows.Forms.TextBox txtGetContactUrl;
+        private System.Windows.Forms.Label label141;
     }
 }
 

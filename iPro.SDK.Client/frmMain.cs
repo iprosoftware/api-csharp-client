@@ -576,5 +576,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtExternalContactIdUrl.Text);
         }
+
+        private void btnGetContact_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtGetContactUrl.Text);
+        }
     }
 }
