@@ -302,6 +302,14 @@ namespace iPro.SDK.Client
             if (rdoImportBookingInsuranceBreakages_Insurance.Checked) { InsuranceBreakages = "Insurance"; }
             if (rdoImportBookingInsuranceBreakages_BreakageDeposit.Checked) { InsuranceBreakages = "BreakageDeposit"; }
 
+            //https://github.com/iprosoftware/azores/issues/1489#issuecomment-364849337
+            string commissionType = string.Empty;
+            if (rdoImportBookingDiscountType_DiscountNotDeducted.Checked) { commissionType = "1"; }
+            if (rdoImportBookingDiscountType_DiscountDeductedFromCommission.Checked) { commissionType = "2"; }
+            if (rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.Checked) { commissionType = "3"; }
+            if (rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.Checked) { commissionType = "4"; }
+            if (rdoImportBookingDiscountType_CommissionBasedOnNetPrice.Checked) { commissionType = "5"; }
+
             return new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("Properties[0].Id", this.txtBookingProperty1Id.Text),
@@ -316,6 +324,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtBookingProperty1Children.Text),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtBookingProperty1Infants.Text),
                 new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
+                new KeyValuePair<string, string>("Properties[0].CommissionType", commissionType),
 
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Name", this.txtBookingProperty1Guest1Name.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Age", this.txtBookingProperty1Guest1Age.Text),
@@ -327,7 +336,6 @@ namespace iPro.SDK.Client
 
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtBookingProperty1Extra1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtBookingProperty1Extra1Qty.Text),
-
 
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtBookingProperty1Extra2Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtBookingProperty1Extra2Qty.Text)

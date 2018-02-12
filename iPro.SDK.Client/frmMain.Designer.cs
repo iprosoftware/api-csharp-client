@@ -333,6 +333,9 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnGetContact = new System.Windows.Forms.Button();
+            this.txtGetContactUrl = new System.Windows.Forms.TextBox();
+            this.label141 = new System.Windows.Forms.Label();
             this.btnExternalContact = new System.Windows.Forms.Button();
             this.txtExternalContactIdUrl = new System.Windows.Forms.TextBox();
             this.label140 = new System.Windows.Forms.Label();
@@ -397,9 +400,15 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnGetContact = new System.Windows.Forms.Button();
-            this.txtGetContactUrl = new System.Windows.Forms.TextBox();
-            this.label141 = new System.Windows.Forms.Label();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rdoImportBookingDiscountType_DiscountNotDeducted = new System.Windows.Forms.RadioButton();
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission = new System.Windows.Forms.RadioButton();
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount = new System.Windows.Forms.RadioButton();
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050 = new System.Windows.Forms.RadioButton();
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -431,6 +440,10 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabControl6.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -2194,28 +2207,9 @@
             // 
             // tabProperty1
             // 
-            this.tabProperty1.Controls.Add(this.panel1);
-            this.tabProperty1.Controls.Add(this.label138);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1LeadGuestAge);
+            this.tabProperty1.Controls.Add(this.tabControl6);
             this.tabProperty1.Controls.Add(this.tabControl4);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1LeadGuestName);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1LeadGuestPassport);
             this.tabProperty1.Controls.Add(this.tabControl3);
-            this.tabProperty1.Controls.Add(this.label49);
-            this.tabProperty1.Controls.Add(this.label50);
-            this.tabProperty1.Controls.Add(this.label52);
-            this.tabProperty1.Controls.Add(this.label51);
-            this.tabProperty1.Controls.Add(this.label53);
-            this.tabProperty1.Controls.Add(this.label54);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1Children);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1Infants);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1Adults);
-            this.tabProperty1.Controls.Add(this.label48);
-            this.tabProperty1.Controls.Add(this.label47);
-            this.tabProperty1.Controls.Add(this.label46);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1Checkin);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1Checkout);
-            this.tabProperty1.Controls.Add(this.txtBookingProperty1Id);
             this.tabProperty1.Location = new System.Drawing.Point(4, 22);
             this.tabProperty1.Name = "tabProperty1";
             this.tabProperty1.Padding = new System.Windows.Forms.Padding(3);
@@ -2229,7 +2223,7 @@
             this.panel1.Controls.Add(this.rdoImportBookingInsuranceBreakages_None);
             this.panel1.Controls.Add(this.rdoImportBookingInsuranceBreakages_BreakageDeposit);
             this.panel1.Controls.Add(this.rdoImportBookingInsuranceBreakages_Insurance);
-            this.panel1.Location = new System.Drawing.Point(121, 116);
+            this.panel1.Location = new System.Drawing.Point(117, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 33);
             this.panel1.TabIndex = 54;
@@ -2269,7 +2263,7 @@
             // label138
             // 
             this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(13, 126);
+            this.label138.Location = new System.Drawing.Point(11, 101);
             this.label138.Name = "label138";
             this.label138.Size = new System.Drawing.Size(105, 13);
             this.label138.TabIndex = 50;
@@ -2277,7 +2271,7 @@
             // 
             // txtBookingProperty1LeadGuestAge
             // 
-            this.txtBookingProperty1LeadGuestAge.Location = new System.Drawing.Point(460, 58);
+            this.txtBookingProperty1LeadGuestAge.Location = new System.Drawing.Point(432, 32);
             this.txtBookingProperty1LeadGuestAge.Name = "txtBookingProperty1LeadGuestAge";
             this.txtBookingProperty1LeadGuestAge.Size = new System.Drawing.Size(134, 20);
             this.txtBookingProperty1LeadGuestAge.TabIndex = 7;
@@ -2424,7 +2418,7 @@
             // 
             // txtBookingProperty1LeadGuestName
             // 
-            this.txtBookingProperty1LeadGuestName.Location = new System.Drawing.Point(460, 29);
+            this.txtBookingProperty1LeadGuestName.Location = new System.Drawing.Point(432, 5);
             this.txtBookingProperty1LeadGuestName.Name = "txtBookingProperty1LeadGuestName";
             this.txtBookingProperty1LeadGuestName.Size = new System.Drawing.Size(134, 20);
             this.txtBookingProperty1LeadGuestName.TabIndex = 1;
@@ -2432,7 +2426,7 @@
             // 
             // txtBookingProperty1LeadGuestPassport
             // 
-            this.txtBookingProperty1LeadGuestPassport.Location = new System.Drawing.Point(460, 87);
+            this.txtBookingProperty1LeadGuestPassport.Location = new System.Drawing.Point(432, 59);
             this.txtBookingProperty1LeadGuestPassport.Name = "txtBookingProperty1LeadGuestPassport";
             this.txtBookingProperty1LeadGuestPassport.Size = new System.Drawing.Size(134, 20);
             this.txtBookingProperty1LeadGuestPassport.TabIndex = 6;
@@ -2546,7 +2540,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(347, 32);
+            this.label49.Location = new System.Drawing.Point(327, 9);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(87, 13);
             this.label49.TabIndex = 13;
@@ -2555,7 +2549,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(347, 61);
+            this.label50.Location = new System.Drawing.Point(330, 62);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(78, 13);
             this.label50.TabIndex = 14;
@@ -2564,7 +2558,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(203, 90);
+            this.label52.Location = new System.Drawing.Point(189, 62);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(39, 13);
             this.label52.TabIndex = 21;
@@ -2573,7 +2567,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(347, 90);
+            this.label51.Location = new System.Drawing.Point(326, 35);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(100, 13);
             this.label51.TabIndex = 15;
@@ -2582,7 +2576,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(203, 61);
+            this.label53.Location = new System.Drawing.Point(189, 35);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(45, 13);
             this.label53.TabIndex = 20;
@@ -2591,7 +2585,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(203, 32);
+            this.label54.Location = new System.Drawing.Point(189, 8);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(36, 13);
             this.label54.TabIndex = 19;
@@ -2599,21 +2593,21 @@
             // 
             // txtBookingProperty1Children
             // 
-            this.txtBookingProperty1Children.Location = new System.Drawing.Point(262, 58);
+            this.txtBookingProperty1Children.Location = new System.Drawing.Point(240, 32);
             this.txtBookingProperty1Children.Name = "txtBookingProperty1Children";
             this.txtBookingProperty1Children.Size = new System.Drawing.Size(66, 20);
             this.txtBookingProperty1Children.TabIndex = 18;
             // 
             // txtBookingProperty1Infants
             // 
-            this.txtBookingProperty1Infants.Location = new System.Drawing.Point(262, 87);
+            this.txtBookingProperty1Infants.Location = new System.Drawing.Point(240, 59);
             this.txtBookingProperty1Infants.Name = "txtBookingProperty1Infants";
             this.txtBookingProperty1Infants.Size = new System.Drawing.Size(66, 20);
             this.txtBookingProperty1Infants.TabIndex = 17;
             // 
             // txtBookingProperty1Adults
             // 
-            this.txtBookingProperty1Adults.Location = new System.Drawing.Point(262, 29);
+            this.txtBookingProperty1Adults.Location = new System.Drawing.Point(240, 6);
             this.txtBookingProperty1Adults.Name = "txtBookingProperty1Adults";
             this.txtBookingProperty1Adults.Size = new System.Drawing.Size(66, 20);
             this.txtBookingProperty1Adults.TabIndex = 16;
@@ -2622,7 +2616,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(13, 90);
+            this.label48.Location = new System.Drawing.Point(11, 62);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(53, 13);
             this.label48.TabIndex = 12;
@@ -2631,7 +2625,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(13, 61);
+            this.label47.Location = new System.Drawing.Point(11, 35);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(46, 13);
             this.label47.TabIndex = 11;
@@ -2640,7 +2634,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(13, 32);
+            this.label46.Location = new System.Drawing.Point(11, 8);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(16, 13);
             this.label46.TabIndex = 10;
@@ -2648,7 +2642,7 @@
             // 
             // txtBookingProperty1Checkin
             // 
-            this.txtBookingProperty1Checkin.Location = new System.Drawing.Point(70, 58);
+            this.txtBookingProperty1Checkin.Location = new System.Drawing.Point(70, 32);
             this.txtBookingProperty1Checkin.Name = "txtBookingProperty1Checkin";
             this.txtBookingProperty1Checkin.Size = new System.Drawing.Size(100, 20);
             this.txtBookingProperty1Checkin.TabIndex = 9;
@@ -2656,7 +2650,7 @@
             // 
             // txtBookingProperty1Checkout
             // 
-            this.txtBookingProperty1Checkout.Location = new System.Drawing.Point(70, 87);
+            this.txtBookingProperty1Checkout.Location = new System.Drawing.Point(70, 59);
             this.txtBookingProperty1Checkout.Name = "txtBookingProperty1Checkout";
             this.txtBookingProperty1Checkout.Size = new System.Drawing.Size(100, 20);
             this.txtBookingProperty1Checkout.TabIndex = 8;
@@ -2664,7 +2658,7 @@
             // 
             // txtBookingProperty1Id
             // 
-            this.txtBookingProperty1Id.Location = new System.Drawing.Point(70, 29);
+            this.txtBookingProperty1Id.Location = new System.Drawing.Point(70, 6);
             this.txtBookingProperty1Id.Name = "txtBookingProperty1Id";
             this.txtBookingProperty1Id.Size = new System.Drawing.Size(100, 20);
             this.txtBookingProperty1Id.TabIndex = 0;
@@ -3489,6 +3483,33 @@
             this.tabPage6.Text = "Contacts";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // btnGetContact
+            // 
+            this.btnGetContact.Location = new System.Drawing.Point(1095, 15);
+            this.btnGetContact.Name = "btnGetContact";
+            this.btnGetContact.Size = new System.Drawing.Size(54, 25);
+            this.btnGetContact.TabIndex = 103;
+            this.btnGetContact.Text = "GET";
+            this.btnGetContact.UseVisualStyleBackColor = true;
+            this.btnGetContact.Click += new System.EventHandler(this.btnGetContact_Click);
+            // 
+            // txtGetContactUrl
+            // 
+            this.txtGetContactUrl.Location = new System.Drawing.Point(778, 16);
+            this.txtGetContactUrl.Name = "txtGetContactUrl";
+            this.txtGetContactUrl.Size = new System.Drawing.Size(311, 20);
+            this.txtGetContactUrl.TabIndex = 102;
+            this.txtGetContactUrl.Text = "/apis/contact/68";
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(689, 19);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(64, 13);
+            this.label141.TabIndex = 101;
+            this.label141.Text = "Get Contact";
+            // 
             // btnExternalContact
             // 
             this.btnExternalContact.Location = new System.Drawing.Point(1096, 44);
@@ -4077,32 +4098,120 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // btnGetContact
+            // tabControl6
             // 
-            this.btnGetContact.Location = new System.Drawing.Point(1095, 15);
-            this.btnGetContact.Name = "btnGetContact";
-            this.btnGetContact.Size = new System.Drawing.Size(54, 25);
-            this.btnGetContact.TabIndex = 103;
-            this.btnGetContact.Text = "GET";
-            this.btnGetContact.UseVisualStyleBackColor = true;
-            this.btnGetContact.Click += new System.EventHandler(this.btnGetContact_Click);
+            this.tabControl6.Controls.Add(this.tabPage8);
+            this.tabControl6.Controls.Add(this.tabPage9);
+            this.tabControl6.Location = new System.Drawing.Point(4, 6);
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            this.tabControl6.Size = new System.Drawing.Size(596, 163);
+            this.tabControl6.TabIndex = 55;
             // 
-            // txtGetContactUrl
+            // tabPage8
             // 
-            this.txtGetContactUrl.Location = new System.Drawing.Point(778, 16);
-            this.txtGetContactUrl.Name = "txtGetContactUrl";
-            this.txtGetContactUrl.Size = new System.Drawing.Size(311, 20);
-            this.txtGetContactUrl.TabIndex = 102;
-            this.txtGetContactUrl.Text = "/apis/contact/68";
+            this.tabPage8.Controls.Add(this.label46);
+            this.tabPage8.Controls.Add(this.panel1);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1Id);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1LeadGuestPassport);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1LeadGuestAge);
+            this.tabPage8.Controls.Add(this.label138);
+            this.tabPage8.Controls.Add(this.label47);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1Checkin);
+            this.tabPage8.Controls.Add(this.label48);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1LeadGuestName);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1Checkout);
+            this.tabPage8.Controls.Add(this.label50);
+            this.tabPage8.Controls.Add(this.label49);
+            this.tabPage8.Controls.Add(this.label51);
+            this.tabPage8.Controls.Add(this.label54);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1Adults);
+            this.tabPage8.Controls.Add(this.label53);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1Children);
+            this.tabPage8.Controls.Add(this.label52);
+            this.tabPage8.Controls.Add(this.txtBookingProperty1Infants);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(588, 137);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Main Details";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // label141
+            // tabPage9
             // 
-            this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(689, 19);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(64, 13);
-            this.label141.TabIndex = 101;
-            this.label141.Text = "Get Contact";
+            this.tabPage9.Controls.Add(this.panel3);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(588, 137);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "Discount Type";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice);
+            this.panel3.Controls.Add(this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050);
+            this.panel3.Controls.Add(this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount);
+            this.panel3.Controls.Add(this.rdoImportBookingDiscountType_DiscountDeductedFromCommission);
+            this.panel3.Controls.Add(this.rdoImportBookingDiscountType_DiscountNotDeducted);
+            this.panel3.Location = new System.Drawing.Point(6, 7);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(308, 124);
+            this.panel3.TabIndex = 0;
+            // 
+            // rdoImportBookingDiscountType_DiscountNotDeducted
+            // 
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.AutoSize = true;
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.Checked = true;
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.Location = new System.Drawing.Point(14, 7);
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.Name = "rdoImportBookingDiscountType_DiscountNotDeducted";
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.Size = new System.Drawing.Size(133, 17);
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.TabIndex = 0;
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.TabStop = true;
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.Text = "Discount not deducted";
+            this.rdoImportBookingDiscountType_DiscountNotDeducted.UseVisualStyleBackColor = true;
+            // 
+            // rdoImportBookingDiscountType_DiscountDeductedFromCommission
+            // 
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.AutoSize = true;
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.Location = new System.Drawing.Point(14, 31);
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.Name = "rdoImportBookingDiscountType_DiscountDeductedFromCommission";
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.Size = new System.Drawing.Size(195, 17);
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.TabIndex = 1;
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.Text = "Discount deducted from commission";
+            this.rdoImportBookingDiscountType_DiscountDeductedFromCommission.UseVisualStyleBackColor = true;
+            // 
+            // rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount
+            // 
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.AutoSize = true;
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.Location = new System.Drawing.Point(14, 55);
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.Name = "rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount";
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.Size = new System.Drawing.Size(208, 17);
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.TabIndex = 2;
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.Text = "Discount deducted from owner amount";
+            this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount.UseVisualStyleBackColor = true;
+            // 
+            // rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050
+            // 
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.AutoSize = true;
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.Location = new System.Drawing.Point(14, 79);
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.Name = "rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050";
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.Size = new System.Drawing.Size(274, 17);
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.TabIndex = 3;
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.Text = "Discount split between owner and commission 50/50";
+            this.rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050.UseVisualStyleBackColor = true;
+            // 
+            // rdoImportBookingDiscountType_CommissionBasedOnNetPrice
+            // 
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.AutoSize = true;
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.Location = new System.Drawing.Point(14, 103);
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.Name = "rdoImportBookingDiscountType_CommissionBasedOnNetPrice";
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.Size = new System.Drawing.Size(175, 17);
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.TabIndex = 4;
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.Text = "Commission Based on Net Price";
+            this.rdoImportBookingDiscountType_CommissionBasedOnNetPrice.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -4140,7 +4249,6 @@
             this.tabCustomer.ResumeLayout(false);
             this.tabCustomer.PerformLayout();
             this.tabProperty1.ResumeLayout(false);
-            this.tabProperty1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl4.ResumeLayout(false);
@@ -4175,6 +4283,12 @@
             this.tabPage7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tabControl6.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4558,6 +4672,15 @@
         private System.Windows.Forms.Button btnGetContact;
         private System.Windows.Forms.TextBox txtGetContactUrl;
         private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.TabControl tabControl6;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton rdoImportBookingDiscountType_CommissionBasedOnNetPrice;
+        private System.Windows.Forms.RadioButton rdoImportBookingDiscountType_DiscountSpiltBetweenOwnerAndCommission5050;
+        private System.Windows.Forms.RadioButton rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount;
+        private System.Windows.Forms.RadioButton rdoImportBookingDiscountType_DiscountDeductedFromCommission;
+        private System.Windows.Forms.RadioButton rdoImportBookingDiscountType_DiscountNotDeducted;
     }
 }
 
