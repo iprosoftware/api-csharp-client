@@ -589,5 +589,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtGetContactUrl.Text);
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtSearchApi.Text);
+        }
     }
 }
