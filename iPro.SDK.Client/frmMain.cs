@@ -360,7 +360,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("children", this.txtChildren.Text),
                 new KeyValuePair<string, string>("source", this.txtSource.Text),
                 new KeyValuePair<string, string>("comments", this.txtComments.Text),
-                new KeyValuePair<string, string>("createdate", this.txtCreatedate.Text)
+                new KeyValuePair<string, string>("createdate", this.txtCreatedate.Text),
+                new KeyValuePair<string, string>("currency", this.ddlEnquiryCurrency.Text)
             });
 
             await PostContent(this.txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
