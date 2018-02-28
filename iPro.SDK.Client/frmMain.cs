@@ -41,6 +41,8 @@ namespace iPro.SDK.Client
             txtBookingProperty1Checkout.Text = now.AddMonths(1).AddDays(7).ToString("yyyy-MM-dd");
 
             ddlContactTitle.SelectedText = "Mr";
+
+            txtPropertyRatesApi.Text = txtPropertyRatesApi.Text.Replace("{date}", now.Date.ToString("yyyy-MM-dd"));
         }
 
         public void UpdateFields()

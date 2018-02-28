@@ -635,7 +635,7 @@
             this.txtPropertyRatesApi.Name = "txtPropertyRatesApi";
             this.txtPropertyRatesApi.Size = new System.Drawing.Size(335, 20);
             this.txtPropertyRatesApi.TabIndex = 18;
-            this.txtPropertyRatesApi.Text = "/apis/property/8849/rates?nearestSeason=today&nextWeeks=4";
+            this.txtPropertyRatesApi.Text = "/apis/property/8849/rates?startDate={date}&nextWeeks=4";
             // 
             // button3
             // 
