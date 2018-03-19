@@ -414,6 +414,8 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label144 = new System.Windows.Forms.Label();
+            this.txtReturnUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1696,6 +1698,8 @@
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.txtReturnUrl);
+            this.tabBooking.Controls.Add(this.label144);
             this.tabBooking.Controls.Add(this.label137);
             this.tabBooking.Controls.Add(this.txtCreateBookingCardType);
             this.tabBooking.Controls.Add(this.label136);
@@ -1905,7 +1909,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(364, 17);
+            this.label56.Location = new System.Drawing.Point(304, 17);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(41, 13);
             this.label56.TabIndex = 41;
@@ -1913,14 +1917,14 @@
             // 
             // txtBookingSource
             // 
-            this.txtBookingSource.Location = new System.Drawing.Point(411, 13);
+            this.txtBookingSource.Location = new System.Drawing.Point(351, 13);
             this.txtBookingSource.Name = "txtBookingSource";
             this.txtBookingSource.Size = new System.Drawing.Size(60, 20);
             this.txtBookingSource.TabIndex = 40;
             // 
             // txtBookingEnquiryId
             // 
-            this.txtBookingEnquiryId.Location = new System.Drawing.Point(269, 13);
+            this.txtBookingEnquiryId.Location = new System.Drawing.Point(234, 13);
             this.txtBookingEnquiryId.Name = "txtBookingEnquiryId";
             this.txtBookingEnquiryId.Size = new System.Drawing.Size(60, 20);
             this.txtBookingEnquiryId.TabIndex = 39;
@@ -1928,7 +1932,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(204, 17);
+            this.label55.Location = new System.Drawing.Point(181, 17);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(51, 13);
             this.label55.TabIndex = 38;
@@ -1936,7 +1940,7 @@
             // 
             // btnPostBooking
             // 
-            this.btnPostBooking.Location = new System.Drawing.Point(1130, 10);
+            this.btnPostBooking.Location = new System.Drawing.Point(1130, 11);
             this.btnPostBooking.Name = "btnPostBooking";
             this.btnPostBooking.Size = new System.Drawing.Size(46, 23);
             this.btnPostBooking.TabIndex = 33;
@@ -1946,7 +1950,7 @@
             // 
             // txtApiBooking
             // 
-            this.txtApiBooking.Location = new System.Drawing.Point(967, 16);
+            this.txtApiBooking.Location = new System.Drawing.Point(962, 14);
             this.txtApiBooking.Name = "txtApiBooking";
             this.txtApiBooking.Size = new System.Drawing.Size(157, 20);
             this.txtApiBooking.TabIndex = 32;
@@ -4276,11 +4280,27 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(422, 16);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(64, 13);
+            this.label144.TabIndex = 63;
+            this.label144.Text = "Return URL";
+            // 
+            // txtReturnUrl
+            // 
+            this.txtReturnUrl.Location = new System.Drawing.Point(492, 14);
+            this.txtReturnUrl.Name = "txtReturnUrl";
+            this.txtReturnUrl.Size = new System.Drawing.Size(360, 20);
+            this.txtReturnUrl.TabIndex = 64;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 631);
+            this.ClientSize = new System.Drawing.Size(1235, 676);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
@@ -4749,6 +4769,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox ddlEnquiryCurrency;
         private System.Windows.Forms.Label label143;
+        private System.Windows.Forms.TextBox txtReturnUrl;
+        private System.Windows.Forms.Label label144;
     }
 }
 

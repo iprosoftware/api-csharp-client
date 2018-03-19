@@ -274,6 +274,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("SagepayVendorTxCode", this.txtBookingSagepayVendorTxCode.Text),
                 new KeyValuePair<string, string>("SagepayVPSTxId", this.txtBookingSagepayVPSTxId.Text),
                 new KeyValuePair<string, string>("SagepayTxAuthNo", this.txtBookingSagepayTxAuthNo.Text),
+                new KeyValuePair<string, string>("ReturnUrl", this.txtReturnUrl.Text),
 
                 new KeyValuePair<string, string>("Contact.ContactId", this.txtBookingContactId.Text),
                 new KeyValuePair<string, string>("Contact.Title", this.txtBookingContactTitle.Text),
