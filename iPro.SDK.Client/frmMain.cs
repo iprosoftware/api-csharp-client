@@ -290,7 +290,9 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Contact.County", this.txtBookingContactCounty.Text),
                 new KeyValuePair<string, string>("Contact.Postcode", this.txtBookingContactPostcode.Text),
                 new KeyValuePair<string, string>("Contact.Country", this.txtBookingContactCountry.Text),
-                new KeyValuePair<string, string>("Contact.Source", this.txtBookingContactSource.Text)
+                new KeyValuePair<string, string>("Contact.Source", this.txtBookingContactSource.Text),
+
+                new KeyValuePair<string, string>("InternalNotes", this.InternalNotes.Text)
             };
 
             values.AddRange(this.GetBookingProperties());

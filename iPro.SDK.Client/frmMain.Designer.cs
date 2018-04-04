@@ -150,6 +150,8 @@
             this.tabProperty = new System.Windows.Forms.TabPage();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.txtReturnUrl = new System.Windows.Forms.TextBox();
+            this.label144 = new System.Windows.Forms.Label();
             this.label137 = new System.Windows.Forms.Label();
             this.txtCreateBookingCardType = new System.Windows.Forms.TextBox();
             this.label136 = new System.Windows.Forms.Label();
@@ -414,8 +416,8 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label144 = new System.Windows.Forms.Label();
-            this.txtReturnUrl = new System.Windows.Forms.TextBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.InternalNotes = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1737,6 +1739,22 @@
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
             // 
+            // txtReturnUrl
+            // 
+            this.txtReturnUrl.Location = new System.Drawing.Point(492, 14);
+            this.txtReturnUrl.Name = "txtReturnUrl";
+            this.txtReturnUrl.Size = new System.Drawing.Size(360, 20);
+            this.txtReturnUrl.TabIndex = 64;
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(422, 16);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(64, 13);
+            this.label144.TabIndex = 63;
+            this.label144.Text = "Return URL";
+            // 
             // label137
             // 
             this.label137.AutoSize = true;
@@ -1986,6 +2004,8 @@
             // 
             // tabCustomer
             // 
+            this.tabCustomer.Controls.Add(this.InternalNotes);
+            this.tabCustomer.Controls.Add(this.label145);
             this.tabCustomer.Controls.Add(this.label44);
             this.tabCustomer.Controls.Add(this.label43);
             this.tabCustomer.Controls.Add(this.label42);
@@ -4280,21 +4300,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label144
+            // label145
             // 
-            this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(422, 16);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(64, 13);
-            this.label144.TabIndex = 63;
-            this.label144.Text = "Return URL";
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(879, 16);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(73, 13);
+            this.label145.TabIndex = 30;
+            this.label145.Text = "Internal Notes";
             // 
-            // txtReturnUrl
+            // InternalNotes
             // 
-            this.txtReturnUrl.Location = new System.Drawing.Point(492, 14);
-            this.txtReturnUrl.Name = "txtReturnUrl";
-            this.txtReturnUrl.Size = new System.Drawing.Size(360, 20);
-            this.txtReturnUrl.TabIndex = 64;
+            this.InternalNotes.Location = new System.Drawing.Point(882, 43);
+            this.InternalNotes.Name = "InternalNotes";
+            this.InternalNotes.Size = new System.Drawing.Size(271, 108);
+            this.InternalNotes.TabIndex = 31;
+            this.InternalNotes.Text = "";
             // 
             // frmMain
             // 
@@ -4771,6 +4792,8 @@
         private System.Windows.Forms.Label label143;
         private System.Windows.Forms.TextBox txtReturnUrl;
         private System.Windows.Forms.Label label144;
+        private System.Windows.Forms.RichTextBox InternalNotes;
+        private System.Windows.Forms.Label label145;
     }
 }
 
