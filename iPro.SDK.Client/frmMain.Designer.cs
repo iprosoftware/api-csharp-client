@@ -675,7 +675,7 @@
             this.txtPropertiesApi.Name = "txtPropertiesApi";
             this.txtPropertiesApi.Size = new System.Drawing.Size(335, 20);
             this.txtPropertiesApi.TabIndex = 24;
-            this.txtPropertiesApi.Text = "/apis/properties?ownerID=&PropertyID=&Bedrooms=&Bathrooms=&Sleeps=";
+            this.txtPropertiesApi.Text = "/apis/properties?ownerID=&PropertyID=8900&Bedrooms=5&Bathrooms=5&Sleeps=10";
             // 
             // button5
             // 
