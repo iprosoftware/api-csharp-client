@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGetVouchers = new System.Windows.Forms.Button();
+            this.txtVouchersApiUrl = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
             this.label142 = new System.Windows.Forms.Label();
             this.txtSearchApi = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -182,6 +185,8 @@
             this.label45 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabCustomer = new System.Windows.Forms.TabPage();
+            this.InternalNotes = new System.Windows.Forms.RichTextBox();
+            this.label145 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -368,9 +373,10 @@
             this.lblContactCommision = new System.Windows.Forms.Label();
             this.txtContactCommision = new System.Windows.Forms.TextBox();
             this.cbContactOnEmailList = new System.Windows.Forms.CheckBox();
-            this.cbContactDoNotPhone = new System.Windows.Forms.CheckBox();
-            this.cbContactDoNotEmail = new System.Windows.Forms.CheckBox();
-            this.cbContactDoNotMail = new System.Windows.Forms.CheckBox();
+            this.cbContactByPhone = new System.Windows.Forms.CheckBox();
+            this.cbContactBySms = new System.Windows.Forms.CheckBox();
+            this.cbContactByEmail = new System.Windows.Forms.CheckBox();
+            this.cbContactByPost = new System.Windows.Forms.CheckBox();
             this.label124 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
             this.txtContactComments = new System.Windows.Forms.TextBox();
@@ -416,8 +422,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label145 = new System.Windows.Forms.Label();
-            this.InternalNotes = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -706,6 +710,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnGetVouchers);
+            this.groupBox2.Controls.Add(this.txtVouchersApiUrl);
+            this.groupBox2.Controls.Add(this.label146);
             this.groupBox2.Controls.Add(this.label142);
             this.groupBox2.Controls.Add(this.txtSearchApi);
             this.groupBox2.Controls.Add(this.btnSearch);
@@ -763,6 +770,33 @@
             this.groupBox2.Size = new System.Drawing.Size(1177, 305);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // btnGetVouchers
+            // 
+            this.btnGetVouchers.Location = new System.Drawing.Point(1089, 258);
+            this.btnGetVouchers.Name = "btnGetVouchers";
+            this.btnGetVouchers.Size = new System.Drawing.Size(54, 23);
+            this.btnGetVouchers.TabIndex = 71;
+            this.btnGetVouchers.Text = "GET";
+            this.btnGetVouchers.UseVisualStyleBackColor = true;
+            this.btnGetVouchers.Click += new System.EventHandler(this.btnGetVouchers_Click);
+            // 
+            // txtVouchersApiUrl
+            // 
+            this.txtVouchersApiUrl.Location = new System.Drawing.Point(748, 260);
+            this.txtVouchersApiUrl.Name = "txtVouchersApiUrl";
+            this.txtVouchersApiUrl.Size = new System.Drawing.Size(337, 20);
+            this.txtVouchersApiUrl.TabIndex = 70;
+            this.txtVouchersApiUrl.Text = "apis/vouchers?VoucherCode=CODE1001";
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(630, 260);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(51, 13);
+            this.label146.TabIndex = 69;
+            this.label146.Text = "vouchers";
             // 
             // label142
             // 
@@ -2043,6 +2077,23 @@
             this.tabCustomer.TabIndex = 0;
             this.tabCustomer.Text = "Customer";
             this.tabCustomer.UseVisualStyleBackColor = true;
+            // 
+            // InternalNotes
+            // 
+            this.InternalNotes.Location = new System.Drawing.Point(882, 43);
+            this.InternalNotes.Name = "InternalNotes";
+            this.InternalNotes.Size = new System.Drawing.Size(271, 108);
+            this.InternalNotes.TabIndex = 31;
+            this.InternalNotes.Text = "";
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(879, 16);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(73, 13);
+            this.label145.TabIndex = 30;
+            this.label145.Text = "Internal Notes";
             // 
             // label44
             // 
@@ -3616,7 +3667,7 @@
             this.txtPropertyCalcPropertyId.Text = "8849";
             // 
             // tabPage6
-            // 
+            //
             this.tabPage6.Controls.Add(this.btnGetContact);
             this.tabPage6.Controls.Add(this.txtGetContactUrl);
             this.tabPage6.Controls.Add(this.label141);
@@ -3636,9 +3687,10 @@
             this.tabPage6.Controls.Add(this.lblContactCommision);
             this.tabPage6.Controls.Add(this.txtContactCommision);
             this.tabPage6.Controls.Add(this.cbContactOnEmailList);
-            this.tabPage6.Controls.Add(this.cbContactDoNotPhone);
-            this.tabPage6.Controls.Add(this.cbContactDoNotEmail);
-            this.tabPage6.Controls.Add(this.cbContactDoNotMail);
+            this.tabPage6.Controls.Add(this.cbContactByPhone);
+            this.tabPage6.Controls.Add(this.cbContactBySms);
+            this.tabPage6.Controls.Add(this.cbContactByEmail);
+            this.tabPage6.Controls.Add(this.cbContactByPost);
             this.tabPage6.Controls.Add(this.label124);
             this.tabPage6.Controls.Add(this.label123);
             this.tabPage6.Controls.Add(this.txtContactComments);
@@ -3857,35 +3909,45 @@
             this.cbContactOnEmailList.Text = "OnEmailList";
             this.cbContactOnEmailList.UseVisualStyleBackColor = true;
             // 
-            // cbContactDoNotPhone
+            // cbContactByPhone
             // 
-            this.cbContactDoNotPhone.AutoSize = true;
-            this.cbContactDoNotPhone.Location = new System.Drawing.Point(890, 136);
-            this.cbContactDoNotPhone.Name = "cbContactDoNotPhone";
-            this.cbContactDoNotPhone.Size = new System.Drawing.Size(88, 17);
-            this.cbContactDoNotPhone.TabIndex = 84;
-            this.cbContactDoNotPhone.Text = "DoNotPhone";
-            this.cbContactDoNotPhone.UseVisualStyleBackColor = true;
+            this.cbContactByPhone.AutoSize = true;
+            this.cbContactByPhone.Location = new System.Drawing.Point(890, 136);
+            this.cbContactByPhone.Name = "cbContactByPhone";
+            this.cbContactByPhone.Size = new System.Drawing.Size(69, 17);
+            this.cbContactByPhone.TabIndex = 84;
+            this.cbContactByPhone.Text = "ByPhone";
+            this.cbContactByPhone.UseVisualStyleBackColor = true;
             // 
-            // cbContactDoNotEmail
+            // cbContactBySms
             // 
-            this.cbContactDoNotEmail.AutoSize = true;
-            this.cbContactDoNotEmail.Location = new System.Drawing.Point(778, 173);
-            this.cbContactDoNotEmail.Name = "cbContactDoNotEmail";
-            this.cbContactDoNotEmail.Size = new System.Drawing.Size(82, 17);
-            this.cbContactDoNotEmail.TabIndex = 83;
-            this.cbContactDoNotEmail.Text = "DoNotEmail";
-            this.cbContactDoNotEmail.UseVisualStyleBackColor = true;
+            this.cbContactBySms.AutoSize = true;
+            this.cbContactBySms.Location = new System.Drawing.Point(997, 136);
+            this.cbContactBySms.Name = "cbContactBySms";
+            this.cbContactBySms.Size = new System.Drawing.Size(59, 17);
+            this.cbContactBySms.TabIndex = 104;
+            this.cbContactBySms.Text = "BySms";
+            this.cbContactBySms.UseVisualStyleBackColor = true;
             // 
-            // cbContactDoNotMail
+            // cbContactByEmail
             // 
-            this.cbContactDoNotMail.AutoSize = true;
-            this.cbContactDoNotMail.Location = new System.Drawing.Point(778, 134);
-            this.cbContactDoNotMail.Name = "cbContactDoNotMail";
-            this.cbContactDoNotMail.Size = new System.Drawing.Size(76, 17);
-            this.cbContactDoNotMail.TabIndex = 82;
-            this.cbContactDoNotMail.Text = "DoNotMail";
-            this.cbContactDoNotMail.UseVisualStyleBackColor = true;
+            this.cbContactByEmail.AutoSize = true;
+            this.cbContactByEmail.Location = new System.Drawing.Point(778, 173);
+            this.cbContactByEmail.Name = "cbContactByEmail";
+            this.cbContactByEmail.Size = new System.Drawing.Size(63, 17);
+            this.cbContactByEmail.TabIndex = 83;
+            this.cbContactByEmail.Text = "ByEmail";
+            this.cbContactByEmail.UseVisualStyleBackColor = true;
+            // 
+            // cbContactByPost
+            // 
+            this.cbContactByPost.AutoSize = true;
+            this.cbContactByPost.Location = new System.Drawing.Point(778, 134);
+            this.cbContactByPost.Name = "cbContactByPost";
+            this.cbContactByPost.Size = new System.Drawing.Size(59, 17);
+            this.cbContactByPost.TabIndex = 82;
+            this.cbContactByPost.Text = "ByPost";
+            this.cbContactByPost.UseVisualStyleBackColor = true;
             // 
             // label124
             // 
@@ -4300,23 +4362,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(879, 16);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(73, 13);
-            this.label145.TabIndex = 30;
-            this.label145.Text = "Internal Notes";
-            // 
-            // InternalNotes
-            // 
-            this.InternalNotes.Location = new System.Drawing.Point(882, 43);
-            this.InternalNotes.Name = "InternalNotes";
-            this.InternalNotes.Size = new System.Drawing.Size(271, 108);
-            this.InternalNotes.TabIndex = 31;
-            this.InternalNotes.Text = "";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4713,9 +4758,10 @@
         private System.Windows.Forms.Label label123;
         private System.Windows.Forms.TextBox txtContactComments;
         private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.CheckBox cbContactDoNotMail;
-        private System.Windows.Forms.CheckBox cbContactDoNotEmail;
-        private System.Windows.Forms.CheckBox cbContactDoNotPhone;
+        private System.Windows.Forms.CheckBox cbContactByPost;
+        private System.Windows.Forms.CheckBox cbContactByEmail;
+        private System.Windows.Forms.CheckBox cbContactByPhone;
+        private System.Windows.Forms.CheckBox cbContactBySms;
         private System.Windows.Forms.CheckBox cbContactOnEmailList;
         private System.Windows.Forms.Label lblContactCommision;
         private System.Windows.Forms.TextBox txtContactCommision;
@@ -4794,6 +4840,9 @@
         private System.Windows.Forms.Label label144;
         private System.Windows.Forms.RichTextBox InternalNotes;
         private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.Button btnGetVouchers;
+        private System.Windows.Forms.TextBox txtVouchersApiUrl;
     }
 }
 

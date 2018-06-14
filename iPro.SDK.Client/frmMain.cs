@@ -544,9 +544,10 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("CompanyName",txtContactCompanyName.Text),
                 new KeyValuePair<string, string>("Comments",txtContactComments.Text),
                 new KeyValuePair<string, string>("TypeId",txtContactTypeId.Text),
-                new KeyValuePair<string, string>("DoNotMail",cbContactDoNotMail.Checked.ToString()),
-                new KeyValuePair<string, string>("DoNotEmail",cbContactDoNotEmail.Checked.ToString()),
-                new KeyValuePair<string, string>("DoNotPhone",cbContactDoNotPhone.Checked.ToString()),
+                new KeyValuePair<string, string>("ByPost",cbContactByPost.Checked.ToString()),
+                new KeyValuePair<string, string>("ByEmail",cbContactByEmail.Checked.ToString()),
+                new KeyValuePair<string, string>("ByPhone",cbContactByPhone.Checked.ToString()),
+                new KeyValuePair<string, string>("BySms",cbContactBySms.Checked.ToString()),
                 new KeyValuePair<string, string>("OnEmailList",cbContactOnEmailList.Checked.ToString()),
                 new KeyValuePair<string, string>("Commision",txtContactCommision.Text),
                 new KeyValuePair<string, string>("Balance",txtContactBalance.Text),
@@ -599,6 +600,12 @@ namespace iPro.SDK.Client
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadContent(txtSearchApi.Text);
+        }
+
+        private void btnGetVouchers_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtVouchersApiUrl.Text);
+
         }
     }
 }
