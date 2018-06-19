@@ -3843,7 +3843,7 @@
             this.txtContactPostUrl.Name = "txtContactPostUrl";
             this.txtContactPostUrl.Size = new System.Drawing.Size(311, 20);
             this.txtContactPostUrl.TabIndex = 92;
-            this.txtContactPostUrl.Text = "/apis/contacts";
+            this.txtContactPostUrl.Text = "/apis/contacts?contactId=";
             // 
             // label126
             // 
