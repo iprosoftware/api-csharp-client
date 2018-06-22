@@ -419,9 +419,13 @@
             this.label130 = new System.Windows.Forms.Label();
             this.txtReservationsApiUrl = new System.Windows.Forms.TextBox();
             this.btnGetReservations = new System.Windows.Forms.Button();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.txtStatementsApiUrl = new System.Windows.Forms.TextBox();
+            this.label147 = new System.Windows.Forms.Label();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -456,6 +460,7 @@
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.tabPage10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1693,6 +1698,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Location = new System.Drawing.Point(12, 182);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -3667,7 +3673,7 @@
             this.txtPropertyCalcPropertyId.Text = "8849";
             // 
             // tabPage6
-            //
+            // 
             this.tabPage6.Controls.Add(this.btnGetContact);
             this.tabPage6.Controls.Add(this.txtGetContactUrl);
             this.tabPage6.Controls.Add(this.label141);
@@ -3924,7 +3930,7 @@
             this.cbContactBySms.AutoSize = true;
             this.cbContactBySms.Location = new System.Drawing.Point(997, 136);
             this.cbContactBySms.Name = "cbContactBySms";
-            this.cbContactBySms.Size = new System.Drawing.Size(59, 17);
+            this.cbContactBySms.Size = new System.Drawing.Size(58, 17);
             this.cbContactBySms.TabIndex = 104;
             this.cbContactBySms.Text = "BySms";
             this.cbContactBySms.UseVisualStyleBackColor = true;
@@ -4329,6 +4335,36 @@
             this.btnGetReservations.UseVisualStyleBackColor = true;
             this.btnGetReservations.Click += new System.EventHandler(this.btnGetReservations_Click);
             // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.button6);
+            this.tabPage10.Controls.Add(this.txtStatementsApiUrl);
+            this.tabPage10.Controls.Add(this.label147);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage10.TabIndex = 10;
+            this.tabPage10.Text = "Statements";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // txtStatementsApiUrl
+            // 
+            this.txtStatementsApiUrl.Location = new System.Drawing.Point(106, 34);
+            this.txtStatementsApiUrl.Name = "txtStatementsApiUrl";
+            this.txtStatementsApiUrl.Size = new System.Drawing.Size(227, 20);
+            this.txtStatementsApiUrl.TabIndex = 52;
+            this.txtStatementsApiUrl.Text = "/apis/statements?ownerId=";
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(40, 37);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(60, 13);
+            this.label147.TabIndex = 51;
+            this.label147.Text = "Statements";
+            // 
             // lblTimeCost
             // 
             this.lblTimeCost.AutoSize = true;
@@ -4361,6 +4397,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(353, 34);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(54, 23);
+            this.button6.TabIndex = 53;
+            this.button6.Text = "GET";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmMain
             // 
@@ -4436,6 +4482,8 @@
             this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -4843,6 +4891,10 @@
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.Button btnGetVouchers;
         private System.Windows.Forms.TextBox txtVouchersApiUrl;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.Label label147;
+        private System.Windows.Forms.TextBox txtStatementsApiUrl;
+        private System.Windows.Forms.Button button6;
     }
 }
 
