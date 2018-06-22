@@ -526,7 +526,7 @@ namespace iPro.SDK.Client
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("Title", ddlContactTitle.SelectedText),
+                new KeyValuePair<string, string>("Title", ddlContactTitle.SelectedItem.ToString()),
                 new KeyValuePair<string, string>("FirstName", txtContactFirstName.Text),
                 new KeyValuePair<string, string>("LastName", txtContactLastName.Text),
                 new KeyValuePair<string, string>("Email", txtContactEmail.Text),
@@ -544,11 +544,11 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("CompanyName",txtContactCompanyName.Text),
                 new KeyValuePair<string, string>("Comments",txtContactComments.Text),
                 new KeyValuePair<string, string>("TypeId",txtContactTypeId.Text),
-                new KeyValuePair<string, string>("ByPost",cbContactByPost.Checked.ToString()),
-                new KeyValuePair<string, string>("ByEmail",cbContactByEmail.Checked.ToString()),
-                new KeyValuePair<string, string>("ByPhone",cbContactByPhone.Checked.ToString()),
-                new KeyValuePair<string, string>("BySms",cbContactBySms.Checked.ToString()),
-                new KeyValuePair<string, string>("OnEmailList",cbContactOnEmailList.Checked.ToString()),
+                new KeyValuePair<string, string>("ContactByPost",cbContactByPost.Checked.ToString()),
+                new KeyValuePair<string, string>("ContactByEmail",cbContactByEmail.Checked.ToString()),
+                new KeyValuePair<string, string>("ContactByPhone",cbContactByPhone.Checked.ToString()),
+                new KeyValuePair<string, string>("ContactBySms",cbContactBySms.Checked.ToString()),
+                new KeyValuePair<string, string>("SubscribedToMailingList",cbContactOnEmailList.Checked.ToString()),
                 new KeyValuePair<string, string>("Commision",txtContactCommision.Text),
                 new KeyValuePair<string, string>("Balance",txtContactBalance.Text),
                 new KeyValuePair<string, string>("Retainer",txtContactRetainer.Text)
