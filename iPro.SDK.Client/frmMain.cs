@@ -612,5 +612,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtStatementsApiUrl.Text);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtWelcomePackApiUrl.Text);
+        }
     }
 }

@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label148 = new System.Windows.Forms.Label();
+            this.txtWelcomePackApiUrl = new System.Windows.Forms.TextBox();
             this.btnGetVouchers = new System.Windows.Forms.Button();
             this.txtVouchersApiUrl = new System.Windows.Forms.TextBox();
             this.label146 = new System.Windows.Forms.Label();
@@ -420,12 +423,12 @@
             this.txtReservationsApiUrl = new System.Windows.Forms.TextBox();
             this.btnGetReservations = new System.Windows.Forms.Button();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.txtStatementsApiUrl = new System.Windows.Forms.TextBox();
             this.label147 = new System.Windows.Forms.Label();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -517,7 +520,7 @@
             // 
             // exchangeCredentialsButton
             // 
-            this.exchangeCredentialsButton.Location = new System.Drawing.Point(519, 152);
+            this.exchangeCredentialsButton.Location = new System.Drawing.Point(519, 143);
             this.exchangeCredentialsButton.Name = "exchangeCredentialsButton";
             this.exchangeCredentialsButton.Size = new System.Drawing.Size(223, 23);
             this.exchangeCredentialsButton.TabIndex = 2;
@@ -715,6 +718,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.label148);
+            this.groupBox2.Controls.Add(this.txtWelcomePackApiUrl);
             this.groupBox2.Controls.Add(this.btnGetVouchers);
             this.groupBox2.Controls.Add(this.txtVouchersApiUrl);
             this.groupBox2.Controls.Add(this.label146);
@@ -772,9 +778,36 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1177, 305);
+            this.groupBox2.Size = new System.Drawing.Size(1177, 315);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(519, 288);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(54, 23);
+            this.button7.TabIndex = 74;
+            this.button7.Text = "GET";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(36, 291);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(117, 13);
+            this.label148.TabIndex = 73;
+            this.label148.Text = "property welcome pack";
+            // 
+            // textBox1
+            // 
+            this.txtWelcomePackApiUrl.Location = new System.Drawing.Point(178, 288);
+            this.txtWelcomePackApiUrl.Name = "txtWelcomePackApiUrl";
+            this.txtWelcomePackApiUrl.Size = new System.Drawing.Size(335, 20);
+            this.txtWelcomePackApiUrl.TabIndex = 72;
+            this.txtWelcomePackApiUrl.Text = "/apis/property/8849/welcomepack";
             // 
             // btnGetVouchers
             // 
@@ -1180,7 +1213,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1177, 305);
+            this.groupBox3.Size = new System.Drawing.Size(1177, 315);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             // 
@@ -1375,7 +1408,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1177, 305);
+            this.groupBox4.Size = new System.Drawing.Size(1177, 315);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
@@ -1699,10 +1732,10 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage10);
-            this.tabControl1.Location = new System.Drawing.Point(12, 182);
+            this.tabControl1.Location = new System.Drawing.Point(12, 172);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1191, 337);
+            this.tabControl1.Size = new System.Drawing.Size(1191, 347);
             this.tabControl1.TabIndex = 34;
             // 
             // tabSettings
@@ -1711,7 +1744,7 @@
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettings.Size = new System.Drawing.Size(1183, 311);
+            this.tabSettings.Size = new System.Drawing.Size(1183, 321);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -1722,7 +1755,7 @@
             this.tabProperty.Location = new System.Drawing.Point(4, 22);
             this.tabProperty.Name = "tabProperty";
             this.tabProperty.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProperty.Size = new System.Drawing.Size(1183, 311);
+            this.tabProperty.Size = new System.Drawing.Size(1183, 321);
             this.tabProperty.TabIndex = 0;
             this.tabProperty.Text = "Property";
             this.tabProperty.UseVisualStyleBackColor = true;
@@ -1733,7 +1766,7 @@
             this.tabEnquiry.Location = new System.Drawing.Point(4, 22);
             this.tabEnquiry.Name = "tabEnquiry";
             this.tabEnquiry.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnquiry.Size = new System.Drawing.Size(1183, 311);
+            this.tabEnquiry.Size = new System.Drawing.Size(1183, 321);
             this.tabEnquiry.TabIndex = 1;
             this.tabEnquiry.Text = "Import Enquiry";
             this.tabEnquiry.UseVisualStyleBackColor = true;
@@ -1774,7 +1807,7 @@
             this.tabBooking.Location = new System.Drawing.Point(4, 22);
             this.tabBooking.Name = "tabBooking";
             this.tabBooking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooking.Size = new System.Drawing.Size(1183, 311);
+            this.tabBooking.Size = new System.Drawing.Size(1183, 321);
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
@@ -2035,7 +2068,7 @@
             this.tabControl2.Controls.Add(this.tabCustomer);
             this.tabControl2.Controls.Add(this.tabProperty1);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl2.Location = new System.Drawing.Point(3, 110);
+            this.tabControl2.Location = new System.Drawing.Point(3, 120);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl2.SelectedIndex = 0;
@@ -2929,7 +2962,7 @@
             this.tabReview.Location = new System.Drawing.Point(4, 22);
             this.tabReview.Name = "tabReview";
             this.tabReview.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReview.Size = new System.Drawing.Size(1183, 311);
+            this.tabReview.Size = new System.Drawing.Size(1183, 321);
             this.tabReview.TabIndex = 4;
             this.tabReview.Text = "Review";
             this.tabReview.UseVisualStyleBackColor = true;
@@ -2955,7 +2988,7 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1177, 305);
+            this.groupBox5.Size = new System.Drawing.Size(1177, 315);
             this.groupBox5.TabIndex = 31;
             this.groupBox5.TabStop = false;
             // 
@@ -3127,7 +3160,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage1.Size = new System.Drawing.Size(1183, 321);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Payments";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -3329,7 +3362,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage2.Size = new System.Drawing.Size(1183, 321);
             this.tabPage2.TabIndex = 6;
             this.tabPage2.Text = "Update Properties";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3392,7 +3425,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage3.Size = new System.Drawing.Size(1183, 321);
             this.tabPage3.TabIndex = 7;
             this.tabPage3.Text = "Booking Calc";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3456,7 +3489,7 @@
             this.tabControl5.Location = new System.Drawing.Point(900, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(280, 305);
+            this.tabControl5.Size = new System.Drawing.Size(280, 315);
             this.tabControl5.TabIndex = 46;
             // 
             // tabPage4
@@ -3468,7 +3501,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(272, 279);
+            this.tabPage4.Size = new System.Drawing.Size(272, 289);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Extra1";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -3738,7 +3771,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage6.Size = new System.Drawing.Size(1183, 321);
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "Contacts";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -4303,7 +4336,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage7.Size = new System.Drawing.Size(1183, 321);
             this.tabPage7.TabIndex = 9;
             this.tabPage7.Text = "Bookings";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -4343,10 +4376,20 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1183, 311);
+            this.tabPage10.Size = new System.Drawing.Size(1183, 321);
             this.tabPage10.TabIndex = 10;
             this.tabPage10.Text = "Statements";
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(353, 34);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(54, 23);
+            this.button6.TabIndex = 53;
+            this.button6.Text = "GET";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // txtStatementsApiUrl
             // 
@@ -4397,16 +4440,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(353, 34);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 23);
-            this.button6.TabIndex = 53;
-            this.button6.Text = "GET";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmMain
             // 
@@ -4895,6 +4928,9 @@
         private System.Windows.Forms.Label label147;
         private System.Windows.Forms.TextBox txtStatementsApiUrl;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.TextBox txtWelcomePackApiUrl;
     }
 }
 
