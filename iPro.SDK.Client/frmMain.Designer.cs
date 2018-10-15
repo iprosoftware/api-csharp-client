@@ -429,6 +429,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnGetPropertyExteneded = new System.Windows.Forms.Button();
+            this.label149 = new System.Windows.Forms.Label();
+            this.txtPropertyExtendedApiUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -718,6 +721,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtPropertyExtendedApiUrl);
+            this.groupBox2.Controls.Add(this.label149);
+            this.groupBox2.Controls.Add(this.btnGetPropertyExteneded);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.label148);
             this.groupBox2.Controls.Add(this.txtWelcomePackApiUrl);
@@ -801,7 +807,7 @@
             this.label148.TabIndex = 73;
             this.label148.Text = "property welcome pack";
             // 
-            // textBox1
+            // txtWelcomePackApiUrl
             // 
             this.txtWelcomePackApiUrl.Location = new System.Drawing.Point(178, 288);
             this.txtWelcomePackApiUrl.Name = "txtWelcomePackApiUrl";
@@ -830,7 +836,7 @@
             // label146
             // 
             this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(630, 260);
+            this.label146.Location = new System.Drawing.Point(631, 263);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(51, 13);
             this.label146.TabIndex = 69;
@@ -3548,7 +3554,7 @@
             this.tabPage5.Controls.Add(this.label104);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(272, 279);
+            this.tabPage5.Size = new System.Drawing.Size(272, 289);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Extra2";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -4441,6 +4447,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // btnGetPropertyExteneded
+            // 
+            this.btnGetPropertyExteneded.Location = new System.Drawing.Point(1089, 286);
+            this.btnGetPropertyExteneded.Name = "btnGetPropertyExteneded";
+            this.btnGetPropertyExteneded.Size = new System.Drawing.Size(54, 22);
+            this.btnGetPropertyExteneded.TabIndex = 75;
+            this.btnGetPropertyExteneded.Text = "GET";
+            this.btnGetPropertyExteneded.UseVisualStyleBackColor = true;
+            this.btnGetPropertyExteneded.Click += new System.EventHandler(this.btnGetPropertyExteneded_Click);
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(631, 291);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(92, 13);
+            this.label149.TabIndex = 76;
+            this.label149.Text = "property extended";
+            // 
+            // txtPropertyExtendedApiUrl
+            // 
+            this.txtPropertyExtendedApiUrl.Location = new System.Drawing.Point(748, 288);
+            this.txtPropertyExtendedApiUrl.Name = "txtPropertyExtendedApiUrl";
+            this.txtPropertyExtendedApiUrl.Size = new System.Drawing.Size(337, 20);
+            this.txtPropertyExtendedApiUrl.TabIndex = 77;
+            this.txtPropertyExtendedApiUrl.Text = "apis/property/8849/propertyextended";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4931,6 +4964,9 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.TextBox txtWelcomePackApiUrl;
+        private System.Windows.Forms.Button btnGetPropertyExteneded;
+        private System.Windows.Forms.TextBox txtPropertyExtendedApiUrl;
+        private System.Windows.Forms.Label label149;
     }
 }
 
