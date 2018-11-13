@@ -622,5 +622,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertyExtendedApiUrl.Text);
         }
+
+        private void btnPropertySearchLite_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertySearchLiteApi.Text);
+        }
     }
 }
