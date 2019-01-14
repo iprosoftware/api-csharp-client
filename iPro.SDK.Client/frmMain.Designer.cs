@@ -223,6 +223,8 @@
             this.tabProperty1 = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label150 = new System.Windows.Forms.Label();
+            this.txtImportBookingVoucherCode = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdoImportBookingInsuranceBreakages_None = new System.Windows.Forms.RadioButton();
@@ -326,6 +328,8 @@
             this.btnUpdatePropertyApi = new System.Windows.Forms.Button();
             this.txtUpdatePropertyApiUrl = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label149 = new System.Windows.Forms.Label();
+            this.txtVoucherCode = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rdoBookingCalcInsuranceBreakages_None = new System.Windows.Forms.RadioButton();
             this.rdoBookingCalcInsuranceBreakages_BreakageDeposit = new System.Windows.Forms.RadioButton();
@@ -801,7 +805,7 @@
             this.label148.TabIndex = 73;
             this.label148.Text = "property welcome pack";
             // 
-            // textBox1
+            // txtWelcomePackApiUrl
             // 
             this.txtWelcomePackApiUrl.Location = new System.Drawing.Point(178, 288);
             this.txtWelcomePackApiUrl.Name = "txtWelcomePackApiUrl";
@@ -2407,6 +2411,8 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.label150);
+            this.tabPage8.Controls.Add(this.txtImportBookingVoucherCode);
             this.tabPage8.Controls.Add(this.label46);
             this.tabPage8.Controls.Add(this.panel1);
             this.tabPage8.Controls.Add(this.txtBookingProperty1Id);
@@ -2435,6 +2441,22 @@
             this.tabPage8.Text = "Main Details";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(396, 91);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(75, 13);
+            this.label150.TabIndex = 59;
+            this.label150.Text = "Voucher Code";
+            // 
+            // txtImportBookingVoucherCode
+            // 
+            this.txtImportBookingVoucherCode.Location = new System.Drawing.Point(477, 88);
+            this.txtImportBookingVoucherCode.Name = "txtImportBookingVoucherCode";
+            this.txtImportBookingVoucherCode.Size = new System.Drawing.Size(89, 20);
+            this.txtImportBookingVoucherCode.TabIndex = 58;
+            // 
             // label46
             // 
             this.label46.AutoSize = true;
@@ -2449,7 +2471,7 @@
             this.panel1.Controls.Add(this.rdoImportBookingInsuranceBreakages_None);
             this.panel1.Controls.Add(this.rdoImportBookingInsuranceBreakages_BreakageDeposit);
             this.panel1.Controls.Add(this.rdoImportBookingInsuranceBreakages_Insurance);
-            this.panel1.Location = new System.Drawing.Point(117, 91);
+            this.panel1.Location = new System.Drawing.Point(117, 85);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 33);
             this.panel1.TabIndex = 54;
@@ -2511,7 +2533,7 @@
             // label138
             // 
             this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(11, 101);
+            this.label138.Location = new System.Drawing.Point(11, 95);
             this.label138.Name = "label138";
             this.label138.Size = new System.Drawing.Size(105, 13);
             this.label138.TabIndex = 50;
@@ -3405,6 +3427,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label149);
+            this.tabPage3.Controls.Add(this.txtVoucherCode);
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.lblInsuranceBreakages);
             this.tabPage3.Controls.Add(this.tabControl5);
@@ -3430,12 +3454,28 @@
             this.tabPage3.Text = "Booking Calc";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(29, 127);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(75, 13);
+            this.label149.TabIndex = 57;
+            this.label149.Text = "Voucher Code";
+            // 
+            // txtVoucherCode
+            // 
+            this.txtVoucherCode.Location = new System.Drawing.Point(110, 124);
+            this.txtVoucherCode.Name = "txtVoucherCode";
+            this.txtVoucherCode.Size = new System.Drawing.Size(100, 20);
+            this.txtVoucherCode.TabIndex = 56;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.rdoBookingCalcInsuranceBreakages_None);
             this.panel2.Controls.Add(this.rdoBookingCalcInsuranceBreakages_BreakageDeposit);
             this.panel2.Controls.Add(this.rdoBookingCalcInsuranceBreakages_Insurance);
-            this.panel2.Location = new System.Drawing.Point(111, 128);
+            this.panel2.Location = new System.Drawing.Point(132, 150);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(275, 33);
             this.panel2.TabIndex = 55;
@@ -3443,7 +3483,7 @@
             // rdoBookingCalcInsuranceBreakages_None
             // 
             this.rdoBookingCalcInsuranceBreakages_None.AutoSize = true;
-            this.rdoBookingCalcInsuranceBreakages_None.Location = new System.Drawing.Point(17, 9);
+            this.rdoBookingCalcInsuranceBreakages_None.Location = new System.Drawing.Point(16, 9);
             this.rdoBookingCalcInsuranceBreakages_None.Name = "rdoBookingCalcInsuranceBreakages_None";
             this.rdoBookingCalcInsuranceBreakages_None.Size = new System.Drawing.Size(51, 17);
             this.rdoBookingCalcInsuranceBreakages_None.TabIndex = 51;
@@ -3475,7 +3515,7 @@
             // lblInsuranceBreakages
             // 
             this.lblInsuranceBreakages.AutoSize = true;
-            this.lblInsuranceBreakages.Location = new System.Drawing.Point(7, 137);
+            this.lblInsuranceBreakages.Location = new System.Drawing.Point(28, 159);
             this.lblInsuranceBreakages.Name = "lblInsuranceBreakages";
             this.lblInsuranceBreakages.Size = new System.Drawing.Size(105, 13);
             this.lblInsuranceBreakages.TabIndex = 48;
@@ -3548,7 +3588,7 @@
             this.tabPage5.Controls.Add(this.label104);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(272, 279);
+            this.tabPage5.Size = new System.Drawing.Size(272, 289);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Extra2";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -3683,7 +3723,7 @@
             // 
             // txtPropertyCalcCheckIn
             // 
-            this.txtPropertyCalcCheckIn.Location = new System.Drawing.Point(86, 69);
+            this.txtPropertyCalcCheckIn.Location = new System.Drawing.Point(110, 69);
             this.txtPropertyCalcCheckIn.Name = "txtPropertyCalcCheckIn";
             this.txtPropertyCalcCheckIn.Size = new System.Drawing.Size(100, 20);
             this.txtPropertyCalcCheckIn.TabIndex = 24;
@@ -3691,7 +3731,7 @@
             // 
             // txtPropertyCalcCheckOut
             // 
-            this.txtPropertyCalcCheckOut.Location = new System.Drawing.Point(86, 98);
+            this.txtPropertyCalcCheckOut.Location = new System.Drawing.Point(110, 98);
             this.txtPropertyCalcCheckOut.Name = "txtPropertyCalcCheckOut";
             this.txtPropertyCalcCheckOut.Size = new System.Drawing.Size(100, 20);
             this.txtPropertyCalcCheckOut.TabIndex = 23;
@@ -3699,7 +3739,7 @@
             // 
             // txtPropertyCalcPropertyId
             // 
-            this.txtPropertyCalcPropertyId.Location = new System.Drawing.Point(86, 40);
+            this.txtPropertyCalcPropertyId.Location = new System.Drawing.Point(110, 40);
             this.txtPropertyCalcPropertyId.Name = "txtPropertyCalcPropertyId";
             this.txtPropertyCalcPropertyId.Size = new System.Drawing.Size(100, 20);
             this.txtPropertyCalcPropertyId.TabIndex = 22;
@@ -4931,6 +4971,10 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.TextBox txtWelcomePackApiUrl;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.TextBox txtVoucherCode;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.TextBox txtImportBookingVoucherCode;
     }
 }
 

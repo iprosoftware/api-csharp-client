@@ -330,6 +330,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtBookingProperty1Infants.Text),
                 new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
                 new KeyValuePair<string, string>("Properties[0].CommissionType", commissionType),
+                new KeyValuePair<string, string>("Properties[0].VoucherCode", this.txtImportBookingVoucherCode.Text),
 
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Name", this.txtBookingProperty1Guest1Name.Text),
                 new KeyValuePair<string, string>("Properties[0].Guests[0].Age", this.txtBookingProperty1Guest1Age.Text),
@@ -515,6 +516,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Children", this.txtPropertyCalcChildren.Text),
                 new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
                 new KeyValuePair<string, string>("Properties[0].Infants", this.txtPropertyCalcInfants.Text),
+                new KeyValuePair<string, string>("Properties[0].VoucherCode", this.txtVoucherCode.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtPropertyExtra1Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtPropertyExtra1Qty.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtPropertyExtra2Id.Text),
