@@ -619,5 +619,15 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtWelcomePackApiUrl.Text);
         }
+
+        private void btnGetPropertyExteneded_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertyExtendedApiUrl.Text);
+        }
+
+        private void btnPropertySearchLite_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertySearchLiteApi.Text);
+        }
     }
 }

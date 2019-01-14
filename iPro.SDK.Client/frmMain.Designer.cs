@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtPropertyExtendedApiUrl = new System.Windows.Forms.TextBox();
+            this.label149 = new System.Windows.Forms.Label();
+            this.btnGetPropertyExteneded = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label148 = new System.Windows.Forms.Label();
             this.txtWelcomePackApiUrl = new System.Windows.Forms.TextBox();
@@ -223,7 +226,7 @@
             this.tabProperty1 = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label150 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
             this.txtImportBookingVoucherCode = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -328,7 +331,7 @@
             this.btnUpdatePropertyApi = new System.Windows.Forms.Button();
             this.txtUpdatePropertyApiUrl = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label149 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
             this.txtVoucherCode = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rdoBookingCalcInsuranceBreakages_None = new System.Windows.Forms.RadioButton();
@@ -433,6 +436,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label150 = new System.Windows.Forms.Label();
+            this.txtPropertySearchLiteApi = new System.Windows.Forms.TextBox();
+            this.btnPropertySearchLite = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -576,7 +582,7 @@
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.outputTextBox.Size = new System.Drawing.Size(590, 233);
+            this.outputTextBox.Size = new System.Drawing.Size(590, 198);
             this.outputTextBox.TabIndex = 3;
             this.outputTextBox.Text = "(HTTP responses and API data will be logged here)";
             // 
@@ -722,6 +728,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnPropertySearchLite);
+            this.groupBox2.Controls.Add(this.txtPropertySearchLiteApi);
+            this.groupBox2.Controls.Add(this.label150);
+            this.groupBox2.Controls.Add(this.txtPropertyExtendedApiUrl);
+            this.groupBox2.Controls.Add(this.label149);
+            this.groupBox2.Controls.Add(this.btnGetPropertyExteneded);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.label148);
             this.groupBox2.Controls.Add(this.txtWelcomePackApiUrl);
@@ -782,9 +794,36 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1177, 315);
+            this.groupBox2.Size = new System.Drawing.Size(1177, 342);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // txtPropertyExtendedApiUrl
+            // 
+            this.txtPropertyExtendedApiUrl.Location = new System.Drawing.Point(748, 288);
+            this.txtPropertyExtendedApiUrl.Name = "txtPropertyExtendedApiUrl";
+            this.txtPropertyExtendedApiUrl.Size = new System.Drawing.Size(337, 20);
+            this.txtPropertyExtendedApiUrl.TabIndex = 77;
+            this.txtPropertyExtendedApiUrl.Text = "apis/property/8849/propertyextended";
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(631, 291);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(92, 13);
+            this.label149.TabIndex = 76;
+            this.label149.Text = "property extended";
+            // 
+            // btnGetPropertyExteneded
+            // 
+            this.btnGetPropertyExteneded.Location = new System.Drawing.Point(1089, 286);
+            this.btnGetPropertyExteneded.Name = "btnGetPropertyExteneded";
+            this.btnGetPropertyExteneded.Size = new System.Drawing.Size(54, 22);
+            this.btnGetPropertyExteneded.TabIndex = 75;
+            this.btnGetPropertyExteneded.Text = "GET";
+            this.btnGetPropertyExteneded.UseVisualStyleBackColor = true;
+            this.btnGetPropertyExteneded.Click += new System.EventHandler(this.btnGetPropertyExteneded_Click);
             // 
             // button7
             // 
@@ -834,7 +873,7 @@
             // label146
             // 
             this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(630, 260);
+            this.label146.Location = new System.Drawing.Point(631, 263);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(51, 13);
             this.label146.TabIndex = 69;
@@ -1719,7 +1758,7 @@
             this.txtHttpRequest.Multiline = true;
             this.txtHttpRequest.Name = "txtHttpRequest";
             this.txtHttpRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHttpRequest.Size = new System.Drawing.Size(589, 233);
+            this.txtHttpRequest.Size = new System.Drawing.Size(589, 198);
             this.txtHttpRequest.TabIndex = 33;
             this.txtHttpRequest.Text = "(HTTP reques will be logged here)";
             // 
@@ -1739,7 +1778,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 172);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1191, 347);
+            this.tabControl1.Size = new System.Drawing.Size(1191, 374);
             this.tabControl1.TabIndex = 34;
             // 
             // tabSettings
@@ -1759,7 +1798,7 @@
             this.tabProperty.Location = new System.Drawing.Point(4, 22);
             this.tabProperty.Name = "tabProperty";
             this.tabProperty.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProperty.Size = new System.Drawing.Size(1183, 321);
+            this.tabProperty.Size = new System.Drawing.Size(1183, 348);
             this.tabProperty.TabIndex = 0;
             this.tabProperty.Text = "Property";
             this.tabProperty.UseVisualStyleBackColor = true;
@@ -2411,7 +2450,7 @@
             // 
             // tabPage8
             // 
-            this.tabPage8.Controls.Add(this.label150);
+            this.tabPage8.Controls.Add(this.label152);
             this.tabPage8.Controls.Add(this.txtImportBookingVoucherCode);
             this.tabPage8.Controls.Add(this.label46);
             this.tabPage8.Controls.Add(this.panel1);
@@ -2441,14 +2480,14 @@
             this.tabPage8.Text = "Main Details";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // label150
+            // label152
             // 
-            this.label150.AutoSize = true;
-            this.label150.Location = new System.Drawing.Point(396, 91);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(75, 13);
-            this.label150.TabIndex = 59;
-            this.label150.Text = "Voucher Code";
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(396, 91);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(75, 13);
+            this.label152.TabIndex = 59;
+            this.label152.Text = "Voucher Code";
             // 
             // txtImportBookingVoucherCode
             // 
@@ -3427,7 +3466,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label149);
+            this.tabPage3.Controls.Add(this.label151);
             this.tabPage3.Controls.Add(this.txtVoucherCode);
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.lblInsuranceBreakages);
@@ -3454,14 +3493,14 @@
             this.tabPage3.Text = "Booking Calc";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label149
+            // label151
             // 
-            this.label149.AutoSize = true;
-            this.label149.Location = new System.Drawing.Point(29, 127);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(75, 13);
-            this.label149.TabIndex = 57;
-            this.label149.Text = "Voucher Code";
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(29, 127);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(75, 13);
+            this.label151.TabIndex = 57;
+            this.label151.Text = "Voucher Code";
             // 
             // txtVoucherCode
             // 
@@ -4473,19 +4512,48 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.outputTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtHttpRequest, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 524);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 551);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 239);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 204);
             this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(631, 319);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(96, 13);
+            this.label150.TabIndex = 78;
+            this.label150.Text = "property search lite";
+            // 
+            // txtPropertySearchLiteApi
+            // 
+            this.txtPropertySearchLiteApi.Location = new System.Drawing.Point(748, 315);
+            this.txtPropertySearchLiteApi.Name = "txtPropertySearchLiteApi";
+            this.txtPropertySearchLiteApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertySearchLiteApi.TabIndex = 79;
+            this.txtPropertySearchLiteApi.Text = "/apis/propertysearchlite?size=15&index=1&checkIn=2020-01-01&checkout=2020-01-08&A" +
+    "dults=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&Weekl" +
+    "yPriceRange=";
+            // 
+            // btnPropertySearchLite
+            // 
+            this.btnPropertySearchLite.Location = new System.Drawing.Point(1089, 313);
+            this.btnPropertySearchLite.Name = "btnPropertySearchLite";
+            this.btnPropertySearchLite.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertySearchLite.TabIndex = 80;
+            this.btnPropertySearchLite.Text = "GET";
+            this.btnPropertySearchLite.UseVisualStyleBackColor = true;
+            this.btnPropertySearchLite.Click += new System.EventHandler(this.btnPropertySearchLite_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 676);
+            this.ClientSize = new System.Drawing.Size(1213, 766);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
@@ -4971,10 +5039,16 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.TextBox txtWelcomePackApiUrl;
-        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.Label label151;
         private System.Windows.Forms.TextBox txtVoucherCode;
-        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label152;
         private System.Windows.Forms.TextBox txtImportBookingVoucherCode;
+        private System.Windows.Forms.Button btnGetPropertyExteneded;
+        private System.Windows.Forms.TextBox txtPropertyExtendedApiUrl;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.Button btnPropertySearchLite;
+        private System.Windows.Forms.TextBox txtPropertySearchLiteApi;
+        private System.Windows.Forms.Label label150;
     }
 }
 
