@@ -478,7 +478,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("PaymentMethod",txtPaymentMethod.Text),
                 new KeyValuePair<string, string>("PaymentDate",txtPaymentDate.Text),
                 new KeyValuePair<string, string>("Status",txtStatus.Text),
-                new KeyValuePair<string, string>("PropertyId",txtPaymentPropertyId.Text)
+                new KeyValuePair<string, string>("PropertyId",txtPaymentPropertyId.Text),
+                new KeyValuePair<string, string>("BalanceDueDate",txtBalanceDueDate.Text),
             });
 
             PostContent(txtPaymentApi.Text, formContent.ReadAsByteArrayAsync().Result);
@@ -629,5 +630,6 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertySearchLiteApi.Text);
         }
+        
     }
 }
