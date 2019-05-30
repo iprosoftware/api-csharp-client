@@ -630,6 +630,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertySearchLiteApi.Text);
         }
-        
+
+        private void btnAvailabilityCheck_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertyDayAvailabilityCheckApi.Text);
+        }
     }
 }
