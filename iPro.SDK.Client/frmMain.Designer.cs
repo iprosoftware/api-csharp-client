@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPropertySearchLite = new System.Windows.Forms.Button();
+            this.txtPropertySearchLiteApi = new System.Windows.Forms.TextBox();
+            this.label150 = new System.Windows.Forms.Label();
             this.txtPropertyExtendedApiUrl = new System.Windows.Forms.TextBox();
             this.label149 = new System.Windows.Forms.Label();
             this.btnGetPropertyExteneded = new System.Windows.Forms.Button();
@@ -426,6 +429,12 @@
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label154 = new System.Windows.Forms.Label();
+            this.btnReactivateBooking = new System.Windows.Forms.Button();
+            this.txtReactivateBooking = new System.Windows.Forms.TextBox();
+            this.label153 = new System.Windows.Forms.Label();
+            this.btnCancelBooking = new System.Windows.Forms.Button();
+            this.txtCancelBooking = new System.Windows.Forms.TextBox();
             this.label130 = new System.Windows.Forms.Label();
             this.txtReservationsApiUrl = new System.Windows.Forms.TextBox();
             this.btnGetReservations = new System.Windows.Forms.Button();
@@ -436,9 +445,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label150 = new System.Windows.Forms.Label();
-            this.txtPropertySearchLiteApi = new System.Windows.Forms.TextBox();
-            this.btnPropertySearchLite = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -797,6 +803,35 @@
             this.groupBox2.Size = new System.Drawing.Size(1177, 342);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // btnPropertySearchLite
+            // 
+            this.btnPropertySearchLite.Location = new System.Drawing.Point(1089, 313);
+            this.btnPropertySearchLite.Name = "btnPropertySearchLite";
+            this.btnPropertySearchLite.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertySearchLite.TabIndex = 80;
+            this.btnPropertySearchLite.Text = "GET";
+            this.btnPropertySearchLite.UseVisualStyleBackColor = true;
+            this.btnPropertySearchLite.Click += new System.EventHandler(this.btnPropertySearchLite_Click);
+            // 
+            // txtPropertySearchLiteApi
+            // 
+            this.txtPropertySearchLiteApi.Location = new System.Drawing.Point(748, 315);
+            this.txtPropertySearchLiteApi.Name = "txtPropertySearchLiteApi";
+            this.txtPropertySearchLiteApi.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertySearchLiteApi.TabIndex = 79;
+            this.txtPropertySearchLiteApi.Text = "/apis/propertysearchlite?size=15&index=1&checkIn=2020-01-01&checkout=2020-01-08&A" +
+    "dults=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&Weekl" +
+    "yPriceRange=";
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(631, 319);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(96, 13);
+            this.label150.TabIndex = 78;
+            this.label150.Text = "property search lite";
             // 
             // txtPropertyExtendedApiUrl
             // 
@@ -1256,7 +1291,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1177, 315);
+            this.groupBox3.Size = new System.Drawing.Size(1177, 342);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             // 
@@ -1451,7 +1486,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1177, 315);
+            this.groupBox4.Size = new System.Drawing.Size(1177, 342);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
@@ -1787,7 +1822,7 @@
             this.tabSettings.Location = new System.Drawing.Point(4, 22);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSettings.Size = new System.Drawing.Size(1183, 321);
+            this.tabSettings.Size = new System.Drawing.Size(1183, 348);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -1809,7 +1844,7 @@
             this.tabEnquiry.Location = new System.Drawing.Point(4, 22);
             this.tabEnquiry.Name = "tabEnquiry";
             this.tabEnquiry.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnquiry.Size = new System.Drawing.Size(1183, 321);
+            this.tabEnquiry.Size = new System.Drawing.Size(1183, 348);
             this.tabEnquiry.TabIndex = 1;
             this.tabEnquiry.Text = "Import Enquiry";
             this.tabEnquiry.UseVisualStyleBackColor = true;
@@ -1850,7 +1885,7 @@
             this.tabBooking.Location = new System.Drawing.Point(4, 22);
             this.tabBooking.Name = "tabBooking";
             this.tabBooking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooking.Size = new System.Drawing.Size(1183, 321);
+            this.tabBooking.Size = new System.Drawing.Size(1183, 348);
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
@@ -2111,7 +2146,7 @@
             this.tabControl2.Controls.Add(this.tabCustomer);
             this.tabControl2.Controls.Add(this.tabProperty1);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl2.Location = new System.Drawing.Point(3, 120);
+            this.tabControl2.Location = new System.Drawing.Point(3, 147);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl2.SelectedIndex = 0;
@@ -3023,7 +3058,7 @@
             this.tabReview.Location = new System.Drawing.Point(4, 22);
             this.tabReview.Name = "tabReview";
             this.tabReview.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReview.Size = new System.Drawing.Size(1183, 321);
+            this.tabReview.Size = new System.Drawing.Size(1183, 348);
             this.tabReview.TabIndex = 4;
             this.tabReview.Text = "Review";
             this.tabReview.UseVisualStyleBackColor = true;
@@ -3049,7 +3084,7 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1177, 315);
+            this.groupBox5.Size = new System.Drawing.Size(1177, 342);
             this.groupBox5.TabIndex = 31;
             this.groupBox5.TabStop = false;
             // 
@@ -3221,7 +3256,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1183, 321);
+            this.tabPage1.Size = new System.Drawing.Size(1183, 348);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Payments";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -3423,7 +3458,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1183, 321);
+            this.tabPage2.Size = new System.Drawing.Size(1183, 348);
             this.tabPage2.TabIndex = 6;
             this.tabPage2.Text = "Update Properties";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3488,7 +3523,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1183, 321);
+            this.tabPage3.Size = new System.Drawing.Size(1183, 348);
             this.tabPage3.TabIndex = 7;
             this.tabPage3.Text = "Booking Calc";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3568,7 +3603,7 @@
             this.tabControl5.Location = new System.Drawing.Point(900, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(280, 315);
+            this.tabControl5.Size = new System.Drawing.Size(280, 342);
             this.tabControl5.TabIndex = 46;
             // 
             // tabPage4
@@ -3580,7 +3615,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(272, 289);
+            this.tabPage4.Size = new System.Drawing.Size(272, 316);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Extra1";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -3627,7 +3662,7 @@
             this.tabPage5.Controls.Add(this.label104);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(272, 289);
+            this.tabPage5.Size = new System.Drawing.Size(272, 316);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Extra2";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -3850,7 +3885,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1183, 321);
+            this.tabPage6.Size = new System.Drawing.Size(1183, 348);
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "Contacts";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -4409,16 +4444,76 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.label154);
+            this.tabPage7.Controls.Add(this.btnReactivateBooking);
+            this.tabPage7.Controls.Add(this.txtReactivateBooking);
+            this.tabPage7.Controls.Add(this.label153);
+            this.tabPage7.Controls.Add(this.btnCancelBooking);
+            this.tabPage7.Controls.Add(this.txtCancelBooking);
             this.tabPage7.Controls.Add(this.label130);
             this.tabPage7.Controls.Add(this.txtReservationsApiUrl);
             this.tabPage7.Controls.Add(this.btnGetReservations);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1183, 321);
+            this.tabPage7.Size = new System.Drawing.Size(1183, 348);
             this.tabPage7.TabIndex = 9;
             this.tabPage7.Text = "Bookings";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(45, 115);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(101, 13);
+            this.label154.TabIndex = 56;
+            this.label154.Text = "Reactivate Booking";
+            // 
+            // btnReactivateBooking
+            // 
+            this.btnReactivateBooking.Location = new System.Drawing.Point(1058, 110);
+            this.btnReactivateBooking.Name = "btnReactivateBooking";
+            this.btnReactivateBooking.Size = new System.Drawing.Size(54, 23);
+            this.btnReactivateBooking.TabIndex = 55;
+            this.btnReactivateBooking.Text = "Update";
+            this.btnReactivateBooking.UseVisualStyleBackColor = true;
+            this.btnReactivateBooking.Click += new System.EventHandler(this.btnReactivateBooking_Click);
+            // 
+            // txtReactivateBooking
+            // 
+            this.txtReactivateBooking.Location = new System.Drawing.Point(167, 113);
+            this.txtReactivateBooking.Name = "txtReactivateBooking";
+            this.txtReactivateBooking.Size = new System.Drawing.Size(872, 20);
+            this.txtReactivateBooking.TabIndex = 54;
+            this.txtReactivateBooking.Text = "/apis/booking/reactivate?BookingId=8849";
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(45, 71);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(82, 13);
+            this.label153.TabIndex = 53;
+            this.label153.Text = "Cancel Booking";
+            // 
+            // btnCancelBooking
+            // 
+            this.btnCancelBooking.Location = new System.Drawing.Point(1058, 66);
+            this.btnCancelBooking.Name = "btnCancelBooking";
+            this.btnCancelBooking.Size = new System.Drawing.Size(54, 23);
+            this.btnCancelBooking.TabIndex = 52;
+            this.btnCancelBooking.Text = "Update";
+            this.btnCancelBooking.UseVisualStyleBackColor = true;
+            this.btnCancelBooking.Click += new System.EventHandler(this.btnCancelBooking_Click);
+            // 
+            // txtCancelBooking
+            // 
+            this.txtCancelBooking.Location = new System.Drawing.Point(167, 69);
+            this.txtCancelBooking.Name = "txtCancelBooking";
+            this.txtCancelBooking.Size = new System.Drawing.Size(872, 20);
+            this.txtCancelBooking.TabIndex = 51;
+            this.txtCancelBooking.Text = "/apis/booking/cancel?BookingId=8849";
             // 
             // label130
             // 
@@ -4455,7 +4550,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1183, 321);
+            this.tabPage10.Size = new System.Drawing.Size(1183, 348);
             this.tabPage10.TabIndex = 10;
             this.tabPage10.Text = "Statements";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -4520,40 +4615,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 204);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label150
-            // 
-            this.label150.AutoSize = true;
-            this.label150.Location = new System.Drawing.Point(631, 319);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(96, 13);
-            this.label150.TabIndex = 78;
-            this.label150.Text = "property search lite";
-            // 
-            // txtPropertySearchLiteApi
-            // 
-            this.txtPropertySearchLiteApi.Location = new System.Drawing.Point(748, 315);
-            this.txtPropertySearchLiteApi.Name = "txtPropertySearchLiteApi";
-            this.txtPropertySearchLiteApi.Size = new System.Drawing.Size(335, 20);
-            this.txtPropertySearchLiteApi.TabIndex = 79;
-            this.txtPropertySearchLiteApi.Text = "/apis/propertysearchlite?size=15&index=1&checkIn=2020-01-01&checkout=2020-01-08&A" +
-    "dults=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&Weekl" +
-    "yPriceRange=";
-            // 
-            // btnPropertySearchLite
-            // 
-            this.btnPropertySearchLite.Location = new System.Drawing.Point(1089, 313);
-            this.btnPropertySearchLite.Name = "btnPropertySearchLite";
-            this.btnPropertySearchLite.Size = new System.Drawing.Size(54, 23);
-            this.btnPropertySearchLite.TabIndex = 80;
-            this.btnPropertySearchLite.Text = "GET";
-            this.btnPropertySearchLite.UseVisualStyleBackColor = true;
-            this.btnPropertySearchLite.Click += new System.EventHandler(this.btnPropertySearchLite_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 766);
+            this.ClientSize = new System.Drawing.Size(1213, 749);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
@@ -5049,6 +5115,12 @@
         private System.Windows.Forms.Button btnPropertySearchLite;
         private System.Windows.Forms.TextBox txtPropertySearchLiteApi;
         private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.Button btnCancelBooking;
+        private System.Windows.Forms.TextBox txtCancelBooking;
+        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Button btnReactivateBooking;
+        private System.Windows.Forms.TextBox txtReactivateBooking;
     }
 }
 

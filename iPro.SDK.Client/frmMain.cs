@@ -629,5 +629,15 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertySearchLiteApi.Text);
         }
+
+        private void btnCancelBooking_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtCancelBooking.Text);
+        }
+
+        private void btnReactivateBooking_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtReactivateBooking.Text);
+        }
     }
 }
