@@ -306,6 +306,8 @@
             this.txtReviewsApi = new System.Windows.Forms.TextBox();
             this.btnGetReviews = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtBalanceDueDate = new System.Windows.Forms.TextBox();
+            this.label153 = new System.Windows.Forms.Label();
             this.txtPaymentPropertyId = new System.Windows.Forms.TextBox();
             this.label83 = new System.Windows.Forms.Label();
             this.txtPaymentDate = new System.Windows.Forms.TextBox();
@@ -445,6 +447,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label154 = new System.Windows.Forms.Label();
+            this.txtPropertyDayAvailabilityCheckApi = new System.Windows.Forms.TextBox();
+            this.btnDayAvailabilityCheck = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -734,6 +739,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnDayAvailabilityCheck);
+            this.groupBox2.Controls.Add(this.txtPropertyDayAvailabilityCheckApi);
+            this.groupBox2.Controls.Add(this.label154);
             this.groupBox2.Controls.Add(this.btnPropertySearchLite);
             this.groupBox2.Controls.Add(this.txtPropertySearchLiteApi);
             this.groupBox2.Controls.Add(this.label150);
@@ -1027,7 +1035,7 @@
             // label128
             // 
             this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(12, 235);
+            this.label128.Location = new System.Drawing.Point(35, 235);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(128, 13);
             this.label128.TabIndex = 56;
@@ -1054,7 +1062,7 @@
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(12, 205);
+            this.label79.Location = new System.Drawing.Point(35, 205);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(118, 13);
             this.label79.TabIndex = 53;
@@ -1218,7 +1226,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 175);
+            this.label9.Location = new System.Drawing.Point(36, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 13);
             this.label9.TabIndex = 35;
@@ -3231,6 +3239,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtBalanceDueDate);
+            this.tabPage1.Controls.Add(this.label153);
             this.tabPage1.Controls.Add(this.txtPaymentPropertyId);
             this.tabPage1.Controls.Add(this.label83);
             this.tabPage1.Controls.Add(this.txtPaymentDate);
@@ -3261,6 +3271,23 @@
             this.tabPage1.Text = "Payments";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtBalanceDueDate
+            // 
+            this.txtBalanceDueDate.Location = new System.Drawing.Point(599, 56);
+            this.txtBalanceDueDate.Name = "txtBalanceDueDate";
+            this.txtBalanceDueDate.Size = new System.Drawing.Size(133, 20);
+            this.txtBalanceDueDate.TabIndex = 69;
+            this.txtBalanceDueDate.Text = "2016-09-22";
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(502, 58);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(89, 13);
+            this.label153.TabIndex = 68;
+            this.label153.Text = "BalanceDueDate";
+            // 
             // txtPaymentPropertyId
             // 
             this.txtPaymentPropertyId.Location = new System.Drawing.Point(88, 118);
@@ -3288,7 +3315,7 @@
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(512, 94);
+            this.label81.Location = new System.Drawing.Point(520, 94);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(71, 13);
             this.label81.TabIndex = 64;
@@ -4615,6 +4642,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 204);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(36, 317);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(88, 13);
+            this.label154.TabIndex = 81;
+            this.label154.Text = "availability check";
+            // 
+            // txtPropertyDayAvailabilityCheckApi
+            // 
+            this.txtPropertyDayAvailabilityCheckApi.Location = new System.Drawing.Point(178, 315);
+            this.txtPropertyDayAvailabilityCheckApi.Name = "txtPropertyDayAvailabilityCheckApi";
+            this.txtPropertyDayAvailabilityCheckApi.Size = new System.Drawing.Size(334, 20);
+            this.txtPropertyDayAvailabilityCheckApi.TabIndex = 82;
+            this.txtPropertyDayAvailabilityCheckApi.Text = "/apis/property/dayavailabilitycheck?lastUpdated=60";
+            // 
+            // btnDayAvailabilityCheck
+            // 
+            this.btnDayAvailabilityCheck.Location = new System.Drawing.Point(518, 315);
+            this.btnDayAvailabilityCheck.Name = "btnDayAvailabilityCheck";
+            this.btnDayAvailabilityCheck.Size = new System.Drawing.Size(55, 21);
+            this.btnDayAvailabilityCheck.TabIndex = 83;
+            this.btnDayAvailabilityCheck.Text = "GET";
+            this.btnDayAvailabilityCheck.UseVisualStyleBackColor = true;
+            this.btnDayAvailabilityCheck.Click += new System.EventHandler(this.btnAvailabilityCheck_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5121,6 +5175,11 @@
         private System.Windows.Forms.Label label154;
         private System.Windows.Forms.Button btnReactivateBooking;
         private System.Windows.Forms.TextBox txtReactivateBooking;
+        private System.Windows.Forms.TextBox txtBalanceDueDate;
+        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.Button btnDayAvailabilityCheck;
+        private System.Windows.Forms.TextBox txtPropertyDayAvailabilityCheckApi;
+        private System.Windows.Forms.Label label154;
     }
 }
 
