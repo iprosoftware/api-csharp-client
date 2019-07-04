@@ -434,7 +434,7 @@
             this.label154 = new System.Windows.Forms.Label();
             this.btnReactivateBooking = new System.Windows.Forms.Button();
             this.txtReactivateBooking = new System.Windows.Forms.TextBox();
-            this.label153 = new System.Windows.Forms.Label();
+            this.label155 = new System.Windows.Forms.Label();
             this.btnCancelBooking = new System.Windows.Forms.Button();
             this.txtCancelBooking = new System.Windows.Forms.TextBox();
             this.label130 = new System.Windows.Forms.Label();
@@ -447,7 +447,7 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label154 = new System.Windows.Forms.Label();
+            this.label156 = new System.Windows.Forms.Label();
             this.txtPropertyDayAvailabilityCheckApi = new System.Windows.Forms.TextBox();
             this.btnDayAvailabilityCheck = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -4471,10 +4471,10 @@
             // 
             // tabPage7
             // 
-            this.tabPage7.Controls.Add(this.label154);
+            this.tabPage7.Controls.Add(this.label156);
             this.tabPage7.Controls.Add(this.btnReactivateBooking);
             this.tabPage7.Controls.Add(this.txtReactivateBooking);
-            this.tabPage7.Controls.Add(this.label153);
+            this.tabPage7.Controls.Add(this.label155);
             this.tabPage7.Controls.Add(this.btnCancelBooking);
             this.tabPage7.Controls.Add(this.txtCancelBooking);
             this.tabPage7.Controls.Add(this.label130);
@@ -4488,14 +4488,14 @@
             this.tabPage7.Text = "Bookings";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // label154
+            // label156
             // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(45, 115);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(101, 13);
-            this.label154.TabIndex = 56;
-            this.label154.Text = "Reactivate Booking";
+            this.label156.AutoSize = true;
+            this.label156.Location = new System.Drawing.Point(45, 115);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(101, 13);
+            this.label156.TabIndex = 56;
+            this.label156.Text = "Reactivate Booking";
             // 
             // btnReactivateBooking
             // 
@@ -4515,14 +4515,14 @@
             this.txtReactivateBooking.TabIndex = 54;
             this.txtReactivateBooking.Text = "/apis/booking/reactivate?BookingId=8849";
             // 
-            // label153
+            // label155
             // 
-            this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(45, 71);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(82, 13);
-            this.label153.TabIndex = 53;
-            this.label153.Text = "Cancel Booking";
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(45, 71);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(82, 13);
+            this.label155.TabIndex = 53;
+            this.label155.Text = "Cancel Booking";
             // 
             // btnCancelBooking
             // 
@@ -5176,10 +5176,10 @@
         private System.Windows.Forms.Button btnReactivateBooking;
         private System.Windows.Forms.TextBox txtReactivateBooking;
         private System.Windows.Forms.TextBox txtBalanceDueDate;
-        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.Label label155;
         private System.Windows.Forms.Button btnDayAvailabilityCheck;
         private System.Windows.Forms.TextBox txtPropertyDayAvailabilityCheckApi;
-        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Label label156;
     }
 }
 
