@@ -640,11 +640,16 @@ namespace iPro.SDK.Client
         private void btnReactivateBooking_Click(object sender, EventArgs e)
         {
             LoadContent(txtReactivateBooking.Text);
-	}
+		}
 
         private void btnAvailabilityCheck_Click(object sender, EventArgs e)
         {
             LoadContent(txtPropertyDayAvailabilityCheckApi.Text);
+        }
+		
+		private void btnPropertiesLastUpdated_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertiesLastUpdated.Text);
         }
     }
 }
