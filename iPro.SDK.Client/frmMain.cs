@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DotNetOpenAuth.OAuth2;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -7,7 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DotNetOpenAuth.OAuth2;
+using System.Linq;
 
 namespace iPro.SDK.Client
 {
@@ -373,7 +375,7 @@ namespace iPro.SDK.Client
             await PostContent(this.txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        private async Task PostContent(string api, byte[] buffer)
+        private async Task PostContent(string api, byte[] buffer, string contentType = "application/x-www-form-urlencoded")
         {
             try
             {
@@ -387,7 +389,7 @@ namespace iPro.SDK.Client
                 httpRequest.Headers.Add("version", "2.0");
 
                 httpRequest.ContentLength = buffer.Length;
-                httpRequest.ContentType = "application/x-www-form-urlencoded";
+                httpRequest.ContentType = contentType;
                 ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
 
                 using (var postStream = httpRequest.GetRequestStream())
@@ -560,6 +562,111 @@ namespace iPro.SDK.Client
             PostContent(txtContactPostUrl.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
+        private static IEnumerable<string> SplitComma(string text)
+        {
+            return text
+                .Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
+                .Select(x => x.Trim())
+                .ToList();
+        }
+
+        private void btnPushProperty_PreviewPayload_Click(object sender, EventArgs e)
+        {
+            var attributes = new Dictionary<string, List<string>>();
+            attributes.Add(pushProperty_Attribute1Name.Text, new List<string>(SplitComma(pushProperty_Attribute1Values.Text)));
+            attributes.Add(pushProperty_Attribute2Name.Text, new List<string>(SplitComma(pushProperty_Attribute2Values.Text)));
+            attributes.Add(pushProperty_Attribute3Name.Text, new List<string>(SplitComma(pushProperty_Attribute3Values.Text)));
+            attributes.Add(pushProperty_Attribute4Name.Text, new List<string>(SplitComma(pushProperty_Attribute4Values.Text)));
+
+            var distances = new List<object>();
+            distances.Add(new
+            {
+                Name = pushProperty_Distance1Name.Text,
+                Distance = pushProperty_Distance1Distance.Text,
+                DistanceType = pushProperty_Distance1DistanceType.Text,
+                DistanceUnit = pushProperty_Distance1DistanceUnit.Text,
+            });
+            distances.Add(new
+            {
+                Name = pushProperty_Distance2Name.Text,
+                Distance = pushProperty_Distance2Distance.Text,
+                DistanceType = pushProperty_Distance2DistanceType.Text,
+                DistanceUnit = pushProperty_Distance2DistanceUnit.Text,
+            });
+
+            var rooms = new List<object>();
+            rooms.Add(new
+            {
+                Name = pushProperty_Room1Name.Text,
+                Description = pushProperty_Room1Description.Text,
+                Amenities = SplitComma(pushProperty_Room1Amenities.Text).ToList(),
+                Type = pushProperty_Room1Type.Text,
+            });
+            rooms.Add(new
+            {
+                Name = pushProperty_Room2Name.Text,
+                Description = pushProperty_Room2Description.Text,
+                Amenities = SplitComma(pushProperty_Room2Amenities.Text).ToList(),
+                Type = pushProperty_Room2Type.Text,
+            });
+
+            var obj = new
+            {
+                Id = pushProperty_Id.Text,
+                Name = pushProperty_Name.Text,
+                PropertyName = pushProperty_PropertyName.Text,
+                Title = pushProperty_Title.Text,
+                Suspended = pushProperty_Suspended.Checked,
+                Withdrawn = pushProperty_Withdrawn.Checked,
+                HideOnWebsite = pushProperty_HideOnWebsite.Checked,
+                DisableOnlineBooking = pushProperty_DisableOnlineBooking.Checked,
+                PropertyReference = pushProperty_PropertyReference.Text,
+                PropertyWebsite = pushProperty_PropertyWebsite.Text,
+                Intro = pushProperty_Intro.Text,
+                MainDescription = pushProperty_MainDescription.Text,
+                Currency = pushProperty_Currency.Text,
+                HideRates = pushProperty_HideRates.Checked,
+                MinRate = pushProperty_MinRate.Text,
+                MaxRate = pushProperty_MaxRate.Text,
+                Commission = pushProperty_Commission.Text,
+                BreakagesDeposit = pushProperty_BreakagesDeposit.Text,
+                AvailabilityNotes = pushProperty_AvailabilityNotes.Text,
+                RentalNotesTitle = pushProperty_RentalNotesTitle.Text,
+                RentalNotes = pushProperty_RentalNotes.Text,
+                Address = pushProperty_Address.Text,
+                Address2 = pushProperty_Address2.Text,
+                City = pushProperty_City.Text,
+                County = pushProperty_County.Text,
+                Postcode = pushProperty_Postcode.Text,
+                Country = pushProperty_Country.Text,
+                Url = pushProperty_Url.Text,
+                GeoLocation = pushProperty_GeoLocation.Text,
+                Location = SplitComma(pushProperty_Location.Text).ToList(),
+                Attributes = attributes,
+                SEOTitle = pushProperty_SEOTitle.Text,
+                SEOKeywords = pushProperty_SEOKeywords.Text,
+                SEODescription = pushProperty_SEODescription.Text,
+                Rooms = rooms,
+                Distances = distances,
+                TrustPilotTag = pushProperty_TrustPilotTag.Text,
+            };
+
+            var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            pushProperty_Payload.Text = json;
+        }
+
+        private void btnPushProperty_Post_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(pushProperty_Payload.Text))
+            {
+                MessageBox.Show("Please preview payload first");
+                return;
+            }
+
+            var content = new StringContent(pushProperty_Payload.Text);
+            PostContent(txtPushPropertyUrl.Text, content.ReadAsByteArrayAsync().Result, "application/json");
+        }
+
         private void btnContactTypes_Click(object sender, EventArgs e)
         {
             LoadContent(txtContactTypesUrl.Text);
@@ -640,14 +747,14 @@ namespace iPro.SDK.Client
         private void btnReactivateBooking_Click(object sender, EventArgs e)
         {
             LoadContent(txtReactivateBooking.Text);
-		}
+        }
 
         private void btnAvailabilityCheck_Click(object sender, EventArgs e)
         {
             LoadContent(txtPropertyDayAvailabilityCheckApi.Text);
         }
-		
-		private void btnPropertiesLastUpdated_Click(object sender, EventArgs e)
+
+        private void btnPropertiesLastUpdated_Click(object sender, EventArgs e)
         {
             LoadContent(txtPropertiesLastUpdated.Text);
         }
