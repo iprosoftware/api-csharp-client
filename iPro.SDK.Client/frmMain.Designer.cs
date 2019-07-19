@@ -172,6 +172,8 @@
             this.btnPushProperty_Post = new System.Windows.Forms.Button();
             this.txtPushPropertyUrl = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label216 = new System.Windows.Forms.Label();
+            this.pushProperty_ContractRenewalDate = new System.Windows.Forms.TextBox();
             this.label215 = new System.Windows.Forms.Label();
             this.pushProperty_Licence = new System.Windows.Forms.TextBox();
             this.pushProperty_PlotSize = new System.Windows.Forms.TextBox();
@@ -278,20 +280,20 @@
             this.pushProperty_Attribute1Name = new System.Windows.Forms.TextBox();
             this.label182 = new System.Windows.Forms.Label();
             this.tabRooms = new System.Windows.Forms.TabPage();
-            this.label205 = new System.Windows.Forms.Label();
+            this.pushProperty_Room2Sleeps = new System.Windows.Forms.TextBox();
+            this.label219 = new System.Windows.Forms.Label();
+            this.pushProperty_Room2NodeName = new System.Windows.Forms.TextBox();
+            this.label218 = new System.Windows.Forms.Label();
+            this.pushProperty_Room1NodeName = new System.Windows.Forms.TextBox();
+            this.label217 = new System.Windows.Forms.Label();
             this.pushProperty_Room2Amenities = new System.Windows.Forms.TextBox();
             this.label206 = new System.Windows.Forms.Label();
-            this.pushProperty_Room2Type = new System.Windows.Forms.TextBox();
-            this.label207 = new System.Windows.Forms.Label();
             this.pushProperty_Room2Description = new System.Windows.Forms.TextBox();
             this.label208 = new System.Windows.Forms.Label();
             this.pushProperty_Room2Name = new System.Windows.Forms.TextBox();
             this.label209 = new System.Windows.Forms.Label();
-            this.label204 = new System.Windows.Forms.Label();
             this.pushProperty_Room1Amenities = new System.Windows.Forms.TextBox();
             this.label203 = new System.Windows.Forms.Label();
-            this.pushProperty_Room1Type = new System.Windows.Forms.TextBox();
-            this.label199 = new System.Windows.Forms.Label();
             this.pushProperty_Room1Description = new System.Windows.Forms.TextBox();
             this.label200 = new System.Windows.Forms.Label();
             this.pushProperty_Room1Name = new System.Windows.Forms.TextBox();
@@ -600,8 +602,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label216 = new System.Windows.Forms.Label();
-            this.pushProperty_ContractRenewalDate = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -2164,6 +2164,22 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Info";
             // 
+            // label216
+            // 
+            this.label216.AutoSize = true;
+            this.label216.Location = new System.Drawing.Point(-2, 200);
+            this.label216.Name = "label216";
+            this.label216.Size = new System.Drawing.Size(112, 13);
+            this.label216.TabIndex = 78;
+            this.label216.Text = "ContractRenewalDate";
+            // 
+            // pushProperty_ContractRenewalDate
+            // 
+            this.pushProperty_ContractRenewalDate.Location = new System.Drawing.Point(116, 197);
+            this.pushProperty_ContractRenewalDate.Name = "pushProperty_ContractRenewalDate";
+            this.pushProperty_ContractRenewalDate.Size = new System.Drawing.Size(141, 20);
+            this.pushProperty_ContractRenewalDate.TabIndex = 77;
+            // 
             // label215
             // 
             this.label215.AutoSize = true;
@@ -3030,6 +3046,7 @@
             this.pushProperty_Attribute4Values.Location = new System.Drawing.Point(622, 39);
             this.pushProperty_Attribute4Values.Multiline = true;
             this.pushProperty_Attribute4Values.Name = "pushProperty_Attribute4Values";
+            this.pushProperty_Attribute4Values.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.pushProperty_Attribute4Values.Size = new System.Drawing.Size(100, 54);
             this.pushProperty_Attribute4Values.TabIndex = 15;
             this.pushProperty_Attribute4Values.Text = "Private, Heated";
@@ -3065,6 +3082,7 @@
             this.pushProperty_Attribute3Values.Location = new System.Drawing.Point(437, 39);
             this.pushProperty_Attribute3Values.Multiline = true;
             this.pushProperty_Attribute3Values.Name = "pushProperty_Attribute3Values";
+            this.pushProperty_Attribute3Values.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.pushProperty_Attribute3Values.Size = new System.Drawing.Size(100, 54);
             this.pushProperty_Attribute3Values.TabIndex = 11;
             this.pushProperty_Attribute3Values.Text = "Walking Distance to Beach, Walking Distance to Bars/Restaurants, Walking Distance" +
@@ -3101,6 +3119,7 @@
             this.pushProperty_Attribute2Values.Location = new System.Drawing.Point(255, 39);
             this.pushProperty_Attribute2Values.Multiline = true;
             this.pushProperty_Attribute2Values.Name = "pushProperty_Attribute2Values";
+            this.pushProperty_Attribute2Values.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.pushProperty_Attribute2Values.Size = new System.Drawing.Size(100, 54);
             this.pushProperty_Attribute2Values.TabIndex = 7;
             this.pushProperty_Attribute2Values.Text = "Golf, Family, Luxury, Beach";
@@ -3136,6 +3155,7 @@
             this.pushProperty_Attribute1Values.Location = new System.Drawing.Point(60, 39);
             this.pushProperty_Attribute1Values.Multiline = true;
             this.pushProperty_Attribute1Values.Name = "pushProperty_Attribute1Values";
+            this.pushProperty_Attribute1Values.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.pushProperty_Attribute1Values.Size = new System.Drawing.Size(100, 54);
             this.pushProperty_Attribute1Values.TabIndex = 3;
             this.pushProperty_Attribute1Values.Text = "Villa";
@@ -3168,20 +3188,20 @@
             // 
             // tabRooms
             // 
-            this.tabRooms.Controls.Add(this.label205);
+            this.tabRooms.Controls.Add(this.pushProperty_Room2Sleeps);
+            this.tabRooms.Controls.Add(this.label219);
+            this.tabRooms.Controls.Add(this.pushProperty_Room2NodeName);
+            this.tabRooms.Controls.Add(this.label218);
+            this.tabRooms.Controls.Add(this.pushProperty_Room1NodeName);
+            this.tabRooms.Controls.Add(this.label217);
             this.tabRooms.Controls.Add(this.pushProperty_Room2Amenities);
             this.tabRooms.Controls.Add(this.label206);
-            this.tabRooms.Controls.Add(this.pushProperty_Room2Type);
-            this.tabRooms.Controls.Add(this.label207);
             this.tabRooms.Controls.Add(this.pushProperty_Room2Description);
             this.tabRooms.Controls.Add(this.label208);
             this.tabRooms.Controls.Add(this.pushProperty_Room2Name);
             this.tabRooms.Controls.Add(this.label209);
-            this.tabRooms.Controls.Add(this.label204);
             this.tabRooms.Controls.Add(this.pushProperty_Room1Amenities);
             this.tabRooms.Controls.Add(this.label203);
-            this.tabRooms.Controls.Add(this.pushProperty_Room1Type);
-            this.tabRooms.Controls.Add(this.label199);
             this.tabRooms.Controls.Add(this.pushProperty_Room1Description);
             this.tabRooms.Controls.Add(this.label200);
             this.tabRooms.Controls.Add(this.pushProperty_Room1Name);
@@ -3193,21 +3213,64 @@
             this.tabRooms.Text = "Rooms";
             this.tabRooms.UseVisualStyleBackColor = true;
             // 
-            // label205
+            // pushProperty_Room2Sleeps
             // 
-            this.label205.AutoSize = true;
-            this.label205.Location = new System.Drawing.Point(562, 89);
-            this.label205.Name = "label205";
-            this.label205.Size = new System.Drawing.Size(116, 13);
-            this.label205.TabIndex = 31;
-            this.label205.Text = "0:bedroom 1:otherroom";
+            this.pushProperty_Room2Sleeps.Location = new System.Drawing.Point(567, 92);
+            this.pushProperty_Room2Sleeps.Name = "pushProperty_Room2Sleeps";
+            this.pushProperty_Room2Sleeps.Size = new System.Drawing.Size(100, 20);
+            this.pushProperty_Room2Sleeps.TabIndex = 37;
+            this.pushProperty_Room2Sleeps.Text = "2";
+            // 
+            // label219
+            // 
+            this.label219.AutoSize = true;
+            this.label219.Location = new System.Drawing.Point(488, 95);
+            this.label219.Name = "label219";
+            this.label219.Size = new System.Drawing.Size(39, 13);
+            this.label219.TabIndex = 36;
+            this.label219.Text = "Sleeps";
+            // 
+            // pushProperty_Room2NodeName
+            // 
+            this.pushProperty_Room2NodeName.Location = new System.Drawing.Point(565, 14);
+            this.pushProperty_Room2NodeName.Name = "pushProperty_Room2NodeName";
+            this.pushProperty_Room2NodeName.Size = new System.Drawing.Size(100, 20);
+            this.pushProperty_Room2NodeName.TabIndex = 35;
+            this.pushProperty_Room2NodeName.Text = "Bedroom1";
+            // 
+            // label218
+            // 
+            this.label218.AutoSize = true;
+            this.label218.Location = new System.Drawing.Point(486, 17);
+            this.label218.Name = "label218";
+            this.label218.Size = new System.Drawing.Size(61, 13);
+            this.label218.TabIndex = 34;
+            this.label218.Text = "NodeName";
+            // 
+            // pushProperty_Room1NodeName
+            // 
+            this.pushProperty_Room1NodeName.Location = new System.Drawing.Point(117, 14);
+            this.pushProperty_Room1NodeName.Name = "pushProperty_Room1NodeName";
+            this.pushProperty_Room1NodeName.Size = new System.Drawing.Size(100, 20);
+            this.pushProperty_Room1NodeName.TabIndex = 33;
+            this.pushProperty_Room1NodeName.Text = "OtherRoom1";
+            // 
+            // label217
+            // 
+            this.label217.AutoSize = true;
+            this.label217.Location = new System.Drawing.Point(38, 17);
+            this.label217.Name = "label217";
+            this.label217.Size = new System.Drawing.Size(61, 13);
+            this.label217.TabIndex = 32;
+            this.label217.Text = "NodeName";
             // 
             // pushProperty_Room2Amenities
             // 
             this.pushProperty_Room2Amenities.Location = new System.Drawing.Point(750, 14);
             this.pushProperty_Room2Amenities.Multiline = true;
             this.pushProperty_Room2Amenities.Name = "pushProperty_Room2Amenities";
-            this.pushProperty_Room2Amenities.Size = new System.Drawing.Size(100, 72);
+            this.pushProperty_Room2Amenities.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pushProperty_Room2Amenities.Size = new System.Drawing.Size(100, 68);
             this.pushProperty_Room2Amenities.TabIndex = 30;
             this.pushProperty_Room2Amenities.Text = "BED LINEN & TOWELS, ALARM CLOCK, CUPBOARD, DOUBLE BED, BUILT-IN WARDROBES, NIGHT " +
     "TABLES, READING LAMPS, BALCONY, SATELLITE TV, AIR CONDITIONING";
@@ -3215,32 +3278,15 @@
             // label206
             // 
             this.label206.AutoSize = true;
-            this.label206.Location = new System.Drawing.Point(671, 17);
+            this.label206.Location = new System.Drawing.Point(692, 17);
             this.label206.Name = "label206";
             this.label206.Size = new System.Drawing.Size(52, 13);
             this.label206.TabIndex = 29;
             this.label206.Text = "Amenities";
             // 
-            // pushProperty_Room2Type
-            // 
-            this.pushProperty_Room2Type.Location = new System.Drawing.Point(565, 66);
-            this.pushProperty_Room2Type.Name = "pushProperty_Room2Type";
-            this.pushProperty_Room2Type.Size = new System.Drawing.Size(100, 20);
-            this.pushProperty_Room2Type.TabIndex = 28;
-            this.pushProperty_Room2Type.Text = "0";
-            // 
-            // label207
-            // 
-            this.label207.AutoSize = true;
-            this.label207.Location = new System.Drawing.Point(486, 69);
-            this.label207.Name = "label207";
-            this.label207.Size = new System.Drawing.Size(31, 13);
-            this.label207.TabIndex = 27;
-            this.label207.Text = "Type";
-            // 
             // pushProperty_Room2Description
             // 
-            this.pushProperty_Room2Description.Location = new System.Drawing.Point(565, 40);
+            this.pushProperty_Room2Description.Location = new System.Drawing.Point(567, 66);
             this.pushProperty_Room2Description.Name = "pushProperty_Room2Description";
             this.pushProperty_Room2Description.Size = new System.Drawing.Size(100, 20);
             this.pushProperty_Room2Description.TabIndex = 26;
@@ -3249,7 +3295,7 @@
             // label208
             // 
             this.label208.AutoSize = true;
-            this.label208.Location = new System.Drawing.Point(486, 43);
+            this.label208.Location = new System.Drawing.Point(488, 69);
             this.label208.Name = "label208";
             this.label208.Size = new System.Drawing.Size(60, 13);
             this.label208.TabIndex = 25;
@@ -3257,7 +3303,7 @@
             // 
             // pushProperty_Room2Name
             // 
-            this.pushProperty_Room2Name.Location = new System.Drawing.Point(565, 14);
+            this.pushProperty_Room2Name.Location = new System.Drawing.Point(567, 40);
             this.pushProperty_Room2Name.Name = "pushProperty_Room2Name";
             this.pushProperty_Room2Name.Size = new System.Drawing.Size(100, 20);
             this.pushProperty_Room2Name.TabIndex = 24;
@@ -3266,59 +3312,34 @@
             // label209
             // 
             this.label209.AutoSize = true;
-            this.label209.Location = new System.Drawing.Point(486, 17);
+            this.label209.Location = new System.Drawing.Point(488, 43);
             this.label209.Name = "label209";
             this.label209.Size = new System.Drawing.Size(35, 13);
             this.label209.TabIndex = 23;
             this.label209.Text = "Name";
-            // 
-            // label204
-            // 
-            this.label204.AutoSize = true;
-            this.label204.Location = new System.Drawing.Point(97, 89);
-            this.label204.Name = "label204";
-            this.label204.Size = new System.Drawing.Size(116, 13);
-            this.label204.TabIndex = 20;
-            this.label204.Text = "0:bedroom 1:otherroom";
             // 
             // pushProperty_Room1Amenities
             // 
             this.pushProperty_Room1Amenities.Location = new System.Drawing.Point(285, 14);
             this.pushProperty_Room1Amenities.Multiline = true;
             this.pushProperty_Room1Amenities.Name = "pushProperty_Room1Amenities";
-            this.pushProperty_Room1Amenities.Size = new System.Drawing.Size(100, 72);
+            this.pushProperty_Room1Amenities.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pushProperty_Room1Amenities.Size = new System.Drawing.Size(100, 68);
             this.pushProperty_Room1Amenities.TabIndex = 19;
             this.pushProperty_Room1Amenities.Text = "SOFA, DOUBLE BED";
             // 
             // label203
             // 
             this.label203.AutoSize = true;
-            this.label203.Location = new System.Drawing.Point(206, 17);
+            this.label203.Location = new System.Drawing.Point(227, 17);
             this.label203.Name = "label203";
             this.label203.Size = new System.Drawing.Size(52, 13);
             this.label203.TabIndex = 18;
             this.label203.Text = "Amenities";
             // 
-            // pushProperty_Room1Type
-            // 
-            this.pushProperty_Room1Type.Location = new System.Drawing.Point(100, 66);
-            this.pushProperty_Room1Type.Name = "pushProperty_Room1Type";
-            this.pushProperty_Room1Type.Size = new System.Drawing.Size(100, 20);
-            this.pushProperty_Room1Type.TabIndex = 17;
-            this.pushProperty_Room1Type.Text = "1";
-            // 
-            // label199
-            // 
-            this.label199.AutoSize = true;
-            this.label199.Location = new System.Drawing.Point(21, 69);
-            this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(31, 13);
-            this.label199.TabIndex = 16;
-            this.label199.Text = "Type";
-            // 
             // pushProperty_Room1Description
             // 
-            this.pushProperty_Room1Description.Location = new System.Drawing.Point(100, 40);
+            this.pushProperty_Room1Description.Location = new System.Drawing.Point(117, 66);
             this.pushProperty_Room1Description.Name = "pushProperty_Room1Description";
             this.pushProperty_Room1Description.Size = new System.Drawing.Size(100, 20);
             this.pushProperty_Room1Description.TabIndex = 15;
@@ -3327,7 +3348,7 @@
             // label200
             // 
             this.label200.AutoSize = true;
-            this.label200.Location = new System.Drawing.Point(21, 43);
+            this.label200.Location = new System.Drawing.Point(38, 69);
             this.label200.Name = "label200";
             this.label200.Size = new System.Drawing.Size(60, 13);
             this.label200.TabIndex = 14;
@@ -3335,7 +3356,7 @@
             // 
             // pushProperty_Room1Name
             // 
-            this.pushProperty_Room1Name.Location = new System.Drawing.Point(100, 14);
+            this.pushProperty_Room1Name.Location = new System.Drawing.Point(117, 40);
             this.pushProperty_Room1Name.Name = "pushProperty_Room1Name";
             this.pushProperty_Room1Name.Size = new System.Drawing.Size(100, 20);
             this.pushProperty_Room1Name.TabIndex = 13;
@@ -3344,7 +3365,7 @@
             // label201
             // 
             this.label201.AutoSize = true;
-            this.label201.Location = new System.Drawing.Point(21, 17);
+            this.label201.Location = new System.Drawing.Point(38, 43);
             this.label201.Name = "label201";
             this.label201.Size = new System.Drawing.Size(35, 13);
             this.label201.TabIndex = 12;
@@ -6307,22 +6328,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label216
-            // 
-            this.label216.AutoSize = true;
-            this.label216.Location = new System.Drawing.Point(-2, 200);
-            this.label216.Name = "label216";
-            this.label216.Size = new System.Drawing.Size(112, 13);
-            this.label216.TabIndex = 78;
-            this.label216.Text = "ContractRenewalDate";
-            // 
-            // pushProperty_ContractRenewalDate
-            // 
-            this.pushProperty_ContractRenewalDate.Location = new System.Drawing.Point(116, 197);
-            this.pushProperty_ContractRenewalDate.Name = "pushProperty_ContractRenewalDate";
-            this.pushProperty_ContractRenewalDate.Size = new System.Drawing.Size(141, 20);
-            this.pushProperty_ContractRenewalDate.TabIndex = 77;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6975,20 +6980,14 @@
         private System.Windows.Forms.Label label197;
         private System.Windows.Forms.TextBox pushProperty_Distance2Name;
         private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.TextBox pushProperty_Room1Type;
-        private System.Windows.Forms.Label label199;
         private System.Windows.Forms.TextBox pushProperty_Room1Description;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.TextBox pushProperty_Room1Name;
         private System.Windows.Forms.Label label201;
-        private System.Windows.Forms.Label label204;
         private System.Windows.Forms.TextBox pushProperty_Room1Amenities;
         private System.Windows.Forms.Label label203;
-        private System.Windows.Forms.Label label205;
         private System.Windows.Forms.TextBox pushProperty_Room2Amenities;
         private System.Windows.Forms.Label label206;
-        private System.Windows.Forms.TextBox pushProperty_Room2Type;
-        private System.Windows.Forms.Label label207;
         private System.Windows.Forms.TextBox pushProperty_Room2Description;
         private System.Windows.Forms.Label label208;
         private System.Windows.Forms.TextBox pushProperty_Room2Name;
@@ -7020,6 +7019,12 @@
         private System.Windows.Forms.TextBox pushProperty_Licence;
         private System.Windows.Forms.Label label216;
         private System.Windows.Forms.TextBox pushProperty_ContractRenewalDate;
+        private System.Windows.Forms.TextBox pushProperty_Room1NodeName;
+        private System.Windows.Forms.Label label217;
+        private System.Windows.Forms.TextBox pushProperty_Room2NodeName;
+        private System.Windows.Forms.Label label218;
+        private System.Windows.Forms.TextBox pushProperty_Room2Sleeps;
+        private System.Windows.Forms.Label label219;
     }
 }
 

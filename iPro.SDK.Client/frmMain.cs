@@ -597,17 +597,31 @@ namespace iPro.SDK.Client
             var rooms = new List<object>();
             rooms.Add(new
             {
+                // Id = null,
+                NodeName = pushProperty_Room1NodeName.Text,
                 Name = pushProperty_Room1Name.Text,
                 Description = pushProperty_Room1Description.Text,
                 Amenities = SplitComma(pushProperty_Room1Amenities.Text).ToList(),
-                Type = pushProperty_Room1Type.Text,
+                RoomType = "BATHROOM",
+                Type = 1, // 0:Bedroom 1:OtherRoom
             });
             rooms.Add(new
             {
+                // Id = null,
+                NodeName = pushProperty_Room2NodeName.Text,
                 Name = pushProperty_Room2Name.Text,
                 Description = pushProperty_Room2Description.Text,
                 Amenities = SplitComma(pushProperty_Room2Amenities.Text).ToList(),
-                Type = pushProperty_Room2Type.Text,
+                Sleeps = pushProperty_Room2Sleeps.Text,
+                RoomNumbers = new List<object>
+                {
+                    new
+                    {
+                        Number = "Room Number",
+                        Notes = "The Notes",
+                    },
+                },
+                Type = 0, // 0:Bedroom 1:OtherRoom
             });
 
             var obj = new
