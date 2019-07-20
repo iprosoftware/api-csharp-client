@@ -6345,7 +6345,7 @@
             this.Controls.Add(this.accessTokenTextBox);
             this.Controls.Add(this.accessTokenLabel);
             this.Name = "frmMain";
-            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.2.0";
+            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.3.0";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
