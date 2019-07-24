@@ -2581,6 +2581,7 @@
             this.pushProperty_Commission.Name = "pushProperty_Commission";
             this.pushProperty_Commission.Size = new System.Drawing.Size(114, 20);
             this.pushProperty_Commission.TabIndex = 65;
+            this.pushProperty_Commission.Text = "200";
             // 
             // label167
             // 
