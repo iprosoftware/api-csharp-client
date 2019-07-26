@@ -602,6 +602,8 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pushProperty_OwnerCompanyId = new System.Windows.Forms.TextBox();
+            this.label199 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -2131,6 +2133,8 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.pushProperty_OwnerCompanyId);
+            this.groupBox10.Controls.Add(this.label199);
             this.groupBox10.Controls.Add(this.label216);
             this.groupBox10.Controls.Add(this.pushProperty_ContractRenewalDate);
             this.groupBox10.Controls.Add(this.label215);
@@ -2177,7 +2181,7 @@
             // 
             this.pushProperty_ContractRenewalDate.Location = new System.Drawing.Point(116, 197);
             this.pushProperty_ContractRenewalDate.Name = "pushProperty_ContractRenewalDate";
-            this.pushProperty_ContractRenewalDate.Size = new System.Drawing.Size(141, 20);
+            this.pushProperty_ContractRenewalDate.Size = new System.Drawing.Size(72, 20);
             this.pushProperty_ContractRenewalDate.TabIndex = 77;
             // 
             // label215
@@ -6329,6 +6333,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // pushProperty_OwnerCompanyId
+            // 
+            this.pushProperty_OwnerCompanyId.Location = new System.Drawing.Point(386, 39);
+            this.pushProperty_OwnerCompanyId.Name = "pushProperty_OwnerCompanyId";
+            this.pushProperty_OwnerCompanyId.Size = new System.Drawing.Size(59, 20);
+            this.pushProperty_OwnerCompanyId.TabIndex = 80;
+            // 
+            // label199
+            // 
+            this.label199.AutoSize = true;
+            this.label199.Location = new System.Drawing.Point(289, 44);
+            this.label199.Name = "label199";
+            this.label199.Size = new System.Drawing.Size(91, 13);
+            this.label199.TabIndex = 79;
+            this.label199.Text = "OwnerCompanyId";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7026,6 +7046,8 @@
         private System.Windows.Forms.Label label218;
         private System.Windows.Forms.TextBox pushProperty_Room2Sleeps;
         private System.Windows.Forms.Label label219;
+        private System.Windows.Forms.TextBox pushProperty_OwnerCompanyId;
+        private System.Windows.Forms.Label label199;
     }
 }
 

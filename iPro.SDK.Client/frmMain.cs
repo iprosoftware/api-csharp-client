@@ -627,6 +627,7 @@ namespace iPro.SDK.Client
             var obj = new
             {
                 Id = pushProperty_Id.Text,
+                OwnerCompanyId = pushProperty_OwnerCompanyId.Text,
                 Name = pushProperty_Name.Text,
                 PropertyName = pushProperty_PropertyName.Text,
                 Title = pushProperty_Title.Text,
