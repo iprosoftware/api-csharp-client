@@ -117,6 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="pushProperty_Intro.Text" xml:space="preserve">
+    <value>5 bedroom 3 bathroom luxury Villa, with fully heated swimming pool in Adeje Tenerife. This Villa has everything you would need in a Luxurious Setting. The 2 King-Size Master bedrooms are spacious with there own private balconies and have views of the mountains, pool and surrounding areas.</value>
+  </data>
+  <data name="pushProperty_MainDescription.Text" xml:space="preserve">
+    <value>&lt;p&gt;Casa Jade is a Stunning Modern built Villa, set over 2 storeys
+and&amp;nbsp; is situated within a Quiet Residential area that
+overlooks the fabulous Del Duque Coastline. This Villa still
+retains a more traditional theme, with Quality Furnishings and
+Furniture throughout.&amp;nbsp; There are typical ceramic terraces,
+front and rear for sun-bathing and the Pool is completely
+surrounded by synthetic grass for comfort and safety.&lt;br /&gt;
+&lt;br /&gt;
+ This Villa is fully equipped with everything you would need for
+your stay in a Spacious and Relaxing atmosphere.&amp;nbsp; All bedrooms
+are large, two with en-suite and two with balcony terraces enjoying
+views of the pool and coast. Great for families and couples who
+need to be near all the amenities and the beach.&lt;br /&gt;
+&lt;br /&gt;
+ The Heated Swimming Pool (October onwards) is a generous size, 8
+metres x 5 metres with ample sunbeds and seating for Al Fresco
+dining.&lt;br /&gt;
+&lt;br /&gt;
+ The 'Gran Sur Shopping Complex' is nearby with Bars, Restaurants,
+Shops, Supermarket and Taxi Rank and Local Shop is only a 3 minute
+walk.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</value>
+  </data>
+  <data name="pushProperty_RentalNotes.Text" xml:space="preserve">
+    <value>&lt;p&gt;&lt;span&gt;&lt;em&gt;NB:Prices may be subject to change at the advertiser's
+discretion.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;The price is for the Villa and not per person.&lt;em&gt;&lt;br /&gt;
+&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;A deposit will be required in advance for every booking. PayPal
+available for the deposit if required, just ask when booking.
+Credit cards also accepted through PayPal (PayPal charges will
+apply).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+ &lt;strong&gt;Cancellation policy&lt;/strong&gt;: The booking deposit is
+non-refundable.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+ &lt;em&gt;We only accept bookings for two weeks over the Christmas and
+New Y&lt;/em&gt;ear.&lt;/p&gt;</value>
+  </data>
   <data name="txtReservationsApiUrl.Text" xml:space="preserve">
     <value>/apis/bookings?size=15=1&amp;index=1&amp;term=&amp;bookingstatus=3&amp;propertyids=&amp;repid=&amp;balancestatus=&amp;taskstatus=-1&amp;orderDateFrom=&amp;orderDateTo=&amp;checkinfrom=&amp;checkinto=&amp;IncludeBookingTags=&amp;LocationId=&amp;ExcludeBookingTags=&amp;Sort=CreateDate&amp;SortDirection=desc&amp;modifiedTimeFrom=2015-12-05&amp;modifiedTimeTo=2016-12-05&amp;contactIDs=&amp;bookingID&amp;</value>
   </data>
