@@ -624,6 +624,20 @@ namespace iPro.SDK.Client
                 Type = 0, // 0:Bedroom 1:OtherRoom
             });
 
+            var images = new List<object>();
+            images.Add(new
+            {
+                Id = pushProperty_Image1Id.Text,
+                Name = pushProperty_Image1Name.Text,
+                Source = pushProperty_Image1Source.Text,
+            });
+            images.Add(new
+            {
+                Id = pushProperty_Image2Id.Text,
+                Name = pushProperty_Image2Name.Text,
+                Source = pushProperty_Image2Source.Text,
+            });
+
             var obj = new
             {
                 Id = pushProperty_Id.Text,
@@ -666,13 +680,14 @@ namespace iPro.SDK.Client
                 Location = SplitComma(pushProperty_Location.Text).ToList(),
                 VirtualTour = pushProperty_VirtualTour.Text,
                 VirtualTourTitle = pushProperty_VirtualTourTitle.Text,
-                Attributes = attributes,
+                TrustPilotTag = pushProperty_TrustPilotTag.Text,
                 SEOTitle = pushProperty_SEOTitle.Text,
                 SEOKeywords = pushProperty_SEOKeywords.Text,
                 SEODescription = pushProperty_SEODescription.Text,
+                Attributes = attributes,
                 Rooms = rooms,
                 Distances = distances,
-                TrustPilotTag = pushProperty_TrustPilotTag.Text,
+                Images = images,
             };
 
             var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
