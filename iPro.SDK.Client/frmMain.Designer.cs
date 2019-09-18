@@ -617,16 +617,14 @@
             this.button6 = new System.Windows.Forms.Button();
             this.txtStatementsApiUrl = new System.Windows.Forms.TextBox();
             this.label147 = new System.Windows.Forms.Label();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.btnBookingUpdate = new System.Windows.Forms.Button();
+            this.txtBookingUpdateApiUrl = new System.Windows.Forms.TextBox();
+            this.textGuestNotes = new System.Windows.Forms.RichTextBox();
+            this.label227 = new System.Windows.Forms.Label();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.label226 = new System.Windows.Forms.Label();
-            this.textBookingID = new System.Windows.Forms.TextBox();
-            this.label227 = new System.Windows.Forms.Label();
-            this.textGuestNotes = new System.Windows.Forms.RichTextBox();
-            this.txtBookingUpdateApiUrl = new System.Windows.Forms.TextBox();
-            this.btnBookingUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -681,8 +679,8 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tabPage11.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -6500,6 +6498,55 @@
             this.label147.TabIndex = 51;
             this.label147.Text = "Statements";
             // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.btnBookingUpdate);
+            this.tabPage11.Controls.Add(this.txtBookingUpdateApiUrl);
+            this.tabPage11.Controls.Add(this.textGuestNotes);
+            this.tabPage11.Controls.Add(this.label227);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(1183, 377);
+            this.tabPage11.TabIndex = 12;
+            this.tabPage11.Text = "Update Booking";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // btnBookingUpdate
+            // 
+            this.btnBookingUpdate.Location = new System.Drawing.Point(607, 17);
+            this.btnBookingUpdate.Name = "btnBookingUpdate";
+            this.btnBookingUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnBookingUpdate.TabIndex = 5;
+            this.btnBookingUpdate.Text = "POST";
+            this.btnBookingUpdate.UseVisualStyleBackColor = true;
+            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
+            // 
+            // txtBookingUpdateApiUrl
+            // 
+            this.txtBookingUpdateApiUrl.Location = new System.Drawing.Point(380, 18);
+            this.txtBookingUpdateApiUrl.Name = "txtBookingUpdateApiUrl";
+            this.txtBookingUpdateApiUrl.Size = new System.Drawing.Size(221, 20);
+            this.txtBookingUpdateApiUrl.TabIndex = 4;
+            this.txtBookingUpdateApiUrl.Text = "/apis/booking/update?BookingId=8849";
+            // 
+            // textGuestNotes
+            // 
+            this.textGuestNotes.Location = new System.Drawing.Point(115, 18);
+            this.textGuestNotes.Name = "textGuestNotes";
+            this.textGuestNotes.Size = new System.Drawing.Size(244, 142);
+            this.textGuestNotes.TabIndex = 3;
+            this.textGuestNotes.Text = "";
+            // 
+            // label227
+            // 
+            this.label227.AutoSize = true;
+            this.label227.Location = new System.Drawing.Point(25, 18);
+            this.label227.Name = "label227";
+            this.label227.Size = new System.Drawing.Size(66, 13);
+            this.label227.TabIndex = 2;
+            this.label227.Text = "Guest Notes";
+            // 
             // lblTimeCost
             // 
             this.lblTimeCost.AutoSize = true;
@@ -6532,73 +6579,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.btnBookingUpdate);
-            this.tabPage11.Controls.Add(this.txtBookingUpdateApiUrl);
-            this.tabPage11.Controls.Add(this.textGuestNotes);
-            this.tabPage11.Controls.Add(this.label227);
-            this.tabPage11.Controls.Add(this.textBookingID);
-            this.tabPage11.Controls.Add(this.label226);
-            this.tabPage11.Location = new System.Drawing.Point(4, 22);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1183, 377);
-            this.tabPage11.TabIndex = 12;
-            this.tabPage11.Text = "Update Booking";
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
-            // label226
-            // 
-            this.label226.AutoSize = true;
-            this.label226.Location = new System.Drawing.Point(23, 19);
-            this.label226.Name = "label226";
-            this.label226.Size = new System.Drawing.Size(60, 13);
-            this.label226.TabIndex = 0;
-            this.label226.Text = "Booking ID";
-            // 
-            // textBookingID
-            // 
-            this.textBookingID.Location = new System.Drawing.Point(184, 19);
-            this.textBookingID.Name = "textBookingID";
-            this.textBookingID.Size = new System.Drawing.Size(244, 20);
-            this.textBookingID.TabIndex = 1;
-            // 
-            // label227
-            // 
-            this.label227.AutoSize = true;
-            this.label227.Location = new System.Drawing.Point(23, 48);
-            this.label227.Name = "label227";
-            this.label227.Size = new System.Drawing.Size(66, 13);
-            this.label227.TabIndex = 2;
-            this.label227.Text = "Guest Notes";
-            // 
-            // textGuestNotes
-            // 
-            this.textGuestNotes.Location = new System.Drawing.Point(184, 48);
-            this.textGuestNotes.Name = "textGuestNotes";
-            this.textGuestNotes.Size = new System.Drawing.Size(244, 142);
-            this.textGuestNotes.TabIndex = 3;
-            this.textGuestNotes.Text = "";
-            // 
-            // txtBookingUpdateApiUrl
-            // 
-            this.txtBookingUpdateApiUrl.Location = new System.Drawing.Point(461, 19);
-            this.txtBookingUpdateApiUrl.Name = "txtBookingUpdateApiUrl";
-            this.txtBookingUpdateApiUrl.Size = new System.Drawing.Size(221, 20);
-            this.txtBookingUpdateApiUrl.TabIndex = 4;
-            this.txtBookingUpdateApiUrl.Text = "/apis/booking_update";
-            // 
-            // btnBookingUpdate
-            // 
-            this.btnBookingUpdate.Location = new System.Drawing.Point(694, 18);
-            this.btnBookingUpdate.Name = "btnBookingUpdate";
-            this.btnBookingUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnBookingUpdate.TabIndex = 5;
-            this.btnBookingUpdate.Text = "POST";
-            this.btnBookingUpdate.UseVisualStyleBackColor = true;
-            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
             // 
             // frmMain
             // 
@@ -6712,10 +6692,10 @@
             this.tabPage7.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7323,8 +7303,6 @@
         private System.Windows.Forms.TextBox txtBookingUpdateApiUrl;
         private System.Windows.Forms.RichTextBox textGuestNotes;
         private System.Windows.Forms.Label label227;
-        private System.Windows.Forms.TextBox textBookingID;
-        private System.Windows.Forms.Label label226;
         private System.Windows.Forms.Button btnBookingUpdate;
     }
 }

@@ -802,7 +802,6 @@ namespace iPro.SDK.Client
         {
             var values = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("BookingID", textBookingID.Text),
                 new KeyValuePair<string, string>("GuestNotes", textGuestNotes.Text)
             };
 
