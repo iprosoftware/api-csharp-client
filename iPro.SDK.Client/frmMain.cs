@@ -797,5 +797,16 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertiesLastUpdated.Text);
         }
+
+        private void btnBookingUpdate_Click(object sender, EventArgs e)
+        {
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("BookingID", textBookingID.Text),
+                new KeyValuePair<string, string>("GuestNotes", textGuestNotes.Text)
+            });
+
+            PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result, "application/json");
+        }
     }
 }

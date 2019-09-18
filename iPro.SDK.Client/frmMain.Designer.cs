@@ -317,6 +317,22 @@
             this.label192 = new System.Windows.Forms.Label();
             this.pushProperty_Distance1Name = new System.Windows.Forms.TextBox();
             this.label191 = new System.Windows.Forms.Label();
+            this.tabImages = new System.Windows.Forms.TabPage();
+            this.label225 = new System.Windows.Forms.Label();
+            this.label224 = new System.Windows.Forms.Label();
+            this.label223 = new System.Windows.Forms.Label();
+            this.pushProperty_Image2Id = new System.Windows.Forms.TextBox();
+            this.label220 = new System.Windows.Forms.Label();
+            this.pushProperty_Image2Source = new System.Windows.Forms.TextBox();
+            this.label221 = new System.Windows.Forms.Label();
+            this.pushProperty_Image2Name = new System.Windows.Forms.TextBox();
+            this.label222 = new System.Windows.Forms.Label();
+            this.pushProperty_Image1Id = new System.Windows.Forms.TextBox();
+            this.label204 = new System.Windows.Forms.Label();
+            this.pushProperty_Image1Source = new System.Windows.Forms.TextBox();
+            this.label205 = new System.Windows.Forms.Label();
+            this.pushProperty_Image1Name = new System.Windows.Forms.TextBox();
+            this.label207 = new System.Windows.Forms.Label();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
             this.txtReturnUrl = new System.Windows.Forms.TextBox();
@@ -604,22 +620,13 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabImages = new System.Windows.Forms.TabPage();
-            this.pushProperty_Image1Id = new System.Windows.Forms.TextBox();
-            this.label204 = new System.Windows.Forms.Label();
-            this.pushProperty_Image1Source = new System.Windows.Forms.TextBox();
-            this.label205 = new System.Windows.Forms.Label();
-            this.pushProperty_Image1Name = new System.Windows.Forms.TextBox();
-            this.label207 = new System.Windows.Forms.Label();
-            this.pushProperty_Image2Id = new System.Windows.Forms.TextBox();
-            this.label220 = new System.Windows.Forms.Label();
-            this.pushProperty_Image2Source = new System.Windows.Forms.TextBox();
-            this.label221 = new System.Windows.Forms.Label();
-            this.pushProperty_Image2Name = new System.Windows.Forms.TextBox();
-            this.label222 = new System.Windows.Forms.Label();
-            this.label223 = new System.Windows.Forms.Label();
-            this.label224 = new System.Windows.Forms.Label();
-            this.label225 = new System.Windows.Forms.Label();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.label226 = new System.Windows.Forms.Label();
+            this.textBookingID = new System.Windows.Forms.TextBox();
+            this.label227 = new System.Windows.Forms.Label();
+            this.textGuestNotes = new System.Windows.Forms.RichTextBox();
+            this.txtBookingUpdateApiUrl = new System.Windows.Forms.TextBox();
+            this.btnBookingUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -645,6 +652,7 @@
             this.tabAttributes.SuspendLayout();
             this.tabRooms.SuspendLayout();
             this.tabDistances.SuspendLayout();
+            this.tabImages.SuspendLayout();
             this.tabEnquiry.SuspendLayout();
             this.tabBooking.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -674,7 +682,7 @@
             this.tabPage7.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tabImages.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -2065,6 +2073,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage10);
+            this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Location = new System.Drawing.Point(12, 172);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -3570,6 +3579,163 @@
             this.label191.Size = new System.Drawing.Size(35, 13);
             this.label191.TabIndex = 2;
             this.label191.Text = "Name";
+            // 
+            // tabImages
+            // 
+            this.tabImages.Controls.Add(this.label225);
+            this.tabImages.Controls.Add(this.label224);
+            this.tabImages.Controls.Add(this.label223);
+            this.tabImages.Controls.Add(this.pushProperty_Image2Id);
+            this.tabImages.Controls.Add(this.label220);
+            this.tabImages.Controls.Add(this.pushProperty_Image2Source);
+            this.tabImages.Controls.Add(this.label221);
+            this.tabImages.Controls.Add(this.pushProperty_Image2Name);
+            this.tabImages.Controls.Add(this.label222);
+            this.tabImages.Controls.Add(this.pushProperty_Image1Id);
+            this.tabImages.Controls.Add(this.label204);
+            this.tabImages.Controls.Add(this.pushProperty_Image1Source);
+            this.tabImages.Controls.Add(this.label205);
+            this.tabImages.Controls.Add(this.pushProperty_Image1Name);
+            this.tabImages.Controls.Add(this.label207);
+            this.tabImages.Location = new System.Drawing.Point(4, 22);
+            this.tabImages.Name = "tabImages";
+            this.tabImages.Padding = new System.Windows.Forms.Padding(3);
+            this.tabImages.Size = new System.Drawing.Size(897, 117);
+            this.tabImages.TabIndex = 12;
+            this.tabImages.Text = "Images";
+            this.tabImages.UseVisualStyleBackColor = true;
+            // 
+            // label225
+            // 
+            this.label225.AutoSize = true;
+            this.label225.Location = new System.Drawing.Point(497, 62);
+            this.label225.Name = "label225";
+            this.label225.Size = new System.Drawing.Size(203, 26);
+            this.label225.TabIndex = 48;
+            this.label225.Text = "- url of image with public accessable \r\n- or base64 encoded string image content";
+            // 
+            // label224
+            // 
+            this.label224.AutoSize = true;
+            this.label224.Location = new System.Drawing.Point(489, 33);
+            this.label224.Name = "label224";
+            this.label224.Size = new System.Drawing.Size(85, 13);
+            this.label224.TabIndex = 47;
+            this.label224.Text = "Name for display";
+            // 
+            // label223
+            // 
+            this.label223.AutoSize = true;
+            this.label223.Location = new System.Drawing.Point(489, 10);
+            this.label223.Name = "label223";
+            this.label223.Size = new System.Drawing.Size(123, 13);
+            this.label223.TabIndex = 46;
+            this.label223.Text = "Id for ignoring duplicated";
+            // 
+            // pushProperty_Image2Id
+            // 
+            this.pushProperty_Image2Id.Location = new System.Drawing.Point(318, 7);
+            this.pushProperty_Image2Id.Name = "pushProperty_Image2Id";
+            this.pushProperty_Image2Id.Size = new System.Drawing.Size(165, 20);
+            this.pushProperty_Image2Id.TabIndex = 45;
+            this.pushProperty_Image2Id.Text = "googlelogo_base64";
+            // 
+            // label220
+            // 
+            this.label220.AutoSize = true;
+            this.label220.Location = new System.Drawing.Point(296, 10);
+            this.label220.Name = "label220";
+            this.label220.Size = new System.Drawing.Size(16, 13);
+            this.label220.TabIndex = 44;
+            this.label220.Text = "Id";
+            // 
+            // pushProperty_Image2Source
+            // 
+            this.pushProperty_Image2Source.Location = new System.Drawing.Point(318, 59);
+            this.pushProperty_Image2Source.Multiline = true;
+            this.pushProperty_Image2Source.Name = "pushProperty_Image2Source";
+            this.pushProperty_Image2Source.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pushProperty_Image2Source.Size = new System.Drawing.Size(173, 52);
+            this.pushProperty_Image2Source.TabIndex = 43;
+            this.pushProperty_Image2Source.Text = resources.GetString("pushProperty_Image2Source.Text");
+            // 
+            // label221
+            // 
+            this.label221.AutoSize = true;
+            this.label221.Location = new System.Drawing.Point(271, 59);
+            this.label221.Name = "label221";
+            this.label221.Size = new System.Drawing.Size(41, 13);
+            this.label221.TabIndex = 42;
+            this.label221.Text = "Source";
+            // 
+            // pushProperty_Image2Name
+            // 
+            this.pushProperty_Image2Name.Location = new System.Drawing.Point(318, 33);
+            this.pushProperty_Image2Name.Name = "pushProperty_Image2Name";
+            this.pushProperty_Image2Name.Size = new System.Drawing.Size(165, 20);
+            this.pushProperty_Image2Name.TabIndex = 41;
+            this.pushProperty_Image2Name.Text = "Google Logo Base64";
+            // 
+            // label222
+            // 
+            this.label222.AutoSize = true;
+            this.label222.Location = new System.Drawing.Point(277, 36);
+            this.label222.Name = "label222";
+            this.label222.Size = new System.Drawing.Size(35, 13);
+            this.label222.TabIndex = 40;
+            this.label222.Text = "Name";
+            // 
+            // pushProperty_Image1Id
+            // 
+            this.pushProperty_Image1Id.Location = new System.Drawing.Point(54, 7);
+            this.pushProperty_Image1Id.Name = "pushProperty_Image1Id";
+            this.pushProperty_Image1Id.Size = new System.Drawing.Size(180, 20);
+            this.pushProperty_Image1Id.TabIndex = 39;
+            this.pushProperty_Image1Id.Text = "googlelogo_color_272x92dp.png";
+            // 
+            // label204
+            // 
+            this.label204.AutoSize = true;
+            this.label204.Location = new System.Drawing.Point(32, 10);
+            this.label204.Name = "label204";
+            this.label204.Size = new System.Drawing.Size(16, 13);
+            this.label204.TabIndex = 38;
+            this.label204.Text = "Id";
+            // 
+            // pushProperty_Image1Source
+            // 
+            this.pushProperty_Image1Source.Location = new System.Drawing.Point(54, 59);
+            this.pushProperty_Image1Source.Name = "pushProperty_Image1Source";
+            this.pushProperty_Image1Source.Size = new System.Drawing.Size(180, 20);
+            this.pushProperty_Image1Source.TabIndex = 37;
+            this.pushProperty_Image1Source.Text = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.pn" +
+    "g";
+            // 
+            // label205
+            // 
+            this.label205.AutoSize = true;
+            this.label205.Location = new System.Drawing.Point(7, 59);
+            this.label205.Name = "label205";
+            this.label205.Size = new System.Drawing.Size(41, 13);
+            this.label205.TabIndex = 36;
+            this.label205.Text = "Source";
+            // 
+            // pushProperty_Image1Name
+            // 
+            this.pushProperty_Image1Name.Location = new System.Drawing.Point(54, 33);
+            this.pushProperty_Image1Name.Name = "pushProperty_Image1Name";
+            this.pushProperty_Image1Name.Size = new System.Drawing.Size(180, 20);
+            this.pushProperty_Image1Name.TabIndex = 35;
+            this.pushProperty_Image1Name.Text = "Google Logo";
+            // 
+            // label207
+            // 
+            this.label207.AutoSize = true;
+            this.label207.Location = new System.Drawing.Point(13, 36);
+            this.label207.Name = "label207";
+            this.label207.Size = new System.Drawing.Size(35, 13);
+            this.label207.TabIndex = 34;
+            this.label207.Text = "Name";
             // 
             // tabEnquiry
             // 
@@ -6367,162 +6533,72 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // tabImages
+            // tabPage11
             // 
-            this.tabImages.Controls.Add(this.label225);
-            this.tabImages.Controls.Add(this.label224);
-            this.tabImages.Controls.Add(this.label223);
-            this.tabImages.Controls.Add(this.pushProperty_Image2Id);
-            this.tabImages.Controls.Add(this.label220);
-            this.tabImages.Controls.Add(this.pushProperty_Image2Source);
-            this.tabImages.Controls.Add(this.label221);
-            this.tabImages.Controls.Add(this.pushProperty_Image2Name);
-            this.tabImages.Controls.Add(this.label222);
-            this.tabImages.Controls.Add(this.pushProperty_Image1Id);
-            this.tabImages.Controls.Add(this.label204);
-            this.tabImages.Controls.Add(this.pushProperty_Image1Source);
-            this.tabImages.Controls.Add(this.label205);
-            this.tabImages.Controls.Add(this.pushProperty_Image1Name);
-            this.tabImages.Controls.Add(this.label207);
-            this.tabImages.Location = new System.Drawing.Point(4, 22);
-            this.tabImages.Name = "tabImages";
-            this.tabImages.Padding = new System.Windows.Forms.Padding(3);
-            this.tabImages.Size = new System.Drawing.Size(897, 117);
-            this.tabImages.TabIndex = 12;
-            this.tabImages.Text = "Images";
-            this.tabImages.UseVisualStyleBackColor = true;
+            this.tabPage11.Controls.Add(this.btnBookingUpdate);
+            this.tabPage11.Controls.Add(this.txtBookingUpdateApiUrl);
+            this.tabPage11.Controls.Add(this.textGuestNotes);
+            this.tabPage11.Controls.Add(this.label227);
+            this.tabPage11.Controls.Add(this.textBookingID);
+            this.tabPage11.Controls.Add(this.label226);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(1183, 377);
+            this.tabPage11.TabIndex = 12;
+            this.tabPage11.Text = "Update Booking";
+            this.tabPage11.UseVisualStyleBackColor = true;
             // 
-            // pushProperty_Image1Id
+            // label226
             // 
-            this.pushProperty_Image1Id.Location = new System.Drawing.Point(54, 7);
-            this.pushProperty_Image1Id.Name = "pushProperty_Image1Id";
-            this.pushProperty_Image1Id.Size = new System.Drawing.Size(180, 20);
-            this.pushProperty_Image1Id.TabIndex = 39;
-            this.pushProperty_Image1Id.Text = "googlelogo_color_272x92dp.png";
+            this.label226.AutoSize = true;
+            this.label226.Location = new System.Drawing.Point(23, 19);
+            this.label226.Name = "label226";
+            this.label226.Size = new System.Drawing.Size(60, 13);
+            this.label226.TabIndex = 0;
+            this.label226.Text = "Booking ID";
             // 
-            // label204
+            // textBookingID
             // 
-            this.label204.AutoSize = true;
-            this.label204.Location = new System.Drawing.Point(32, 10);
-            this.label204.Name = "label204";
-            this.label204.Size = new System.Drawing.Size(16, 13);
-            this.label204.TabIndex = 38;
-            this.label204.Text = "Id";
+            this.textBookingID.Location = new System.Drawing.Point(184, 19);
+            this.textBookingID.Name = "textBookingID";
+            this.textBookingID.Size = new System.Drawing.Size(244, 20);
+            this.textBookingID.TabIndex = 1;
             // 
-            // pushProperty_Image1Source
+            // label227
             // 
-            this.pushProperty_Image1Source.Location = new System.Drawing.Point(54, 59);
-            this.pushProperty_Image1Source.Name = "pushProperty_Image1Source";
-            this.pushProperty_Image1Source.Size = new System.Drawing.Size(180, 20);
-            this.pushProperty_Image1Source.TabIndex = 37;
-            this.pushProperty_Image1Source.Text = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.pn" +
-    "g";
+            this.label227.AutoSize = true;
+            this.label227.Location = new System.Drawing.Point(23, 48);
+            this.label227.Name = "label227";
+            this.label227.Size = new System.Drawing.Size(66, 13);
+            this.label227.TabIndex = 2;
+            this.label227.Text = "Guest Notes";
             // 
-            // label205
+            // textGuestNotes
             // 
-            this.label205.AutoSize = true;
-            this.label205.Location = new System.Drawing.Point(7, 59);
-            this.label205.Name = "label205";
-            this.label205.Size = new System.Drawing.Size(41, 13);
-            this.label205.TabIndex = 36;
-            this.label205.Text = "Source";
+            this.textGuestNotes.Location = new System.Drawing.Point(184, 48);
+            this.textGuestNotes.Name = "textGuestNotes";
+            this.textGuestNotes.Size = new System.Drawing.Size(244, 142);
+            this.textGuestNotes.TabIndex = 3;
+            this.textGuestNotes.Text = "";
             // 
-            // pushProperty_Image1Name
+            // txtBookingUpdateApiUrl
             // 
-            this.pushProperty_Image1Name.Location = new System.Drawing.Point(54, 33);
-            this.pushProperty_Image1Name.Name = "pushProperty_Image1Name";
-            this.pushProperty_Image1Name.Size = new System.Drawing.Size(180, 20);
-            this.pushProperty_Image1Name.TabIndex = 35;
-            this.pushProperty_Image1Name.Text = "Google Logo";
+            this.txtBookingUpdateApiUrl.Location = new System.Drawing.Point(461, 19);
+            this.txtBookingUpdateApiUrl.Name = "txtBookingUpdateApiUrl";
+            this.txtBookingUpdateApiUrl.Size = new System.Drawing.Size(221, 20);
+            this.txtBookingUpdateApiUrl.TabIndex = 4;
+            this.txtBookingUpdateApiUrl.Text = "/apis/booking_update";
             // 
-            // label207
+            // btnBookingUpdate
             // 
-            this.label207.AutoSize = true;
-            this.label207.Location = new System.Drawing.Point(13, 36);
-            this.label207.Name = "label207";
-            this.label207.Size = new System.Drawing.Size(35, 13);
-            this.label207.TabIndex = 34;
-            this.label207.Text = "Name";
-            // 
-            // pushProperty_Image2Id
-            // 
-            this.pushProperty_Image2Id.Location = new System.Drawing.Point(318, 7);
-            this.pushProperty_Image2Id.Name = "pushProperty_Image2Id";
-            this.pushProperty_Image2Id.Size = new System.Drawing.Size(165, 20);
-            this.pushProperty_Image2Id.TabIndex = 45;
-            this.pushProperty_Image2Id.Text = "googlelogo_base64";
-            // 
-            // label220
-            // 
-            this.label220.AutoSize = true;
-            this.label220.Location = new System.Drawing.Point(296, 10);
-            this.label220.Name = "label220";
-            this.label220.Size = new System.Drawing.Size(16, 13);
-            this.label220.TabIndex = 44;
-            this.label220.Text = "Id";
-            // 
-            // pushProperty_Image2Source
-            // 
-            this.pushProperty_Image2Source.Location = new System.Drawing.Point(318, 59);
-            this.pushProperty_Image2Source.Multiline = true;
-            this.pushProperty_Image2Source.Name = "pushProperty_Image2Source";
-            this.pushProperty_Image2Source.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.pushProperty_Image2Source.Size = new System.Drawing.Size(173, 52);
-            this.pushProperty_Image2Source.TabIndex = 43;
-            this.pushProperty_Image2Source.Text = resources.GetString("pushProperty_Image2Source.Text");
-            // 
-            // label221
-            // 
-            this.label221.AutoSize = true;
-            this.label221.Location = new System.Drawing.Point(271, 59);
-            this.label221.Name = "label221";
-            this.label221.Size = new System.Drawing.Size(41, 13);
-            this.label221.TabIndex = 42;
-            this.label221.Text = "Source";
-            // 
-            // pushProperty_Image2Name
-            // 
-            this.pushProperty_Image2Name.Location = new System.Drawing.Point(318, 33);
-            this.pushProperty_Image2Name.Name = "pushProperty_Image2Name";
-            this.pushProperty_Image2Name.Size = new System.Drawing.Size(165, 20);
-            this.pushProperty_Image2Name.TabIndex = 41;
-            this.pushProperty_Image2Name.Text = "Google Logo Base64";
-            // 
-            // label222
-            // 
-            this.label222.AutoSize = true;
-            this.label222.Location = new System.Drawing.Point(277, 36);
-            this.label222.Name = "label222";
-            this.label222.Size = new System.Drawing.Size(35, 13);
-            this.label222.TabIndex = 40;
-            this.label222.Text = "Name";
-            // 
-            // label223
-            // 
-            this.label223.AutoSize = true;
-            this.label223.Location = new System.Drawing.Point(489, 10);
-            this.label223.Name = "label223";
-            this.label223.Size = new System.Drawing.Size(123, 13);
-            this.label223.TabIndex = 46;
-            this.label223.Text = "Id for ignoring duplicated";
-            // 
-            // label224
-            // 
-            this.label224.AutoSize = true;
-            this.label224.Location = new System.Drawing.Point(489, 33);
-            this.label224.Name = "label224";
-            this.label224.Size = new System.Drawing.Size(85, 13);
-            this.label224.TabIndex = 47;
-            this.label224.Text = "Name for display";
-            // 
-            // label225
-            // 
-            this.label225.AutoSize = true;
-            this.label225.Location = new System.Drawing.Point(497, 62);
-            this.label225.Name = "label225";
-            this.label225.Size = new System.Drawing.Size(203, 26);
-            this.label225.TabIndex = 48;
-            this.label225.Text = "- url of image with public accessable \r\n- or base64 encoded string image content";
+            this.btnBookingUpdate.Location = new System.Drawing.Point(694, 18);
+            this.btnBookingUpdate.Name = "btnBookingUpdate";
+            this.btnBookingUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnBookingUpdate.TabIndex = 5;
+            this.btnBookingUpdate.Text = "POST";
+            this.btnBookingUpdate.UseVisualStyleBackColor = true;
+            this.btnBookingUpdate.Click += new System.EventHandler(this.btnBookingUpdate_Click);
             // 
             // frmMain
             // 
@@ -6587,6 +6663,8 @@
             this.tabRooms.PerformLayout();
             this.tabDistances.ResumeLayout(false);
             this.tabDistances.PerformLayout();
+            this.tabImages.ResumeLayout(false);
+            this.tabImages.PerformLayout();
             this.tabEnquiry.ResumeLayout(false);
             this.tabBooking.ResumeLayout(false);
             this.tabBooking.PerformLayout();
@@ -6636,8 +6714,8 @@
             this.tabPage10.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tabImages.ResumeLayout(false);
-            this.tabImages.PerformLayout();
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7241,6 +7319,13 @@
         private System.Windows.Forms.Label label225;
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.Label label223;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.TextBox txtBookingUpdateApiUrl;
+        private System.Windows.Forms.RichTextBox textGuestNotes;
+        private System.Windows.Forms.Label label227;
+        private System.Windows.Forms.TextBox textBookingID;
+        private System.Windows.Forms.Label label226;
+        private System.Windows.Forms.Button btnBookingUpdate;
     }
 }
 
