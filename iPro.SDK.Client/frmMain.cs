@@ -800,13 +800,14 @@ namespace iPro.SDK.Client
 
         private void btnBookingUpdate_Click(object sender, EventArgs e)
         {
-            var formContent = new FormUrlEncodedContent(new[]
+            var values = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("BookingID", textBookingID.Text),
                 new KeyValuePair<string, string>("GuestNotes", textGuestNotes.Text)
-            });
+            };
 
-            PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result, "application/json");
+            var formContent = new FormUrlEncodedContent(values);
+            PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
         }
     }
 }
