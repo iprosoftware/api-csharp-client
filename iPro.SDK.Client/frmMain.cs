@@ -293,7 +293,6 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Contact.Postcode", this.txtBookingContactPostcode.Text),
                 new KeyValuePair<string, string>("Contact.Country", this.txtBookingContactCountry.Text),
                 new KeyValuePair<string, string>("Contact.Source", this.txtBookingContactSource.Text),
-
                 new KeyValuePair<string, string>("InternalNotes", this.InternalNotes.Text)
             };
 
@@ -346,7 +345,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtBookingProperty1Extra1Qty.Text),
 
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtBookingProperty1Extra2Id.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtBookingProperty1Extra2Qty.Text)
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtBookingProperty1Extra2Qty.Text),
+                new KeyValuePair<string, string>("Properties[0].GuestNotes", this.GuestNotes.Text),
             };
         }
 
@@ -802,7 +802,9 @@ namespace iPro.SDK.Client
         {
             var values = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("GuestNotes", textGuestNotes.Text)
+                new KeyValuePair<string, string>("GuestNotes", textGuestNotes.Text),
+                new KeyValuePair<string, string>("HouseKeeperNotes", txtHousekeeperNotes.Text),
+                new KeyValuePair<string, string>("InternalNotes", txtInternalNotes.Text)
             };
 
             var formContent = new FormUrlEncodedContent(values);
