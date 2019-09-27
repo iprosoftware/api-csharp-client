@@ -621,6 +621,10 @@
             this.txtStatementsApiUrl = new System.Windows.Forms.TextBox();
             this.label147 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.txtInternalNotes = new System.Windows.Forms.RichTextBox();
+            this.label229 = new System.Windows.Forms.Label();
+            this.txtHousekeeperNotes = new System.Windows.Forms.RichTextBox();
+            this.label228 = new System.Windows.Forms.Label();
             this.btnBookingUpdate = new System.Windows.Forms.Button();
             this.txtBookingUpdateApiUrl = new System.Windows.Forms.TextBox();
             this.textGuestNotes = new System.Windows.Forms.RichTextBox();
@@ -628,10 +632,11 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label228 = new System.Windows.Forms.Label();
-            this.txtHousekeeperNotes = new System.Windows.Forms.RichTextBox();
-            this.label229 = new System.Windows.Forms.Label();
-            this.txtInternalNotes = new System.Windows.Forms.RichTextBox();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.label230 = new System.Windows.Forms.Label();
+            this.txtCustomAccommodationCost = new System.Windows.Forms.TextBox();
+            this.label231 = new System.Windows.Forms.Label();
+            this.txtCustomOwnerAmount = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -689,6 +694,7 @@
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -4364,6 +4370,7 @@
             // 
             this.tabControl6.Controls.Add(this.tabPage8);
             this.tabControl6.Controls.Add(this.tabPage9);
+            this.tabControl6.Controls.Add(this.tabPage13);
             this.tabControl6.Location = new System.Drawing.Point(4, 6);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
@@ -6554,6 +6561,40 @@
             this.tabPage11.Text = "Update Booking";
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
+            // txtInternalNotes
+            // 
+            this.txtInternalNotes.Location = new System.Drawing.Point(560, 42);
+            this.txtInternalNotes.Name = "txtInternalNotes";
+            this.txtInternalNotes.Size = new System.Drawing.Size(234, 142);
+            this.txtInternalNotes.TabIndex = 9;
+            this.txtInternalNotes.Text = "";
+            // 
+            // label229
+            // 
+            this.label229.AutoSize = true;
+            this.label229.Location = new System.Drawing.Point(557, 17);
+            this.label229.Name = "label229";
+            this.label229.Size = new System.Drawing.Size(73, 13);
+            this.label229.TabIndex = 8;
+            this.label229.Text = "Internal Notes";
+            // 
+            // txtHousekeeperNotes
+            // 
+            this.txtHousekeeperNotes.Location = new System.Drawing.Point(300, 42);
+            this.txtHousekeeperNotes.Name = "txtHousekeeperNotes";
+            this.txtHousekeeperNotes.Size = new System.Drawing.Size(235, 142);
+            this.txtHousekeeperNotes.TabIndex = 7;
+            this.txtHousekeeperNotes.Text = "";
+            // 
+            // label228
+            // 
+            this.label228.AutoSize = true;
+            this.label228.Location = new System.Drawing.Point(297, 18);
+            this.label228.Name = "label228";
+            this.label228.Size = new System.Drawing.Size(102, 13);
+            this.label228.TabIndex = 6;
+            this.label228.Text = "Housekeeper Notes";
+            // 
             // btnBookingUpdate
             // 
             this.btnBookingUpdate.Location = new System.Drawing.Point(1088, 18);
@@ -6622,39 +6663,51 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label228
+            // tabPage13
             // 
-            this.label228.AutoSize = true;
-            this.label228.Location = new System.Drawing.Point(297, 18);
-            this.label228.Name = "label228";
-            this.label228.Size = new System.Drawing.Size(102, 13);
-            this.label228.TabIndex = 6;
-            this.label228.Text = "Housekeeper Notes";
+            this.tabPage13.Controls.Add(this.txtCustomOwnerAmount);
+            this.tabPage13.Controls.Add(this.label231);
+            this.tabPage13.Controls.Add(this.txtCustomAccommodationCost);
+            this.tabPage13.Controls.Add(this.label230);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(588, 137);
+            this.tabPage13.TabIndex = 2;
+            this.tabPage13.Text = "Custom Costs";
+            this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // txtHousekeeperNotes
+            // label230
             // 
-            this.txtHousekeeperNotes.Location = new System.Drawing.Point(300, 42);
-            this.txtHousekeeperNotes.Name = "txtHousekeeperNotes";
-            this.txtHousekeeperNotes.Size = new System.Drawing.Size(235, 142);
-            this.txtHousekeeperNotes.TabIndex = 7;
-            this.txtHousekeeperNotes.Text = "";
+            this.label230.AutoSize = true;
+            this.label230.Location = new System.Drawing.Point(20, 14);
+            this.label230.Name = "label230";
+            this.label230.Size = new System.Drawing.Size(107, 13);
+            this.label230.TabIndex = 0;
+            this.label230.Text = "Accommodation Cost";
             // 
-            // label229
+            // txtCustomAccommodationCost
             // 
-            this.label229.AutoSize = true;
-            this.label229.Location = new System.Drawing.Point(557, 17);
-            this.label229.Name = "label229";
-            this.label229.Size = new System.Drawing.Size(73, 13);
-            this.label229.TabIndex = 8;
-            this.label229.Text = "Internal Notes";
+            this.txtCustomAccommodationCost.Location = new System.Drawing.Point(134, 12);
+            this.txtCustomAccommodationCost.Name = "txtCustomAccommodationCost";
+            this.txtCustomAccommodationCost.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomAccommodationCost.TabIndex = 1;
             // 
-            // txtInternalNotes
+            // label231
             // 
-            this.txtInternalNotes.Location = new System.Drawing.Point(560, 42);
-            this.txtInternalNotes.Name = "txtInternalNotes";
-            this.txtInternalNotes.Size = new System.Drawing.Size(234, 142);
-            this.txtInternalNotes.TabIndex = 9;
-            this.txtInternalNotes.Text = "";
+            this.label231.AutoSize = true;
+            this.label231.Location = new System.Drawing.Point(23, 49);
+            this.label231.Name = "label231";
+            this.label231.Size = new System.Drawing.Size(77, 13);
+            this.label231.TabIndex = 2;
+            this.label231.Text = "Owner Amount";
+            // 
+            // txtCustomOwnerAmount
+            // 
+            this.txtCustomOwnerAmount.Location = new System.Drawing.Point(134, 49);
+            this.txtCustomOwnerAmount.Name = "txtCustomOwnerAmount";
+            this.txtCustomOwnerAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomOwnerAmount.TabIndex = 3;
             // 
             // frmMain
             // 
@@ -6774,6 +6827,8 @@
             this.tabPage11.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7389,6 +7444,11 @@
         private System.Windows.Forms.Label label229;
         private System.Windows.Forms.RichTextBox txtHousekeeperNotes;
         private System.Windows.Forms.Label label228;
+        private System.Windows.Forms.TabPage tabPage13;
+        private System.Windows.Forms.TextBox txtCustomOwnerAmount;
+        private System.Windows.Forms.Label label231;
+        private System.Windows.Forms.TextBox txtCustomAccommodationCost;
+        private System.Windows.Forms.Label label230;
     }
 }
 
