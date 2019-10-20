@@ -128,6 +128,8 @@
             this.txtBookingRules = new System.Windows.Forms.TextBox();
             this.btnBookingRules = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtEnquiryBrandId = new System.Windows.Forms.TextBox();
+            this.label233 = new System.Windows.Forms.Label();
             this.ddlEnquiryCurrency = new System.Windows.Forms.ComboBox();
             this.label143 = new System.Windows.Forms.Label();
             this.txtCreatedate = new System.Windows.Forms.TextBox();
@@ -335,6 +337,8 @@
             this.label207 = new System.Windows.Forms.Label();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.txtBookingBrandId = new System.Windows.Forms.TextBox();
+            this.label232 = new System.Windows.Forms.Label();
             this.txtReturnUrl = new System.Windows.Forms.TextBox();
             this.label144 = new System.Windows.Forms.Label();
             this.label137 = new System.Windows.Forms.Label();
@@ -432,6 +436,11 @@
             this.rdoImportBookingDiscountType_DiscountDeductedFromOwnerAmount = new System.Windows.Forms.RadioButton();
             this.rdoImportBookingDiscountType_DiscountDeductedFromCommission = new System.Windows.Forms.RadioButton();
             this.rdoImportBookingDiscountType_DiscountNotDeducted = new System.Windows.Forms.RadioButton();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.txtCustomOwnerAmount = new System.Windows.Forms.TextBox();
+            this.label231 = new System.Windows.Forms.Label();
+            this.txtCustomAccommodationCost = new System.Windows.Forms.TextBox();
+            this.label230 = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabGuest1 = new System.Windows.Forms.TabPage();
             this.label63 = new System.Windows.Forms.Label();
@@ -632,11 +641,8 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.label230 = new System.Windows.Forms.Label();
-            this.txtCustomAccommodationCost = new System.Windows.Forms.TextBox();
-            this.label231 = new System.Windows.Forms.Label();
-            this.txtCustomOwnerAmount = new System.Windows.Forms.TextBox();
+            this.txtContactBrandId = new System.Windows.Forms.TextBox();
+            this.label234 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -673,6 +679,7 @@
             this.panel1.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabGuest1.SuspendLayout();
             this.tabGuest2.SuspendLayout();
@@ -694,7 +701,6 @@
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tabPage13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -1723,6 +1729,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtEnquiryBrandId);
+            this.groupBox4.Controls.Add(this.label233);
             this.groupBox4.Controls.Add(this.ddlEnquiryCurrency);
             this.groupBox4.Controls.Add(this.label143);
             this.groupBox4.Controls.Add(this.txtCreatedate);
@@ -1763,6 +1771,22 @@
             this.groupBox4.Size = new System.Drawing.Size(1177, 371);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
+            // 
+            // txtEnquiryBrandId
+            // 
+            this.txtEnquiryBrandId.Location = new System.Drawing.Point(62, 230);
+            this.txtEnquiryBrandId.Name = "txtEnquiryBrandId";
+            this.txtEnquiryBrandId.Size = new System.Drawing.Size(60, 20);
+            this.txtEnquiryBrandId.TabIndex = 68;
+            // 
+            // label233
+            // 
+            this.label233.AutoSize = true;
+            this.label233.Location = new System.Drawing.Point(9, 234);
+            this.label233.Name = "label233";
+            this.label233.Size = new System.Drawing.Size(44, 13);
+            this.label233.TabIndex = 67;
+            this.label233.Text = "BrandId";
             // 
             // ddlEnquiryCurrency
             // 
@@ -3762,6 +3786,8 @@
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.txtBookingBrandId);
+            this.tabBooking.Controls.Add(this.label232);
             this.tabBooking.Controls.Add(this.txtReturnUrl);
             this.tabBooking.Controls.Add(this.label144);
             this.tabBooking.Controls.Add(this.label137);
@@ -3800,6 +3826,22 @@
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
+            // 
+            // txtBookingBrandId
+            // 
+            this.txtBookingBrandId.Location = new System.Drawing.Point(60, 103);
+            this.txtBookingBrandId.Name = "txtBookingBrandId";
+            this.txtBookingBrandId.Size = new System.Drawing.Size(60, 20);
+            this.txtBookingBrandId.TabIndex = 66;
+            // 
+            // label232
+            // 
+            this.label232.AutoSize = true;
+            this.label232.Location = new System.Drawing.Point(7, 107);
+            this.label232.Name = "label232";
+            this.label232.Size = new System.Drawing.Size(44, 13);
+            this.label232.TabIndex = 65;
+            this.label232.Text = "BrandId";
             // 
             // txtReturnUrl
             // 
@@ -4699,6 +4741,52 @@
             this.rdoImportBookingDiscountType_DiscountNotDeducted.TabStop = true;
             this.rdoImportBookingDiscountType_DiscountNotDeducted.Text = "Discount not deducted";
             this.rdoImportBookingDiscountType_DiscountNotDeducted.UseVisualStyleBackColor = true;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.Controls.Add(this.txtCustomOwnerAmount);
+            this.tabPage13.Controls.Add(this.label231);
+            this.tabPage13.Controls.Add(this.txtCustomAccommodationCost);
+            this.tabPage13.Controls.Add(this.label230);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(588, 137);
+            this.tabPage13.TabIndex = 2;
+            this.tabPage13.Text = "Custom Costs";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // txtCustomOwnerAmount
+            // 
+            this.txtCustomOwnerAmount.Location = new System.Drawing.Point(134, 49);
+            this.txtCustomOwnerAmount.Name = "txtCustomOwnerAmount";
+            this.txtCustomOwnerAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomOwnerAmount.TabIndex = 3;
+            // 
+            // label231
+            // 
+            this.label231.AutoSize = true;
+            this.label231.Location = new System.Drawing.Point(23, 49);
+            this.label231.Name = "label231";
+            this.label231.Size = new System.Drawing.Size(77, 13);
+            this.label231.TabIndex = 2;
+            this.label231.Text = "Owner Amount";
+            // 
+            // txtCustomAccommodationCost
+            // 
+            this.txtCustomAccommodationCost.Location = new System.Drawing.Point(134, 12);
+            this.txtCustomAccommodationCost.Name = "txtCustomAccommodationCost";
+            this.txtCustomAccommodationCost.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomAccommodationCost.TabIndex = 1;
+            // 
+            // label230
+            // 
+            this.label230.AutoSize = true;
+            this.label230.Location = new System.Drawing.Point(20, 14);
+            this.label230.Name = "label230";
+            this.label230.Size = new System.Drawing.Size(107, 13);
+            this.label230.TabIndex = 0;
+            this.label230.Text = "Accommodation Cost";
             // 
             // tabControl4
             // 
@@ -5782,6 +5870,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.txtContactBrandId);
+            this.tabPage6.Controls.Add(this.label234);
             this.tabPage6.Controls.Add(this.btnGetContact);
             this.tabPage6.Controls.Add(this.txtGetContactUrl);
             this.tabPage6.Controls.Add(this.label141);
@@ -6663,57 +6753,27 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // tabPage13
+            // txtContactBrandId
             // 
-            this.tabPage13.Controls.Add(this.txtCustomOwnerAmount);
-            this.tabPage13.Controls.Add(this.label231);
-            this.tabPage13.Controls.Add(this.txtCustomAccommodationCost);
-            this.tabPage13.Controls.Add(this.label230);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(588, 137);
-            this.tabPage13.TabIndex = 2;
-            this.tabPage13.Text = "Custom Costs";
-            this.tabPage13.UseVisualStyleBackColor = true;
+            this.txtContactBrandId.Location = new System.Drawing.Point(1074, 211);
+            this.txtContactBrandId.Name = "txtContactBrandId";
+            this.txtContactBrandId.Size = new System.Drawing.Size(81, 20);
+            this.txtContactBrandId.TabIndex = 106;
             // 
-            // label230
+            // label234
             // 
-            this.label230.AutoSize = true;
-            this.label230.Location = new System.Drawing.Point(20, 14);
-            this.label230.Name = "label230";
-            this.label230.Size = new System.Drawing.Size(107, 13);
-            this.label230.TabIndex = 0;
-            this.label230.Text = "Accommodation Cost";
-            // 
-            // txtCustomAccommodationCost
-            // 
-            this.txtCustomAccommodationCost.Location = new System.Drawing.Point(134, 12);
-            this.txtCustomAccommodationCost.Name = "txtCustomAccommodationCost";
-            this.txtCustomAccommodationCost.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomAccommodationCost.TabIndex = 1;
-            // 
-            // label231
-            // 
-            this.label231.AutoSize = true;
-            this.label231.Location = new System.Drawing.Point(23, 49);
-            this.label231.Name = "label231";
-            this.label231.Size = new System.Drawing.Size(77, 13);
-            this.label231.TabIndex = 2;
-            this.label231.Text = "Owner Amount";
-            // 
-            // txtCustomOwnerAmount
-            // 
-            this.txtCustomOwnerAmount.Location = new System.Drawing.Point(134, 49);
-            this.txtCustomOwnerAmount.Name = "txtCustomOwnerAmount";
-            this.txtCustomOwnerAmount.Size = new System.Drawing.Size(100, 20);
-            this.txtCustomOwnerAmount.TabIndex = 3;
+            this.label234.AutoSize = true;
+            this.label234.Location = new System.Drawing.Point(1021, 215);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(44, 13);
+            this.label234.TabIndex = 105;
+            this.label234.Text = "BrandId";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 778);
+            this.ClientSize = new System.Drawing.Size(1213, 749);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
@@ -6789,6 +6849,8 @@
             this.tabPage9.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
             this.tabControl4.ResumeLayout(false);
             this.tabGuest1.ResumeLayout(false);
             this.tabGuest1.PerformLayout();
@@ -6827,8 +6889,6 @@
             this.tabPage11.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7449,6 +7509,12 @@
         private System.Windows.Forms.Label label231;
         private System.Windows.Forms.TextBox txtCustomAccommodationCost;
         private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.TextBox txtBookingBrandId;
+        private System.Windows.Forms.Label label232;
+        private System.Windows.Forms.TextBox txtEnquiryBrandId;
+        private System.Windows.Forms.Label label233;
+        private System.Windows.Forms.TextBox txtContactBrandId;
+        private System.Windows.Forms.Label label234;
     }
 }
 
