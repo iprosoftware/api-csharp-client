@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace iPro.SDK.Client
 {
@@ -158,15 +159,9 @@ namespace iPro.SDK.Client
                     httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
                 }
 
-                var response = await httpRequest.GetResponseAsync();
-
-                var reader = new StreamReader(response.GetResponseStream());
-
-                outputTextBox.Text = string.Format("Status Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
-                outputTextBox.Text += reader.ReadToEnd();
+                await ParseResponse(httpRequest);
 
                 stopwatch.Stop();
-
                 lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
             }
             catch (WebException ex)
@@ -183,6 +178,44 @@ namespace iPro.SDK.Client
                 {
                     outputTextBox.Text = ex.ToString();
                 }
+            }
+        }
+
+        private async Task ParseResponse(HttpWebRequest httpRequest)
+        {
+            var response = await httpRequest.GetResponseAsync();
+            outputTextBox.Text = string.Format("Status Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
+
+            var contentDispositionHeader = response.Headers["Content-Disposition"];
+            if (!string.IsNullOrWhiteSpace(contentDispositionHeader))
+            {
+                outputTextBox.Text += contentDispositionHeader;
+
+                var contentDisposition = new ContentDisposition(contentDispositionHeader);
+                var extName = response.ContentType == MediaTypeNames.Application.Pdf ? ".pdf" : Path.GetExtension(contentDisposition.FileName);
+
+                using (var dialog = new SaveFileDialog())
+                {
+                    dialog.Filter = "All files (*.*)|*.*";
+                    dialog.FilterIndex = 1;
+                    dialog.RestoreDirectory = true;
+                    dialog.DefaultExt = extName;
+                    dialog.FileName = contentDisposition.FileName;
+
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var stream = dialog.OpenFile())
+                        {
+                            var res = response.GetResponseStream();
+                            res.CopyTo(stream);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                var reader = new StreamReader(response.GetResponseStream());
+                outputTextBox.Text += reader.ReadToEnd();
             }
         }
 
@@ -406,15 +439,9 @@ namespace iPro.SDK.Client
                     postStream.Close();
                 }
 
-                var response = await httpRequest.GetResponseAsync();
-
-                var reader = new StreamReader(response.GetResponseStream());
-
-                outputTextBox.Text = string.Format("Status Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
-                outputTextBox.Text += reader.ReadToEnd();
+                await ParseResponse(httpRequest);
 
                 stopwatch.Stop();
-
                 lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
             }
             catch (WebException ex)
