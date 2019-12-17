@@ -1102,7 +1102,7 @@
             this.txtPropertySearchLiteApi.TabIndex = 79;
             this.txtPropertySearchLiteApi.Text = "/apis/propertysearchlite?size=15&index=1&checkIn=2020-01-01&checkout=2020-01-08&A" +
     "dults=1&Children=&Nights=&PriceFilterType=Nightly&NightlyPriceRange=10,600&Weekl" +
-    "yPriceRange=";
+    "yPriceRange=&IsBrokenRule=false";
             // 
             // label150
             // 
