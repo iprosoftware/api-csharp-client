@@ -49,20 +49,17 @@ namespace iPro.SDK.Client
         private void HandleWebException(WebException ex)
         {
             var sb = new StringBuilder();
-            sb.AppendLine("-------------Error-------------");
-
-            sb.AppendLine(ex.ToString());
-
-            sb.AppendLine(string.Empty);
 
             using (var response = ex.Response)
             {
                 try
                 {
                     var httpResponse = (HttpWebResponse)response;
+
                     sb.AppendLine("-------------Message-------------");
                     sb.AppendLine(string.Format("StatusCode:{0}", httpResponse.StatusCode));
                     sb.AppendLine(string.Format("Status:{0}", httpResponse.StatusDescription));
+
                     using (var data = response.GetResponseStream())
                     {
                         var text = new StreamReader(data).ReadToEnd();
@@ -74,6 +71,9 @@ namespace iPro.SDK.Client
                 }
             }
 
+            sb.AppendLine(string.Empty);
+            sb.AppendLine("-------------Error-------------");
+            sb.AppendLine(ex.ToString());
             sb.AppendLine(string.Empty);
 
             outputTextBox.Text = sb.ToString();
