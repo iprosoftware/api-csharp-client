@@ -175,6 +175,18 @@ namespace iPro.SDK.Client
             }
         }
 
+        private void GetAccessToken()
+        {
+            HandleRequestState(() =>
+            {
+                var client = CreateOAuth2Client();
+                var authState = client.GetClientAccessToken();
+                accessTokenTextBox.Text = authState.AccessToken;
+                tokenExpiryTextBox.Text = authState.AccessTokenExpirationUtc.Value.ToString("O");
+                getResourceButton.Enabled = true;
+            });
+        }
+
         private async Task LoadContent(string api)
         {
             await HandleRequestState(async () =>
@@ -216,19 +228,12 @@ namespace iPro.SDK.Client
             });
         }
 
+        /******************************************************************************************************************************************************/
+
         protected void exchangeCredentialsButton_Click(object sender, EventArgs e)
         {
-            HandleRequestState(() =>
-            {
-                var client = CreateOAuth2Client();
-                var authState = client.GetClientAccessToken();
-                accessTokenTextBox.Text = authState.AccessToken;
-                tokenExpiryTextBox.Text = authState.AccessTokenExpirationUtc.Value.ToString("O");
-                getResourceButton.Enabled = true;
-            });
+            GetAccessToken();
         }
-
-        /******************************************************************************************************************************************************/
 
         private async void getResourceButton_Click(object sender, EventArgs e)
         {
