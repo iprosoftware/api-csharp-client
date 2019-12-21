@@ -16,8 +16,6 @@ namespace iPro.SDK.Client
 {
     public partial class frmMain : Form
     {
-        IAuthorizationState authState;
-
         public frmMain()
         {
             InitializeComponent();
@@ -48,56 +46,6 @@ namespace iPro.SDK.Client
             txtPropertyRatesApi.Text = txtPropertyRatesApi.Text.Replace("{date}", now.Date.ToString("yyyy-MM-dd"));
         }
 
-        public void UpdateFields()
-        {
-            accessTokenTextBox.Text = authState.AccessToken;
-            tokenExpiryTextBox.Text = authState.AccessTokenExpirationUtc.Value.ToString("O");
-            getResourceButton.Enabled = true;
-        }
-
-        protected void exchangeCredentialsButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var stopwatch = new Stopwatch();
-                stopwatch.Start();
-
-                var client = CreateOAuth2Client();
-                authState = client.GetClientAccessToken();
-                UpdateFields();
-
-                stopwatch.Stop();
-
-                lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
-            }
-            catch (WebException ex)
-            {
-                HandleWebException(ex);
-            }
-
-            catch (Exception ex)
-            {
-                if (ex.InnerException is WebException)
-                {
-                    var webException = (WebException)ex.InnerException;
-                    HandleWebException(webException);
-                }
-                else
-                {
-
-                    if (ex.InnerException != null)
-                    {
-                        outputTextBox.Text = ex.InnerException.ToString();
-                    }
-                    else
-                    {
-                        outputTextBox.Text = ex.ToString();
-                    }
-                }
-            }
-
-        }
-
         private void HandleWebException(WebException ex)
         {
             var sb = new StringBuilder();
@@ -105,8 +53,7 @@ namespace iPro.SDK.Client
 
             sb.AppendLine(ex.ToString());
 
-            sb.AppendLine("");
-
+            sb.AppendLine(string.Empty);
 
             using (var response = ex.Response)
             {
@@ -126,9 +73,56 @@ namespace iPro.SDK.Client
                 {
                 }
             }
-            sb.AppendLine("");
+
+            sb.AppendLine(string.Empty);
 
             outputTextBox.Text = sb.ToString();
+        }
+
+        private async Task HandleRequestState(Func<Task> func)
+        {
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            lblTimeCost.Text = @"Waiting for server response...";
+
+            try
+            {
+                await func();
+            }
+            catch (WebException ex)
+            {
+                HandleWebException(ex);
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException is WebException)
+                {
+                    var webException = (WebException)ex.InnerException;
+                    HandleWebException(webException);
+                }
+                else
+                {
+                    if (ex.InnerException != null)
+                    {
+                        outputTextBox.Text = ex.InnerException.ToString();
+                    }
+                    else
+                    {
+                        outputTextBox.Text = ex.ToString();
+                    }
+                }
+            }
+
+            stopwatch.Stop();
+            lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
+        }
+
+        private async void HandleRequestState(Action action)
+        {
+            await HandleRequestState(async () =>
+            {
+                action();
+            });
         }
 
         private WebServerClient CreateOAuth2Client()
@@ -137,48 +131,10 @@ namespace iPro.SDK.Client
             {
                 TokenEndpoint = new Uri(this.txtHost.Text + tokenEndpointTextBox.Text)
             };
+
             var client = new WebServerClient(serverDescription, oauth2ClientIdTextBox.Text, oauth2ClientSecretTextBox.Text);
+
             return (client);
-        }
-
-        private async Task LoadContent(string api)
-        {
-            try
-            {
-                lblTimeCost.Text = @"Waiting for server response...";
-                var stopwatch = new Stopwatch();
-                stopwatch.Start();
-
-                var url = txtHost.Text.TrimEnd('/') + '/' + api.TrimStart('/');
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
-
-                httpRequest.Headers.Add("version", "2.0");
-                if (!string.IsNullOrEmpty(txtIfModifiedSince.Text))
-                {
-                    httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
-                }
-
-                await ParseResponse(httpRequest);
-
-                stopwatch.Stop();
-                lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
-            }
-            catch (WebException ex)
-            {
-                HandleWebException(ex);
-            }
-            catch (Exception ex)
-            {
-                if (ex.InnerException != null)
-                {
-                    outputTextBox.Text = ex.InnerException.ToString();
-                }
-                else
-                {
-                    outputTextBox.Text = ex.ToString();
-                }
-            }
         }
 
         private async Task ParseResponse(HttpWebRequest httpRequest)
@@ -218,6 +174,61 @@ namespace iPro.SDK.Client
                 outputTextBox.Text += reader.ReadToEnd();
             }
         }
+
+        private async Task LoadContent(string api)
+        {
+            await HandleRequestState(async () =>
+            {
+                var url = txtHost.Text.TrimEnd('/') + '/' + api.TrimStart('/');
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
+
+                httpRequest.Headers.Add("version", "2.0");
+                if (!string.IsNullOrEmpty(txtIfModifiedSince.Text))
+                {
+                    httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
+                }
+
+                await ParseResponse(httpRequest);
+            });
+        }
+
+        private async Task PostContent(string api, byte[] buffer, string contentType = "application/x-www-form-urlencoded")
+        {
+            await HandleRequestState(async () =>
+            {
+                var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
+                httpRequest.Method = "POST";
+                httpRequest.Headers.Add("version", "2.0");
+
+                httpRequest.ContentLength = buffer.Length;
+                httpRequest.ContentType = contentType;
+                ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
+
+                using (var postStream = httpRequest.GetRequestStream())
+                {
+                    postStream.Write(buffer, 0, buffer.Length);
+                    postStream.Flush();
+                    postStream.Close();
+                }
+
+                await ParseResponse(httpRequest);
+            });
+        }
+
+        protected void exchangeCredentialsButton_Click(object sender, EventArgs e)
+        {
+            HandleRequestState(() =>
+            {
+                var client = CreateOAuth2Client();
+                var authState = client.GetClientAccessToken();
+                accessTokenTextBox.Text = authState.AccessToken;
+                tokenExpiryTextBox.Text = authState.AccessTokenExpirationUtc.Value.ToString("O");
+                getResourceButton.Enabled = true;
+            });
+        }
+
+        /******************************************************************************************************************************************************/
 
         private async void getResourceButton_Click(object sender, EventArgs e)
         {
@@ -413,52 +424,6 @@ namespace iPro.SDK.Client
             });
 
             await PostContent(this.txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
-        }
-
-        private async Task PostContent(string api, byte[] buffer, string contentType = "application/x-www-form-urlencoded")
-        {
-            try
-            {
-                lblTimeCost.Text = @"Waiting for server response...";
-
-                var stopwatch = new Stopwatch();
-                stopwatch.Start();
-
-                var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
-                httpRequest.Method = "POST";
-                httpRequest.Headers.Add("version", "2.0");
-
-                httpRequest.ContentLength = buffer.Length;
-                httpRequest.ContentType = contentType;
-                ClientBase.AuthorizeRequest(httpRequest, accessTokenTextBox.Text);
-
-                using (var postStream = httpRequest.GetRequestStream())
-                {
-                    postStream.Write(buffer, 0, buffer.Length);
-                    postStream.Flush();
-                    postStream.Close();
-                }
-
-                await ParseResponse(httpRequest);
-
-                stopwatch.Stop();
-                lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
-            }
-            catch (WebException ex)
-            {
-                HandleWebException(ex);
-            }
-            catch (Exception ex)
-            {
-                if (ex.InnerException != null)
-                {
-                    outputTextBox.Text = ex.InnerException.ToString();
-                }
-                else
-                {
-                    outputTextBox.Text = ex.ToString();
-                }
-            }
         }
 
         private async void btnGetReviews_Click(object sender, EventArgs e)

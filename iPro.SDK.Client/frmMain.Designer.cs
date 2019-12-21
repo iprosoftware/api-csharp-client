@@ -554,6 +554,8 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.txtContactBrandId = new System.Windows.Forms.TextBox();
+            this.label234 = new System.Windows.Forms.Label();
             this.btnGetContact = new System.Windows.Forms.Button();
             this.txtGetContactUrl = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
@@ -641,8 +643,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtContactBrandId = new System.Windows.Forms.TextBox();
-            this.label234 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -5941,6 +5941,22 @@
             this.tabPage6.Text = "Contacts";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // txtContactBrandId
+            // 
+            this.txtContactBrandId.Location = new System.Drawing.Point(1074, 211);
+            this.txtContactBrandId.Name = "txtContactBrandId";
+            this.txtContactBrandId.Size = new System.Drawing.Size(81, 20);
+            this.txtContactBrandId.TabIndex = 106;
+            // 
+            // label234
+            // 
+            this.label234.AutoSize = true;
+            this.label234.Location = new System.Drawing.Point(1021, 215);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(44, 13);
+            this.label234.TabIndex = 105;
+            this.label234.Text = "BrandId";
+            // 
             // btnGetContact
             // 
             this.btnGetContact.Location = new System.Drawing.Point(1095, 15);
@@ -6753,27 +6769,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // txtContactBrandId
-            // 
-            this.txtContactBrandId.Location = new System.Drawing.Point(1074, 211);
-            this.txtContactBrandId.Name = "txtContactBrandId";
-            this.txtContactBrandId.Size = new System.Drawing.Size(81, 20);
-            this.txtContactBrandId.TabIndex = 106;
-            // 
-            // label234
-            // 
-            this.label234.AutoSize = true;
-            this.label234.Location = new System.Drawing.Point(1021, 215);
-            this.label234.Name = "label234";
-            this.label234.Size = new System.Drawing.Size(44, 13);
-            this.label234.TabIndex = 105;
-            this.label234.Text = "BrandId";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 749);
+            this.ClientSize = new System.Drawing.Size(1213, 789);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
