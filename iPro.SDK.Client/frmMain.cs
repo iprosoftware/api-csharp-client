@@ -649,8 +649,8 @@ namespace iPro.SDK.Client
             assignedContacts.Add(new
             {
                 ContactId = new int?(),
-                ExternalId = "abc123",
                 ContactType = "KeyHolder",
+                ExternalId = "abc123b",
                 Title = "Mr",
                 FirstName = "Steve",
                 LastName = "Long",
@@ -681,10 +681,58 @@ namespace iPro.SDK.Client
                 AlertEmailTemplateId = new int?(),
             });
 
+            var ownerCompany = new
+            {
+                ExternalId = "abc123a",
+                Title = "Mr",
+                FirstName = "Fred",
+                LastName = "Chin",
+                Email = "fred.chin@test.com",
+                Email1 = string.Empty,
+                Email2 = string.Empty,
+                Mobile = string.Empty,
+                AltPhone = string.Empty,
+                Telephone = string.Empty,
+                Address = string.Empty,
+                Address1 = string.Empty,
+                Postcode = string.Empty,
+                County = string.Empty,
+                City = string.Empty,
+                Country = string.Empty,
+                CompanyName = string.Empty,
+                Signature = string.Empty,
+                Source = string.Empty,
+                Comments = string.Empty,
+                ByPost = false,
+                ByEmail = false,
+                ByTelephone = false,
+                BySms = false,
+                AddedToBlacklist = false,
+                OnEmailList = false,
+                IsArchived = false,
+
+                BankName = string.Empty,
+                BankAccountName = string.Empty,
+                BankAccountNumber = string.Empty,
+                BankAddress = string.Empty,
+                BankAddress1 = string.Empty,
+                BankCountry = string.Empty,
+                BankCounty = string.Empty,
+                BankCity = string.Empty,
+                BankPostcode = string.Empty,
+                BankSortCode = string.Empty,
+                BankReference = string.Empty,
+                BankPaymentReference = string.Empty,
+                IdNumber = string.Empty,
+                BankVatRegistered = new bool?(),
+                BankNonResident = new bool?(),
+            };
+
             var obj = new
             {
                 Id = pushProperty_Id.Text.ConvertToNullable<int>(),
                 OwnerCompanyId = pushProperty_OwnerCompanyId.Text.ConvertToNullable<int>(),
+                OwnerCompany = ownerCompany,
                 Name = pushProperty_Name.Text,
                 PropertyName = pushProperty_PropertyName.Text,
                 Title = pushProperty_Title.Text,
