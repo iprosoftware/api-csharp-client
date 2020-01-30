@@ -129,7 +129,7 @@ namespace iPro.SDK.Client
         {
             var serverDescription = new AuthorizationServerDescription
             {
-                TokenEndpoint = new Uri(this.txtHost.Text + tokenEndpointTextBox.Text)
+                TokenEndpoint = new Uri(txtHost.Text + tokenEndpointTextBox.Text)
             };
 
             var client = new WebServerClient(serverDescription, oauth2ClientIdTextBox.Text, oauth2ClientSecretTextBox.Text);
@@ -209,7 +209,7 @@ namespace iPro.SDK.Client
         {
             await HandleRequestState(async () =>
             {
-                var httpRequest = (HttpWebRequest)WebRequest.Create(this.txtHost.Text + api);
+                var httpRequest = (HttpWebRequest)WebRequest.Create(txtHost.Text + api);
                 httpRequest.Method = "POST";
                 httpRequest.Headers.Add("version", "2.0");
 
@@ -237,120 +237,120 @@ namespace iPro.SDK.Client
 
         private async void getResourceButton_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyApi.Text);
+            await LoadContent(txtPropertyApi.Text);
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertImagesApi.Text);
+            await LoadContent(txtPropertImagesApi.Text);
         }
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyEnquiresApi.Text);
+            await LoadContent(txtPropertyEnquiresApi.Text);
         }
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyRatesApi.Text);
+            await LoadContent(txtPropertyRatesApi.Text);
         }
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyAvailabilityApi.Text);
+            await LoadContent(txtPropertyAvailabilityApi.Text);
         }
 
         private async void button5_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertiesApi.Text);
+            await LoadContent(txtPropertiesApi.Text);
         }
 
         private async void btnPropertyAll_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyAllApi.Text);
+            await LoadContent(txtPropertyAllApi.Text);
         }
 
         private async void btnBookingRules_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtBookingRules.Text);
+            await LoadContent(txtBookingRules.Text);
         }
 
         private async void btnBookingTags_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtBookingTags.Text);
+            await LoadContent(txtBookingTags.Text);
         }
 
         private async void btnPropertyExtras_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyExtras.Text);
+            await LoadContent(txtPropertyExtras.Text);
         }
 
         private async void btnGetSources_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtSources.Text);
+            await LoadContent(txtSources.Text);
         }
 
         private async void btnContacts_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtContacts.Text);
+            await LoadContent(txtContacts.Text);
         }
 
         private async void btnPropertyRooms_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyRoomsApi.Text);
+            await LoadContent(txtPropertyRoomsApi.Text);
         }
 
         private async void btnPropertyDistance_Click(object sender, EventArgs e)
         {
-            await LoadContent(this.txtPropertyDistanceApi.Text);
+            await LoadContent(txtPropertyDistanceApi.Text);
         }
 
         private async void btnPostBooking_Click(object sender, EventArgs e)
         {
             var values = new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("BrandId", this.txtBookingBrandId.Text),
+                new KeyValuePair<string, string>("BrandId", txtBookingBrandId.Text),
 
-                new KeyValuePair<string, string>("BookingTagIds", this.txtBookingTagIds.Text),
-                new KeyValuePair<string, string>("EnquiryId", this.txtBookingEnquiryId.Text),
-                new KeyValuePair<string, string>("Source", this.txtBookingSource.Text),
-                new KeyValuePair<string, string>("SendEmail", this.cbBookingSendEmail.Checked.ToString()),
+                new KeyValuePair<string, string>("BookingTagIds", txtBookingTagIds.Text),
+                new KeyValuePair<string, string>("EnquiryId", txtBookingEnquiryId.Text),
+                new KeyValuePair<string, string>("Source", txtBookingSource.Text),
+                new KeyValuePair<string, string>("SendEmail", cbBookingSendEmail.Checked.ToString()),
 
-                new KeyValuePair<string, string>("PaidAmount", this.txtPaidAmount.Text),
-                new KeyValuePair<string, string>("PaymentMethod", this.txtBookingPaymentMethod.Text),
-                new KeyValuePair<string, string>("PaymentToken", this.txtBookingPaymentToken.Text),
-                new KeyValuePair<string, string>("CardPartialNumbers", this.txtBookingCardPartialNumbers.Text),
-                new KeyValuePair<string, string>("CardType", this.txtCreateBookingCardType.Text),
+                new KeyValuePair<string, string>("PaidAmount", txtPaidAmount.Text),
+                new KeyValuePair<string, string>("PaymentMethod", txtBookingPaymentMethod.Text),
+                new KeyValuePair<string, string>("PaymentToken", txtBookingPaymentToken.Text),
+                new KeyValuePair<string, string>("CardPartialNumbers", txtBookingCardPartialNumbers.Text),
+                new KeyValuePair<string, string>("CardType", txtCreateBookingCardType.Text),
 
-                new KeyValuePair<string, string>("IsDeferredPayment", this.chkBookingIsDeferredPayment.Checked.ToString()),
-                new KeyValuePair<string, string>("SagepaySecurityKey", this.txtBookingSagepaySecurityKey.Text),
-                new KeyValuePair<string, string>("SagepayVendorTxCode", this.txtBookingSagepayVendorTxCode.Text),
-                new KeyValuePair<string, string>("SagepayVPSTxId", this.txtBookingSagepayVPSTxId.Text),
-                new KeyValuePair<string, string>("SagepayTxAuthNo", this.txtBookingSagepayTxAuthNo.Text),
-                new KeyValuePair<string, string>("ReturnUrl", this.txtReturnUrl.Text),
+                new KeyValuePair<string, string>("IsDeferredPayment", chkBookingIsDeferredPayment.Checked.ToString()),
+                new KeyValuePair<string, string>("SagepaySecurityKey", txtBookingSagepaySecurityKey.Text),
+                new KeyValuePair<string, string>("SagepayVendorTxCode", txtBookingSagepayVendorTxCode.Text),
+                new KeyValuePair<string, string>("SagepayVPSTxId", txtBookingSagepayVPSTxId.Text),
+                new KeyValuePair<string, string>("SagepayTxAuthNo", txtBookingSagepayTxAuthNo.Text),
+                new KeyValuePair<string, string>("ReturnUrl", txtReturnUrl.Text),
 
-                new KeyValuePair<string, string>("Contact.ContactId", this.txtBookingContactId.Text),
-                new KeyValuePair<string, string>("Contact.Title", this.txtBookingContactTitle.Text),
-                new KeyValuePair<string, string>("Contact.FirstName", this.txtBookingContactFirstName.Text),
-                new KeyValuePair<string, string>("Contact.LastName", this.txtBookingContactLastName.Text),
-                new KeyValuePair<string, string>("Contact.Email", this.txtBookingContactEmail.Text),
-                new KeyValuePair<string, string>("Contact.Email1", this.txtBookingContactEmail1.Text),
-                new KeyValuePair<string, string>("Contact.Telephone", this.txtBookingContactTelephone.Text),
-                new KeyValuePair<string, string>("Contact.Mobile", this.txtBookingContactMobile.Text),
-                new KeyValuePair<string, string>("Contact.Address1", this.txtBookingContactAddress1.Text),
-                new KeyValuePair<string, string>("Contact.Address2", this.txtBookingContactAddress2.Text),
-                new KeyValuePair<string, string>("Contact.City", this.txtBookingContactCity.Text),
-                new KeyValuePair<string, string>("Contact.County", this.txtBookingContactCounty.Text),
-                new KeyValuePair<string, string>("Contact.Postcode", this.txtBookingContactPostcode.Text),
-                new KeyValuePair<string, string>("Contact.Country", this.txtBookingContactCountry.Text),
-                new KeyValuePair<string, string>("Contact.Source", this.txtBookingContactSource.Text),
+                new KeyValuePair<string, string>("Contact.ContactId", txtBookingContactId.Text),
+                new KeyValuePair<string, string>("Contact.Title", txtBookingContactTitle.Text),
+                new KeyValuePair<string, string>("Contact.FirstName", txtBookingContactFirstName.Text),
+                new KeyValuePair<string, string>("Contact.LastName", txtBookingContactLastName.Text),
+                new KeyValuePair<string, string>("Contact.Email", txtBookingContactEmail.Text),
+                new KeyValuePair<string, string>("Contact.Email1", txtBookingContactEmail1.Text),
+                new KeyValuePair<string, string>("Contact.Telephone", txtBookingContactTelephone.Text),
+                new KeyValuePair<string, string>("Contact.Mobile", txtBookingContactMobile.Text),
+                new KeyValuePair<string, string>("Contact.Address1", txtBookingContactAddress1.Text),
+                new KeyValuePair<string, string>("Contact.Address2", txtBookingContactAddress2.Text),
+                new KeyValuePair<string, string>("Contact.City", txtBookingContactCity.Text),
+                new KeyValuePair<string, string>("Contact.County", txtBookingContactCounty.Text),
+                new KeyValuePair<string, string>("Contact.Postcode", txtBookingContactPostcode.Text),
+                new KeyValuePair<string, string>("Contact.Country", txtBookingContactCountry.Text),
+                new KeyValuePair<string, string>("Contact.Source", txtBookingContactSource.Text),
 
-                new KeyValuePair<string, string>("InternalNotes", this.InternalNotes.Text)
+                new KeyValuePair<string, string>("InternalNotes", InternalNotes.Text),
             };
 
-            values.AddRange(this.GetBookingProperties());
+            values.AddRange(GetBookingProperties());
             var formContent = new FormUrlEncodedContent(values);
-            await PostContent(this.txtApiBooking.Text, formContent.ReadAsByteArrayAsync().Result);
+            await PostContent(txtApiBooking.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
         private IEnumerable<KeyValuePair<string, string>> GetBookingProperties()
@@ -370,37 +370,37 @@ namespace iPro.SDK.Client
 
             return new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("Properties[0].Id", this.txtBookingProperty1Id.Text),
-                new KeyValuePair<string, string>("Properties[0].Checkin", this.txtBookingProperty1Checkin.Text),
-                new KeyValuePair<string, string>("Properties[0].Checkout", this.txtBookingProperty1Checkout.Text),
+                new KeyValuePair<string, string>("Properties[0].Id", txtBookingProperty1Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Checkin", txtBookingProperty1Checkin.Text),
+                new KeyValuePair<string, string>("Properties[0].Checkout", txtBookingProperty1Checkout.Text),
 
-                new KeyValuePair<string, string>("Properties[0].LeadGuestName", this.txtBookingProperty1LeadGuestName.Text),
-                new KeyValuePair<string, string>("Properties[0].LeadGuestAge", this.txtBookingProperty1LeadGuestAge.Text),
-                new KeyValuePair<string, string>("Properties[0].LeadGuestPassport", this.txtBookingProperty1LeadGuestPassport.Text),
+                new KeyValuePair<string, string>("Properties[0].LeadGuestName", txtBookingProperty1LeadGuestName.Text),
+                new KeyValuePair<string, string>("Properties[0].LeadGuestAge", txtBookingProperty1LeadGuestAge.Text),
+                new KeyValuePair<string, string>("Properties[0].LeadGuestPassport", txtBookingProperty1LeadGuestPassport.Text),
 
-                new KeyValuePair<string, string>("Properties[0].Adults", this.txtBookingProperty1Adults.Text),
-                new KeyValuePair<string, string>("Properties[0].Children", this.txtBookingProperty1Children.Text),
-                new KeyValuePair<string, string>("Properties[0].Infants", this.txtBookingProperty1Infants.Text),
+                new KeyValuePair<string, string>("Properties[0].Adults", txtBookingProperty1Adults.Text),
+                new KeyValuePair<string, string>("Properties[0].Children", txtBookingProperty1Children.Text),
+                new KeyValuePair<string, string>("Properties[0].Infants", txtBookingProperty1Infants.Text),
                 new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
                 new KeyValuePair<string, string>("Properties[0].CommissionType", commissionType),
-                new KeyValuePair<string, string>("Properties[0].VoucherCode", this.txtImportBookingVoucherCode.Text),
+                new KeyValuePair<string, string>("Properties[0].VoucherCode", txtImportBookingVoucherCode.Text),
 
-                new KeyValuePair<string, string>("Properties[0].Guests[0].Name", this.txtBookingProperty1Guest1Name.Text),
-                new KeyValuePair<string, string>("Properties[0].Guests[0].Age", this.txtBookingProperty1Guest1Age.Text),
-                new KeyValuePair<string, string>("Properties[0].Guests[0].Passport", this.txtBookingProperty1Guest1Passport.Text),
+                new KeyValuePair<string, string>("Properties[0].Guests[0].Name", txtBookingProperty1Guest1Name.Text),
+                new KeyValuePair<string, string>("Properties[0].Guests[0].Age", txtBookingProperty1Guest1Age.Text),
+                new KeyValuePair<string, string>("Properties[0].Guests[0].Passport", txtBookingProperty1Guest1Passport.Text),
 
-                new KeyValuePair<string, string>("Properties[0].Guests[1].Name", this.txtBookingProperty1Guest2Name.Text),
-                new KeyValuePair<string, string>("Properties[0].Guests[1].Age", this.txtBookingProperty1Guest2Age.Text),
-                new KeyValuePair<string, string>("Properties[0].Guests[1].Passport", this.txtBookingProperty1Guest2Passport.Text),
+                new KeyValuePair<string, string>("Properties[0].Guests[1].Name", txtBookingProperty1Guest2Name.Text),
+                new KeyValuePair<string, string>("Properties[0].Guests[1].Age", txtBookingProperty1Guest2Age.Text),
+                new KeyValuePair<string, string>("Properties[0].Guests[1].Passport", txtBookingProperty1Guest2Passport.Text),
 
-                new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtBookingProperty1Extra1Id.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtBookingProperty1Extra1Qty.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[0].Id", txtBookingProperty1Extra1Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", txtBookingProperty1Extra1Qty.Text),
 
-                new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtBookingProperty1Extra2Id.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtBookingProperty1Extra2Qty.Text),
-                new KeyValuePair<string, string>("Properties[0].GuestNotes", this.GuestNotes.Text),
-                new KeyValuePair<string, string>("Properties[0].AccommodationCost", this.txtCustomAccommodationCost.Text),
-                new KeyValuePair<string, string>("Properties[0].OwnerAmount", this.txtCustomOwnerAmount.Text)
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Id", txtBookingProperty1Extra2Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", txtBookingProperty1Extra2Qty.Text),
+                new KeyValuePair<string, string>("Properties[0].GuestNotes", GuestNotes.Text),
+                new KeyValuePair<string, string>("Properties[0].AccommodationCost", txtCustomAccommodationCost.Text),
+                new KeyValuePair<string, string>("Properties[0].OwnerAmount", txtCustomOwnerAmount.Text),
             };
         }
 
@@ -408,27 +408,27 @@ namespace iPro.SDK.Client
         {
             var formContent = new FormUrlEncodedContent(new[]
             {
-                new KeyValuePair<string, string>("firstname", this.txtFirstName.Text),
-                new KeyValuePair<string, string>("lastname", this.txtLastName.Text),
-                new KeyValuePair<string, string>("propertyids", this.txtPropertyIDs.Text),
-                new KeyValuePair<string, string>("startdate", this.txtStartDate.Text),
-                new KeyValuePair<string, string>("enddate", this.txtEndDate.Text),
-                new KeyValuePair<string, string>("days", this.txtDays.Text),
-                new KeyValuePair<string, string>("budget", this.txtBudget.Text),
-                new KeyValuePair<string, string>("mobile", this.txtMobile.Text),
-                new KeyValuePair<string, string>("phone", this.txtPhone.Text),
-                new KeyValuePair<string, string>("email", this.txtEmail.Text),
-                new KeyValuePair<string, string>("adults", this.txtAdults.Text),
-                new KeyValuePair<string, string>("children", this.txtChildren.Text),
-                new KeyValuePair<string, string>("source", this.txtSource.Text),
-                new KeyValuePair<string, string>("comments", this.txtComments.Text),
-                new KeyValuePair<string, string>("createdate", this.txtCreatedate.Text),
-                new KeyValuePair<string, string>("currency", this.ddlEnquiryCurrency.Text),
-                new KeyValuePair<string, string>("BrandId", this.txtEnquiryBrandId.Text)
+                new KeyValuePair<string, string>("firstname", txtFirstName.Text),
+                new KeyValuePair<string, string>("lastname", txtLastName.Text),
+                new KeyValuePair<string, string>("propertyids", txtPropertyIDs.Text),
+                new KeyValuePair<string, string>("startdate", txtStartDate.Text),
+                new KeyValuePair<string, string>("enddate", txtEndDate.Text),
+                new KeyValuePair<string, string>("days", txtDays.Text),
+                new KeyValuePair<string, string>("budget", txtBudget.Text),
+                new KeyValuePair<string, string>("mobile", txtMobile.Text),
+                new KeyValuePair<string, string>("phone", txtPhone.Text),
+                new KeyValuePair<string, string>("email", txtEmail.Text),
+                new KeyValuePair<string, string>("adults", txtAdults.Text),
+                new KeyValuePair<string, string>("children", txtChildren.Text),
+                new KeyValuePair<string, string>("source", txtSource.Text),
+                new KeyValuePair<string, string>("comments", txtComments.Text),
+                new KeyValuePair<string, string>("createdate", txtCreatedate.Text),
+                new KeyValuePair<string, string>("currency", ddlEnquiryCurrency.Text),
+                new KeyValuePair<string, string>("BrandId", txtEnquiryBrandId.Text),
 
             });
 
-            await PostContent(this.txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
+            await PostContent(txtApiImportEnquiry.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
         private async void btnGetReviews_Click(object sender, EventArgs e)
@@ -445,7 +445,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("ReviewDescription", txtReviewDescription.Text),
                 new KeyValuePair<string, string>("ReviewerName", txtReviewerName.Text),
                 new KeyValuePair<string, string>("PropertyId",txtPropertyId.Text),
-                new KeyValuePair<string, string>("IsApproved",cbIsApproved.Checked.ToString())
+                new KeyValuePair<string, string>("IsApproved",cbIsApproved.Checked.ToString()),
             });
 
             PostContent(txtReviewsApi.Text, formContent.ReadAsByteArrayAsync().Result);
@@ -503,7 +503,7 @@ namespace iPro.SDK.Client
 
         private async void btnCalcBooking_Click(object sender, EventArgs e)
         {
-            var formContent = new FormUrlEncodedContent(this.GetBookingCalcProperties());
+            var formContent = new FormUrlEncodedContent(GetBookingCalcProperties());
             await PostContent(txtApiBookingCalc.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
@@ -516,18 +516,18 @@ namespace iPro.SDK.Client
 
             return new List<KeyValuePair<string, string>>
             {
-                new KeyValuePair<string, string>("Properties[0].Id", this.txtPropertyCalcPropertyId.Text),
-                new KeyValuePair<string, string>("Properties[0].Checkin", this.txtPropertyCalcCheckIn.Text),
-                new KeyValuePair<string, string>("Properties[0].Checkout", this.txtPropertyCalcCheckOut.Text),
-                new KeyValuePair<string, string>("Properties[0].Adults", this.txtPropertyCalcAdults.Text),
-                new KeyValuePair<string, string>("Properties[0].Children", this.txtPropertyCalcChildren.Text),
+                new KeyValuePair<string, string>("Properties[0].Id", txtPropertyCalcPropertyId.Text),
+                new KeyValuePair<string, string>("Properties[0].Checkin", txtPropertyCalcCheckIn.Text),
+                new KeyValuePair<string, string>("Properties[0].Checkout", txtPropertyCalcCheckOut.Text),
+                new KeyValuePair<string, string>("Properties[0].Adults", txtPropertyCalcAdults.Text),
+                new KeyValuePair<string, string>("Properties[0].Children", txtPropertyCalcChildren.Text),
                 new KeyValuePair<string, string>("Properties[0].InsuranceBreakages", InsuranceBreakages),
-                new KeyValuePair<string, string>("Properties[0].Infants", this.txtPropertyCalcInfants.Text),
-                new KeyValuePair<string, string>("Properties[0].VoucherCode", this.txtVoucherCode.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[0].Id", this.txtPropertyExtra1Id.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", this.txtPropertyExtra1Qty.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[1].Id", this.txtPropertyExtra2Id.Text),
-                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", this.txtPropertyExtra2Qty.Text)
+                new KeyValuePair<string, string>("Properties[0].Infants", txtPropertyCalcInfants.Text),
+                new KeyValuePair<string, string>("Properties[0].VoucherCode", txtVoucherCode.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[0].Id", txtPropertyExtra1Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[0].Qty", txtPropertyExtra1Qty.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Id", txtPropertyExtra2Id.Text),
+                new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", txtPropertyExtra2Qty.Text),
             };
         }
 
@@ -561,7 +561,7 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Commision",txtContactCommision.Text),
                 new KeyValuePair<string, string>("Balance",txtContactBalance.Text),
                 new KeyValuePair<string, string>("Retainer",txtContactRetainer.Text),
-                new KeyValuePair<string, string>("BrandId",txtContactBrandId.Text)
+                new KeyValuePair<string, string>("BrandId",txtContactBrandId.Text),
 
             });
 
@@ -644,6 +644,42 @@ namespace iPro.SDK.Client
                 Source = pushProperty_Image2Source.Text,
             });
 
+            var assignedContacts = new List<object>();
+            assignedContacts.Add(new
+            {
+                ContactId = new int?(),
+                ExternalId = "abc123",
+                ContactType = "KeyHolder",
+                Title = "Mr",
+                FirstName = "Steve",
+                LastName = "Long",
+                Email = "steve.long@test.com",
+                Email1 = string.Empty,
+                Email2 = string.Empty,
+                Mobile = string.Empty,
+                AltPhone = string.Empty,
+                Telephone = string.Empty,
+                Address = string.Empty,
+                Address1 = string.Empty,
+                Postcode = string.Empty,
+                County = string.Empty,
+                City = string.Empty,
+                Country = string.Empty,
+                CompanyName = string.Empty,
+                Signature = string.Empty,
+                Source = string.Empty,
+                Comments = string.Empty,
+                ByPost = false,
+                ByEmail = false,
+                ByTelephone = false,
+                BySms = false,
+                AddedToBlacklist = false,
+                OnEmailList = false,
+                IsArchived = false,
+                EnableAlerts = false,
+                AlertEmailTemplateId = new int?(),
+            });
+
             var obj = new
             {
                 Id = pushProperty_Id.Text,
@@ -660,21 +696,50 @@ namespace iPro.SDK.Client
                 PropertyWebsite = pushProperty_PropertyWebsite.Text,
                 Intro = pushProperty_Intro.Text,
                 MainDescription = pushProperty_MainDescription.Text,
+
+                BrandId = pushProperty_BrandId.Text,
                 Currency = pushProperty_Currency.Text,
                 HideRates = pushProperty_HideRates.Checked,
                 MinRate = pushProperty_MinRate.Text,
                 MaxRate = pushProperty_MaxRate.Text,
                 Commission = pushProperty_Commission.Text,
                 BreakagesDeposit = pushProperty_BreakagesDeposit.Text,
+
+                InternalRentalNotes = pushProperty_InternalRentalNotes.Text,
                 AvailabilityNotes = pushProperty_AvailabilityNotes.Text,
                 RentalNotesTitle = pushProperty_RentalNotesTitle.Text,
                 RentalNotes = pushProperty_RentalNotes.Text,
+                RentalNotesTitle1 = pushProperty_RentalNotesTitle1.Text,
+                RentalNotes1 = pushProperty_RentalNotes1.Text,
+                VirtualTourTitle = pushProperty_VirtualTourTitle.Text,
+                VirtualTour = pushProperty_VirtualTour.Text,
+                Directions = string.Empty,
+                BrochurePage = string.Empty,
+
+                CheckInTimeFrom = "14:00",
+                CheckInTimeTo = "18:00",
+                CheckOutTimeUntil = "12:00",
+
+                KeySafeCode = string.Empty,
+                WifiCode = string.Empty,
+                OwnersCode = string.Empty,
+                OfficeCode = string.Empty,
+
+                PropertyNameTitle = string.Empty,
+                PropertySummary = string.Empty,
+                PropertyDescription = string.Empty,
+                RegionDescription = string.Empty,
+                LocationDescription = string.Empty,
+                OwnerListingStory = string.Empty,
+
                 Address = pushProperty_Address.Text,
                 Address2 = pushProperty_Address2.Text,
                 City = pushProperty_City.Text,
                 County = pushProperty_County.Text,
                 Postcode = pushProperty_Postcode.Text,
                 Country = pushProperty_Country.Text,
+                OwnerPropertyName = string.Empty,
+
                 Url = pushProperty_Url.Text,
                 GeoLocation = pushProperty_GeoLocation.Text,
                 Pros = pushProperty_Pros.Text,
@@ -682,18 +747,20 @@ namespace iPro.SDK.Client
                 BuildSize = pushProperty_BuildSize.Text,
                 PlotSize = pushProperty_PlotSize.Text,
                 Licence = pushProperty_Licence.Text,
+                LicenceExpiryDate = pushProperty_LicenceExpiryDate.Text,
                 Warnings = pushProperty_Warning.Text,
                 Location = SplitComma(pushProperty_Location.Text).ToList(),
-                VirtualTour = pushProperty_VirtualTour.Text,
-                VirtualTourTitle = pushProperty_VirtualTourTitle.Text,
                 TrustPilotTag = pushProperty_TrustPilotTag.Text,
+
                 SEOTitle = pushProperty_SEOTitle.Text,
                 SEOKeywords = pushProperty_SEOKeywords.Text,
                 SEODescription = pushProperty_SEODescription.Text,
+
                 Attributes = attributes,
                 Rooms = rooms,
                 Distances = distances,
                 Images = images,
+                AssignedContacts = assignedContacts,
             };
 
             var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
@@ -810,12 +877,11 @@ namespace iPro.SDK.Client
             {
                 new KeyValuePair<string, string>("GuestNotes", textGuestNotes.Text),
                 new KeyValuePair<string, string>("HouseKeeperNotes", txtHousekeeperNotes.Text),
-                new KeyValuePair<string, string>("InternalNotes", txtInternalNotes.Text)
+                new KeyValuePair<string, string>("InternalNotes", txtInternalNotes.Text),
             };
 
             var formContent = new FormUrlEncodedContent(values);
             PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
         }
-
     }
 }

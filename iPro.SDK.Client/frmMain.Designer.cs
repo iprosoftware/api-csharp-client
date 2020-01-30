@@ -236,37 +236,35 @@
             this.pushProperty_SEOTitle = new System.Windows.Forms.TextBox();
             this.label168 = new System.Windows.Forms.Label();
             this.tabsPushPropertyItems = new System.Windows.Forms.TabControl();
-            this.tabToggles = new System.Windows.Forms.TabPage();
+            this.tabPropertyToggles = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.pushProperty_HideRates = new System.Windows.Forms.CheckBox();
             this.pushProperty_DisableOnlineBooking = new System.Windows.Forms.CheckBox();
             this.pushProperty_HideOnWebsite = new System.Windows.Forms.CheckBox();
             this.pushProperty_Withdrawn = new System.Windows.Forms.CheckBox();
             this.pushProperty_Suspended = new System.Windows.Forms.CheckBox();
-            this.tabPropertyIntro = new System.Windows.Forms.TabPage();
-            this.pushProperty_Intro = new System.Windows.Forms.TextBox();
-            this.tabPropertyMainDescription = new System.Windows.Forms.TabPage();
+            this.tabPropertyIntroDescription = new System.Windows.Forms.TabPage();
             this.pushProperty_MainDescription = new System.Windows.Forms.TextBox();
             this.tabPropertyRentalNotes = new System.Windows.Forms.TabPage();
             this.label181 = new System.Windows.Forms.Label();
             this.pushProperty_RentalNotes = new System.Windows.Forms.TextBox();
             this.label180 = new System.Windows.Forms.Label();
             this.pushProperty_RentalNotesTitle = new System.Windows.Forms.TextBox();
-            this.tabVirtualTour = new System.Windows.Forms.TabPage();
+            this.tabPropertyVirtualTour = new System.Windows.Forms.TabPage();
             this.label202 = new System.Windows.Forms.Label();
             this.pushProperty_VirtualTour = new System.Windows.Forms.TextBox();
             this.label210 = new System.Windows.Forms.Label();
             this.pushProperty_VirtualTourTitle = new System.Windows.Forms.TextBox();
-            this.tabAvailabilityNotes = new System.Windows.Forms.TabPage();
+            this.tabPropertyAvailabilityNotes = new System.Windows.Forms.TabPage();
             this.pushProperty_AvailabilityNotes = new System.Windows.Forms.TextBox();
-            this.tabProsCons = new System.Windows.Forms.TabPage();
+            this.tabPropertyProsCons = new System.Windows.Forms.TabPage();
             this.label212 = new System.Windows.Forms.Label();
             this.pushProperty_Cons = new System.Windows.Forms.TextBox();
             this.label211 = new System.Windows.Forms.Label();
             this.pushProperty_Pros = new System.Windows.Forms.TextBox();
-            this.tabWarning = new System.Windows.Forms.TabPage();
+            this.tabPropertyWarning = new System.Windows.Forms.TabPage();
             this.pushProperty_Warning = new System.Windows.Forms.TextBox();
-            this.tabAttributes = new System.Windows.Forms.TabPage();
+            this.tabPropertyAttributes = new System.Windows.Forms.TabPage();
             this.pushProperty_Attribute4Values = new System.Windows.Forms.TextBox();
             this.label189 = new System.Windows.Forms.Label();
             this.pushProperty_Attribute4Name = new System.Windows.Forms.TextBox();
@@ -283,7 +281,7 @@
             this.label184 = new System.Windows.Forms.Label();
             this.pushProperty_Attribute1Name = new System.Windows.Forms.TextBox();
             this.label182 = new System.Windows.Forms.Label();
-            this.tabRooms = new System.Windows.Forms.TabPage();
+            this.tabPropertyRooms = new System.Windows.Forms.TabPage();
             this.pushProperty_Room2Sleeps = new System.Windows.Forms.TextBox();
             this.label219 = new System.Windows.Forms.Label();
             this.pushProperty_Room2NodeName = new System.Windows.Forms.TextBox();
@@ -302,7 +300,7 @@
             this.label200 = new System.Windows.Forms.Label();
             this.pushProperty_Room1Name = new System.Windows.Forms.TextBox();
             this.label201 = new System.Windows.Forms.Label();
-            this.tabDistances = new System.Windows.Forms.TabPage();
+            this.tabPropertyDistances = new System.Windows.Forms.TabPage();
             this.pushProperty_Distance2DistanceType = new System.Windows.Forms.TextBox();
             this.label195 = new System.Windows.Forms.Label();
             this.pushProperty_Distance2DistanceUnit = new System.Windows.Forms.TextBox();
@@ -319,7 +317,7 @@
             this.label192 = new System.Windows.Forms.Label();
             this.pushProperty_Distance1Name = new System.Windows.Forms.TextBox();
             this.label191 = new System.Windows.Forms.Label();
-            this.tabImages = new System.Windows.Forms.TabPage();
+            this.tabPropertyImages = new System.Windows.Forms.TabPage();
             this.label225 = new System.Windows.Forms.Label();
             this.label224 = new System.Windows.Forms.Label();
             this.label223 = new System.Windows.Forms.Label();
@@ -643,6 +641,20 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label235 = new System.Windows.Forms.Label();
+            this.pushProperty_LicenceExpiryDate = new System.Windows.Forms.TextBox();
+            this.pushProperty_InternalRentalNotes = new System.Windows.Forms.TextBox();
+            this.label238 = new System.Windows.Forms.Label();
+            this.label239 = new System.Windows.Forms.Label();
+            this.pushProperty_Intro = new System.Windows.Forms.TextBox();
+            this.label240 = new System.Windows.Forms.Label();
+            this.label241 = new System.Windows.Forms.Label();
+            this.label236 = new System.Windows.Forms.Label();
+            this.pushProperty_RentalNotes1 = new System.Windows.Forms.TextBox();
+            this.label237 = new System.Windows.Forms.Label();
+            this.pushProperty_RentalNotesTitle1 = new System.Windows.Forms.TextBox();
+            this.pushProperty_BrandId = new System.Windows.Forms.TextBox();
+            this.label242 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -656,19 +668,18 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabsPushPropertyItems.SuspendLayout();
-            this.tabToggles.SuspendLayout();
+            this.tabPropertyToggles.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.tabPropertyIntro.SuspendLayout();
-            this.tabPropertyMainDescription.SuspendLayout();
+            this.tabPropertyIntroDescription.SuspendLayout();
             this.tabPropertyRentalNotes.SuspendLayout();
-            this.tabVirtualTour.SuspendLayout();
-            this.tabAvailabilityNotes.SuspendLayout();
-            this.tabProsCons.SuspendLayout();
-            this.tabWarning.SuspendLayout();
-            this.tabAttributes.SuspendLayout();
-            this.tabRooms.SuspendLayout();
-            this.tabDistances.SuspendLayout();
-            this.tabImages.SuspendLayout();
+            this.tabPropertyVirtualTour.SuspendLayout();
+            this.tabPropertyAvailabilityNotes.SuspendLayout();
+            this.tabPropertyProsCons.SuspendLayout();
+            this.tabPropertyWarning.SuspendLayout();
+            this.tabPropertyAttributes.SuspendLayout();
+            this.tabPropertyRooms.SuspendLayout();
+            this.tabPropertyDistances.SuspendLayout();
+            this.tabPropertyImages.SuspendLayout();
             this.tabEnquiry.SuspendLayout();
             this.tabBooking.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -2195,6 +2206,10 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.pushProperty_BrandId);
+            this.groupBox10.Controls.Add(this.label242);
+            this.groupBox10.Controls.Add(this.label235);
+            this.groupBox10.Controls.Add(this.pushProperty_LicenceExpiryDate);
             this.groupBox10.Controls.Add(this.pushProperty_OwnerCompanyId);
             this.groupBox10.Controls.Add(this.label199);
             this.groupBox10.Controls.Add(this.label216);
@@ -2275,7 +2290,7 @@
             // 
             this.pushProperty_Licence.Location = new System.Drawing.Point(47, 171);
             this.pushProperty_Licence.Name = "pushProperty_Licence";
-            this.pushProperty_Licence.Size = new System.Drawing.Size(398, 20);
+            this.pushProperty_Licence.Size = new System.Drawing.Size(141, 20);
             this.pushProperty_Licence.TabIndex = 75;
             // 
             // pushProperty_PlotSize
@@ -2776,33 +2791,32 @@
             // 
             // tabsPushPropertyItems
             // 
-            this.tabsPushPropertyItems.Controls.Add(this.tabToggles);
-            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyIntro);
-            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyMainDescription);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyToggles);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyIntroDescription);
             this.tabsPushPropertyItems.Controls.Add(this.tabPropertyRentalNotes);
-            this.tabsPushPropertyItems.Controls.Add(this.tabVirtualTour);
-            this.tabsPushPropertyItems.Controls.Add(this.tabAvailabilityNotes);
-            this.tabsPushPropertyItems.Controls.Add(this.tabProsCons);
-            this.tabsPushPropertyItems.Controls.Add(this.tabWarning);
-            this.tabsPushPropertyItems.Controls.Add(this.tabAttributes);
-            this.tabsPushPropertyItems.Controls.Add(this.tabRooms);
-            this.tabsPushPropertyItems.Controls.Add(this.tabDistances);
-            this.tabsPushPropertyItems.Controls.Add(this.tabImages);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyVirtualTour);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyAvailabilityNotes);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyProsCons);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyWarning);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyAttributes);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyRooms);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyDistances);
+            this.tabsPushPropertyItems.Controls.Add(this.tabPropertyImages);
             this.tabsPushPropertyItems.Location = new System.Drawing.Point(0, 234);
             this.tabsPushPropertyItems.Name = "tabsPushPropertyItems";
             this.tabsPushPropertyItems.SelectedIndex = 0;
             this.tabsPushPropertyItems.Size = new System.Drawing.Size(905, 143);
             this.tabsPushPropertyItems.TabIndex = 30;
             // 
-            // tabToggles
+            // tabPropertyToggles
             // 
-            this.tabToggles.Controls.Add(this.groupBox6);
-            this.tabToggles.Location = new System.Drawing.Point(4, 22);
-            this.tabToggles.Name = "tabToggles";
-            this.tabToggles.Size = new System.Drawing.Size(897, 117);
-            this.tabToggles.TabIndex = 11;
-            this.tabToggles.Text = "Toggles";
-            this.tabToggles.UseVisualStyleBackColor = true;
+            this.tabPropertyToggles.Controls.Add(this.groupBox6);
+            this.tabPropertyToggles.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyToggles.Name = "tabPropertyToggles";
+            this.tabPropertyToggles.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyToggles.TabIndex = 11;
+            this.tabPropertyToggles.Text = "Toggles";
+            this.tabPropertyToggles.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -2868,52 +2882,36 @@
             this.pushProperty_Suspended.Text = "Suspended";
             this.pushProperty_Suspended.UseVisualStyleBackColor = true;
             // 
-            // tabPropertyIntro
+            // tabPropertyIntroDescription
             // 
-            this.tabPropertyIntro.Controls.Add(this.pushProperty_Intro);
-            this.tabPropertyIntro.Location = new System.Drawing.Point(4, 22);
-            this.tabPropertyIntro.Name = "tabPropertyIntro";
-            this.tabPropertyIntro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPropertyIntro.Size = new System.Drawing.Size(897, 117);
-            this.tabPropertyIntro.TabIndex = 0;
-            this.tabPropertyIntro.Text = "Intro";
-            this.tabPropertyIntro.UseVisualStyleBackColor = true;
-            // 
-            // pushProperty_Intro
-            // 
-            this.pushProperty_Intro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pushProperty_Intro.Location = new System.Drawing.Point(3, 3);
-            this.pushProperty_Intro.Multiline = true;
-            this.pushProperty_Intro.Name = "pushProperty_Intro";
-            this.pushProperty_Intro.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.pushProperty_Intro.Size = new System.Drawing.Size(891, 111);
-            this.pushProperty_Intro.TabIndex = 0;
-            this.pushProperty_Intro.Text = resources.GetString("pushProperty_Intro.Text");
-            // 
-            // tabPropertyMainDescription
-            // 
-            this.tabPropertyMainDescription.Controls.Add(this.pushProperty_MainDescription);
-            this.tabPropertyMainDescription.Location = new System.Drawing.Point(4, 22);
-            this.tabPropertyMainDescription.Name = "tabPropertyMainDescription";
-            this.tabPropertyMainDescription.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPropertyMainDescription.Size = new System.Drawing.Size(897, 117);
-            this.tabPropertyMainDescription.TabIndex = 1;
-            this.tabPropertyMainDescription.Text = "MainDescription";
-            this.tabPropertyMainDescription.UseVisualStyleBackColor = true;
+            this.tabPropertyIntroDescription.Controls.Add(this.label241);
+            this.tabPropertyIntroDescription.Controls.Add(this.label240);
+            this.tabPropertyIntroDescription.Controls.Add(this.pushProperty_Intro);
+            this.tabPropertyIntroDescription.Controls.Add(this.pushProperty_MainDescription);
+            this.tabPropertyIntroDescription.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyIntroDescription.Name = "tabPropertyIntroDescription";
+            this.tabPropertyIntroDescription.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPropertyIntroDescription.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyIntroDescription.TabIndex = 1;
+            this.tabPropertyIntroDescription.Text = "Intro/Description";
+            this.tabPropertyIntroDescription.UseVisualStyleBackColor = true;
             // 
             // pushProperty_MainDescription
             // 
-            this.pushProperty_MainDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pushProperty_MainDescription.Location = new System.Drawing.Point(3, 3);
+            this.pushProperty_MainDescription.Location = new System.Drawing.Point(488, 31);
             this.pushProperty_MainDescription.Multiline = true;
             this.pushProperty_MainDescription.Name = "pushProperty_MainDescription";
             this.pushProperty_MainDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.pushProperty_MainDescription.Size = new System.Drawing.Size(891, 111);
+            this.pushProperty_MainDescription.Size = new System.Drawing.Size(400, 70);
             this.pushProperty_MainDescription.TabIndex = 1;
             this.pushProperty_MainDescription.Text = resources.GetString("pushProperty_MainDescription.Text");
             // 
             // tabPropertyRentalNotes
             // 
+            this.tabPropertyRentalNotes.Controls.Add(this.label236);
+            this.tabPropertyRentalNotes.Controls.Add(this.pushProperty_RentalNotes1);
+            this.tabPropertyRentalNotes.Controls.Add(this.label237);
+            this.tabPropertyRentalNotes.Controls.Add(this.pushProperty_RentalNotesTitle1);
             this.tabPropertyRentalNotes.Controls.Add(this.label181);
             this.tabPropertyRentalNotes.Controls.Add(this.pushProperty_RentalNotes);
             this.tabPropertyRentalNotes.Controls.Add(this.label180);
@@ -2928,7 +2926,7 @@
             // label181
             // 
             this.label181.AutoSize = true;
-            this.label181.Location = new System.Drawing.Point(27, 36);
+            this.label181.Location = new System.Drawing.Point(27, 39);
             this.label181.Name = "label181";
             this.label181.Size = new System.Drawing.Size(66, 13);
             this.label181.TabIndex = 71;
@@ -2936,18 +2934,18 @@
             // 
             // pushProperty_RentalNotes
             // 
-            this.pushProperty_RentalNotes.Location = new System.Drawing.Point(99, 33);
+            this.pushProperty_RentalNotes.Location = new System.Drawing.Point(99, 36);
             this.pushProperty_RentalNotes.Multiline = true;
             this.pushProperty_RentalNotes.Name = "pushProperty_RentalNotes";
             this.pushProperty_RentalNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.pushProperty_RentalNotes.Size = new System.Drawing.Size(782, 67);
+            this.pushProperty_RentalNotes.Size = new System.Drawing.Size(268, 67);
             this.pushProperty_RentalNotes.TabIndex = 70;
             this.pushProperty_RentalNotes.Text = resources.GetString("pushProperty_RentalNotes.Text");
             // 
             // label180
             // 
             this.label180.AutoSize = true;
-            this.label180.Location = new System.Drawing.Point(7, 10);
+            this.label180.Location = new System.Drawing.Point(7, 13);
             this.label180.Name = "label180";
             this.label180.Size = new System.Drawing.Size(86, 13);
             this.label180.TabIndex = 69;
@@ -2955,24 +2953,24 @@
             // 
             // pushProperty_RentalNotesTitle
             // 
-            this.pushProperty_RentalNotesTitle.Location = new System.Drawing.Point(99, 7);
+            this.pushProperty_RentalNotesTitle.Location = new System.Drawing.Point(99, 10);
             this.pushProperty_RentalNotesTitle.Name = "pushProperty_RentalNotesTitle";
             this.pushProperty_RentalNotesTitle.Size = new System.Drawing.Size(268, 20);
             this.pushProperty_RentalNotesTitle.TabIndex = 0;
             this.pushProperty_RentalNotesTitle.Text = "Booking Notes";
             // 
-            // tabVirtualTour
+            // tabPropertyVirtualTour
             // 
-            this.tabVirtualTour.Controls.Add(this.label202);
-            this.tabVirtualTour.Controls.Add(this.pushProperty_VirtualTour);
-            this.tabVirtualTour.Controls.Add(this.label210);
-            this.tabVirtualTour.Controls.Add(this.pushProperty_VirtualTourTitle);
-            this.tabVirtualTour.Location = new System.Drawing.Point(4, 22);
-            this.tabVirtualTour.Name = "tabVirtualTour";
-            this.tabVirtualTour.Size = new System.Drawing.Size(897, 117);
-            this.tabVirtualTour.TabIndex = 9;
-            this.tabVirtualTour.Text = "VirtualTour";
-            this.tabVirtualTour.UseVisualStyleBackColor = true;
+            this.tabPropertyVirtualTour.Controls.Add(this.label202);
+            this.tabPropertyVirtualTour.Controls.Add(this.pushProperty_VirtualTour);
+            this.tabPropertyVirtualTour.Controls.Add(this.label210);
+            this.tabPropertyVirtualTour.Controls.Add(this.pushProperty_VirtualTourTitle);
+            this.tabPropertyVirtualTour.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyVirtualTour.Name = "tabPropertyVirtualTour";
+            this.tabPropertyVirtualTour.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyVirtualTour.TabIndex = 9;
+            this.tabPropertyVirtualTour.Text = "VirtualTour";
+            this.tabPropertyVirtualTour.UseVisualStyleBackColor = true;
             // 
             // label202
             // 
@@ -2989,7 +2987,7 @@
             this.pushProperty_VirtualTour.Multiline = true;
             this.pushProperty_VirtualTour.Name = "pushProperty_VirtualTour";
             this.pushProperty_VirtualTour.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.pushProperty_VirtualTour.Size = new System.Drawing.Size(782, 67);
+            this.pushProperty_VirtualTour.Size = new System.Drawing.Size(268, 67);
             this.pushProperty_VirtualTour.TabIndex = 74;
             // 
             // label210
@@ -3008,39 +3006,41 @@
             this.pushProperty_VirtualTourTitle.Size = new System.Drawing.Size(268, 20);
             this.pushProperty_VirtualTourTitle.TabIndex = 72;
             // 
-            // tabAvailabilityNotes
+            // tabPropertyAvailabilityNotes
             // 
-            this.tabAvailabilityNotes.Controls.Add(this.pushProperty_AvailabilityNotes);
-            this.tabAvailabilityNotes.Location = new System.Drawing.Point(4, 22);
-            this.tabAvailabilityNotes.Name = "tabAvailabilityNotes";
-            this.tabAvailabilityNotes.Size = new System.Drawing.Size(897, 117);
-            this.tabAvailabilityNotes.TabIndex = 3;
-            this.tabAvailabilityNotes.Text = "AvailabilityNotes";
-            this.tabAvailabilityNotes.UseVisualStyleBackColor = true;
+            this.tabPropertyAvailabilityNotes.Controls.Add(this.label239);
+            this.tabPropertyAvailabilityNotes.Controls.Add(this.label238);
+            this.tabPropertyAvailabilityNotes.Controls.Add(this.pushProperty_InternalRentalNotes);
+            this.tabPropertyAvailabilityNotes.Controls.Add(this.pushProperty_AvailabilityNotes);
+            this.tabPropertyAvailabilityNotes.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyAvailabilityNotes.Name = "tabPropertyAvailabilityNotes";
+            this.tabPropertyAvailabilityNotes.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyAvailabilityNotes.TabIndex = 3;
+            this.tabPropertyAvailabilityNotes.Text = "Internal/Availability Notes";
+            this.tabPropertyAvailabilityNotes.UseVisualStyleBackColor = true;
             // 
             // pushProperty_AvailabilityNotes
             // 
-            this.pushProperty_AvailabilityNotes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pushProperty_AvailabilityNotes.Location = new System.Drawing.Point(0, 0);
+            this.pushProperty_AvailabilityNotes.Location = new System.Drawing.Point(481, 34);
             this.pushProperty_AvailabilityNotes.Multiline = true;
             this.pushProperty_AvailabilityNotes.Name = "pushProperty_AvailabilityNotes";
             this.pushProperty_AvailabilityNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.pushProperty_AvailabilityNotes.Size = new System.Drawing.Size(897, 117);
+            this.pushProperty_AvailabilityNotes.Size = new System.Drawing.Size(400, 70);
             this.pushProperty_AvailabilityNotes.TabIndex = 2;
             this.pushProperty_AvailabilityNotes.Text = "availability notes";
             // 
-            // tabProsCons
+            // tabPropertyProsCons
             // 
-            this.tabProsCons.Controls.Add(this.label212);
-            this.tabProsCons.Controls.Add(this.pushProperty_Cons);
-            this.tabProsCons.Controls.Add(this.label211);
-            this.tabProsCons.Controls.Add(this.pushProperty_Pros);
-            this.tabProsCons.Location = new System.Drawing.Point(4, 22);
-            this.tabProsCons.Name = "tabProsCons";
-            this.tabProsCons.Size = new System.Drawing.Size(897, 117);
-            this.tabProsCons.TabIndex = 8;
-            this.tabProsCons.Text = "Pros/Cons";
-            this.tabProsCons.UseVisualStyleBackColor = true;
+            this.tabPropertyProsCons.Controls.Add(this.label212);
+            this.tabPropertyProsCons.Controls.Add(this.pushProperty_Cons);
+            this.tabPropertyProsCons.Controls.Add(this.label211);
+            this.tabPropertyProsCons.Controls.Add(this.pushProperty_Pros);
+            this.tabPropertyProsCons.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyProsCons.Name = "tabPropertyProsCons";
+            this.tabPropertyProsCons.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyProsCons.TabIndex = 8;
+            this.tabPropertyProsCons.Text = "Pros/Cons";
+            this.tabPropertyProsCons.UseVisualStyleBackColor = true;
             // 
             // label212
             // 
@@ -3080,15 +3080,15 @@
             this.pushProperty_Pros.TabIndex = 76;
             this.pushProperty_Pros.Text = "Property Pros";
             // 
-            // tabWarning
+            // tabPropertyWarning
             // 
-            this.tabWarning.Controls.Add(this.pushProperty_Warning);
-            this.tabWarning.Location = new System.Drawing.Point(4, 22);
-            this.tabWarning.Name = "tabWarning";
-            this.tabWarning.Size = new System.Drawing.Size(897, 117);
-            this.tabWarning.TabIndex = 10;
-            this.tabWarning.Text = "Warning";
-            this.tabWarning.UseVisualStyleBackColor = true;
+            this.tabPropertyWarning.Controls.Add(this.pushProperty_Warning);
+            this.tabPropertyWarning.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyWarning.Name = "tabPropertyWarning";
+            this.tabPropertyWarning.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyWarning.TabIndex = 10;
+            this.tabPropertyWarning.Text = "Warning";
+            this.tabPropertyWarning.UseVisualStyleBackColor = true;
             // 
             // pushProperty_Warning
             // 
@@ -3100,30 +3100,30 @@
             this.pushProperty_Warning.Size = new System.Drawing.Size(897, 117);
             this.pushProperty_Warning.TabIndex = 3;
             // 
-            // tabAttributes
+            // tabPropertyAttributes
             // 
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute4Values);
-            this.tabAttributes.Controls.Add(this.label189);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute4Name);
-            this.tabAttributes.Controls.Add(this.label190);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute3Values);
-            this.tabAttributes.Controls.Add(this.label187);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute3Name);
-            this.tabAttributes.Controls.Add(this.label188);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute2Values);
-            this.tabAttributes.Controls.Add(this.label185);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute2Name);
-            this.tabAttributes.Controls.Add(this.label186);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute1Values);
-            this.tabAttributes.Controls.Add(this.label184);
-            this.tabAttributes.Controls.Add(this.pushProperty_Attribute1Name);
-            this.tabAttributes.Controls.Add(this.label182);
-            this.tabAttributes.Location = new System.Drawing.Point(4, 22);
-            this.tabAttributes.Name = "tabAttributes";
-            this.tabAttributes.Size = new System.Drawing.Size(897, 117);
-            this.tabAttributes.TabIndex = 5;
-            this.tabAttributes.Text = "Attributes";
-            this.tabAttributes.UseVisualStyleBackColor = true;
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute4Values);
+            this.tabPropertyAttributes.Controls.Add(this.label189);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute4Name);
+            this.tabPropertyAttributes.Controls.Add(this.label190);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute3Values);
+            this.tabPropertyAttributes.Controls.Add(this.label187);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute3Name);
+            this.tabPropertyAttributes.Controls.Add(this.label188);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute2Values);
+            this.tabPropertyAttributes.Controls.Add(this.label185);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute2Name);
+            this.tabPropertyAttributes.Controls.Add(this.label186);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute1Values);
+            this.tabPropertyAttributes.Controls.Add(this.label184);
+            this.tabPropertyAttributes.Controls.Add(this.pushProperty_Attribute1Name);
+            this.tabPropertyAttributes.Controls.Add(this.label182);
+            this.tabPropertyAttributes.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyAttributes.Name = "tabPropertyAttributes";
+            this.tabPropertyAttributes.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyAttributes.TabIndex = 5;
+            this.tabPropertyAttributes.Text = "Attributes";
+            this.tabPropertyAttributes.UseVisualStyleBackColor = true;
             // 
             // pushProperty_Attribute4Values
             // 
@@ -3270,32 +3270,32 @@
             this.label182.TabIndex = 0;
             this.label182.Text = "Name";
             // 
-            // tabRooms
+            // tabPropertyRooms
             // 
-            this.tabRooms.Controls.Add(this.pushProperty_Room2Sleeps);
-            this.tabRooms.Controls.Add(this.label219);
-            this.tabRooms.Controls.Add(this.pushProperty_Room2NodeName);
-            this.tabRooms.Controls.Add(this.label218);
-            this.tabRooms.Controls.Add(this.pushProperty_Room1NodeName);
-            this.tabRooms.Controls.Add(this.label217);
-            this.tabRooms.Controls.Add(this.pushProperty_Room2Amenities);
-            this.tabRooms.Controls.Add(this.label206);
-            this.tabRooms.Controls.Add(this.pushProperty_Room2Description);
-            this.tabRooms.Controls.Add(this.label208);
-            this.tabRooms.Controls.Add(this.pushProperty_Room2Name);
-            this.tabRooms.Controls.Add(this.label209);
-            this.tabRooms.Controls.Add(this.pushProperty_Room1Amenities);
-            this.tabRooms.Controls.Add(this.label203);
-            this.tabRooms.Controls.Add(this.pushProperty_Room1Description);
-            this.tabRooms.Controls.Add(this.label200);
-            this.tabRooms.Controls.Add(this.pushProperty_Room1Name);
-            this.tabRooms.Controls.Add(this.label201);
-            this.tabRooms.Location = new System.Drawing.Point(4, 22);
-            this.tabRooms.Name = "tabRooms";
-            this.tabRooms.Size = new System.Drawing.Size(897, 117);
-            this.tabRooms.TabIndex = 6;
-            this.tabRooms.Text = "Rooms";
-            this.tabRooms.UseVisualStyleBackColor = true;
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room2Sleeps);
+            this.tabPropertyRooms.Controls.Add(this.label219);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room2NodeName);
+            this.tabPropertyRooms.Controls.Add(this.label218);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room1NodeName);
+            this.tabPropertyRooms.Controls.Add(this.label217);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room2Amenities);
+            this.tabPropertyRooms.Controls.Add(this.label206);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room2Description);
+            this.tabPropertyRooms.Controls.Add(this.label208);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room2Name);
+            this.tabPropertyRooms.Controls.Add(this.label209);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room1Amenities);
+            this.tabPropertyRooms.Controls.Add(this.label203);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room1Description);
+            this.tabPropertyRooms.Controls.Add(this.label200);
+            this.tabPropertyRooms.Controls.Add(this.pushProperty_Room1Name);
+            this.tabPropertyRooms.Controls.Add(this.label201);
+            this.tabPropertyRooms.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyRooms.Name = "tabPropertyRooms";
+            this.tabPropertyRooms.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyRooms.TabIndex = 6;
+            this.tabPropertyRooms.Text = "Rooms";
+            this.tabPropertyRooms.UseVisualStyleBackColor = true;
             // 
             // pushProperty_Room2Sleeps
             // 
@@ -3455,30 +3455,30 @@
             this.label201.TabIndex = 12;
             this.label201.Text = "Name";
             // 
-            // tabDistances
+            // tabPropertyDistances
             // 
-            this.tabDistances.Controls.Add(this.pushProperty_Distance2DistanceType);
-            this.tabDistances.Controls.Add(this.label195);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance2DistanceUnit);
-            this.tabDistances.Controls.Add(this.label196);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance2Distance);
-            this.tabDistances.Controls.Add(this.label197);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance2Name);
-            this.tabDistances.Controls.Add(this.label198);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance1DistanceType);
-            this.tabDistances.Controls.Add(this.label194);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance1DistanceUnit);
-            this.tabDistances.Controls.Add(this.label193);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance1Distance);
-            this.tabDistances.Controls.Add(this.label192);
-            this.tabDistances.Controls.Add(this.pushProperty_Distance1Name);
-            this.tabDistances.Controls.Add(this.label191);
-            this.tabDistances.Location = new System.Drawing.Point(4, 22);
-            this.tabDistances.Name = "tabDistances";
-            this.tabDistances.Size = new System.Drawing.Size(897, 117);
-            this.tabDistances.TabIndex = 7;
-            this.tabDistances.Text = "Distances";
-            this.tabDistances.UseVisualStyleBackColor = true;
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance2DistanceType);
+            this.tabPropertyDistances.Controls.Add(this.label195);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance2DistanceUnit);
+            this.tabPropertyDistances.Controls.Add(this.label196);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance2Distance);
+            this.tabPropertyDistances.Controls.Add(this.label197);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance2Name);
+            this.tabPropertyDistances.Controls.Add(this.label198);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance1DistanceType);
+            this.tabPropertyDistances.Controls.Add(this.label194);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance1DistanceUnit);
+            this.tabPropertyDistances.Controls.Add(this.label193);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance1Distance);
+            this.tabPropertyDistances.Controls.Add(this.label192);
+            this.tabPropertyDistances.Controls.Add(this.pushProperty_Distance1Name);
+            this.tabPropertyDistances.Controls.Add(this.label191);
+            this.tabPropertyDistances.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyDistances.Name = "tabPropertyDistances";
+            this.tabPropertyDistances.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyDistances.TabIndex = 7;
+            this.tabPropertyDistances.Text = "Distances";
+            this.tabPropertyDistances.UseVisualStyleBackColor = true;
             // 
             // pushProperty_Distance2DistanceType
             // 
@@ -3616,30 +3616,30 @@
             this.label191.TabIndex = 2;
             this.label191.Text = "Name";
             // 
-            // tabImages
+            // tabPropertyImages
             // 
-            this.tabImages.Controls.Add(this.label225);
-            this.tabImages.Controls.Add(this.label224);
-            this.tabImages.Controls.Add(this.label223);
-            this.tabImages.Controls.Add(this.pushProperty_Image2Id);
-            this.tabImages.Controls.Add(this.label220);
-            this.tabImages.Controls.Add(this.pushProperty_Image2Source);
-            this.tabImages.Controls.Add(this.label221);
-            this.tabImages.Controls.Add(this.pushProperty_Image2Name);
-            this.tabImages.Controls.Add(this.label222);
-            this.tabImages.Controls.Add(this.pushProperty_Image1Id);
-            this.tabImages.Controls.Add(this.label204);
-            this.tabImages.Controls.Add(this.pushProperty_Image1Source);
-            this.tabImages.Controls.Add(this.label205);
-            this.tabImages.Controls.Add(this.pushProperty_Image1Name);
-            this.tabImages.Controls.Add(this.label207);
-            this.tabImages.Location = new System.Drawing.Point(4, 22);
-            this.tabImages.Name = "tabImages";
-            this.tabImages.Padding = new System.Windows.Forms.Padding(3);
-            this.tabImages.Size = new System.Drawing.Size(897, 117);
-            this.tabImages.TabIndex = 12;
-            this.tabImages.Text = "Images";
-            this.tabImages.UseVisualStyleBackColor = true;
+            this.tabPropertyImages.Controls.Add(this.label225);
+            this.tabPropertyImages.Controls.Add(this.label224);
+            this.tabPropertyImages.Controls.Add(this.label223);
+            this.tabPropertyImages.Controls.Add(this.pushProperty_Image2Id);
+            this.tabPropertyImages.Controls.Add(this.label220);
+            this.tabPropertyImages.Controls.Add(this.pushProperty_Image2Source);
+            this.tabPropertyImages.Controls.Add(this.label221);
+            this.tabPropertyImages.Controls.Add(this.pushProperty_Image2Name);
+            this.tabPropertyImages.Controls.Add(this.label222);
+            this.tabPropertyImages.Controls.Add(this.pushProperty_Image1Id);
+            this.tabPropertyImages.Controls.Add(this.label204);
+            this.tabPropertyImages.Controls.Add(this.pushProperty_Image1Source);
+            this.tabPropertyImages.Controls.Add(this.label205);
+            this.tabPropertyImages.Controls.Add(this.pushProperty_Image1Name);
+            this.tabPropertyImages.Controls.Add(this.label207);
+            this.tabPropertyImages.Location = new System.Drawing.Point(4, 22);
+            this.tabPropertyImages.Name = "tabPropertyImages";
+            this.tabPropertyImages.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPropertyImages.Size = new System.Drawing.Size(897, 117);
+            this.tabPropertyImages.TabIndex = 12;
+            this.tabPropertyImages.Text = "Images";
+            this.tabPropertyImages.UseVisualStyleBackColor = true;
             // 
             // label225
             // 
@@ -6769,6 +6769,130 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // label235
+            // 
+            this.label235.AutoSize = true;
+            this.label235.Location = new System.Drawing.Point(196, 177);
+            this.label235.Name = "label235";
+            this.label235.Size = new System.Drawing.Size(102, 13);
+            this.label235.TabIndex = 82;
+            this.label235.Text = "Licence Expiry Date";
+            // 
+            // pushProperty_LicenceExpiryDate
+            // 
+            this.pushProperty_LicenceExpiryDate.Location = new System.Drawing.Point(304, 174);
+            this.pushProperty_LicenceExpiryDate.Name = "pushProperty_LicenceExpiryDate";
+            this.pushProperty_LicenceExpiryDate.Size = new System.Drawing.Size(141, 20);
+            this.pushProperty_LicenceExpiryDate.TabIndex = 81;
+            // 
+            // pushProperty_InternalRentalNotes
+            // 
+            this.pushProperty_InternalRentalNotes.Location = new System.Drawing.Point(10, 34);
+            this.pushProperty_InternalRentalNotes.Multiline = true;
+            this.pushProperty_InternalRentalNotes.Name = "pushProperty_InternalRentalNotes";
+            this.pushProperty_InternalRentalNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pushProperty_InternalRentalNotes.Size = new System.Drawing.Size(400, 70);
+            this.pushProperty_InternalRentalNotes.TabIndex = 3;
+            this.pushProperty_InternalRentalNotes.Text = "internal rental notes";
+            // 
+            // label238
+            // 
+            this.label238.AutoSize = true;
+            this.label238.Location = new System.Drawing.Point(12, 14);
+            this.label238.Name = "label238";
+            this.label238.Size = new System.Drawing.Size(101, 13);
+            this.label238.TabIndex = 74;
+            this.label238.Text = "InternalRentalNotes";
+            // 
+            // label239
+            // 
+            this.label239.AutoSize = true;
+            this.label239.Location = new System.Drawing.Point(483, 14);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(84, 13);
+            this.label239.TabIndex = 75;
+            this.label239.Text = "AvailabilityNotes";
+            // 
+            // pushProperty_Intro
+            // 
+            this.pushProperty_Intro.Location = new System.Drawing.Point(18, 31);
+            this.pushProperty_Intro.Multiline = true;
+            this.pushProperty_Intro.Name = "pushProperty_Intro";
+            this.pushProperty_Intro.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pushProperty_Intro.Size = new System.Drawing.Size(400, 70);
+            this.pushProperty_Intro.TabIndex = 2;
+            this.pushProperty_Intro.Text = resources.GetString("pushProperty_Intro.Text");
+            // 
+            // label240
+            // 
+            this.label240.AutoSize = true;
+            this.label240.Location = new System.Drawing.Point(485, 12);
+            this.label240.Name = "label240";
+            this.label240.Size = new System.Drawing.Size(83, 13);
+            this.label240.TabIndex = 70;
+            this.label240.Text = "MainDescription";
+            // 
+            // label241
+            // 
+            this.label241.AutoSize = true;
+            this.label241.Location = new System.Drawing.Point(21, 12);
+            this.label241.Name = "label241";
+            this.label241.Size = new System.Drawing.Size(28, 13);
+            this.label241.TabIndex = 71;
+            this.label241.Text = "Intro";
+            // 
+            // label236
+            // 
+            this.label236.AutoSize = true;
+            this.label236.Location = new System.Drawing.Point(518, 39);
+            this.label236.Name = "label236";
+            this.label236.Size = new System.Drawing.Size(72, 13);
+            this.label236.TabIndex = 79;
+            this.label236.Text = "RentalNotes1";
+            // 
+            // pushProperty_RentalNotes1
+            // 
+            this.pushProperty_RentalNotes1.Location = new System.Drawing.Point(590, 36);
+            this.pushProperty_RentalNotes1.Multiline = true;
+            this.pushProperty_RentalNotes1.Name = "pushProperty_RentalNotes1";
+            this.pushProperty_RentalNotes1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.pushProperty_RentalNotes1.Size = new System.Drawing.Size(268, 67);
+            this.pushProperty_RentalNotes1.TabIndex = 78;
+            this.pushProperty_RentalNotes1.Text = resources.GetString("pushProperty_RentalNotes1.Text");
+            // 
+            // label237
+            // 
+            this.label237.AutoSize = true;
+            this.label237.Location = new System.Drawing.Point(498, 13);
+            this.label237.Name = "label237";
+            this.label237.Size = new System.Drawing.Size(92, 13);
+            this.label237.TabIndex = 77;
+            this.label237.Text = "RentalNotesTitle1";
+            // 
+            // pushProperty_RentalNotesTitle1
+            // 
+            this.pushProperty_RentalNotesTitle1.Location = new System.Drawing.Point(590, 10);
+            this.pushProperty_RentalNotesTitle1.Name = "pushProperty_RentalNotesTitle1";
+            this.pushProperty_RentalNotesTitle1.Size = new System.Drawing.Size(268, 20);
+            this.pushProperty_RentalNotesTitle1.TabIndex = 76;
+            this.pushProperty_RentalNotesTitle1.Text = "Booking Notes 1";
+            // 
+            // pushProperty_BrandId
+            // 
+            this.pushProperty_BrandId.Location = new System.Drawing.Point(274, 197);
+            this.pushProperty_BrandId.Name = "pushProperty_BrandId";
+            this.pushProperty_BrandId.Size = new System.Drawing.Size(171, 20);
+            this.pushProperty_BrandId.TabIndex = 84;
+            // 
+            // label242
+            // 
+            this.label242.AutoSize = true;
+            this.label242.Location = new System.Drawing.Point(221, 199);
+            this.label242.Name = "label242";
+            this.label242.Size = new System.Drawing.Size(44, 13);
+            this.label242.TabIndex = 83;
+            this.label242.Text = "BrandId";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6809,31 +6933,29 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabsPushPropertyItems.ResumeLayout(false);
-            this.tabToggles.ResumeLayout(false);
+            this.tabPropertyToggles.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.tabPropertyIntro.ResumeLayout(false);
-            this.tabPropertyIntro.PerformLayout();
-            this.tabPropertyMainDescription.ResumeLayout(false);
-            this.tabPropertyMainDescription.PerformLayout();
+            this.tabPropertyIntroDescription.ResumeLayout(false);
+            this.tabPropertyIntroDescription.PerformLayout();
             this.tabPropertyRentalNotes.ResumeLayout(false);
             this.tabPropertyRentalNotes.PerformLayout();
-            this.tabVirtualTour.ResumeLayout(false);
-            this.tabVirtualTour.PerformLayout();
-            this.tabAvailabilityNotes.ResumeLayout(false);
-            this.tabAvailabilityNotes.PerformLayout();
-            this.tabProsCons.ResumeLayout(false);
-            this.tabProsCons.PerformLayout();
-            this.tabWarning.ResumeLayout(false);
-            this.tabWarning.PerformLayout();
-            this.tabAttributes.ResumeLayout(false);
-            this.tabAttributes.PerformLayout();
-            this.tabRooms.ResumeLayout(false);
-            this.tabRooms.PerformLayout();
-            this.tabDistances.ResumeLayout(false);
-            this.tabDistances.PerformLayout();
-            this.tabImages.ResumeLayout(false);
-            this.tabImages.PerformLayout();
+            this.tabPropertyVirtualTour.ResumeLayout(false);
+            this.tabPropertyVirtualTour.PerformLayout();
+            this.tabPropertyAvailabilityNotes.ResumeLayout(false);
+            this.tabPropertyAvailabilityNotes.PerformLayout();
+            this.tabPropertyProsCons.ResumeLayout(false);
+            this.tabPropertyProsCons.PerformLayout();
+            this.tabPropertyWarning.ResumeLayout(false);
+            this.tabPropertyWarning.PerformLayout();
+            this.tabPropertyAttributes.ResumeLayout(false);
+            this.tabPropertyAttributes.PerformLayout();
+            this.tabPropertyRooms.ResumeLayout(false);
+            this.tabPropertyRooms.PerformLayout();
+            this.tabPropertyDistances.ResumeLayout(false);
+            this.tabPropertyDistances.PerformLayout();
+            this.tabPropertyImages.ResumeLayout(false);
+            this.tabPropertyImages.PerformLayout();
             this.tabEnquiry.ResumeLayout(false);
             this.tabBooking.ResumeLayout(false);
             this.tabBooking.PerformLayout();
@@ -7325,8 +7447,7 @@
 		private System.Windows.Forms.Label label157;
         private System.Windows.Forms.TabPage tabPushProperty;
         private System.Windows.Forms.TabControl tabsPushPropertyItems;
-        private System.Windows.Forms.TabPage tabPropertyIntro;
-        private System.Windows.Forms.TabPage tabPropertyMainDescription;
+        private System.Windows.Forms.TabPage tabPropertyIntroDescription;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox pushProperty_SEODescription;
         private System.Windows.Forms.Label label170;
@@ -7383,16 +7504,15 @@
         private System.Windows.Forms.TextBox pushProperty_RentalNotes;
         private System.Windows.Forms.Label label180;
         private System.Windows.Forms.TextBox pushProperty_RentalNotesTitle;
-        private System.Windows.Forms.TextBox pushProperty_Intro;
         private System.Windows.Forms.Button btnPushProperty_Post;
         private System.Windows.Forms.TextBox txtPushPropertyUrl;
         private System.Windows.Forms.TextBox pushProperty_Payload;
         private System.Windows.Forms.Button btnPushProperty_PreviewPayload;
-        private System.Windows.Forms.TabPage tabAvailabilityNotes;
+        private System.Windows.Forms.TabPage tabPropertyAvailabilityNotes;
         private System.Windows.Forms.TextBox pushProperty_AvailabilityNotes;
-        private System.Windows.Forms.TabPage tabAttributes;
-        private System.Windows.Forms.TabPage tabRooms;
-        private System.Windows.Forms.TabPage tabDistances;
+        private System.Windows.Forms.TabPage tabPropertyAttributes;
+        private System.Windows.Forms.TabPage tabPropertyRooms;
+        private System.Windows.Forms.TabPage tabPropertyDistances;
         private System.Windows.Forms.TextBox pushProperty_Location;
         private System.Windows.Forms.Label label183;
         private System.Windows.Forms.TextBox pushProperty_Attribute1Values;
@@ -7439,8 +7559,8 @@
         private System.Windows.Forms.Label label208;
         private System.Windows.Forms.TextBox pushProperty_Room2Name;
         private System.Windows.Forms.Label label209;
-        private System.Windows.Forms.TabPage tabVirtualTour;
-        private System.Windows.Forms.TabPage tabProsCons;
+        private System.Windows.Forms.TabPage tabPropertyVirtualTour;
+        private System.Windows.Forms.TabPage tabPropertyProsCons;
         private System.Windows.Forms.Label label202;
         private System.Windows.Forms.TextBox pushProperty_VirtualTour;
         private System.Windows.Forms.Label label210;
@@ -7449,9 +7569,9 @@
         private System.Windows.Forms.TextBox pushProperty_Cons;
         private System.Windows.Forms.Label label211;
         private System.Windows.Forms.TextBox pushProperty_Pros;
-        private System.Windows.Forms.TabPage tabWarning;
+        private System.Windows.Forms.TabPage tabPropertyWarning;
         private System.Windows.Forms.TextBox pushProperty_Warning;
-        private System.Windows.Forms.TabPage tabToggles;
+        private System.Windows.Forms.TabPage tabPropertyToggles;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox pushProperty_HideRates;
         private System.Windows.Forms.CheckBox pushProperty_DisableOnlineBooking;
@@ -7474,7 +7594,7 @@
         private System.Windows.Forms.Label label219;
         private System.Windows.Forms.TextBox pushProperty_OwnerCompanyId;
         private System.Windows.Forms.Label label199;
-        private System.Windows.Forms.TabPage tabImages;
+        private System.Windows.Forms.TabPage tabPropertyImages;
         private System.Windows.Forms.TextBox pushProperty_Image2Id;
         private System.Windows.Forms.Label label220;
         private System.Windows.Forms.TextBox pushProperty_Image2Source;
@@ -7515,6 +7635,20 @@
         private System.Windows.Forms.Label label233;
         private System.Windows.Forms.TextBox txtContactBrandId;
         private System.Windows.Forms.Label label234;
+        private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.TextBox pushProperty_LicenceExpiryDate;
+        private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.Label label238;
+        private System.Windows.Forms.TextBox pushProperty_InternalRentalNotes;
+        private System.Windows.Forms.Label label241;
+        private System.Windows.Forms.Label label240;
+        private System.Windows.Forms.TextBox pushProperty_Intro;
+        private System.Windows.Forms.Label label236;
+        private System.Windows.Forms.TextBox pushProperty_RentalNotes1;
+        private System.Windows.Forms.Label label237;
+        private System.Windows.Forms.TextBox pushProperty_RentalNotesTitle1;
+        private System.Windows.Forms.TextBox pushProperty_BrandId;
+        private System.Windows.Forms.Label label242;
     }
 }
 
