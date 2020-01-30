@@ -1,4 +1,5 @@
-﻿using DotNetOpenAuth.OAuth2;
+﻿using EBA.Ex;
+using DotNetOpenAuth.OAuth2;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -682,8 +683,8 @@ namespace iPro.SDK.Client
 
             var obj = new
             {
-                Id = pushProperty_Id.Text,
-                OwnerCompanyId = pushProperty_OwnerCompanyId.Text,
+                Id = pushProperty_Id.Text.ConvertToNullable<int>(),
+                OwnerCompanyId = pushProperty_OwnerCompanyId.Text.ConvertToNullable<int>(),
                 Name = pushProperty_Name.Text,
                 PropertyName = pushProperty_PropertyName.Text,
                 Title = pushProperty_Title.Text,
@@ -697,13 +698,13 @@ namespace iPro.SDK.Client
                 Intro = pushProperty_Intro.Text,
                 MainDescription = pushProperty_MainDescription.Text,
 
-                BrandId = pushProperty_BrandId.Text,
+                BrandId = pushProperty_BrandId.Text.ConvertToNullable<int>(),
                 Currency = pushProperty_Currency.Text,
                 HideRates = pushProperty_HideRates.Checked,
-                MinRate = pushProperty_MinRate.Text,
-                MaxRate = pushProperty_MaxRate.Text,
-                Commission = pushProperty_Commission.Text,
-                BreakagesDeposit = pushProperty_BreakagesDeposit.Text,
+                MinRate = pushProperty_MinRate.Text.ConvertToNullable<decimal>(),
+                MaxRate = pushProperty_MaxRate.Text.ConvertToNullable<decimal>(),
+                Commission = pushProperty_Commission.Text.ConvertToNullable<decimal>(),
+                BreakagesDeposit = pushProperty_BreakagesDeposit.Text.ConvertToNullable<decimal>(),
 
                 InternalRentalNotes = pushProperty_InternalRentalNotes.Text,
                 AvailabilityNotes = pushProperty_AvailabilityNotes.Text,
@@ -714,7 +715,7 @@ namespace iPro.SDK.Client
                 VirtualTourTitle = pushProperty_VirtualTourTitle.Text,
                 VirtualTour = pushProperty_VirtualTour.Text,
                 Directions = string.Empty,
-                BrochurePage = string.Empty,
+                BrochurePage = new int?(),
 
                 CheckInTimeFrom = "14:00",
                 CheckInTimeTo = "18:00",
