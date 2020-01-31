@@ -653,21 +653,24 @@
             this.textGuestNotes = new System.Windows.Forms.RichTextBox();
             this.label227 = new System.Windows.Forms.Label();
             this.tabBatchJson = new System.Windows.Forms.TabPage();
+            this.batchJson_EndsAt = new System.Windows.Forms.Label();
+            this.batchJson_StartsAt = new System.Windows.Forms.Label();
+            this.batchJson_Failed = new System.Windows.Forms.Label();
+            this.batchJson_Success = new System.Windows.Forms.Label();
+            this.batchJson_Total = new System.Windows.Forms.Label();
+            this.batchJson_Endpoint = new System.Windows.Forms.ComboBox();
+            this.label246 = new System.Windows.Forms.Label();
+            this.label245 = new System.Windows.Forms.Label();
+            this.batchJson_LogFileLocationTxt = new System.Windows.Forms.TextBox();
+            this.label244 = new System.Windows.Forms.Label();
+            this.label243 = new System.Windows.Forms.Label();
+            this.batchJson_PayloadTxt = new System.Windows.Forms.TextBox();
             this.batchJson_StartButton = new System.Windows.Forms.Button();
             this.batchJson_ProcessBar = new System.Windows.Forms.ProgressBar();
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.batchJson_PayloadTxt = new System.Windows.Forms.TextBox();
-            this.label243 = new System.Windows.Forms.Label();
-            this.label244 = new System.Windows.Forms.Label();
-            this.batchJson_LogFileLocationTxt = new System.Windows.Forms.TextBox();
-            this.label245 = new System.Windows.Forms.Label();
-            this.label246 = new System.Windows.Forms.Label();
-            this.batchJson_Endpoint = new System.Windows.Forms.ComboBox();
-            this.batchJson_Total = new System.Windows.Forms.Label();
-            this.batchJson_Success = new System.Windows.Forms.Label();
-            this.batchJson_Failed = new System.Windows.Forms.Label();
+            this.batchJson_Elapsed = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -6877,6 +6880,9 @@
             // 
             // tabBatchJson
             // 
+            this.tabBatchJson.Controls.Add(this.batchJson_Elapsed);
+            this.tabBatchJson.Controls.Add(this.batchJson_EndsAt);
+            this.tabBatchJson.Controls.Add(this.batchJson_StartsAt);
             this.tabBatchJson.Controls.Add(this.batchJson_Failed);
             this.tabBatchJson.Controls.Add(this.batchJson_Success);
             this.tabBatchJson.Controls.Add(this.batchJson_Total);
@@ -6896,6 +6902,117 @@
             this.tabBatchJson.TabIndex = 13;
             this.tabBatchJson.Text = "Batch Json";
             this.tabBatchJson.UseVisualStyleBackColor = true;
+            // 
+            // batchJson_EndsAt
+            // 
+            this.batchJson_EndsAt.AutoSize = true;
+            this.batchJson_EndsAt.Location = new System.Drawing.Point(728, 98);
+            this.batchJson_EndsAt.Name = "batchJson_EndsAt";
+            this.batchJson_EndsAt.Size = new System.Drawing.Size(64, 13);
+            this.batchJson_EndsAt.TabIndex = 14;
+            this.batchJson_EndsAt.Text = "Ends at ------";
+            // 
+            // batchJson_StartsAt
+            // 
+            this.batchJson_StartsAt.AutoSize = true;
+            this.batchJson_StartsAt.Location = new System.Drawing.Point(728, 79);
+            this.batchJson_StartsAt.Name = "batchJson_StartsAt";
+            this.batchJson_StartsAt.Size = new System.Drawing.Size(67, 13);
+            this.batchJson_StartsAt.TabIndex = 13;
+            this.batchJson_StartsAt.Text = "Starts at ------";
+            // 
+            // batchJson_Failed
+            // 
+            this.batchJson_Failed.AutoSize = true;
+            this.batchJson_Failed.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.batchJson_Failed.Location = new System.Drawing.Point(728, 41);
+            this.batchJson_Failed.Name = "batchJson_Failed";
+            this.batchJson_Failed.Size = new System.Drawing.Size(44, 13);
+            this.batchJson_Failed.TabIndex = 12;
+            this.batchJson_Failed.Text = "Failed 0";
+            // 
+            // batchJson_Success
+            // 
+            this.batchJson_Success.AutoSize = true;
+            this.batchJson_Success.Location = new System.Drawing.Point(728, 60);
+            this.batchJson_Success.Name = "batchJson_Success";
+            this.batchJson_Success.Size = new System.Drawing.Size(57, 13);
+            this.batchJson_Success.TabIndex = 11;
+            this.batchJson_Success.Text = "Success 0";
+            // 
+            // batchJson_Total
+            // 
+            this.batchJson_Total.AutoSize = true;
+            this.batchJson_Total.Location = new System.Drawing.Point(728, 22);
+            this.batchJson_Total.Name = "batchJson_Total";
+            this.batchJson_Total.Size = new System.Drawing.Size(40, 13);
+            this.batchJson_Total.TabIndex = 10;
+            this.batchJson_Total.Text = "Total 0";
+            // 
+            // batchJson_Endpoint
+            // 
+            this.batchJson_Endpoint.FormattingEnabled = true;
+            this.batchJson_Endpoint.Items.AddRange(new object[] {
+            "/apis/property"});
+            this.batchJson_Endpoint.Location = new System.Drawing.Point(61, 17);
+            this.batchJson_Endpoint.Name = "batchJson_Endpoint";
+            this.batchJson_Endpoint.Size = new System.Drawing.Size(300, 21);
+            this.batchJson_Endpoint.TabIndex = 9;
+            // 
+            // label246
+            // 
+            this.label246.AutoSize = true;
+            this.label246.Location = new System.Drawing.Point(6, 94);
+            this.label246.Name = "label246";
+            this.label246.Size = new System.Drawing.Size(48, 13);
+            this.label246.TabIndex = 8;
+            this.label246.Text = "Progress";
+            // 
+            // label245
+            // 
+            this.label245.AutoSize = true;
+            this.label245.Location = new System.Drawing.Point(6, 57);
+            this.label245.Name = "label245";
+            this.label245.Size = new System.Drawing.Size(44, 13);
+            this.label245.TabIndex = 7;
+            this.label245.Text = "Log File";
+            // 
+            // batchJson_LogFileLocationTxt
+            // 
+            this.batchJson_LogFileLocationTxt.Location = new System.Drawing.Point(61, 54);
+            this.batchJson_LogFileLocationTxt.Name = "batchJson_LogFileLocationTxt";
+            this.batchJson_LogFileLocationTxt.ReadOnly = true;
+            this.batchJson_LogFileLocationTxt.Size = new System.Drawing.Size(600, 20);
+            this.batchJson_LogFileLocationTxt.TabIndex = 6;
+            // 
+            // label244
+            // 
+            this.label244.AutoSize = true;
+            this.label244.Location = new System.Drawing.Point(6, 126);
+            this.label244.Name = "label244";
+            this.label244.Size = new System.Drawing.Size(70, 13);
+            this.label244.TabIndex = 5;
+            this.label244.Text = "Json Payload";
+            // 
+            // label243
+            // 
+            this.label243.AutoSize = true;
+            this.label243.Location = new System.Drawing.Point(6, 20);
+            this.label243.Name = "label243";
+            this.label243.Size = new System.Drawing.Size(49, 13);
+            this.label243.TabIndex = 4;
+            this.label243.Text = "Endpoint";
+            // 
+            // batchJson_PayloadTxt
+            // 
+            this.batchJson_PayloadTxt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.batchJson_PayloadTxt.Location = new System.Drawing.Point(3, 147);
+            this.batchJson_PayloadTxt.MaxLength = 2147483647;
+            this.batchJson_PayloadTxt.Multiline = true;
+            this.batchJson_PayloadTxt.Name = "batchJson_PayloadTxt";
+            this.batchJson_PayloadTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.batchJson_PayloadTxt.Size = new System.Drawing.Size(1177, 227);
+            this.batchJson_PayloadTxt.TabIndex = 3;
             // 
             // batchJson_StartButton
             // 
@@ -6948,97 +7065,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // batchJson_PayloadTxt
+            // batchJson_Elapsed
             // 
-            this.batchJson_PayloadTxt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.batchJson_PayloadTxt.Location = new System.Drawing.Point(3, 147);
-            this.batchJson_PayloadTxt.MaxLength = 2147483647;
-            this.batchJson_PayloadTxt.Multiline = true;
-            this.batchJson_PayloadTxt.Name = "batchJson_PayloadTxt";
-            this.batchJson_PayloadTxt.Size = new System.Drawing.Size(1177, 227);
-            this.batchJson_PayloadTxt.TabIndex = 3;
-            // 
-            // label243
-            // 
-            this.label243.AutoSize = true;
-            this.label243.Location = new System.Drawing.Point(6, 20);
-            this.label243.Name = "label243";
-            this.label243.Size = new System.Drawing.Size(49, 13);
-            this.label243.TabIndex = 4;
-            this.label243.Text = "Endpoint";
-            // 
-            // label244
-            // 
-            this.label244.AutoSize = true;
-            this.label244.Location = new System.Drawing.Point(6, 126);
-            this.label244.Name = "label244";
-            this.label244.Size = new System.Drawing.Size(70, 13);
-            this.label244.TabIndex = 5;
-            this.label244.Text = "Json Payload";
-            // 
-            // batchJson_LogFileLocationTxt
-            // 
-            this.batchJson_LogFileLocationTxt.Location = new System.Drawing.Point(61, 54);
-            this.batchJson_LogFileLocationTxt.Name = "batchJson_LogFileLocationTxt";
-            this.batchJson_LogFileLocationTxt.ReadOnly = true;
-            this.batchJson_LogFileLocationTxt.Size = new System.Drawing.Size(600, 20);
-            this.batchJson_LogFileLocationTxt.TabIndex = 6;
-            // 
-            // label245
-            // 
-            this.label245.AutoSize = true;
-            this.label245.Location = new System.Drawing.Point(6, 57);
-            this.label245.Name = "label245";
-            this.label245.Size = new System.Drawing.Size(44, 13);
-            this.label245.TabIndex = 7;
-            this.label245.Text = "Log File";
-            // 
-            // label246
-            // 
-            this.label246.AutoSize = true;
-            this.label246.Location = new System.Drawing.Point(6, 94);
-            this.label246.Name = "label246";
-            this.label246.Size = new System.Drawing.Size(48, 13);
-            this.label246.TabIndex = 8;
-            this.label246.Text = "Progress";
-            // 
-            // batchJson_Endpoint
-            // 
-            this.batchJson_Endpoint.FormattingEnabled = true;
-            this.batchJson_Endpoint.Items.AddRange(new object[] {
-            "/apis/property"});
-            this.batchJson_Endpoint.Location = new System.Drawing.Point(61, 17);
-            this.batchJson_Endpoint.Name = "batchJson_Endpoint";
-            this.batchJson_Endpoint.Size = new System.Drawing.Size(300, 21);
-            this.batchJson_Endpoint.TabIndex = 9;
-            // 
-            // batchJson_Total
-            // 
-            this.batchJson_Total.AutoSize = true;
-            this.batchJson_Total.Location = new System.Drawing.Point(752, 60);
-            this.batchJson_Total.Name = "batchJson_Total";
-            this.batchJson_Total.Size = new System.Drawing.Size(40, 13);
-            this.batchJson_Total.TabIndex = 10;
-            this.batchJson_Total.Text = "Total 0";
-            // 
-            // batchJson_Success
-            // 
-            this.batchJson_Success.AutoSize = true;
-            this.batchJson_Success.Location = new System.Drawing.Point(752, 94);
-            this.batchJson_Success.Name = "batchJson_Success";
-            this.batchJson_Success.Size = new System.Drawing.Size(57, 13);
-            this.batchJson_Success.TabIndex = 11;
-            this.batchJson_Success.Text = "Success 0";
-            // 
-            // batchJson_Failed
-            // 
-            this.batchJson_Failed.AutoSize = true;
-            this.batchJson_Failed.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.batchJson_Failed.Location = new System.Drawing.Point(752, 77);
-            this.batchJson_Failed.Name = "batchJson_Failed";
-            this.batchJson_Failed.Size = new System.Drawing.Size(44, 13);
-            this.batchJson_Failed.TabIndex = 12;
-            this.batchJson_Failed.Text = "Failed 0";
+            this.batchJson_Elapsed.AutoSize = true;
+            this.batchJson_Elapsed.Location = new System.Drawing.Point(728, 117);
+            this.batchJson_Elapsed.Name = "batchJson_Elapsed";
+            this.batchJson_Elapsed.Size = new System.Drawing.Size(66, 13);
+            this.batchJson_Elapsed.TabIndex = 15;
+            this.batchJson_Elapsed.Text = "Elapsed ------";
             // 
             // frmMain
             // 
@@ -7057,7 +7091,7 @@
             this.Controls.Add(this.accessTokenTextBox);
             this.Controls.Add(this.accessTokenLabel);
             this.Name = "frmMain";
-            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.3.0";
+            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.4.0";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -7811,6 +7845,9 @@
         private System.Windows.Forms.Label batchJson_Total;
         private System.Windows.Forms.Label batchJson_Success;
         private System.Windows.Forms.Label batchJson_Failed;
+        private System.Windows.Forms.Label batchJson_StartsAt;
+        private System.Windows.Forms.Label batchJson_EndsAt;
+        private System.Windows.Forms.Label batchJson_Elapsed;
     }
 }
 

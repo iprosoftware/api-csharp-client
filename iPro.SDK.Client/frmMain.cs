@@ -984,8 +984,27 @@ namespace iPro.SDK.Client
             PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        private async void batchJson_StartButton_Click(object sender, EventArgs e)
+        private void batchJson_StartButton_Click(object sender, EventArgs e)
         {
+            Action<bool, DateTime?, DateTime?> SetStarted = (started, startsAt, endsAt) =>
+            {
+                Invoke(new Action(() =>
+                {
+                    batchJson_Endpoint.Enabled = !started;
+                    batchJson_StartButton.Enabled = !started;
+
+                    var empty = "------";
+                    var strStartsAt = startsAt.HasValue ? startsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
+                    batchJson_StartsAt.Text = $"Starts at {strStartsAt}";
+
+                    var strEndsAt = endsAt.HasValue ? endsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
+                    batchJson_EndsAt.Text = $"Ends at {strEndsAt}";
+
+                    var strElapsed = startsAt.HasValue && endsAt.HasValue ? (endsAt.Value - startsAt.Value).ToString() : empty;
+                    batchJson_Elapsed.Text = $"Elapsed {strElapsed}";
+                }));
+            };
+
             Action<int, int, int> SetProgress = (total, failed, success) =>
             {
                 Invoke(new Action(() =>
@@ -1001,13 +1020,8 @@ namespace iPro.SDK.Client
                 }));
             };
 
-            Action<bool> SetEnabled = (enabled) =>
-            {
-                batchJson_Endpoint.Enabled = enabled;
-                batchJson_StartButton.Enabled = enabled;
-            };
-
             // reset
+            SetStarted(false, null, null);
             SetProgress(0, 0, 0);
             batchJson_LogFileLocationTxt.Text = string.Empty;
 
@@ -1037,11 +1051,6 @@ namespace iPro.SDK.Client
                 return;
             }
 
-            // set state
-            var failedCount = 0;
-            var successCount = 0;
-            SetProgress(payloadList.Count, failedCount, successCount);
-
             // init logger
             var logsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
             if (!Directory.Exists(logsDir)) { Directory.CreateDirectory(logsDir); }
@@ -1059,28 +1068,42 @@ namespace iPro.SDK.Client
             };
 
             // process
-            SetEnabled(false);
-
-            foreach (var item in payloadList)
+            Task.Run(async () =>
             {
-                var json = JsonConvert.SerializeObject(item);
-                var content = new StringContent(json);
-                var result = await PostContent(endpoint, content.ReadAsByteArrayAsync().Result, "application/json");
-                WriteLog(result.Message + Environment.NewLine + Environment.NewLine);
+                DateTime? startsAt = null;
+                DateTime? endsAt = null;
 
-                if (result.Success)
+                var failedCount = 0;
+                var successCount = 0;
+
+                try
                 {
-                    successCount += 1;
+                    // set state
+                    startsAt = DateTime.Now;
+                    SetStarted(true, startsAt, endsAt);
+                    SetProgress(payloadList.Count, 0, 0);
+
+                    foreach (var item in payloadList)
+                    {
+                        var json = JsonConvert.SerializeObject(item);
+                        var content = new StringContent(json);
+                        var result = await PostContent(endpoint, content.ReadAsByteArrayAsync().Result, "application/json");
+
+                        var logContent = $"Index: {successCount + failedCount}, {result.Message}";
+                        WriteLog(logContent + Environment.NewLine + Environment.NewLine);
+
+                        if (result.Success) { successCount += 1; } else { failedCount += 1; }
+                        SetProgress(payloadList.Count, failedCount, successCount);
+
+                        System.Threading.Thread.Sleep(200);
+                    }
                 }
-                else
+                finally
                 {
-                    failedCount += 1;
+                    endsAt = DateTime.Now;
+                    SetStarted(false, startsAt, endsAt);
                 }
-
-                SetProgress(payloadList.Count, failedCount, successCount);
-            }
-
-            SetEnabled(true);
+            });
         }
     }
 }
