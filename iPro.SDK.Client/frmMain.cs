@@ -1,9 +1,10 @@
-﻿using EBA.Ex;
-using DotNetOpenAuth.OAuth2;
+﻿using DotNetOpenAuth.OAuth2;
+using EBA.Ex;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -47,7 +48,18 @@ namespace iPro.SDK.Client
             txtPropertyRatesApi.Text = txtPropertyRatesApi.Text.Replace("{date}", now.Date.ToString("yyyy-MM-dd"));
         }
 
-        private void HandleWebException(WebException ex)
+        public class ParsedResult
+        {
+            public string Message { get; set; }
+            public bool Success { get; set; }
+        }
+
+        public class JsonResponse
+        {
+            public bool Success { get; set; }
+        }
+
+        private static string HandleWebException(WebException ex)
         {
             var sb = new StringBuilder();
 
@@ -77,45 +89,58 @@ namespace iPro.SDK.Client
             sb.AppendLine(ex.ToString());
             sb.AppendLine(string.Empty);
 
-            outputTextBox.Text = sb.ToString();
+            return sb.ToString();
         }
 
-        private async Task HandleRequestState(Func<Task> func)
+        private async Task<ParsedResult> HandleRequestState(Func<Task<ParsedResult>> func)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             lblTimeCost.Text = @"Waiting for server response...";
 
+            ParsedResult result = null;
             try
             {
-                await func();
+                result = await func();
             }
             catch (WebException ex)
             {
-                HandleWebException(ex);
+                result = new ParsedResult
+                {
+                    Success = false,
+                    Message = HandleWebException(ex),
+                };
             }
             catch (Exception ex)
             {
                 if (ex.InnerException is WebException)
                 {
                     var webException = (WebException)ex.InnerException;
-                    HandleWebException(webException);
+                    result = new ParsedResult
+                    {
+                        Success = false,
+                        Message = HandleWebException(webException),
+                    };
                 }
                 else
                 {
-                    if (ex.InnerException != null)
+                    result = new ParsedResult
                     {
-                        outputTextBox.Text = ex.InnerException.ToString();
-                    }
-                    else
-                    {
-                        outputTextBox.Text = ex.ToString();
-                    }
+                        Success = false,
+                        Message = (ex.InnerException ?? ex).ToString(),
+                    };
                 }
+            }
+
+            if (result != null)
+            {
+                outputTextBox.Text = result.Message;
             }
 
             stopwatch.Stop();
             lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
+
+            return result;
         }
 
         private async void HandleRequestState(Action action)
@@ -123,6 +148,7 @@ namespace iPro.SDK.Client
             await HandleRequestState(async () =>
             {
                 action();
+                return null;
             });
         }
 
@@ -138,15 +164,17 @@ namespace iPro.SDK.Client
             return (client);
         }
 
-        private async Task ParseResponse(HttpWebRequest httpRequest)
+        private static async Task<ParsedResult> ParseResponse(HttpWebRequest httpRequest)
         {
             var response = await httpRequest.GetResponseAsync();
-            outputTextBox.Text = string.Format("Status Code: {0}\r\n", (int)((HttpWebResponse)response).StatusCode);
+            var message = string.Format("Status Code: {0}" + Environment.NewLine, (int)((HttpWebResponse)response).StatusCode);
+            var success = false;
 
             var contentDispositionHeader = response.Headers["Content-Disposition"];
             if (!string.IsNullOrWhiteSpace(contentDispositionHeader))
             {
-                outputTextBox.Text += contentDispositionHeader;
+                success = true;
+                message += contentDispositionHeader;
 
                 var contentDisposition = new ContentDisposition(contentDispositionHeader);
                 var extName = response.ContentType == MediaTypeNames.Application.Pdf ? ".pdf" : Path.GetExtension(contentDisposition.FileName);
@@ -172,8 +200,29 @@ namespace iPro.SDK.Client
             else
             {
                 var reader = new StreamReader(response.GetResponseStream());
-                outputTextBox.Text += reader.ReadToEnd();
+                var responseText = reader.ReadToEnd();
+
+                if (response.ContentType == "application/json")
+                {
+                    var responseObj = JsonConvert.DeserializeObject<JsonResponse>(responseText);
+                    success = responseObj.Success;
+
+                    var parsedObj = JsonConvert.DeserializeObject<dynamic>(responseText);
+                    var formattedJson = JsonConvert.SerializeObject(parsedObj, Formatting.Indented);
+                    message += formattedJson;
+                }
+                else
+                {
+                    success = true;
+                    message += responseText;
+                }
             }
+
+            return new ParsedResult
+            {
+                Success = success,
+                Message = message,
+            };
         }
 
         private void GetAccessToken()
@@ -188,9 +237,9 @@ namespace iPro.SDK.Client
             });
         }
 
-        private async Task LoadContent(string api)
+        private async Task<ParsedResult> LoadContent(string api)
         {
-            await HandleRequestState(async () =>
+            return await HandleRequestState(async () =>
             {
                 var url = txtHost.Text.TrimEnd('/') + '/' + api.TrimStart('/');
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -202,13 +251,14 @@ namespace iPro.SDK.Client
                     httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
                 }
 
-                await ParseResponse(httpRequest);
+                var result = await ParseResponse(httpRequest);
+                return result;
             });
         }
 
-        private async Task PostContent(string api, byte[] buffer, string contentType = "application/x-www-form-urlencoded")
+        private async Task<ParsedResult> PostContent(string api, byte[] buffer, string contentType = "application/x-www-form-urlencoded")
         {
-            await HandleRequestState(async () =>
+            return await HandleRequestState(async () =>
             {
                 var httpRequest = (HttpWebRequest)WebRequest.Create(txtHost.Text + api);
                 httpRequest.Method = "POST";
@@ -225,7 +275,8 @@ namespace iPro.SDK.Client
                     postStream.Close();
                 }
 
-                await ParseResponse(httpRequest);
+                var result = await ParseResponse(httpRequest);
+                return result;
             });
         }
 
@@ -931,6 +982,105 @@ namespace iPro.SDK.Client
 
             var formContent = new FormUrlEncodedContent(values);
             PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
+        }
+
+        private async void batchJson_StartButton_Click(object sender, EventArgs e)
+        {
+            Action<int, int, int> SetProgress = (total, failed, success) =>
+            {
+                Invoke(new Action(() =>
+                {
+                    batchJson_ProcessBar.Maximum = total;
+                    batchJson_ProcessBar.Minimum = 0;
+                    batchJson_ProcessBar.Step = 1;
+                    batchJson_ProcessBar.Value = failed + success;
+                    batchJson_Total.Text = $"Total {total}";
+                    batchJson_Failed.Text = $"Failed {failed}";
+                    batchJson_Success.Text = $"Success {success}";
+                    batchJson_Failed.ForeColor = failed > 0 ? Color.Red : SystemColors.ControlText;
+                }));
+            };
+
+            Action<bool> SetEnabled = (enabled) =>
+            {
+                batchJson_Endpoint.Enabled = enabled;
+                batchJson_StartButton.Enabled = enabled;
+            };
+
+            // reset
+            SetProgress(0, 0, 0);
+            batchJson_LogFileLocationTxt.Text = string.Empty;
+
+            // validate
+            var endpoint = batchJson_Endpoint.Text;
+            if (string.IsNullOrWhiteSpace(endpoint))
+            {
+                MessageBox.Show($"{nameof(endpoint)} is required");
+                return;
+            }
+
+            var payload = batchJson_PayloadTxt.Text;
+            if (string.IsNullOrWhiteSpace(payload))
+            {
+                MessageBox.Show($"{nameof(payload)} is required");
+                return;
+            }
+
+            List<Newtonsoft.Json.Linq.JToken> payloadList = null;
+            try
+            {
+                payloadList = JsonConvert.DeserializeObject<List<Newtonsoft.Json.Linq.JToken>>(payload);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            // set state
+            var failedCount = 0;
+            var successCount = 0;
+            SetProgress(payloadList.Count, failedCount, successCount);
+
+            // init logger
+            var logsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
+            if (!Directory.Exists(logsDir)) { Directory.CreateDirectory(logsDir); }
+            var logFilePath = Path.Combine(logsDir, DateTime.Now.ToString("yyyyMMdd-HHmmss") + ".log");
+            batchJson_LogFileLocationTxt.Text = logFilePath;
+            Action<string> WriteLog = (message) =>
+            {
+                using (var stream = new FileStream(logFilePath, FileMode.Append))
+                {
+                    using (var writer = new StreamWriter(stream))
+                    {
+                        writer.Write(message);
+                    }
+                }
+            };
+
+            // process
+            SetEnabled(false);
+
+            foreach (var item in payloadList)
+            {
+                var json = JsonConvert.SerializeObject(item);
+                var content = new StringContent(json);
+                var result = await PostContent(endpoint, content.ReadAsByteArrayAsync().Result, "application/json");
+                WriteLog(result.Message + Environment.NewLine + Environment.NewLine);
+
+                if (result.Success)
+                {
+                    successCount += 1;
+                }
+                else
+                {
+                    failedCount += 1;
+                }
+
+                SetProgress(payloadList.Count, failedCount, successCount);
+            }
+
+            SetEnabled(true);
         }
     }
 }
