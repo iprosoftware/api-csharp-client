@@ -653,6 +653,7 @@
             this.textGuestNotes = new System.Windows.Forms.RichTextBox();
             this.label227 = new System.Windows.Forms.Label();
             this.tabBatchJson = new System.Windows.Forms.TabPage();
+            this.batchJson_Elapsed = new System.Windows.Forms.Label();
             this.batchJson_EndsAt = new System.Windows.Forms.Label();
             this.batchJson_StartsAt = new System.Windows.Forms.Label();
             this.batchJson_Failed = new System.Windows.Forms.Label();
@@ -670,7 +671,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.batchJson_Elapsed = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -6903,6 +6903,15 @@
             this.tabBatchJson.Text = "Batch Json";
             this.tabBatchJson.UseVisualStyleBackColor = true;
             // 
+            // batchJson_Elapsed
+            // 
+            this.batchJson_Elapsed.AutoSize = true;
+            this.batchJson_Elapsed.Location = new System.Drawing.Point(728, 117);
+            this.batchJson_Elapsed.Name = "batchJson_Elapsed";
+            this.batchJson_Elapsed.Size = new System.Drawing.Size(66, 13);
+            this.batchJson_Elapsed.TabIndex = 15;
+            this.batchJson_Elapsed.Text = "Elapsed ------";
+            // 
             // batchJson_EndsAt
             // 
             this.batchJson_EndsAt.AutoSize = true;
@@ -6953,7 +6962,9 @@
             // 
             this.batchJson_Endpoint.FormattingEnabled = true;
             this.batchJson_Endpoint.Items.AddRange(new object[] {
-            "/apis/property"});
+            "/apis/property",
+            "/apis/booking",
+            "/apis/vouchers"});
             this.batchJson_Endpoint.Location = new System.Drawing.Point(61, 17);
             this.batchJson_Endpoint.Name = "batchJson_Endpoint";
             this.batchJson_Endpoint.Size = new System.Drawing.Size(300, 21);
@@ -7065,15 +7076,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // batchJson_Elapsed
-            // 
-            this.batchJson_Elapsed.AutoSize = true;
-            this.batchJson_Elapsed.Location = new System.Drawing.Point(728, 117);
-            this.batchJson_Elapsed.Name = "batchJson_Elapsed";
-            this.batchJson_Elapsed.Size = new System.Drawing.Size(66, 13);
-            this.batchJson_Elapsed.TabIndex = 15;
-            this.batchJson_Elapsed.Text = "Elapsed ------";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7091,7 +7093,7 @@
             this.Controls.Add(this.accessTokenTextBox);
             this.Controls.Add(this.accessTokenLabel);
             this.Name = "frmMain";
-            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.4.0";
+            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.4.1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
