@@ -1105,5 +1105,10 @@ namespace iPro.SDK.Client
                 }
             });
         }
+
+        private void btnGetLimitedReservations_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtLimitedReservationsApiUrl.Text);
+        }
     }
 }

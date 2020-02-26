@@ -630,6 +630,9 @@
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabBookings = new System.Windows.Forms.TabPage();
+            this.btnGetLimitedReservations = new System.Windows.Forms.Button();
+            this.label247 = new System.Windows.Forms.Label();
+            this.txtLimitedReservationsApiUrl = new System.Windows.Forms.TextBox();
             this.label156 = new System.Windows.Forms.Label();
             this.btnReactivateBooking = new System.Windows.Forms.Button();
             this.txtReactivateBooking = new System.Windows.Forms.TextBox();
@@ -6653,6 +6656,9 @@
             // 
             // tabBookings
             // 
+            this.tabBookings.Controls.Add(this.btnGetLimitedReservations);
+            this.tabBookings.Controls.Add(this.label247);
+            this.tabBookings.Controls.Add(this.txtLimitedReservationsApiUrl);
             this.tabBookings.Controls.Add(this.label156);
             this.tabBookings.Controls.Add(this.btnReactivateBooking);
             this.tabBookings.Controls.Add(this.txtReactivateBooking);
@@ -6669,6 +6675,33 @@
             this.tabBookings.TabIndex = 9;
             this.tabBookings.Text = "Bookings";
             this.tabBookings.UseVisualStyleBackColor = true;
+            // 
+            // btnGetLimitedReservations
+            // 
+            this.btnGetLimitedReservations.Location = new System.Drawing.Point(1058, 151);
+            this.btnGetLimitedReservations.Name = "btnGetLimitedReservations";
+            this.btnGetLimitedReservations.Size = new System.Drawing.Size(54, 23);
+            this.btnGetLimitedReservations.TabIndex = 59;
+            this.btnGetLimitedReservations.Text = "GET";
+            this.btnGetLimitedReservations.UseVisualStyleBackColor = true;
+            this.btnGetLimitedReservations.Click += new System.EventHandler(this.btnGetLimitedReservations_Click);
+            // 
+            // label247
+            // 
+            this.label247.AutoSize = true;
+            this.label247.Location = new System.Drawing.Point(44, 154);
+            this.label247.Name = "label247";
+            this.label247.Size = new System.Drawing.Size(69, 13);
+            this.label247.TabIndex = 58;
+            this.label247.Text = "Reservations";
+            // 
+            // txtLimitedReservationsApiUrl
+            // 
+            this.txtLimitedReservationsApiUrl.Location = new System.Drawing.Point(167, 151);
+            this.txtLimitedReservationsApiUrl.Name = "txtLimitedReservationsApiUrl";
+            this.txtLimitedReservationsApiUrl.Size = new System.Drawing.Size(872, 20);
+            this.txtLimitedReservationsApiUrl.TabIndex = 57;
+            this.txtLimitedReservationsApiUrl.Text = resources.GetString("txtLimitedReservationsApiUrl.Text");
             // 
             // label156
             // 
@@ -7080,7 +7113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 789);
+            this.ClientSize = new System.Drawing.Size(1213, 749);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblTimeCost);
             this.Controls.Add(this.tabControl1);
@@ -7850,6 +7883,9 @@
         private System.Windows.Forms.Label batchJson_StartsAt;
         private System.Windows.Forms.Label batchJson_EndsAt;
         private System.Windows.Forms.Label batchJson_Elapsed;
+        private System.Windows.Forms.Label label247;
+        private System.Windows.Forms.TextBox txtLimitedReservationsApiUrl;
+        private System.Windows.Forms.Button btnGetLimitedReservations;
     }
 }
 
