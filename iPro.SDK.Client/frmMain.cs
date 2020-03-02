@@ -70,8 +70,8 @@ namespace iPro.SDK.Client
                     var httpResponse = (HttpWebResponse)response;
 
                     sb.AppendLine("-------------Message-------------");
-                    sb.AppendLine(string.Format("StatusCode:{0}", httpResponse.StatusCode));
-                    sb.AppendLine(string.Format("Status:{0}", httpResponse.StatusDescription));
+                    sb.AppendLine($"StatusCode: {httpResponse.StatusCode}");
+                    sb.AppendLine($"Status: {httpResponse.StatusDescription}");
 
                     using (var data = response.GetResponseStream())
                     {
