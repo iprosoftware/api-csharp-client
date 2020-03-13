@@ -98,6 +98,9 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\BigJsonHelpers.cs" />
+    <Compile Include="Helpers\RequestHelpers.cs" />
+    <Compile Include="Models\JsonResponse.cs" />
+    <Compile Include="Models\ParsedResult.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedTraceListener.cs" />
