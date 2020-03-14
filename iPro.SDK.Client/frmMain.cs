@@ -1,16 +1,18 @@
 ﻿using DotNetOpenAuth.OAuth2;
 using EBA.Ex;
+using iPro.SDK.Client.BatchJsons;
 using iPro.SDK.Client.Helpers;
 using iPro.SDK.Client.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -46,13 +48,15 @@ namespace iPro.SDK.Client
             ddlContactTitle.SelectedText = "Mr";
 
             txtPropertyRatesApi.Text = txtPropertyRatesApi.Text.Replace("{date}", now.Date.ToString("yyyy-MM-dd"));
+
+            InitBatchJson();
         }
 
         private async Task<ParsedResult> HandleRequestState(Func<Task<ParsedResult>> func)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
-            lblTimeCost.Text = @"Waiting for server response...";
+            Invoke(new Action(() => { lblTimeCost.Text = @"Waiting for server response..."; }));
 
             var result = await RequestHelper.HandleRequestState(func);
             if (result != null)
@@ -61,7 +65,7 @@ namespace iPro.SDK.Client
             }
 
             stopwatch.Stop();
-            lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds);
+            Invoke(new Action(() => { lblTimeCost.Text = string.Format("Time cost: {0} ms", stopwatch.ElapsedMilliseconds); }));
 
             return result;
         }
@@ -846,127 +850,218 @@ namespace iPro.SDK.Client
             PostContent(txtBookingUpdateApiUrl.Text, formContent.ReadAsByteArrayAsync().Result);
         }
 
-        private void batchJson_StartButton_Click(object sender, EventArgs e)
+        #region batch json
+        private FileLogger _batchJsonLogger;
+        private BatchJsonStore<BatchJsonState> _batchJsonStore;
+
+        private void InitBatchJson()
         {
-            Action<bool, DateTime?, DateTime?> SetStarted = (started, startsAt, endsAt) =>
+            _batchJsonLogger = new FileLogger();
+            _batchJsonStore = new BatchJsonStore<BatchJsonState>();
+
+            _batchJsonStore.Subscribe((state) =>
             {
                 Invoke(new Action(() =>
                 {
-                    batchJson_Endpoint.Enabled = !started;
-                    batchJson_StartButton.Enabled = !started;
+                    batchJson_Endpoint.Enabled = !state.IsRunning;
+                    batchJson_StartButton.Enabled = !state.IsRunning;
+                    batchJson_SelectPayload.Enabled = !state.IsRunning;
+                    batchJson_LogFileLocationTxt.Text = state.LogFilePath;
 
                     var empty = "------";
-                    var strStartsAt = startsAt.HasValue ? startsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
+                    var strStartsAt = state.StartsAt.HasValue ? state.StartsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
                     batchJson_StartsAt.Text = $"Starts at {strStartsAt}";
 
-                    var strEndsAt = endsAt.HasValue ? endsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
+                    var strEndsAt = state.EndsAt.HasValue ? state.EndsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
                     batchJson_EndsAt.Text = $"Ends at {strEndsAt}";
 
-                    var strElapsed = startsAt.HasValue && endsAt.HasValue ? (endsAt.Value - startsAt.Value).ToString() : empty;
+                    var strElapsed = state.StartsAt.HasValue ? (DateTime.Now - state.StartsAt.Value).ToString() : empty;
                     batchJson_Elapsed.Text = $"Elapsed {strElapsed}";
-                }));
-            };
 
-            Action<int, int, int> SetProgress = (total, failed, success) =>
-            {
-                Invoke(new Action(() =>
-                {
-                    batchJson_ProcessBar.Maximum = total;
+                    var scanState = state.ScannedError != null ? "failed" : state.ScannedCount.ToString();
+                    batchJson_ScannedCount.Text = state.IsScanning ? "Scanning..." : $"Scanned {scanState}";
+                    batchJson_ScannedCount.ForeColor = (state.IsScanning || state.ScannedError != null) ? Color.Red : SystemColors.ControlText;
+
+                    if (state.HasSelectedFiles)
+                    {
+                        batchJson_PayloadTxt.Text = string.Join(Environment.NewLine, state.SelectedFiles);
+                        batchJson_PayloadTxt.Enabled = false;
+                    }
+
+                    batchJson_ProcessBar.Maximum = state.TotalCount;
                     batchJson_ProcessBar.Minimum = 0;
                     batchJson_ProcessBar.Step = 1;
-                    batchJson_ProcessBar.Value = failed + success;
-                    batchJson_Total.Text = $"Total {total}";
-                    batchJson_Failed.Text = $"Failed {failed}";
-                    batchJson_Success.Text = $"Success {success}";
-                    batchJson_Failed.ForeColor = failed > 0 ? Color.Red : SystemColors.ControlText;
+                    batchJson_ProcessBar.Value = state.FailedCount + state.SuccessCount;
+                    batchJson_Total.Text = $"Total {state.TotalCount}";
+                    batchJson_Failed.Text = $"Failed {state.FailedCount}";
+                    batchJson_Success.Text = $"Success {state.SuccessCount}";
+                    batchJson_Failed.ForeColor = state.FailedCount > 0 ? Color.Red : SystemColors.ControlText;
                 }));
-            };
+            });
+        }
 
-            // reset
-            SetStarted(false, null, null);
-            SetProgress(0, 0, 0);
-            batchJson_LogFileLocationTxt.Text = string.Empty;
+        private void batchJsonShowMessage(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                MessageBox.Show(message);
+            }));
+        }
 
+        private async Task batchJsonPush(JObject item)
+        {
+            var itemJson = JsonConvert.SerializeObject(item);
+            var content = new StringContent(itemJson);
+
+            var result = await PostContent(
+                api: _batchJsonStore.State.ApiEndpoint,
+                buffer: content.ReadAsByteArrayAsync().Result,
+                contentType: "application/json");
+
+            var logTitle = $"Index: {_batchJsonStore.State.SuccessCount + _batchJsonStore.State.FailedCount}";
+            if (result.Success)
+            { _batchJsonLogger.Info(logTitle, result.Message); }
+            else
+            { _batchJsonLogger.Warn(logTitle, result.Message); }
+
+            if (result.Success)
+            { _batchJsonStore.Dispatch(x => x.SuccessCount += 1); }
+            else
+            { _batchJsonStore.Dispatch(x => x.FailedCount += 1); }
+
+            Thread.Sleep(100);
+        }
+
+        private void batchJson_StartButton_Click(object sender, EventArgs e)
+        {
             // validate
             var endpoint = batchJson_Endpoint.Text;
             if (string.IsNullOrWhiteSpace(endpoint))
             {
-                MessageBox.Show($"{nameof(endpoint)} is required");
+                batchJsonShowMessage($"{nameof(endpoint)} is required");
                 return;
             }
 
             var payload = batchJson_PayloadTxt.Text;
             if (string.IsNullOrWhiteSpace(payload))
             {
-                MessageBox.Show($"{nameof(payload)} is required");
+                batchJsonShowMessage($"{nameof(payload)} is required");
                 return;
             }
 
-            List<Newtonsoft.Json.Linq.JToken> payloadList = null;
-            try
+            if (_batchJsonStore.State.ScannedError != null)
             {
-                payloadList = JsonConvert.DeserializeObject<List<Newtonsoft.Json.Linq.JToken>>(payload);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                batchJsonShowMessage("Scanned Failed");
                 return;
             }
 
-            // init logger
-            var logsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
-            if (!Directory.Exists(logsDir)) { Directory.CreateDirectory(logsDir); }
-            var logFilePath = Path.Combine(logsDir, DateTime.Now.ToString("yyyyMMdd-HHmmss") + ".log");
-            batchJson_LogFileLocationTxt.Text = logFilePath;
-            Action<string> WriteLog = (message) =>
+            // start state
+            _batchJsonStore.Dispatch(state =>
             {
-                using (var stream = new FileStream(logFilePath, FileMode.Append))
-                {
-                    using (var writer = new StreamWriter(stream))
-                    {
-                        writer.Write(message);
-                    }
-                }
-            };
+                state.LogFilePath = _batchJsonLogger.FilePath;
+                state.ApiEndpoint = endpoint;
+                state.IsRunning = true;
+                state.StartsAt = DateTime.Now;
+                state.EndsAt = null;
+                state.TotalCount = state.ScannedCount;
+                state.SuccessCount = 0;
+                state.FailedCount = 0;
+            });
 
             // process
-            Task.Run(async () =>
+            Task.Run(() =>
             {
-                DateTime? startsAt = null;
-                DateTime? endsAt = null;
-
-                var failedCount = 0;
-                var successCount = 0;
-
                 try
                 {
-                    // set state
-                    startsAt = DateTime.Now;
-                    SetStarted(true, startsAt, endsAt);
-                    SetProgress(payloadList.Count, 0, 0);
-
-                    foreach (var item in payloadList)
+                    if (_batchJsonStore.State.HasSelectedFiles)
                     {
-                        var json = JsonConvert.SerializeObject(item);
-                        var content = new StringContent(json);
-                        var result = await PostContent(endpoint, content.ReadAsByteArrayAsync().Result, "application/json");
-
-                        var logContent = $"Index: {successCount + failedCount}, {result.Message}";
-                        WriteLog(logContent + Environment.NewLine + Environment.NewLine);
-
-                        if (result.Success) { successCount += 1; } else { failedCount += 1; }
-                        SetProgress(payloadList.Count, failedCount, successCount);
-
-                        System.Threading.Thread.Sleep(200);
+                        BigJsonAsyncHelper.LoadFilesAsync(_batchJsonStore.State.SelectedFiles, batchJsonPush);
                     }
+                    else
+                    {
+                        BigJsonAsyncHelper.LoadJsonAsync(payload, batchJsonPush);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _batchJsonLogger.Error("Process Failed", ex.ToString());
+                    batchJsonShowMessage(ex.ToString());
                 }
                 finally
                 {
-                    endsAt = DateTime.Now;
-                    SetStarted(false, startsAt, endsAt);
+                    _batchJsonStore.Dispatch(state =>
+                    {
+                        state.IsRunning = false;
+                        state.EndsAt = DateTime.Now;
+                    });
                 }
             });
         }
+
+        private void batchJson_SelectPayload_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Filter = "All files (*.*)|*.*";
+                dialog.FilterIndex = 1;
+                dialog.RestoreDirectory = true;
+                dialog.Multiselect = true;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    _batchJsonStore.Dispatch(state =>
+                    {
+                        state.IsScanning = true;
+                        state.SelectedFiles = dialog.FileNames;
+                    });
+
+                    Task.Run(() =>
+                    {
+                        var scanned = 0;
+                        Exception scannedError = null;
+
+                        try { scanned = BigJsonHelper.CountInFiles(dialog.FileNames); }
+                        catch (Exception ex) { scannedError = ex; }
+
+                        _batchJsonStore.Dispatch(state =>
+                        {
+                            state.IsScanning = false;
+                            state.ScannedCount = scanned;
+                            state.ScannedError = scannedError;
+                        });
+                    });
+                }
+            }
+        }
+
+        private void batchJson_PayloadTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (_batchJsonStore.State.HasSelectedFiles)
+            {
+                return;
+            }
+
+            var payload = batchJson_PayloadTxt.Text;
+            _batchJsonStore.Dispatch(state => state.IsScanning = true);
+
+            Task.Run(() =>
+            {
+                var scanned = 0;
+                Exception scannedError = null;
+
+                try { scanned = BigJsonHelper.CountInJson(payload); }
+                catch (Exception ex) { scannedError = ex; }
+
+                _batchJsonStore.Dispatch(state =>
+                {
+                    state.IsScanning = false;
+                    state.ScannedCount = scanned;
+                    state.ScannedError = scannedError;
+                });
+            });
+        }
+
+        #endregion
 
         private void btnGetLimitedReservations_Click(object sender, EventArgs e)
         {

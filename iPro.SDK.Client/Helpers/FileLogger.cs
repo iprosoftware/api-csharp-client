@@ -37,6 +37,11 @@ namespace iPro.SDK.Client.Helpers
             Write($"[error] {title} ${error}");
         }
 
+        public void Warn(string title, string warning)
+        {
+            Write($"[warn] {title} ${warning}");
+        }
+
         public void Info(string title, string message)
         {
             Write($"[info] {title} ${message}");

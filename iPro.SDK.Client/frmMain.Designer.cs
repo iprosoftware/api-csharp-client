@@ -656,6 +656,8 @@
             this.textGuestNotes = new System.Windows.Forms.RichTextBox();
             this.label227 = new System.Windows.Forms.Label();
             this.tabBatchJson = new System.Windows.Forms.TabPage();
+            this.batchJson_ScannedCount = new System.Windows.Forms.Label();
+            this.batchJson_SelectPayload = new System.Windows.Forms.Button();
             this.batchJson_Elapsed = new System.Windows.Forms.Label();
             this.batchJson_EndsAt = new System.Windows.Forms.Label();
             this.batchJson_StartsAt = new System.Windows.Forms.Label();
@@ -6913,6 +6915,8 @@
             // 
             // tabBatchJson
             // 
+            this.tabBatchJson.Controls.Add(this.batchJson_ScannedCount);
+            this.tabBatchJson.Controls.Add(this.batchJson_SelectPayload);
             this.tabBatchJson.Controls.Add(this.batchJson_Elapsed);
             this.tabBatchJson.Controls.Add(this.batchJson_EndsAt);
             this.tabBatchJson.Controls.Add(this.batchJson_StartsAt);
@@ -6936,10 +6940,29 @@
             this.tabBatchJson.Text = "Batch Json";
             this.tabBatchJson.UseVisualStyleBackColor = true;
             // 
+            // batchJson_ScannedCount
+            // 
+            this.batchJson_ScannedCount.AutoSize = true;
+            this.batchJson_ScannedCount.Location = new System.Drawing.Point(217, 126);
+            this.batchJson_ScannedCount.Name = "batchJson_ScannedCount";
+            this.batchJson_ScannedCount.Size = new System.Drawing.Size(59, 13);
+            this.batchJson_ScannedCount.TabIndex = 17;
+            this.batchJson_ScannedCount.Text = "Scanned 0";
+            // 
+            // batchJson_SelectPayload
+            // 
+            this.batchJson_SelectPayload.Location = new System.Drawing.Point(91, 121);
+            this.batchJson_SelectPayload.Name = "batchJson_SelectPayload";
+            this.batchJson_SelectPayload.Size = new System.Drawing.Size(120, 23);
+            this.batchJson_SelectPayload.TabIndex = 16;
+            this.batchJson_SelectPayload.Text = "From File(s)";
+            this.batchJson_SelectPayload.UseVisualStyleBackColor = true;
+            this.batchJson_SelectPayload.Click += new System.EventHandler(this.batchJson_SelectPayload_Click);
+            // 
             // batchJson_Elapsed
             // 
             this.batchJson_Elapsed.AutoSize = true;
-            this.batchJson_Elapsed.Location = new System.Drawing.Point(728, 117);
+            this.batchJson_Elapsed.Location = new System.Drawing.Point(728, 79);
             this.batchJson_Elapsed.Name = "batchJson_Elapsed";
             this.batchJson_Elapsed.Size = new System.Drawing.Size(66, 13);
             this.batchJson_Elapsed.TabIndex = 15;
@@ -6948,7 +6971,7 @@
             // batchJson_EndsAt
             // 
             this.batchJson_EndsAt.AutoSize = true;
-            this.batchJson_EndsAt.Location = new System.Drawing.Point(728, 98);
+            this.batchJson_EndsAt.Location = new System.Drawing.Point(728, 117);
             this.batchJson_EndsAt.Name = "batchJson_EndsAt";
             this.batchJson_EndsAt.Size = new System.Drawing.Size(64, 13);
             this.batchJson_EndsAt.TabIndex = 14;
@@ -6957,7 +6980,7 @@
             // batchJson_StartsAt
             // 
             this.batchJson_StartsAt.AutoSize = true;
-            this.batchJson_StartsAt.Location = new System.Drawing.Point(728, 79);
+            this.batchJson_StartsAt.Location = new System.Drawing.Point(728, 98);
             this.batchJson_StartsAt.Name = "batchJson_StartsAt";
             this.batchJson_StartsAt.Size = new System.Drawing.Size(67, 13);
             this.batchJson_StartsAt.TabIndex = 13;
@@ -7057,6 +7080,7 @@
             this.batchJson_PayloadTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.batchJson_PayloadTxt.Size = new System.Drawing.Size(1177, 227);
             this.batchJson_PayloadTxt.TabIndex = 3;
+            this.batchJson_PayloadTxt.TextChanged += new System.EventHandler(this.batchJson_PayloadTxt_TextChanged);
             // 
             // batchJson_StartButton
             // 
@@ -7886,6 +7910,8 @@
         private System.Windows.Forms.Label label247;
         private System.Windows.Forms.TextBox txtLimitedReservationsApiUrl;
         private System.Windows.Forms.Button btnGetLimitedReservations;
+        private System.Windows.Forms.Button batchJson_SelectPayload;
+        private System.Windows.Forms.Label batchJson_ScannedCount;
     }
 }
 
