@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace iPro.SDK.Client.Helpers
 {
-    public class BigJsonHelpers
+    public class BigJsonHelper
     {
         public static void LoadFiles(IEnumerable<string> jsonFiles, Action<JObject> itemAction)
         {
@@ -95,7 +95,7 @@ namespace iPro.SDK.Client.Helpers
         }
     }
 
-    public class BigJsonAsyncHelpers
+    public class BigJsonAsyncHelper
     {
         public static void LoadFilesAsync(IEnumerable<string> jsonFiles, Func<JObject, Task> itemAction)
         {

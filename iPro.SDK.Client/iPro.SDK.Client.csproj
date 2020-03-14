@@ -97,8 +97,9 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\BigJsonHelpers.cs" />
-    <Compile Include="Helpers\RequestHelpers.cs" />
+    <Compile Include="Helpers\BigJsonHelper.cs" />
+    <Compile Include="Helpers\FileLogger.cs" />
+    <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Models\JsonResponse.cs" />
     <Compile Include="Models\ParsedResult.cs" />
     <Compile Include="Program.cs" />

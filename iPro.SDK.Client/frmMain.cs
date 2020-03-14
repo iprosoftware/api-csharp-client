@@ -54,7 +54,7 @@ namespace iPro.SDK.Client
             stopwatch.Start();
             lblTimeCost.Text = @"Waiting for server response...";
 
-            var result = await RequestHelpers.HandleRequestState(func);
+            var result = await RequestHelper.HandleRequestState(func);
             if (result != null)
             {
                 outputTextBox.Text = result.Message;
@@ -113,7 +113,7 @@ namespace iPro.SDK.Client
                     httpRequest.IfModifiedSince = Convert.ToDateTime(txtIfModifiedSince.Text);
                 }
 
-                var result = await RequestHelpers.ParseResponse(httpRequest);
+                var result = await RequestHelper.ParseResponse(httpRequest);
                 return result;
             });
         }
@@ -137,7 +137,7 @@ namespace iPro.SDK.Client
                     postStream.Close();
                 }
 
-                var result = await RequestHelpers.ParseResponse(httpRequest);
+                var result = await RequestHelper.ParseResponse(httpRequest);
                 return result;
             });
         }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace iPro.SDK.Client.Helpers
 {
-    public class RequestHelpers
+    public class RequestHelper
     {
         public static string HandleWebException(WebException ex)
         {
