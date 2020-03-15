@@ -97,15 +97,15 @@ namespace iPro.SDK.Client.Helpers
 
     public class BigJsonAsyncHelper
     {
-        public static void LoadFilesAsync(IEnumerable<string> jsonFiles, Func<JObject, Task> itemAction)
+        public async static Task LoadFilesAsync(IEnumerable<string> jsonFiles, Func<JObject, Task> itemAction)
         {
             foreach (var jsonFile in jsonFiles)
             {
-                LoadFileAsync(jsonFile, itemAction);
+                await LoadFileAsync(jsonFile, itemAction);
             }
         }
 
-        public static void LoadFileAsync(string jsonFile, Func<JObject, Task> itemAction)
+        public async static Task LoadFileAsync(string jsonFile, Func<JObject, Task> itemAction)
         {
             if (!File.Exists(jsonFile))
             {
@@ -114,11 +114,11 @@ namespace iPro.SDK.Client.Helpers
 
             using (var reader = new StreamReader(jsonFile))
             {
-                LoadJsonStreamAsync(reader, itemAction);
+                await LoadJsonStreamAsync(reader, itemAction);
             }
         }
 
-        public static void LoadJsonAsync(string json, Func<JObject, Task> itemAction)
+        public async static Task LoadJsonAsync(string json, Func<JObject, Task> itemAction)
         {
             if (string.IsNullOrEmpty(json))
             {
@@ -127,11 +127,11 @@ namespace iPro.SDK.Client.Helpers
 
             using (var reader = new StringReader(json))
             {
-                LoadJsonStreamAsync(reader, itemAction);
+                await LoadJsonStreamAsync(reader, itemAction);
             }
         }
 
-        private async static void LoadJsonStreamAsync(TextReader textReader, Func<JObject, Task> itemAction)
+        private async static Task LoadJsonStreamAsync(TextReader textReader, Func<JObject, Task> itemAction)
         {
             using (var reader = new JsonTextReader(textReader))
             {

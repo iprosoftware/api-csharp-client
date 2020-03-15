@@ -657,7 +657,7 @@
             this.label227 = new System.Windows.Forms.Label();
             this.tabBatchJson = new System.Windows.Forms.TabPage();
             this.batchJson_ScannedCount = new System.Windows.Forms.Label();
-            this.batchJson_SelectPayload = new System.Windows.Forms.Button();
+            this.batchJson_SelectFiles = new System.Windows.Forms.Button();
             this.batchJson_Elapsed = new System.Windows.Forms.Label();
             this.batchJson_EndsAt = new System.Windows.Forms.Label();
             this.batchJson_StartsAt = new System.Windows.Forms.Label();
@@ -676,6 +676,7 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.batchJson_ClearFiles = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -6915,8 +6916,9 @@
             // 
             // tabBatchJson
             // 
+            this.tabBatchJson.Controls.Add(this.batchJson_ClearFiles);
             this.tabBatchJson.Controls.Add(this.batchJson_ScannedCount);
-            this.tabBatchJson.Controls.Add(this.batchJson_SelectPayload);
+            this.tabBatchJson.Controls.Add(this.batchJson_SelectFiles);
             this.tabBatchJson.Controls.Add(this.batchJson_Elapsed);
             this.tabBatchJson.Controls.Add(this.batchJson_EndsAt);
             this.tabBatchJson.Controls.Add(this.batchJson_StartsAt);
@@ -6943,21 +6945,21 @@
             // batchJson_ScannedCount
             // 
             this.batchJson_ScannedCount.AutoSize = true;
-            this.batchJson_ScannedCount.Location = new System.Drawing.Point(217, 126);
+            this.batchJson_ScannedCount.Location = new System.Drawing.Point(303, 126);
             this.batchJson_ScannedCount.Name = "batchJson_ScannedCount";
             this.batchJson_ScannedCount.Size = new System.Drawing.Size(59, 13);
             this.batchJson_ScannedCount.TabIndex = 17;
             this.batchJson_ScannedCount.Text = "Scanned 0";
             // 
-            // batchJson_SelectPayload
+            // batchJson_SelectFiles
             // 
-            this.batchJson_SelectPayload.Location = new System.Drawing.Point(91, 121);
-            this.batchJson_SelectPayload.Name = "batchJson_SelectPayload";
-            this.batchJson_SelectPayload.Size = new System.Drawing.Size(120, 23);
-            this.batchJson_SelectPayload.TabIndex = 16;
-            this.batchJson_SelectPayload.Text = "From File(s)";
-            this.batchJson_SelectPayload.UseVisualStyleBackColor = true;
-            this.batchJson_SelectPayload.Click += new System.EventHandler(this.batchJson_SelectPayload_Click);
+            this.batchJson_SelectFiles.Location = new System.Drawing.Point(91, 121);
+            this.batchJson_SelectFiles.Name = "batchJson_SelectFiles";
+            this.batchJson_SelectFiles.Size = new System.Drawing.Size(100, 23);
+            this.batchJson_SelectFiles.TabIndex = 16;
+            this.batchJson_SelectFiles.Text = "From File(s)";
+            this.batchJson_SelectFiles.UseVisualStyleBackColor = true;
+            this.batchJson_SelectFiles.Click += new System.EventHandler(this.batchJson_SelectFiles_Click);
             // 
             // batchJson_Elapsed
             // 
@@ -7132,6 +7134,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // batchJson_ClearFiles
+            // 
+            this.batchJson_ClearFiles.Enabled = false;
+            this.batchJson_ClearFiles.Location = new System.Drawing.Point(197, 121);
+            this.batchJson_ClearFiles.Name = "batchJson_ClearFiles";
+            this.batchJson_ClearFiles.Size = new System.Drawing.Size(100, 23);
+            this.batchJson_ClearFiles.TabIndex = 18;
+            this.batchJson_ClearFiles.Text = "Clear File(s)";
+            this.batchJson_ClearFiles.UseVisualStyleBackColor = true;
+            this.batchJson_ClearFiles.Click += new System.EventHandler(this.batchJson_ClearFiles_Click);
             // 
             // frmMain
             // 
@@ -7910,8 +7923,9 @@
         private System.Windows.Forms.Label label247;
         private System.Windows.Forms.TextBox txtLimitedReservationsApiUrl;
         private System.Windows.Forms.Button btnGetLimitedReservations;
-        private System.Windows.Forms.Button batchJson_SelectPayload;
+        private System.Windows.Forms.Button batchJson_SelectFiles;
         private System.Windows.Forms.Label batchJson_ScannedCount;
+        private System.Windows.Forms.Button batchJson_ClearFiles;
     }
 }
 

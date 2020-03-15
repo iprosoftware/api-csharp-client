@@ -13,7 +13,7 @@ namespace iPro.SDK.Client.BatchJsons
         public int ScannedCount { get; set; }
         public Exception ScannedError { get; set; }
 
-        public bool IsRunning { get; set; }
+        public bool IsPushing { get; set; }
         public DateTime? StartsAt { get; set; }
         public DateTime? EndsAt { get; set; }
         public int TotalCount { get; set; }

@@ -61,7 +61,7 @@ namespace iPro.SDK.Client
             var result = await RequestHelper.HandleRequestState(func);
             if (result != null)
             {
-                outputTextBox.Text = result.Message;
+                Invoke(new Action(() => { outputTextBox.Text = result.Message; }));
             }
 
             stopwatch.Stop();
@@ -70,36 +70,23 @@ namespace iPro.SDK.Client
             return result;
         }
 
-        private async void HandleRequestState(Action action)
+        private async Task GetAccessToken()
         {
-            await HandleRequestState(async () =>
-            {
-                action();
-                return null;
-            });
-        }
-
-        private WebServerClient CreateOAuth2Client()
-        {
-            var serverDescription = new AuthorizationServerDescription
-            {
-                TokenEndpoint = new Uri(txtHost.Text + tokenEndpointTextBox.Text)
-            };
-
+            var tokenEndpoint = txtHost.Text.TrimEnd('/') + '/' + tokenEndpointTextBox.Text.TrimStart('/');
+            var serverDescription = new AuthorizationServerDescription { TokenEndpoint = new Uri(tokenEndpoint) };
             var client = new WebServerClient(serverDescription, oauth2ClientIdTextBox.Text, oauth2ClientSecretTextBox.Text);
 
-            return client;
-        }
-
-        private void GetAccessToken()
-        {
-            HandleRequestState(() =>
+            await HandleRequestState(async () =>
             {
-                var client = CreateOAuth2Client();
                 var authState = client.GetClientAccessToken();
-                accessTokenTextBox.Text = authState.AccessToken;
-                tokenExpiryTextBox.Text = authState.AccessTokenExpirationUtc.Value.ToString("O");
-                getResourceButton.Enabled = true;
+
+                Invoke(new Action(() =>
+                {
+                    accessTokenTextBox.Text = authState.AccessToken;
+                    tokenExpiryTextBox.Text = authState.AccessTokenExpirationUtc.Value.ToString("O");
+                }));
+
+                return null;
             });
         }
 
@@ -148,9 +135,9 @@ namespace iPro.SDK.Client
 
         /******************************************************************************************************************************************************/
 
-        protected void exchangeCredentialsButton_Click(object sender, EventArgs e)
+        protected async void exchangeCredentialsButton_Click(object sender, EventArgs e)
         {
-            GetAccessToken();
+            await GetAccessToken();
         }
 
         private async void getResourceButton_Click(object sender, EventArgs e)
@@ -863,29 +850,39 @@ namespace iPro.SDK.Client
             {
                 Invoke(new Action(() =>
                 {
-                    batchJson_Endpoint.Enabled = !state.IsRunning;
-                    batchJson_StartButton.Enabled = !state.IsRunning;
-                    batchJson_SelectPayload.Enabled = !state.IsRunning;
+                    var enableState = !(state.IsPushing || state.IsScanning);
+                    batchJson_Endpoint.Enabled = enableState;
+                    batchJson_StartButton.Enabled = enableState;
+                    batchJson_SelectFiles.Enabled = enableState;
+                    batchJson_ClearFiles.Enabled = enableState && state.HasSelectedFiles;
                     batchJson_LogFileLocationTxt.Text = state.LogFilePath;
 
                     var empty = "------";
-                    var strStartsAt = state.StartsAt.HasValue ? state.StartsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
-                    batchJson_StartsAt.Text = $"Starts at {strStartsAt}";
+                    var startsAtState = state.StartsAt.HasValue ? state.StartsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
+                    batchJson_StartsAt.Text = $"Starts at {startsAtState}";
 
-                    var strEndsAt = state.EndsAt.HasValue ? state.EndsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
-                    batchJson_EndsAt.Text = $"Ends at {strEndsAt}";
+                    var endsAtState = state.EndsAt.HasValue ? state.EndsAt.Value.ToString("yyyy-MM-dd HH:mm:ss") : empty;
+                    batchJson_EndsAt.Text = $"Ends at {endsAtState}";
 
-                    var strElapsed = state.StartsAt.HasValue ? (DateTime.Now - state.StartsAt.Value).ToString() : empty;
-                    batchJson_Elapsed.Text = $"Elapsed {strElapsed}";
+                    if (state.IsPushing)
+                    {
+                        var elapsedState = state.StartsAt.HasValue ? (DateTime.Now - state.StartsAt.Value).ToString() : empty;
+                        batchJson_Elapsed.Text = $"Elapsed {elapsedState}";
+                    }
 
-                    var scanState = state.ScannedError != null ? "failed" : state.ScannedCount.ToString();
-                    batchJson_ScannedCount.Text = state.IsScanning ? "Scanning..." : $"Scanned {scanState}";
+                    var scannedState = state.ScannedError != null ? "failed" : state.ScannedCount.ToString();
+                    batchJson_ScannedCount.Text = state.IsScanning ? "Scanning..." : $"Scanned {scannedState}";
                     batchJson_ScannedCount.ForeColor = (state.IsScanning || state.ScannedError != null) ? Color.Red : SystemColors.ControlText;
 
                     if (state.HasSelectedFiles)
                     {
                         batchJson_PayloadTxt.Text = string.Join(Environment.NewLine, state.SelectedFiles);
                         batchJson_PayloadTxt.Enabled = false;
+                    }
+                    else if (!batchJson_PayloadTxt.Enabled)
+                    {
+                        batchJson_PayloadTxt.Text = string.Empty;
+                        batchJson_PayloadTxt.Enabled = true;
                     }
 
                     batchJson_ProcessBar.Maximum = state.TotalCount;
@@ -919,15 +916,17 @@ namespace iPro.SDK.Client
                 contentType: "application/json");
 
             var logTitle = $"Index: {_batchJsonStore.State.SuccessCount + _batchJsonStore.State.FailedCount}";
-            if (result.Success)
-            { _batchJsonLogger.Info(logTitle, result.Message); }
-            else
-            { _batchJsonLogger.Warn(logTitle, result.Message); }
 
             if (result.Success)
-            { _batchJsonStore.Dispatch(x => x.SuccessCount += 1); }
+            {
+                _batchJsonLogger.Info(logTitle, result.Message);
+                _batchJsonStore.Dispatch(x => x.SuccessCount += 1);
+            }
             else
-            { _batchJsonStore.Dispatch(x => x.FailedCount += 1); }
+            {
+                _batchJsonLogger.Warn(logTitle, result.Message);
+                _batchJsonStore.Dispatch(x => x.FailedCount += 1);
+            }
 
             Thread.Sleep(100);
         }
@@ -960,7 +959,7 @@ namespace iPro.SDK.Client
             {
                 state.LogFilePath = _batchJsonLogger.FilePath;
                 state.ApiEndpoint = endpoint;
-                state.IsRunning = true;
+                state.IsPushing = true;
                 state.StartsAt = DateTime.Now;
                 state.EndsAt = null;
                 state.TotalCount = state.ScannedCount;
@@ -969,17 +968,17 @@ namespace iPro.SDK.Client
             });
 
             // process
-            Task.Run(() =>
+            Task.Run(async () =>
             {
                 try
                 {
                     if (_batchJsonStore.State.HasSelectedFiles)
                     {
-                        BigJsonAsyncHelper.LoadFilesAsync(_batchJsonStore.State.SelectedFiles, batchJsonPush);
+                        await BigJsonAsyncHelper.LoadFilesAsync(_batchJsonStore.State.SelectedFiles, batchJsonPush);
                     }
                     else
                     {
-                        BigJsonAsyncHelper.LoadJsonAsync(payload, batchJsonPush);
+                        await BigJsonAsyncHelper.LoadJsonAsync(payload, batchJsonPush);
                     }
                 }
                 catch (Exception ex)
@@ -991,14 +990,24 @@ namespace iPro.SDK.Client
                 {
                     _batchJsonStore.Dispatch(state =>
                     {
-                        state.IsRunning = false;
+                        state.IsPushing = false;
                         state.EndsAt = DateTime.Now;
                     });
                 }
             });
         }
 
-        private void batchJson_SelectPayload_Click(object sender, EventArgs e)
+        private void batchJson_ClearFiles_Click(object sender, EventArgs e)
+        {
+            _batchJsonStore.Dispatch(state =>
+            {
+                state.SelectedFiles = null;
+                state.ScannedCount = 0;
+                state.ScannedError = null;
+            });
+        }
+
+        private void batchJson_SelectFiles_Click(object sender, EventArgs e)
         {
             using (var dialog = new OpenFileDialog())
             {
@@ -1009,6 +1018,7 @@ namespace iPro.SDK.Client
 
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
+                    var fileNames = dialog.FileNames.ToList();
                     _batchJsonStore.Dispatch(state =>
                     {
                         state.IsScanning = true;
@@ -1020,8 +1030,11 @@ namespace iPro.SDK.Client
                         var scanned = 0;
                         Exception scannedError = null;
 
-                        try { scanned = BigJsonHelper.CountInFiles(dialog.FileNames); }
-                        catch (Exception ex) { scannedError = ex; }
+                        if (fileNames.Any())
+                        {
+                            try { scanned = BigJsonHelper.CountInFiles(fileNames); }
+                            catch (Exception ex) { scannedError = ex; }
+                        }
 
                         _batchJsonStore.Dispatch(state =>
                         {
@@ -1049,8 +1062,11 @@ namespace iPro.SDK.Client
                 var scanned = 0;
                 Exception scannedError = null;
 
-                try { scanned = BigJsonHelper.CountInJson(payload); }
-                catch (Exception ex) { scannedError = ex; }
+                if (!string.IsNullOrEmpty(payload))
+                {
+                    try { scanned = BigJsonHelper.CountInJson(payload); }
+                    catch (Exception ex) { scannedError = ex; }
+                }
 
                 _batchJsonStore.Dispatch(state =>
                 {
