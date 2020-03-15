@@ -4,24 +4,24 @@ using System.Collections.Generic;
 namespace iPro.SDK.Client.BatchJsons
 {
     public class BatchJsonStore<TState>
-        where TState : new()
+        where TState : class
     {
+        private readonly TState _state;
         private readonly List<Action<TState>> _subscribers;
 
-        public BatchJsonStore()
+        public BatchJsonStore(TState state)
         {
+            _state = state;
             _subscribers = new List<Action<TState>>();
         }
 
-        public TState State { get; private set; } = new TState();
-
         public BatchJsonStore<TState> Dispatch(Action<TState> setter)
         {
-            setter.Invoke(State);
+            setter.Invoke(_state);
 
             _subscribers.ForEach((subscriber) =>
             {
-                subscriber(State);
+                subscriber(_state);
             });
 
             return this;

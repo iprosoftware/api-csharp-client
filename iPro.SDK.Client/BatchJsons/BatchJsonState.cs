@@ -8,6 +8,7 @@ namespace iPro.SDK.Client.BatchJsons
     {
         public string LogFilePath { get; set; }
         public string ApiEndpoint { get; set; }
+        public string PayloadText { get; set; }
 
         public bool IsScanning { get; set; }
         public int ScannedCount { get; set; }

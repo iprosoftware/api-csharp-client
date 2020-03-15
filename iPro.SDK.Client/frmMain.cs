@@ -838,15 +838,13 @@ namespace iPro.SDK.Client
         }
 
         #region batch json
-        private FileLogger _batchJsonLogger;
-        private BatchJsonStore<BatchJsonState> _batchJsonStore;
+        private BatchJsonService _batchJsonService;
 
         private void InitBatchJson()
         {
-            _batchJsonLogger = new FileLogger();
-            _batchJsonStore = new BatchJsonStore<BatchJsonState>();
+            _batchJsonService = new BatchJsonService(postContent: PostContent);
 
-            _batchJsonStore.Subscribe((state) =>
+            _batchJsonService.Store.Subscribe((state) =>
             {
                 Invoke(new Action(() =>
                 {
@@ -897,114 +895,30 @@ namespace iPro.SDK.Client
             });
         }
 
-        private void batchJsonShowMessage(string message)
-        {
-            Invoke(new Action(() =>
-            {
-                MessageBox.Show(message);
-            }));
-        }
-
-        private async Task batchJsonPush(JObject item)
-        {
-            var itemJson = JsonConvert.SerializeObject(item);
-            var content = new StringContent(itemJson);
-
-            var result = await PostContent(
-                api: _batchJsonStore.State.ApiEndpoint,
-                buffer: content.ReadAsByteArrayAsync().Result,
-                contentType: "application/json");
-
-            var logTitle = $"Index: {_batchJsonStore.State.SuccessCount + _batchJsonStore.State.FailedCount}";
-
-            if (result.Success)
-            {
-                _batchJsonLogger.Info(logTitle, result.Message);
-                _batchJsonStore.Dispatch(x => x.SuccessCount += 1);
-            }
-            else
-            {
-                _batchJsonLogger.Warn(logTitle, result.Message);
-                _batchJsonStore.Dispatch(x => x.FailedCount += 1);
-            }
-
-            Thread.Sleep(100);
-        }
-
         private void batchJson_StartButton_Click(object sender, EventArgs e)
         {
-            // validate
-            var endpoint = batchJson_Endpoint.Text;
-            if (string.IsNullOrWhiteSpace(endpoint))
+            try
             {
-                batchJsonShowMessage($"{nameof(endpoint)} is required");
-                return;
-            }
-
-            var payload = batchJson_PayloadTxt.Text;
-            if (string.IsNullOrWhiteSpace(payload))
-            {
-                batchJsonShowMessage($"{nameof(payload)} is required");
-                return;
-            }
-
-            if (_batchJsonStore.State.ScannedError != null)
-            {
-                batchJsonShowMessage("Scanned Failed");
-                return;
-            }
-
-            // start state
-            _batchJsonStore.Dispatch(state =>
-            {
-                state.LogFilePath = _batchJsonLogger.FilePath;
-                state.ApiEndpoint = endpoint;
-                state.IsPushing = true;
-                state.StartsAt = DateTime.Now;
-                state.EndsAt = null;
-                state.TotalCount = state.ScannedCount;
-                state.SuccessCount = 0;
-                state.FailedCount = 0;
-            });
-
-            // process
-            Task.Run(async () =>
-            {
-                try
-                {
-                    if (_batchJsonStore.State.HasSelectedFiles)
+                var endpoint = batchJson_Endpoint.Text;
+                _batchJsonService
+                    .Start(endpoint)
+                    .ContinueWith((t) =>
                     {
-                        await BigJsonAsyncHelper.LoadFilesAsync(_batchJsonStore.State.SelectedFiles, batchJsonPush);
-                    }
-                    else
-                    {
-                        await BigJsonAsyncHelper.LoadJsonAsync(payload, batchJsonPush);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _batchJsonLogger.Error("Process Failed", ex.ToString());
-                    batchJsonShowMessage(ex.ToString());
-                }
-                finally
-                {
-                    _batchJsonStore.Dispatch(state =>
-                    {
-                        state.IsPushing = false;
-                        state.EndsAt = DateTime.Now;
+                        if (t.Exception != null)
+                        {
+                            MessageBox.Show(t.Exception.Message);
+                        }
                     });
-                }
-            });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void batchJson_ClearFiles_Click(object sender, EventArgs e)
         {
-            _batchJsonStore.Dispatch(state =>
-            {
-                state.SelectedFiles = null;
-                state.ScannedCount = 0;
-                state.ScannedError = null;
-            });
+            _batchJsonService.ClearFiles();
         }
 
         private void batchJson_SelectFiles_Click(object sender, EventArgs e)
@@ -1018,63 +932,15 @@ namespace iPro.SDK.Client
 
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    var fileNames = dialog.FileNames.ToList();
-                    _batchJsonStore.Dispatch(state =>
-                    {
-                        state.IsScanning = true;
-                        state.SelectedFiles = dialog.FileNames;
-                    });
-
-                    Task.Run(() =>
-                    {
-                        var scanned = 0;
-                        Exception scannedError = null;
-
-                        if (fileNames.Any())
-                        {
-                            try { scanned = BigJsonHelper.CountInFiles(fileNames); }
-                            catch (Exception ex) { scannedError = ex; }
-                        }
-
-                        _batchJsonStore.Dispatch(state =>
-                        {
-                            state.IsScanning = false;
-                            state.ScannedCount = scanned;
-                            state.ScannedError = scannedError;
-                        });
-                    });
+                    _batchJsonService.SelectFiles(dialog.FileNames);
                 }
             }
         }
 
         private void batchJson_PayloadTxt_TextChanged(object sender, EventArgs e)
         {
-            if (_batchJsonStore.State.HasSelectedFiles)
-            {
-                return;
-            }
-
             var payload = batchJson_PayloadTxt.Text;
-            _batchJsonStore.Dispatch(state => state.IsScanning = true);
-
-            Task.Run(() =>
-            {
-                var scanned = 0;
-                Exception scannedError = null;
-
-                if (!string.IsNullOrEmpty(payload))
-                {
-                    try { scanned = BigJsonHelper.CountInJson(payload); }
-                    catch (Exception ex) { scannedError = ex; }
-                }
-
-                _batchJsonStore.Dispatch(state =>
-                {
-                    state.IsScanning = false;
-                    state.ScannedCount = scanned;
-                    state.ScannedError = scannedError;
-                });
-            });
+            _batchJsonService.SetPayload(payload);
         }
 
         #endregion

@@ -91,6 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchJsons\BatchJsonService.cs" />
     <Compile Include="BatchJsons\BatchJsonState.cs" />
     <Compile Include="BatchJsons\BatchJsonStore.cs" />
     <Compile Include="frmMain.cs">
