@@ -635,6 +635,7 @@ namespace iPro.SDK.Client
             var obj = new
             {
                 Id = pushProperty_Id.Text.ConvertToNullable<int>(),
+                ExternalId = pushProperty_ExternalId.Text,
                 OwnerCompanyId = pushProperty_OwnerCompanyId.Text.ConvertToNullable<int>(),
                 OwnerCompany = ownerCompany,
                 Name = pushProperty_Name.Text,

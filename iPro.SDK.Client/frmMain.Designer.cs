@@ -174,6 +174,8 @@
             this.btnPushProperty_Post = new System.Windows.Forms.Button();
             this.txtPushPropertyUrl = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.pushProperty_ExternalId = new System.Windows.Forms.TextBox();
+            this.label248 = new System.Windows.Forms.Label();
             this.pushProperty_BrandId = new System.Windows.Forms.TextBox();
             this.label242 = new System.Windows.Forms.Label();
             this.label235 = new System.Windows.Forms.Label();
@@ -656,6 +658,7 @@
             this.textGuestNotes = new System.Windows.Forms.RichTextBox();
             this.label227 = new System.Windows.Forms.Label();
             this.tabBatchJson = new System.Windows.Forms.TabPage();
+            this.batchJson_ClearFiles = new System.Windows.Forms.Button();
             this.batchJson_ScannedCount = new System.Windows.Forms.Label();
             this.batchJson_SelectFiles = new System.Windows.Forms.Button();
             this.batchJson_Elapsed = new System.Windows.Forms.Label();
@@ -676,7 +679,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.batchJson_ClearFiles = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -2230,6 +2232,8 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.pushProperty_ExternalId);
+            this.groupBox10.Controls.Add(this.label248);
             this.groupBox10.Controls.Add(this.pushProperty_BrandId);
             this.groupBox10.Controls.Add(this.label242);
             this.groupBox10.Controls.Add(this.label235);
@@ -2268,6 +2272,23 @@
             this.groupBox10.TabIndex = 70;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Info";
+            // 
+            // pushProperty_ExternalId
+            // 
+            this.pushProperty_ExternalId.Location = new System.Drawing.Point(60, 41);
+            this.pushProperty_ExternalId.Name = "pushProperty_ExternalId";
+            this.pushProperty_ExternalId.Size = new System.Drawing.Size(89, 20);
+            this.pushProperty_ExternalId.TabIndex = 86;
+            this.pushProperty_ExternalId.Text = "80A46EF9";
+            // 
+            // label248
+            // 
+            this.label248.AutoSize = true;
+            this.label248.Location = new System.Drawing.Point(2, 44);
+            this.label248.Name = "label248";
+            this.label248.Size = new System.Drawing.Size(54, 13);
+            this.label248.TabIndex = 85;
+            this.label248.Text = "ExternalId";
             // 
             // pushProperty_BrandId
             // 
@@ -2411,7 +2432,7 @@
             // 
             this.pushProperty_Location.Location = new System.Drawing.Point(60, 15);
             this.pushProperty_Location.Name = "pushProperty_Location";
-            this.pushProperty_Location.Size = new System.Drawing.Size(385, 20);
+            this.pushProperty_Location.Size = new System.Drawing.Size(157, 20);
             this.pushProperty_Location.TabIndex = 1;
             this.pushProperty_Location.Text = "Tenerife, Costa Adeje";
             // 
@@ -2459,11 +2480,11 @@
             // label161
             // 
             this.label161.AutoSize = true;
-            this.label161.Location = new System.Drawing.Point(121, 45);
+            this.label161.Location = new System.Drawing.Point(155, 44);
             this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(96, 13);
+            this.label161.Size = new System.Drawing.Size(63, 13);
             this.label161.TabIndex = 62;
-            this.label161.Text = "PropertyReference";
+            this.label161.Text = "PropertyRef";
             // 
             // pushProperty_Title
             // 
@@ -2518,7 +2539,7 @@
             // 
             // pushProperty_Id
             // 
-            this.pushProperty_Id.Location = new System.Drawing.Point(47, 41);
+            this.pushProperty_Id.Location = new System.Drawing.Point(251, 15);
             this.pushProperty_Id.Name = "pushProperty_Id";
             this.pushProperty_Id.Size = new System.Drawing.Size(59, 20);
             this.pushProperty_Id.TabIndex = 55;
@@ -2527,7 +2548,7 @@
             // lblPushProperty_Id
             // 
             this.lblPushProperty_Id.AutoSize = true;
-            this.lblPushProperty_Id.Location = new System.Drawing.Point(25, 44);
+            this.lblPushProperty_Id.Location = new System.Drawing.Point(229, 18);
             this.lblPushProperty_Id.Name = "lblPushProperty_Id";
             this.lblPushProperty_Id.Size = new System.Drawing.Size(16, 13);
             this.lblPushProperty_Id.TabIndex = 54;
@@ -6942,6 +6963,17 @@
             this.tabBatchJson.Text = "Batch Json";
             this.tabBatchJson.UseVisualStyleBackColor = true;
             // 
+            // batchJson_ClearFiles
+            // 
+            this.batchJson_ClearFiles.Enabled = false;
+            this.batchJson_ClearFiles.Location = new System.Drawing.Point(197, 121);
+            this.batchJson_ClearFiles.Name = "batchJson_ClearFiles";
+            this.batchJson_ClearFiles.Size = new System.Drawing.Size(100, 23);
+            this.batchJson_ClearFiles.TabIndex = 18;
+            this.batchJson_ClearFiles.Text = "Clear File(s)";
+            this.batchJson_ClearFiles.UseVisualStyleBackColor = true;
+            this.batchJson_ClearFiles.Click += new System.EventHandler(this.batchJson_ClearFiles_Click);
+            // 
             // batchJson_ScannedCount
             // 
             this.batchJson_ScannedCount.AutoSize = true;
@@ -7135,17 +7167,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // batchJson_ClearFiles
-            // 
-            this.batchJson_ClearFiles.Enabled = false;
-            this.batchJson_ClearFiles.Location = new System.Drawing.Point(197, 121);
-            this.batchJson_ClearFiles.Name = "batchJson_ClearFiles";
-            this.batchJson_ClearFiles.Size = new System.Drawing.Size(100, 23);
-            this.batchJson_ClearFiles.TabIndex = 18;
-            this.batchJson_ClearFiles.Text = "Clear File(s)";
-            this.batchJson_ClearFiles.UseVisualStyleBackColor = true;
-            this.batchJson_ClearFiles.Click += new System.EventHandler(this.batchJson_ClearFiles_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7163,7 +7184,7 @@
             this.Controls.Add(this.accessTokenTextBox);
             this.Controls.Add(this.accessTokenLabel);
             this.Name = "frmMain";
-            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.4.2";
+            this.Text = "iPro : Client Credentials Grant Flow - Demo Client - v1.4.3";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -7926,6 +7947,8 @@
         private System.Windows.Forms.Button batchJson_SelectFiles;
         private System.Windows.Forms.Label batchJson_ScannedCount;
         private System.Windows.Forms.Button batchJson_ClearFiles;
+        private System.Windows.Forms.TextBox pushProperty_ExternalId;
+        private System.Windows.Forms.Label label248;
     }
 }
 
