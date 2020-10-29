@@ -950,5 +950,10 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtLimitedReservationsApiUrl.Text);
         }
+
+        private void btnPropertyBlockouts_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtPropertyBlockouts.Text);
+        }
     }
 }

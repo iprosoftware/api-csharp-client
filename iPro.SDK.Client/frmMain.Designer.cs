@@ -679,6 +679,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label249 = new System.Windows.Forms.Label();
+            this.txtPropertyBlockouts = new System.Windows.Forms.TextBox();
+            this.btnPropertyBlockouts = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -990,6 +993,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnPropertyBlockouts);
+            this.groupBox2.Controls.Add(this.txtPropertyBlockouts);
+            this.groupBox2.Controls.Add(this.label249);
             this.groupBox2.Controls.Add(this.btnPropertiesLastUpdated);
             this.groupBox2.Controls.Add(this.txtPropertiesLastUpdated);
             this.groupBox2.Controls.Add(this.label157);
@@ -7167,6 +7173,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // label249
+            // 
+            this.label249.AutoSize = true;
+            this.label249.Location = new System.Drawing.Point(630, 345);
+            this.label249.Name = "label249";
+            this.label249.Size = new System.Drawing.Size(89, 13);
+            this.label249.TabIndex = 87;
+            this.label249.Text = "property blockout";
+            // 
+            // txtPropertyBlockouts
+            // 
+            this.txtPropertyBlockouts.Location = new System.Drawing.Point(748, 343);
+            this.txtPropertyBlockouts.Name = "txtPropertyBlockouts";
+            this.txtPropertyBlockouts.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyBlockouts.TabIndex = 88;
+            this.txtPropertyBlockouts.Text = "/apis/property/8849/blockouts?checkin=2020-10-29&checkout=2020-12-31";
+            // 
+            // btnPropertyBlockouts
+            // 
+            this.btnPropertyBlockouts.Location = new System.Drawing.Point(1089, 342);
+            this.btnPropertyBlockouts.Name = "btnPropertyBlockouts";
+            this.btnPropertyBlockouts.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertyBlockouts.TabIndex = 89;
+            this.btnPropertyBlockouts.Text = "GET";
+            this.btnPropertyBlockouts.UseVisualStyleBackColor = true;
+            this.btnPropertyBlockouts.Click += new System.EventHandler(this.btnPropertyBlockouts_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7949,6 +7982,9 @@
         private System.Windows.Forms.Button batchJson_ClearFiles;
         private System.Windows.Forms.TextBox pushProperty_ExternalId;
         private System.Windows.Forms.Label label248;
+        private System.Windows.Forms.Button btnPropertyBlockouts;
+        private System.Windows.Forms.TextBox txtPropertyBlockouts;
+        private System.Windows.Forms.Label label249;
     }
 }
 
