@@ -955,5 +955,17 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtPropertyBlockouts.Text);
         }
+
+        private async void btnAuthContactPost_Click(object sender, EventArgs e)
+        {
+            var data = new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("Email", txtEmailAuthContact.Text),
+                new KeyValuePair<string, string>("Password", txtPasswordAuthContact.Text)
+            };
+                
+            var formContent = new FormUrlEncodedContent(data);
+            await PostContent(txtApiUrlAuthContact.Text, formContent.ReadAsByteArrayAsync().Result);
+        }
     }
 }

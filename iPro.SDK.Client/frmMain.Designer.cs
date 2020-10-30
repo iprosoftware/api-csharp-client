@@ -52,6 +52,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPropertyBlockouts = new System.Windows.Forms.Button();
+            this.txtPropertyBlockouts = new System.Windows.Forms.TextBox();
+            this.label249 = new System.Windows.Forms.Label();
             this.btnPropertiesLastUpdated = new System.Windows.Forms.Button();
             this.txtPropertiesLastUpdated = new System.Windows.Forms.TextBox();
             this.label157 = new System.Windows.Forms.Label();
@@ -679,9 +682,11 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label249 = new System.Windows.Forms.Label();
-            this.txtPropertyBlockouts = new System.Windows.Forms.TextBox();
-            this.btnPropertyBlockouts = new System.Windows.Forms.Button();
+            this.label250 = new System.Windows.Forms.Label();
+            this.txtEmailAuthContact = new System.Windows.Forms.TextBox();
+            this.txtPasswordAuthContact = new System.Windows.Forms.TextBox();
+            this.btnAuthContactPost = new System.Windows.Forms.Button();
+            this.txtApiUrlAuthContact = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1071,6 +1076,33 @@
             this.groupBox2.Size = new System.Drawing.Size(1177, 371);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
+            // 
+            // btnPropertyBlockouts
+            // 
+            this.btnPropertyBlockouts.Location = new System.Drawing.Point(1089, 342);
+            this.btnPropertyBlockouts.Name = "btnPropertyBlockouts";
+            this.btnPropertyBlockouts.Size = new System.Drawing.Size(54, 23);
+            this.btnPropertyBlockouts.TabIndex = 89;
+            this.btnPropertyBlockouts.Text = "GET";
+            this.btnPropertyBlockouts.UseVisualStyleBackColor = true;
+            this.btnPropertyBlockouts.Click += new System.EventHandler(this.btnPropertyBlockouts_Click);
+            // 
+            // txtPropertyBlockouts
+            // 
+            this.txtPropertyBlockouts.Location = new System.Drawing.Point(748, 343);
+            this.txtPropertyBlockouts.Name = "txtPropertyBlockouts";
+            this.txtPropertyBlockouts.Size = new System.Drawing.Size(335, 20);
+            this.txtPropertyBlockouts.TabIndex = 88;
+            this.txtPropertyBlockouts.Text = "/apis/property/8849/blockouts?checkin=2020-10-29&checkout=2020-12-31";
+            // 
+            // label249
+            // 
+            this.label249.AutoSize = true;
+            this.label249.Location = new System.Drawing.Point(630, 345);
+            this.label249.Name = "label249";
+            this.label249.Size = new System.Drawing.Size(89, 13);
+            this.label249.TabIndex = 87;
+            this.label249.Text = "property blockout";
             // 
             // btnPropertiesLastUpdated
             // 
@@ -6045,6 +6077,11 @@
             // 
             // tabContacts
             // 
+            this.tabContacts.Controls.Add(this.txtApiUrlAuthContact);
+            this.tabContacts.Controls.Add(this.btnAuthContactPost);
+            this.tabContacts.Controls.Add(this.txtPasswordAuthContact);
+            this.tabContacts.Controls.Add(this.txtEmailAuthContact);
+            this.tabContacts.Controls.Add(this.label250);
             this.tabContacts.Controls.Add(this.txtContactBrandId);
             this.tabContacts.Controls.Add(this.label234);
             this.tabContacts.Controls.Add(this.btnGetContact);
@@ -7173,32 +7210,48 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label249
+            // label250
             // 
-            this.label249.AutoSize = true;
-            this.label249.Location = new System.Drawing.Point(630, 345);
-            this.label249.Name = "label249";
-            this.label249.Size = new System.Drawing.Size(89, 13);
-            this.label249.TabIndex = 87;
-            this.label249.Text = "property blockout";
+            this.label250.AutoSize = true;
+            this.label250.Location = new System.Drawing.Point(20, 311);
+            this.label250.Name = "label250";
+            this.label250.Size = new System.Drawing.Size(107, 13);
+            this.label250.TabIndex = 107;
+            this.label250.Text = "Authenticate Contact";
             // 
-            // txtPropertyBlockouts
+            // txtEmailAuthContact
             // 
-            this.txtPropertyBlockouts.Location = new System.Drawing.Point(748, 343);
-            this.txtPropertyBlockouts.Name = "txtPropertyBlockouts";
-            this.txtPropertyBlockouts.Size = new System.Drawing.Size(335, 20);
-            this.txtPropertyBlockouts.TabIndex = 88;
-            this.txtPropertyBlockouts.Text = "/apis/property/8849/blockouts?checkin=2020-10-29&checkout=2020-12-31";
+            this.txtEmailAuthContact.Location = new System.Drawing.Point(149, 308);
+            this.txtEmailAuthContact.Name = "txtEmailAuthContact";
+            this.txtEmailAuthContact.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailAuthContact.TabIndex = 108;
+            this.txtEmailAuthContact.Text = "Email";
             // 
-            // btnPropertyBlockouts
+            // txtPasswordAuthContact
             // 
-            this.btnPropertyBlockouts.Location = new System.Drawing.Point(1089, 342);
-            this.btnPropertyBlockouts.Name = "btnPropertyBlockouts";
-            this.btnPropertyBlockouts.Size = new System.Drawing.Size(54, 23);
-            this.btnPropertyBlockouts.TabIndex = 89;
-            this.btnPropertyBlockouts.Text = "GET";
-            this.btnPropertyBlockouts.UseVisualStyleBackColor = true;
-            this.btnPropertyBlockouts.Click += new System.EventHandler(this.btnPropertyBlockouts_Click);
+            this.txtPasswordAuthContact.Location = new System.Drawing.Point(267, 308);
+            this.txtPasswordAuthContact.Name = "txtPasswordAuthContact";
+            this.txtPasswordAuthContact.Size = new System.Drawing.Size(100, 20);
+            this.txtPasswordAuthContact.TabIndex = 109;
+            this.txtPasswordAuthContact.Text = "Password";
+            // 
+            // btnAuthContactPost
+            // 
+            this.btnAuthContactPost.Location = new System.Drawing.Point(570, 307);
+            this.btnAuthContactPost.Name = "btnAuthContactPost";
+            this.btnAuthContactPost.Size = new System.Drawing.Size(75, 23);
+            this.btnAuthContactPost.TabIndex = 110;
+            this.btnAuthContactPost.Text = "GET";
+            this.btnAuthContactPost.UseVisualStyleBackColor = true;
+            this.btnAuthContactPost.Click += new System.EventHandler(this.btnAuthContactPost_Click);
+            // 
+            // txtApiUrlAuthContact
+            // 
+            this.txtApiUrlAuthContact.Location = new System.Drawing.Point(380, 308);
+            this.txtApiUrlAuthContact.Name = "txtApiUrlAuthContact";
+            this.txtApiUrlAuthContact.Size = new System.Drawing.Size(176, 20);
+            this.txtApiUrlAuthContact.TabIndex = 111;
+            this.txtApiUrlAuthContact.Text = "/apis/contact/authenticate";
             // 
             // frmMain
             // 
@@ -7985,6 +8038,11 @@
         private System.Windows.Forms.Button btnPropertyBlockouts;
         private System.Windows.Forms.TextBox txtPropertyBlockouts;
         private System.Windows.Forms.Label label249;
+        private System.Windows.Forms.TextBox txtApiUrlAuthContact;
+        private System.Windows.Forms.Button btnAuthContactPost;
+        private System.Windows.Forms.TextBox txtPasswordAuthContact;
+        private System.Windows.Forms.TextBox txtEmailAuthContact;
+        private System.Windows.Forms.Label label250;
     }
 }
 
