@@ -571,6 +571,11 @@
             this.txtPropertyCalcCheckOut = new System.Windows.Forms.TextBox();
             this.txtPropertyCalcPropertyId = new System.Windows.Forms.TextBox();
             this.tabContacts = new System.Windows.Forms.TabPage();
+            this.txtApiUrlAuthContact = new System.Windows.Forms.TextBox();
+            this.btnAuthContactPost = new System.Windows.Forms.Button();
+            this.txtPasswordAuthContact = new System.Windows.Forms.TextBox();
+            this.txtEmailAuthContact = new System.Windows.Forms.TextBox();
+            this.label250 = new System.Windows.Forms.Label();
             this.txtContactBrandId = new System.Windows.Forms.TextBox();
             this.label234 = new System.Windows.Forms.Label();
             this.btnGetContact = new System.Windows.Forms.Button();
@@ -682,11 +687,10 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label250 = new System.Windows.Forms.Label();
-            this.txtEmailAuthContact = new System.Windows.Forms.TextBox();
-            this.txtPasswordAuthContact = new System.Windows.Forms.TextBox();
-            this.btnAuthContactPost = new System.Windows.Forms.Button();
-            this.txtApiUrlAuthContact = new System.Windows.Forms.TextBox();
+            this.label251 = new System.Windows.Forms.Label();
+            this.lblRemoveBookingTag = new System.Windows.Forms.Label();
+            this.txtAddBookingTag = new System.Windows.Forms.TextBox();
+            this.txtRemoveBookingTag = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -5468,6 +5472,10 @@
             // 
             // tabPayments
             // 
+            this.tabPayments.Controls.Add(this.txtRemoveBookingTag);
+            this.tabPayments.Controls.Add(this.txtAddBookingTag);
+            this.tabPayments.Controls.Add(this.lblRemoveBookingTag);
+            this.tabPayments.Controls.Add(this.label251);
             this.tabPayments.Controls.Add(this.txtBalanceDueDate);
             this.tabPayments.Controls.Add(this.label153);
             this.tabPayments.Controls.Add(this.txtPaymentPropertyId);
@@ -6152,6 +6160,49 @@
             this.tabContacts.TabIndex = 8;
             this.tabContacts.Text = "Contacts";
             this.tabContacts.UseVisualStyleBackColor = true;
+            // 
+            // txtApiUrlAuthContact
+            // 
+            this.txtApiUrlAuthContact.Location = new System.Drawing.Point(380, 308);
+            this.txtApiUrlAuthContact.Name = "txtApiUrlAuthContact";
+            this.txtApiUrlAuthContact.Size = new System.Drawing.Size(176, 20);
+            this.txtApiUrlAuthContact.TabIndex = 111;
+            this.txtApiUrlAuthContact.Text = "/apis/contact/authenticate";
+            // 
+            // btnAuthContactPost
+            // 
+            this.btnAuthContactPost.Location = new System.Drawing.Point(570, 307);
+            this.btnAuthContactPost.Name = "btnAuthContactPost";
+            this.btnAuthContactPost.Size = new System.Drawing.Size(75, 23);
+            this.btnAuthContactPost.TabIndex = 110;
+            this.btnAuthContactPost.Text = "GET";
+            this.btnAuthContactPost.UseVisualStyleBackColor = true;
+            this.btnAuthContactPost.Click += new System.EventHandler(this.btnAuthContactPost_Click);
+            // 
+            // txtPasswordAuthContact
+            // 
+            this.txtPasswordAuthContact.Location = new System.Drawing.Point(267, 308);
+            this.txtPasswordAuthContact.Name = "txtPasswordAuthContact";
+            this.txtPasswordAuthContact.Size = new System.Drawing.Size(100, 20);
+            this.txtPasswordAuthContact.TabIndex = 109;
+            this.txtPasswordAuthContact.Text = "Password";
+            // 
+            // txtEmailAuthContact
+            // 
+            this.txtEmailAuthContact.Location = new System.Drawing.Point(149, 308);
+            this.txtEmailAuthContact.Name = "txtEmailAuthContact";
+            this.txtEmailAuthContact.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailAuthContact.TabIndex = 108;
+            this.txtEmailAuthContact.Text = "Email";
+            // 
+            // label250
+            // 
+            this.label250.AutoSize = true;
+            this.label250.Location = new System.Drawing.Point(20, 311);
+            this.label250.Name = "label250";
+            this.label250.Size = new System.Drawing.Size(107, 13);
+            this.label250.TabIndex = 107;
+            this.label250.Text = "Authenticate Contact";
             // 
             // txtContactBrandId
             // 
@@ -7210,48 +7261,40 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label250
+            // label251
             // 
-            this.label250.AutoSize = true;
-            this.label250.Location = new System.Drawing.Point(20, 311);
-            this.label250.Name = "label250";
-            this.label250.Size = new System.Drawing.Size(107, 13);
-            this.label250.TabIndex = 107;
-            this.label250.Text = "Authenticate Contact";
+            this.label251.AutoSize = true;
+            this.label251.Location = new System.Drawing.Point(769, 20);
+            this.label251.Name = "label251";
+            this.label251.Size = new System.Drawing.Size(84, 13);
+            this.label251.TabIndex = 70;
+            this.label251.Text = "AddBookingTag";
+            this.label251.Click += new System.EventHandler(this.label251_Click);
             // 
-            // txtEmailAuthContact
+            // lblRemoveBookingTag
             // 
-            this.txtEmailAuthContact.Location = new System.Drawing.Point(149, 308);
-            this.txtEmailAuthContact.Name = "txtEmailAuthContact";
-            this.txtEmailAuthContact.Size = new System.Drawing.Size(100, 20);
-            this.txtEmailAuthContact.TabIndex = 108;
-            this.txtEmailAuthContact.Text = "Email";
+            this.lblRemoveBookingTag.AutoSize = true;
+            this.lblRemoveBookingTag.Location = new System.Drawing.Point(769, 59);
+            this.lblRemoveBookingTag.Name = "lblRemoveBookingTag";
+            this.lblRemoveBookingTag.Size = new System.Drawing.Size(105, 13);
+            this.lblRemoveBookingTag.TabIndex = 71;
+            this.lblRemoveBookingTag.Text = "RemoveBookingTag";
             // 
-            // txtPasswordAuthContact
+            // txtAddBookingTag
             // 
-            this.txtPasswordAuthContact.Location = new System.Drawing.Point(267, 308);
-            this.txtPasswordAuthContact.Name = "txtPasswordAuthContact";
-            this.txtPasswordAuthContact.Size = new System.Drawing.Size(100, 20);
-            this.txtPasswordAuthContact.TabIndex = 109;
-            this.txtPasswordAuthContact.Text = "Password";
+            this.txtAddBookingTag.Location = new System.Drawing.Point(880, 18);
+            this.txtAddBookingTag.Name = "txtAddBookingTag";
+            this.txtAddBookingTag.Size = new System.Drawing.Size(100, 20);
+            this.txtAddBookingTag.TabIndex = 72;
+            this.txtAddBookingTag.Text = "1,2";
             // 
-            // btnAuthContactPost
+            // txtRemoveBookingTag
             // 
-            this.btnAuthContactPost.Location = new System.Drawing.Point(570, 307);
-            this.btnAuthContactPost.Name = "btnAuthContactPost";
-            this.btnAuthContactPost.Size = new System.Drawing.Size(75, 23);
-            this.btnAuthContactPost.TabIndex = 110;
-            this.btnAuthContactPost.Text = "GET";
-            this.btnAuthContactPost.UseVisualStyleBackColor = true;
-            this.btnAuthContactPost.Click += new System.EventHandler(this.btnAuthContactPost_Click);
-            // 
-            // txtApiUrlAuthContact
-            // 
-            this.txtApiUrlAuthContact.Location = new System.Drawing.Point(380, 308);
-            this.txtApiUrlAuthContact.Name = "txtApiUrlAuthContact";
-            this.txtApiUrlAuthContact.Size = new System.Drawing.Size(176, 20);
-            this.txtApiUrlAuthContact.TabIndex = 111;
-            this.txtApiUrlAuthContact.Text = "/apis/contact/authenticate";
+            this.txtRemoveBookingTag.Location = new System.Drawing.Point(880, 57);
+            this.txtRemoveBookingTag.Name = "txtRemoveBookingTag";
+            this.txtRemoveBookingTag.Size = new System.Drawing.Size(100, 20);
+            this.txtRemoveBookingTag.TabIndex = 73;
+            this.txtRemoveBookingTag.Text = "12,20";
             // 
             // frmMain
             // 
@@ -8043,6 +8086,10 @@
         private System.Windows.Forms.TextBox txtPasswordAuthContact;
         private System.Windows.Forms.TextBox txtEmailAuthContact;
         private System.Windows.Forms.Label label250;
+        private System.Windows.Forms.TextBox txtRemoveBookingTag;
+        private System.Windows.Forms.TextBox txtAddBookingTag;
+        private System.Windows.Forms.Label lblRemoveBookingTag;
+        private System.Windows.Forms.Label label251;
     }
 }
 

@@ -391,6 +391,8 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Status",txtStatus.Text),
                 new KeyValuePair<string, string>("PropertyId",txtPaymentPropertyId.Text),
                 new KeyValuePair<string, string>("BalanceDueDate",txtBalanceDueDate.Text),
+                new KeyValuePair<string, string>("AddBookingTag",txtAddBookingTag.Text),
+                new KeyValuePair<string, string>("RemoveBookingTag",txtRemoveBookingTag.Text),
             });
 
             PostContent(txtPaymentApi.Text, formContent.ReadAsByteArrayAsync().Result);
@@ -966,6 +968,11 @@ namespace iPro.SDK.Client
                 
             var formContent = new FormUrlEncodedContent(data);
             await PostContent(txtApiUrlAuthContact.Text, formContent.ReadAsByteArrayAsync().Result);
+        }
+
+        private void label251_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
