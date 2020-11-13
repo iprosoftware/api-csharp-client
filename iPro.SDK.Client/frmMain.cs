@@ -215,25 +215,21 @@ namespace iPro.SDK.Client
             var values = new List<KeyValuePair<string, string>>
             {
                 new KeyValuePair<string, string>("BrandId", txtBookingBrandId.Text),
-
                 new KeyValuePair<string, string>("BookingTagIds", txtBookingTagIds.Text),
                 new KeyValuePair<string, string>("EnquiryId", txtBookingEnquiryId.Text),
                 new KeyValuePair<string, string>("Source", txtBookingSource.Text),
                 new KeyValuePair<string, string>("SendEmail", cbBookingSendEmail.Checked.ToString()),
-
                 new KeyValuePair<string, string>("PaidAmount", txtPaidAmount.Text),
                 new KeyValuePair<string, string>("PaymentMethod", txtBookingPaymentMethod.Text),
                 new KeyValuePair<string, string>("PaymentToken", txtBookingPaymentToken.Text),
                 new KeyValuePair<string, string>("CardPartialNumbers", txtBookingCardPartialNumbers.Text),
                 new KeyValuePair<string, string>("CardType", txtCreateBookingCardType.Text),
-
                 new KeyValuePair<string, string>("IsDeferredPayment", chkBookingIsDeferredPayment.Checked.ToString()),
                 new KeyValuePair<string, string>("SagepaySecurityKey", txtBookingSagepaySecurityKey.Text),
                 new KeyValuePair<string, string>("SagepayVendorTxCode", txtBookingSagepayVendorTxCode.Text),
                 new KeyValuePair<string, string>("SagepayVPSTxId", txtBookingSagepayVPSTxId.Text),
                 new KeyValuePair<string, string>("SagepayTxAuthNo", txtBookingSagepayTxAuthNo.Text),
                 new KeyValuePair<string, string>("ReturnUrl", txtReturnUrl.Text),
-
                 new KeyValuePair<string, string>("Contact.ContactId", txtBookingContactId.Text),
                 new KeyValuePair<string, string>("Contact.Title", txtBookingContactTitle.Text),
                 new KeyValuePair<string, string>("Contact.FirstName", txtBookingContactFirstName.Text),
@@ -249,8 +245,9 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Contact.Postcode", txtBookingContactPostcode.Text),
                 new KeyValuePair<string, string>("Contact.Country", txtBookingContactCountry.Text),
                 new KeyValuePair<string, string>("Contact.Source", txtBookingContactSource.Text),
-
                 new KeyValuePair<string, string>("InternalNotes", InternalNotes.Text),
+                new KeyValuePair<string, string>("OwnerBooking", txtOwnerBooking.Text),
+                new KeyValuePair<string, string>("GuestNotes", txtGuestNotes.Text)
             };
 
             values.AddRange(GetBookingProperties());
@@ -303,7 +300,7 @@ namespace iPro.SDK.Client
 
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Id", txtBookingProperty1Extra2Id.Text),
                 new KeyValuePair<string, string>("Properties[0].Extras[1].Qty", txtBookingProperty1Extra2Qty.Text),
-                new KeyValuePair<string, string>("Properties[0].GuestNotes", GuestNotes.Text),
+                new KeyValuePair<string, string>("Properties[0].GuestNotes", txtGuestNotes.Text),
                 new KeyValuePair<string, string>("Properties[0].AccommodationCost", txtCustomAccommodationCost.Text),
                 new KeyValuePair<string, string>("Properties[0].OwnerAmount", txtCustomOwnerAmount.Text),
             };
@@ -971,6 +968,11 @@ namespace iPro.SDK.Client
         }
 
         private void label251_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InternalNotes_TextChanged(object sender, EventArgs e)
         {
 
         }

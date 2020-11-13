@@ -354,6 +354,8 @@
             this.label207 = new System.Windows.Forms.Label();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.txtOwnerBooking = new System.Windows.Forms.TextBox();
+            this.label252 = new System.Windows.Forms.Label();
             this.txtBookingBrandId = new System.Windows.Forms.TextBox();
             this.label232 = new System.Windows.Forms.Label();
             this.txtReturnUrl = new System.Windows.Forms.TextBox();
@@ -485,7 +487,7 @@
             this.txtBookingProperty1Extra2Id = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.GuestNotes = new System.Windows.Forms.RichTextBox();
+            this.txtGuestNotes = new System.Windows.Forms.RichTextBox();
             this.label226 = new System.Windows.Forms.Label();
             this.InternalNotes = new System.Windows.Forms.RichTextBox();
             this.label145 = new System.Windows.Forms.Label();
@@ -508,6 +510,10 @@
             this.txtReviewsApi = new System.Windows.Forms.TextBox();
             this.btnGetReviews = new System.Windows.Forms.Button();
             this.tabPayments = new System.Windows.Forms.TabPage();
+            this.txtRemoveBookingTag = new System.Windows.Forms.TextBox();
+            this.txtAddBookingTag = new System.Windows.Forms.TextBox();
+            this.lblRemoveBookingTag = new System.Windows.Forms.Label();
+            this.label251 = new System.Windows.Forms.Label();
             this.txtBalanceDueDate = new System.Windows.Forms.TextBox();
             this.label153 = new System.Windows.Forms.Label();
             this.txtPaymentPropertyId = new System.Windows.Forms.TextBox();
@@ -687,10 +693,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label251 = new System.Windows.Forms.Label();
-            this.lblRemoveBookingTag = new System.Windows.Forms.Label();
-            this.txtAddBookingTag = new System.Windows.Forms.TextBox();
-            this.txtRemoveBookingTag = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -3997,6 +3999,8 @@
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.txtOwnerBooking);
+            this.tabBooking.Controls.Add(this.label252);
             this.tabBooking.Controls.Add(this.txtBookingBrandId);
             this.tabBooking.Controls.Add(this.label232);
             this.tabBooking.Controls.Add(this.txtReturnUrl);
@@ -4037,6 +4041,23 @@
             this.tabBooking.TabIndex = 2;
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
+            // 
+            // txtOwnerBooking
+            // 
+            this.txtOwnerBooking.Location = new System.Drawing.Point(300, 103);
+            this.txtOwnerBooking.Name = "txtOwnerBooking";
+            this.txtOwnerBooking.Size = new System.Drawing.Size(100, 20);
+            this.txtOwnerBooking.TabIndex = 68;
+            this.txtOwnerBooking.Text = "0";
+            // 
+            // label252
+            // 
+            this.label252.AutoSize = true;
+            this.label252.Location = new System.Drawing.Point(142, 106);
+            this.label252.Name = "label252";
+            this.label252.Size = new System.Drawing.Size(153, 13);
+            this.label252.TabIndex = 67;
+            this.label252.Text = "Owner Booking (1 - yes, 0 - no)";
             // 
             // txtBookingBrandId
             // 
@@ -5247,7 +5268,7 @@
             // 
             // tabPage12
             // 
-            this.tabPage12.Controls.Add(this.GuestNotes);
+            this.tabPage12.Controls.Add(this.txtGuestNotes);
             this.tabPage12.Controls.Add(this.label226);
             this.tabPage12.Controls.Add(this.InternalNotes);
             this.tabPage12.Controls.Add(this.label145);
@@ -5259,13 +5280,13 @@
             this.tabPage12.Text = "Notes";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
-            // GuestNotes
+            // txtGuestNotes
             // 
-            this.GuestNotes.Location = new System.Drawing.Point(14, 36);
-            this.GuestNotes.Name = "GuestNotes";
-            this.GuestNotes.Size = new System.Drawing.Size(292, 107);
-            this.GuestNotes.TabIndex = 34;
-            this.GuestNotes.Text = "";
+            this.txtGuestNotes.Location = new System.Drawing.Point(14, 36);
+            this.txtGuestNotes.Name = "txtGuestNotes";
+            this.txtGuestNotes.Size = new System.Drawing.Size(292, 107);
+            this.txtGuestNotes.TabIndex = 34;
+            this.txtGuestNotes.Text = "";
             // 
             // label226
             // 
@@ -5283,6 +5304,7 @@
             this.InternalNotes.Size = new System.Drawing.Size(271, 108);
             this.InternalNotes.TabIndex = 32;
             this.InternalNotes.Text = "";
+            this.InternalNotes.TextChanged += new System.EventHandler(this.InternalNotes_TextChanged);
             // 
             // label145
             // 
@@ -5507,6 +5529,41 @@
             this.tabPayments.TabIndex = 5;
             this.tabPayments.Text = "Payments";
             this.tabPayments.UseVisualStyleBackColor = true;
+            // 
+            // txtRemoveBookingTag
+            // 
+            this.txtRemoveBookingTag.Location = new System.Drawing.Point(880, 57);
+            this.txtRemoveBookingTag.Name = "txtRemoveBookingTag";
+            this.txtRemoveBookingTag.Size = new System.Drawing.Size(100, 20);
+            this.txtRemoveBookingTag.TabIndex = 73;
+            this.txtRemoveBookingTag.Text = "12,20";
+            // 
+            // txtAddBookingTag
+            // 
+            this.txtAddBookingTag.Location = new System.Drawing.Point(880, 18);
+            this.txtAddBookingTag.Name = "txtAddBookingTag";
+            this.txtAddBookingTag.Size = new System.Drawing.Size(100, 20);
+            this.txtAddBookingTag.TabIndex = 72;
+            this.txtAddBookingTag.Text = "1,2";
+            // 
+            // lblRemoveBookingTag
+            // 
+            this.lblRemoveBookingTag.AutoSize = true;
+            this.lblRemoveBookingTag.Location = new System.Drawing.Point(769, 59);
+            this.lblRemoveBookingTag.Name = "lblRemoveBookingTag";
+            this.lblRemoveBookingTag.Size = new System.Drawing.Size(105, 13);
+            this.lblRemoveBookingTag.TabIndex = 71;
+            this.lblRemoveBookingTag.Text = "RemoveBookingTag";
+            // 
+            // label251
+            // 
+            this.label251.AutoSize = true;
+            this.label251.Location = new System.Drawing.Point(769, 20);
+            this.label251.Name = "label251";
+            this.label251.Size = new System.Drawing.Size(84, 13);
+            this.label251.TabIndex = 70;
+            this.label251.Text = "AddBookingTag";
+            this.label251.Click += new System.EventHandler(this.label251_Click);
             // 
             // txtBalanceDueDate
             // 
@@ -7261,41 +7318,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label251
-            // 
-            this.label251.AutoSize = true;
-            this.label251.Location = new System.Drawing.Point(769, 20);
-            this.label251.Name = "label251";
-            this.label251.Size = new System.Drawing.Size(84, 13);
-            this.label251.TabIndex = 70;
-            this.label251.Text = "AddBookingTag";
-            this.label251.Click += new System.EventHandler(this.label251_Click);
-            // 
-            // lblRemoveBookingTag
-            // 
-            this.lblRemoveBookingTag.AutoSize = true;
-            this.lblRemoveBookingTag.Location = new System.Drawing.Point(769, 59);
-            this.lblRemoveBookingTag.Name = "lblRemoveBookingTag";
-            this.lblRemoveBookingTag.Size = new System.Drawing.Size(105, 13);
-            this.lblRemoveBookingTag.TabIndex = 71;
-            this.lblRemoveBookingTag.Text = "RemoveBookingTag";
-            // 
-            // txtAddBookingTag
-            // 
-            this.txtAddBookingTag.Location = new System.Drawing.Point(880, 18);
-            this.txtAddBookingTag.Name = "txtAddBookingTag";
-            this.txtAddBookingTag.Size = new System.Drawing.Size(100, 20);
-            this.txtAddBookingTag.TabIndex = 72;
-            this.txtAddBookingTag.Text = "1,2";
-            // 
-            // txtRemoveBookingTag
-            // 
-            this.txtRemoveBookingTag.Location = new System.Drawing.Point(880, 57);
-            this.txtRemoveBookingTag.Name = "txtRemoveBookingTag";
-            this.txtRemoveBookingTag.Size = new System.Drawing.Size(100, 20);
-            this.txtRemoveBookingTag.TabIndex = 73;
-            this.txtRemoveBookingTag.Text = "12,20";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8021,7 +8043,7 @@
         private System.Windows.Forms.Label label227;
         private System.Windows.Forms.Button btnBookingUpdate;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.RichTextBox GuestNotes;
+        private System.Windows.Forms.RichTextBox txtGuestNotes;
         private System.Windows.Forms.Label label226;
         private System.Windows.Forms.RichTextBox InternalNotes;
         private System.Windows.Forms.Label label145;
@@ -8090,6 +8112,8 @@
         private System.Windows.Forms.TextBox txtAddBookingTag;
         private System.Windows.Forms.Label lblRemoveBookingTag;
         private System.Windows.Forms.Label label251;
+        private System.Windows.Forms.TextBox txtOwnerBooking;
+        private System.Windows.Forms.Label label252;
     }
 }
 
