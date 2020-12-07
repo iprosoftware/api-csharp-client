@@ -976,5 +976,10 @@ namespace iPro.SDK.Client
         {
 
         }
+
+        private void btnGetComplaints_Click(object sender, EventArgs e)
+        {
+            LoadContent(txtComplaintsApiUrl.Text);
+        }
     }
 }

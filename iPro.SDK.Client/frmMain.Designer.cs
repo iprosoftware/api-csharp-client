@@ -693,6 +693,9 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label253 = new System.Windows.Forms.Label();
+            this.txtComplaintsApiUrl = new System.Windows.Forms.TextBox();
+            this.btnGetComplaints = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -6831,6 +6834,9 @@
             // 
             // tabBookings
             // 
+            this.tabBookings.Controls.Add(this.btnGetComplaints);
+            this.tabBookings.Controls.Add(this.txtComplaintsApiUrl);
+            this.tabBookings.Controls.Add(this.label253);
             this.tabBookings.Controls.Add(this.btnGetLimitedReservations);
             this.tabBookings.Controls.Add(this.label247);
             this.tabBookings.Controls.Add(this.txtLimitedReservationsApiUrl);
@@ -7317,6 +7323,33 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
+            // 
+            // label253
+            // 
+            this.label253.AutoSize = true;
+            this.label253.Location = new System.Drawing.Point(47, 191);
+            this.label253.Name = "label253";
+            this.label253.Size = new System.Drawing.Size(58, 13);
+            this.label253.TabIndex = 60;
+            this.label253.Text = "Complaints";
+            // 
+            // txtComplaintsApiUrl
+            // 
+            this.txtComplaintsApiUrl.Location = new System.Drawing.Point(167, 188);
+            this.txtComplaintsApiUrl.Name = "txtComplaintsApiUrl";
+            this.txtComplaintsApiUrl.Size = new System.Drawing.Size(872, 20);
+            this.txtComplaintsApiUrl.TabIndex = 61;
+            this.txtComplaintsApiUrl.Text = "/apis/booking/123/complaints?index=1&size=15";
+            // 
+            // btnGetComplaints
+            // 
+            this.btnGetComplaints.Location = new System.Drawing.Point(1058, 183);
+            this.btnGetComplaints.Name = "btnGetComplaints";
+            this.btnGetComplaints.Size = new System.Drawing.Size(54, 28);
+            this.btnGetComplaints.TabIndex = 62;
+            this.btnGetComplaints.Text = "GET";
+            this.btnGetComplaints.UseVisualStyleBackColor = true;
+            this.btnGetComplaints.Click += new System.EventHandler(this.btnGetComplaints_Click);
             // 
             // frmMain
             // 
@@ -8114,6 +8147,9 @@
         private System.Windows.Forms.Label label251;
         private System.Windows.Forms.TextBox txtOwnerBooking;
         private System.Windows.Forms.Label label252;
+        private System.Windows.Forms.Button btnGetComplaints;
+        private System.Windows.Forms.TextBox txtComplaintsApiUrl;
+        private System.Windows.Forms.Label label253;
     }
 }
 
