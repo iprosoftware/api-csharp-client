@@ -247,7 +247,9 @@ namespace iPro.SDK.Client
                 new KeyValuePair<string, string>("Contact.Source", txtBookingContactSource.Text),
                 new KeyValuePair<string, string>("InternalNotes", InternalNotes.Text),
                 new KeyValuePair<string, string>("OwnerBooking", txtOwnerBooking.Text),
-                new KeyValuePair<string, string>("GuestNotes", txtGuestNotes.Text)
+                new KeyValuePair<string, string>("GuestNotes", txtGuestNotes.Text),
+                new KeyValuePair<string, string>("HousekeeperNotes", tHousekeeperNotes.Text),
+                new KeyValuePair<string, string>("NatureOfStay", txtNatureOfStay.Text)
             };
 
             values.AddRange(GetBookingProperties());

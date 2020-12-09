@@ -646,6 +646,9 @@
             this.txtContacts = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tabBookings = new System.Windows.Forms.TabPage();
+            this.btnGetComplaints = new System.Windows.Forms.Button();
+            this.txtComplaintsApiUrl = new System.Windows.Forms.TextBox();
+            this.label253 = new System.Windows.Forms.Label();
             this.btnGetLimitedReservations = new System.Windows.Forms.Button();
             this.label247 = new System.Windows.Forms.Label();
             this.txtLimitedReservationsApiUrl = new System.Windows.Forms.TextBox();
@@ -693,9 +696,10 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label253 = new System.Windows.Forms.Label();
-            this.txtComplaintsApiUrl = new System.Windows.Forms.TextBox();
-            this.btnGetComplaints = new System.Windows.Forms.Button();
+            this.label254 = new System.Windows.Forms.Label();
+            this.tHousekeeperNotes = new System.Windows.Forms.RichTextBox();
+            this.lblNatureOfStay = new System.Windows.Forms.Label();
+            this.txtNatureOfStay = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -4002,6 +4006,8 @@
             // 
             // tabBooking
             // 
+            this.tabBooking.Controls.Add(this.txtNatureOfStay);
+            this.tabBooking.Controls.Add(this.lblNatureOfStay);
             this.tabBooking.Controls.Add(this.txtOwnerBooking);
             this.tabBooking.Controls.Add(this.label252);
             this.tabBooking.Controls.Add(this.txtBookingBrandId);
@@ -5271,7 +5277,9 @@
             // 
             // tabPage12
             // 
+            this.tabPage12.Controls.Add(this.tHousekeeperNotes);
             this.tabPage12.Controls.Add(this.txtGuestNotes);
+            this.tabPage12.Controls.Add(this.label254);
             this.tabPage12.Controls.Add(this.label226);
             this.tabPage12.Controls.Add(this.InternalNotes);
             this.tabPage12.Controls.Add(this.label145);
@@ -6857,6 +6865,33 @@
             this.tabBookings.Text = "Bookings";
             this.tabBookings.UseVisualStyleBackColor = true;
             // 
+            // btnGetComplaints
+            // 
+            this.btnGetComplaints.Location = new System.Drawing.Point(1058, 183);
+            this.btnGetComplaints.Name = "btnGetComplaints";
+            this.btnGetComplaints.Size = new System.Drawing.Size(54, 28);
+            this.btnGetComplaints.TabIndex = 62;
+            this.btnGetComplaints.Text = "GET";
+            this.btnGetComplaints.UseVisualStyleBackColor = true;
+            this.btnGetComplaints.Click += new System.EventHandler(this.btnGetComplaints_Click);
+            // 
+            // txtComplaintsApiUrl
+            // 
+            this.txtComplaintsApiUrl.Location = new System.Drawing.Point(167, 188);
+            this.txtComplaintsApiUrl.Name = "txtComplaintsApiUrl";
+            this.txtComplaintsApiUrl.Size = new System.Drawing.Size(872, 20);
+            this.txtComplaintsApiUrl.TabIndex = 61;
+            this.txtComplaintsApiUrl.Text = "/apis/booking/123/complaints?index=1&size=15";
+            // 
+            // label253
+            // 
+            this.label253.AutoSize = true;
+            this.label253.Location = new System.Drawing.Point(47, 191);
+            this.label253.Name = "label253";
+            this.label253.Size = new System.Drawing.Size(58, 13);
+            this.label253.TabIndex = 60;
+            this.label253.Text = "Complaints";
+            // 
             // btnGetLimitedReservations
             // 
             this.btnGetLimitedReservations.Location = new System.Drawing.Point(1058, 151);
@@ -7324,32 +7359,38 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label253
+            // label254
             // 
-            this.label253.AutoSize = true;
-            this.label253.Location = new System.Drawing.Point(47, 191);
-            this.label253.Name = "label253";
-            this.label253.Size = new System.Drawing.Size(58, 13);
-            this.label253.TabIndex = 60;
-            this.label253.Text = "Complaints";
+            this.label254.AutoSize = true;
+            this.label254.Location = new System.Drawing.Point(617, 19);
+            this.label254.Name = "label254";
+            this.label254.Size = new System.Drawing.Size(102, 13);
+            this.label254.TabIndex = 69;
+            this.label254.Text = "Housekeeper Notes";
             // 
-            // txtComplaintsApiUrl
+            // tHousekeeperNotes
             // 
-            this.txtComplaintsApiUrl.Location = new System.Drawing.Point(167, 188);
-            this.txtComplaintsApiUrl.Name = "txtComplaintsApiUrl";
-            this.txtComplaintsApiUrl.Size = new System.Drawing.Size(872, 20);
-            this.txtComplaintsApiUrl.TabIndex = 61;
-            this.txtComplaintsApiUrl.Text = "/apis/booking/123/complaints?index=1&size=15";
+            this.tHousekeeperNotes.Location = new System.Drawing.Point(613, 35);
+            this.tHousekeeperNotes.Name = "tHousekeeperNotes";
+            this.tHousekeeperNotes.Size = new System.Drawing.Size(254, 107);
+            this.tHousekeeperNotes.TabIndex = 70;
+            this.tHousekeeperNotes.Text = "";
             // 
-            // btnGetComplaints
+            // lblNatureOfStay
             // 
-            this.btnGetComplaints.Location = new System.Drawing.Point(1058, 183);
-            this.btnGetComplaints.Name = "btnGetComplaints";
-            this.btnGetComplaints.Size = new System.Drawing.Size(54, 28);
-            this.btnGetComplaints.TabIndex = 62;
-            this.btnGetComplaints.Text = "GET";
-            this.btnGetComplaints.UseVisualStyleBackColor = true;
-            this.btnGetComplaints.Click += new System.EventHandler(this.btnGetComplaints_Click);
+            this.lblNatureOfStay.AutoSize = true;
+            this.lblNatureOfStay.Location = new System.Drawing.Point(422, 106);
+            this.lblNatureOfStay.Name = "lblNatureOfStay";
+            this.lblNatureOfStay.Size = new System.Drawing.Size(77, 13);
+            this.lblNatureOfStay.TabIndex = 69;
+            this.lblNatureOfStay.Text = "Nature Of Stay";
+            // 
+            // txtNatureOfStay
+            // 
+            this.txtNatureOfStay.Location = new System.Drawing.Point(506, 103);
+            this.txtNatureOfStay.Name = "txtNatureOfStay";
+            this.txtNatureOfStay.Size = new System.Drawing.Size(159, 20);
+            this.txtNatureOfStay.TabIndex = 70;
             // 
             // frmMain
             // 
@@ -8150,6 +8191,10 @@
         private System.Windows.Forms.Button btnGetComplaints;
         private System.Windows.Forms.TextBox txtComplaintsApiUrl;
         private System.Windows.Forms.Label label253;
+        private System.Windows.Forms.RichTextBox tHousekeeperNotes;
+        private System.Windows.Forms.Label label254;
+        private System.Windows.Forms.TextBox txtNatureOfStay;
+        private System.Windows.Forms.Label lblNatureOfStay;
     }
 }
 
