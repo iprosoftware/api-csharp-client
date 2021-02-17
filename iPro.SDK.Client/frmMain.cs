@@ -983,5 +983,11 @@ namespace iPro.SDK.Client
         {
             LoadContent(txtComplaintsApiUrl.Text);
         }
+
+        private void paymentsGet_Click(object sender, EventArgs e)
+        {
+            string url = $"{txtPaymentApi.Text}?BookingID={paymentsGetBookingId.Text}&DateFrom={paymentsGetDateFrom.Text}&DateTo={paymentsGetDateTo.Text}";
+            LoadContent(url);
+        }
     }
 }

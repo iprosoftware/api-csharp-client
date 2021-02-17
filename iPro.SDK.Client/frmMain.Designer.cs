@@ -354,6 +354,8 @@
             this.label207 = new System.Windows.Forms.Label();
             this.tabEnquiry = new System.Windows.Forms.TabPage();
             this.tabBooking = new System.Windows.Forms.TabPage();
+            this.txtNatureOfStay = new System.Windows.Forms.TextBox();
+            this.lblNatureOfStay = new System.Windows.Forms.Label();
             this.txtOwnerBooking = new System.Windows.Forms.TextBox();
             this.label252 = new System.Windows.Forms.Label();
             this.txtBookingBrandId = new System.Windows.Forms.TextBox();
@@ -487,7 +489,9 @@
             this.txtBookingProperty1Extra2Id = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.tHousekeeperNotes = new System.Windows.Forms.RichTextBox();
             this.txtGuestNotes = new System.Windows.Forms.RichTextBox();
+            this.label254 = new System.Windows.Forms.Label();
             this.label226 = new System.Windows.Forms.Label();
             this.InternalNotes = new System.Windows.Forms.RichTextBox();
             this.label145 = new System.Windows.Forms.Label();
@@ -510,6 +514,13 @@
             this.txtReviewsApi = new System.Windows.Forms.TextBox();
             this.btnGetReviews = new System.Windows.Forms.Button();
             this.tabPayments = new System.Windows.Forms.TabPage();
+            this.paymentsGet = new System.Windows.Forms.Button();
+            this.paymentsGetDateTo = new System.Windows.Forms.TextBox();
+            this.paymentsGetDateFrom = new System.Windows.Forms.TextBox();
+            this.paymentsGetBookingId = new System.Windows.Forms.TextBox();
+            this.label257 = new System.Windows.Forms.Label();
+            this.label256 = new System.Windows.Forms.Label();
+            this.label255 = new System.Windows.Forms.Label();
             this.txtRemoveBookingTag = new System.Windows.Forms.TextBox();
             this.txtAddBookingTag = new System.Windows.Forms.TextBox();
             this.lblRemoveBookingTag = new System.Windows.Forms.Label();
@@ -696,10 +707,6 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label254 = new System.Windows.Forms.Label();
-            this.tHousekeeperNotes = new System.Windows.Forms.RichTextBox();
-            this.lblNatureOfStay = new System.Windows.Forms.Label();
-            this.txtNatureOfStay = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -4051,6 +4058,22 @@
             this.tabBooking.Text = "Import Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
             // 
+            // txtNatureOfStay
+            // 
+            this.txtNatureOfStay.Location = new System.Drawing.Point(506, 103);
+            this.txtNatureOfStay.Name = "txtNatureOfStay";
+            this.txtNatureOfStay.Size = new System.Drawing.Size(159, 20);
+            this.txtNatureOfStay.TabIndex = 70;
+            // 
+            // lblNatureOfStay
+            // 
+            this.lblNatureOfStay.AutoSize = true;
+            this.lblNatureOfStay.Location = new System.Drawing.Point(422, 106);
+            this.lblNatureOfStay.Name = "lblNatureOfStay";
+            this.lblNatureOfStay.Size = new System.Drawing.Size(77, 13);
+            this.lblNatureOfStay.TabIndex = 69;
+            this.lblNatureOfStay.Text = "Nature Of Stay";
+            // 
             // txtOwnerBooking
             // 
             this.txtOwnerBooking.Location = new System.Drawing.Point(300, 103);
@@ -5291,6 +5314,14 @@
             this.tabPage12.Text = "Notes";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
+            // tHousekeeperNotes
+            // 
+            this.tHousekeeperNotes.Location = new System.Drawing.Point(613, 35);
+            this.tHousekeeperNotes.Name = "tHousekeeperNotes";
+            this.tHousekeeperNotes.Size = new System.Drawing.Size(254, 107);
+            this.tHousekeeperNotes.TabIndex = 70;
+            this.tHousekeeperNotes.Text = "";
+            // 
             // txtGuestNotes
             // 
             this.txtGuestNotes.Location = new System.Drawing.Point(14, 36);
@@ -5298,6 +5329,15 @@
             this.txtGuestNotes.Size = new System.Drawing.Size(292, 107);
             this.txtGuestNotes.TabIndex = 34;
             this.txtGuestNotes.Text = "";
+            // 
+            // label254
+            // 
+            this.label254.AutoSize = true;
+            this.label254.Location = new System.Drawing.Point(617, 19);
+            this.label254.Name = "label254";
+            this.label254.Size = new System.Drawing.Size(102, 13);
+            this.label254.TabIndex = 69;
+            this.label254.Text = "Housekeeper Notes";
             // 
             // label226
             // 
@@ -5505,6 +5545,13 @@
             // 
             // tabPayments
             // 
+            this.tabPayments.Controls.Add(this.paymentsGet);
+            this.tabPayments.Controls.Add(this.paymentsGetDateTo);
+            this.tabPayments.Controls.Add(this.paymentsGetDateFrom);
+            this.tabPayments.Controls.Add(this.paymentsGetBookingId);
+            this.tabPayments.Controls.Add(this.label257);
+            this.tabPayments.Controls.Add(this.label256);
+            this.tabPayments.Controls.Add(this.label255);
             this.tabPayments.Controls.Add(this.txtRemoveBookingTag);
             this.tabPayments.Controls.Add(this.txtAddBookingTag);
             this.tabPayments.Controls.Add(this.lblRemoveBookingTag);
@@ -5540,6 +5587,67 @@
             this.tabPayments.TabIndex = 5;
             this.tabPayments.Text = "Payments";
             this.tabPayments.UseVisualStyleBackColor = true;
+            // 
+            // paymentsGet
+            // 
+            this.paymentsGet.Location = new System.Drawing.Point(88, 332);
+            this.paymentsGet.Name = "paymentsGet";
+            this.paymentsGet.Size = new System.Drawing.Size(75, 23);
+            this.paymentsGet.TabIndex = 80;
+            this.paymentsGet.Text = "GET";
+            this.paymentsGet.UseVisualStyleBackColor = true;
+            this.paymentsGet.Click += new System.EventHandler(this.paymentsGet_Click);
+            // 
+            // paymentsGetDateTo
+            // 
+            this.paymentsGetDateTo.Location = new System.Drawing.Point(88, 300);
+            this.paymentsGetDateTo.Name = "paymentsGetDateTo";
+            this.paymentsGetDateTo.Size = new System.Drawing.Size(100, 20);
+            this.paymentsGetDateTo.TabIndex = 79;
+            this.paymentsGetDateTo.Text = "2021-01-31";
+            // 
+            // paymentsGetDateFrom
+            // 
+            this.paymentsGetDateFrom.Location = new System.Drawing.Point(88, 269);
+            this.paymentsGetDateFrom.Name = "paymentsGetDateFrom";
+            this.paymentsGetDateFrom.Size = new System.Drawing.Size(100, 20);
+            this.paymentsGetDateFrom.TabIndex = 78;
+            this.paymentsGetDateFrom.Text = "2021-01-01";
+            // 
+            // paymentsGetBookingId
+            // 
+            this.paymentsGetBookingId.Location = new System.Drawing.Point(88, 238);
+            this.paymentsGetBookingId.Name = "paymentsGetBookingId";
+            this.paymentsGetBookingId.Size = new System.Drawing.Size(100, 20);
+            this.paymentsGetBookingId.TabIndex = 77;
+            this.paymentsGetBookingId.Text = "1000";
+            // 
+            // label257
+            // 
+            this.label257.AutoSize = true;
+            this.label257.Location = new System.Drawing.Point(22, 302);
+            this.label257.Name = "label257";
+            this.label257.Size = new System.Drawing.Size(46, 13);
+            this.label257.TabIndex = 76;
+            this.label257.Text = "Date To";
+            // 
+            // label256
+            // 
+            this.label256.AutoSize = true;
+            this.label256.Location = new System.Drawing.Point(22, 272);
+            this.label256.Name = "label256";
+            this.label256.Size = new System.Drawing.Size(56, 13);
+            this.label256.TabIndex = 75;
+            this.label256.Text = "Date From";
+            // 
+            // label255
+            // 
+            this.label255.AutoSize = true;
+            this.label255.Location = new System.Drawing.Point(22, 241);
+            this.label255.Name = "label255";
+            this.label255.Size = new System.Drawing.Size(60, 13);
+            this.label255.TabIndex = 74;
+            this.label255.Text = "Booking ID";
             // 
             // txtRemoveBookingTag
             // 
@@ -7359,39 +7467,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
-            // label254
-            // 
-            this.label254.AutoSize = true;
-            this.label254.Location = new System.Drawing.Point(617, 19);
-            this.label254.Name = "label254";
-            this.label254.Size = new System.Drawing.Size(102, 13);
-            this.label254.TabIndex = 69;
-            this.label254.Text = "Housekeeper Notes";
-            // 
-            // tHousekeeperNotes
-            // 
-            this.tHousekeeperNotes.Location = new System.Drawing.Point(613, 35);
-            this.tHousekeeperNotes.Name = "tHousekeeperNotes";
-            this.tHousekeeperNotes.Size = new System.Drawing.Size(254, 107);
-            this.tHousekeeperNotes.TabIndex = 70;
-            this.tHousekeeperNotes.Text = "";
-            // 
-            // lblNatureOfStay
-            // 
-            this.lblNatureOfStay.AutoSize = true;
-            this.lblNatureOfStay.Location = new System.Drawing.Point(422, 106);
-            this.lblNatureOfStay.Name = "lblNatureOfStay";
-            this.lblNatureOfStay.Size = new System.Drawing.Size(77, 13);
-            this.lblNatureOfStay.TabIndex = 69;
-            this.lblNatureOfStay.Text = "Nature Of Stay";
-            // 
-            // txtNatureOfStay
-            // 
-            this.txtNatureOfStay.Location = new System.Drawing.Point(506, 103);
-            this.txtNatureOfStay.Name = "txtNatureOfStay";
-            this.txtNatureOfStay.Size = new System.Drawing.Size(159, 20);
-            this.txtNatureOfStay.TabIndex = 70;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8195,6 +8270,13 @@
         private System.Windows.Forms.Label label254;
         private System.Windows.Forms.TextBox txtNatureOfStay;
         private System.Windows.Forms.Label lblNatureOfStay;
+        private System.Windows.Forms.Button paymentsGet;
+        private System.Windows.Forms.TextBox paymentsGetDateTo;
+        private System.Windows.Forms.TextBox paymentsGetDateFrom;
+        private System.Windows.Forms.TextBox paymentsGetBookingId;
+        private System.Windows.Forms.Label label257;
+        private System.Windows.Forms.Label label256;
+        private System.Windows.Forms.Label label255;
     }
 }
 
