@@ -989,5 +989,78 @@ namespace iPro.SDK.Client
             string url = $"{txtPaymentApi.Text}?BookingID={paymentsGetBookingId.Text}&DateFrom={paymentsGetDateFrom.Text}&DateTo={paymentsGetDateTo.Text}";
             LoadContent(url);
         }
+
+        private void cnGet_Click(object sender, EventArgs e)
+        {
+            int type = -1;
+            if (!cnTypeId.Text.Equals("1 - Booking, 2 - Contact, 3 - Enquiry"))
+            {
+                type = cnTypeId.Text.ConvertTo<int>(-1);
+            }
+
+            int commsNoteTypeId = -1;
+            if (!cnCommsNotesTypeId.Text.Equals("1 - Call, 2 - Email, 3 - Note, 4 - Task, 5 - Letter, 6- Mailing Label"))
+            {
+                commsNoteTypeId = cnCommsNotesTypeId.Text.ConvertTo<int>(-1);
+            }
+
+            string url = $"{cnCommsNotesUrl.Text}?BookingID={cnBookingId.Text}&ContactID={cnContactId.Text}&EnquiryID={cnEnquiryId.Text}" +
+                $"&Type={type}&CommsNoteType={commsNoteTypeId}&DateFrom={cnDateFrom.Text}&DateTo={cnDateTo.Text}";
+
+            LoadContent(url);
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cnPostPreviewJsonBtn_Click(object sender, EventArgs e)
+        {
+            DateTime date = DateTime.Now;
+            if (string.IsNullOrEmpty(cnPostCreatedDate.Text) || (!string.IsNullOrWhiteSpace(cnPostCreatedDate.Text) && DateTime.TryParse(cnPostCreatedDate.Text, out date)))
+            {
+                int commsNoteTypeId = 0;
+
+                if (!cnPostTypeId.Text.Equals("1 - Call, 2 - Email, 3 - Note, 4 - Task, 5 - Letter, 6- Mailing Label"))
+                {
+                    int.TryParse(cnPostTypeId.Text, out commsNoteTypeId);
+                }
+
+                var obj = new
+                {
+                    CreatedDate = date,
+                    RepID = cnPostRepId.Text.ConvertToNullable<int>(),
+                    BookingID = cnPostBookingId.Text.ConvertToNullable<int>(),
+                    EnquiryID = cnPostEnquiryId.Text.ConvertToNullable<int>(),
+                    ContactID = cnPostContactId.Text.ConvertToNullable<int>(),
+                    Subject = cnPostSubject.Text,
+                    Notes = cnPostNotes.Text,
+                    CommsNoteTypeID = commsNoteTypeId,
+                    TaskID = cnPostTaskId.Text.ConvertToNullable<int>(),
+                    BillID = cnPostBillId.Text.ConvertToNullable<int>(),
+                };
+
+                var json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+                cnPostPreviewJson.Text = json;
+            }
+            else
+            {
+                MessageBox.Show("Please specify Created Date in valid format yyyy-MM-dd or leave it blank");
+                return;
+            }
+        }
+
+        private void cnPost_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cnPostPreviewJson.Text))
+            {
+                MessageBox.Show("Please click Preview JSON button first");
+                return;
+            }
+
+            var content = new StringContent(cnPostPreviewJson.Text);
+            PostContent(cnPostApiUrl.Text, content.ReadAsByteArrayAsync().Result, "application/json");
+        }
     }
 }

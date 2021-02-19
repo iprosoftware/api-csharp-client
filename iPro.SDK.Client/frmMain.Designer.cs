@@ -707,6 +707,49 @@
             this.lblTimeCost = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label258 = new System.Windows.Forms.Label();
+            this.label259 = new System.Windows.Forms.Label();
+            this.label260 = new System.Windows.Forms.Label();
+            this.label261 = new System.Windows.Forms.Label();
+            this.label262 = new System.Windows.Forms.Label();
+            this.label263 = new System.Windows.Forms.Label();
+            this.cnGet = new System.Windows.Forms.Button();
+            this.cnBookingId = new System.Windows.Forms.TextBox();
+            this.cnContactId = new System.Windows.Forms.TextBox();
+            this.cnEnquiryId = new System.Windows.Forms.TextBox();
+            this.cnTypeId = new System.Windows.Forms.TextBox();
+            this.cnDateFrom = new System.Windows.Forms.TextBox();
+            this.cnDateTo = new System.Windows.Forms.TextBox();
+            this.label264 = new System.Windows.Forms.Label();
+            this.cnCommsNotesTypeId = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label265 = new System.Windows.Forms.Label();
+            this.label266 = new System.Windows.Forms.Label();
+            this.label267 = new System.Windows.Forms.Label();
+            this.label268 = new System.Windows.Forms.Label();
+            this.label269 = new System.Windows.Forms.Label();
+            this.label270 = new System.Windows.Forms.Label();
+            this.label271 = new System.Windows.Forms.Label();
+            this.label272 = new System.Windows.Forms.Label();
+            this.label273 = new System.Windows.Forms.Label();
+            this.label274 = new System.Windows.Forms.Label();
+            this.cnPostCreatedDate = new System.Windows.Forms.TextBox();
+            this.cnPostRepId = new System.Windows.Forms.TextBox();
+            this.cnPostBookingId = new System.Windows.Forms.TextBox();
+            this.cnPostEnquiryId = new System.Windows.Forms.TextBox();
+            this.cnPostContactId = new System.Windows.Forms.TextBox();
+            this.cnPostSubject = new System.Windows.Forms.TextBox();
+            this.cnPostNotes = new System.Windows.Forms.TextBox();
+            this.cnPostTypeId = new System.Windows.Forms.TextBox();
+            this.cnPostTaskId = new System.Windows.Forms.TextBox();
+            this.cnPostBillId = new System.Windows.Forms.TextBox();
+            this.cnPostPreviewJson = new System.Windows.Forms.RichTextBox();
+            this.cnPostPreviewJsonBtn = new System.Windows.Forms.Button();
+            this.cnPost = new System.Windows.Forms.Button();
+            this.cnPostApiUrl = new System.Windows.Forms.TextBox();
+            this.cnCommsNotesUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -765,6 +808,9 @@
             this.tabUpdateBooking.SuspendLayout();
             this.tabBatchJson.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenEndpointLabel
@@ -2205,6 +2251,7 @@
             this.tabControl1.Controls.Add(this.tabStatements);
             this.tabControl1.Controls.Add(this.tabUpdateBooking);
             this.tabControl1.Controls.Add(this.tabBatchJson);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(12, 172);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -7467,6 +7514,409 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1191, 196);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox12);
+            this.tabPage1.Controls.Add(this.groupBox11);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1183, 377);
+            this.tabPage1.TabIndex = 14;
+            this.tabPage1.Text = "Comms Notes";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.cnCommsNotesUrl);
+            this.groupBox11.Controls.Add(this.cnCommsNotesTypeId);
+            this.groupBox11.Controls.Add(this.label264);
+            this.groupBox11.Controls.Add(this.cnDateTo);
+            this.groupBox11.Controls.Add(this.cnDateFrom);
+            this.groupBox11.Controls.Add(this.cnTypeId);
+            this.groupBox11.Controls.Add(this.cnEnquiryId);
+            this.groupBox11.Controls.Add(this.cnContactId);
+            this.groupBox11.Controls.Add(this.cnBookingId);
+            this.groupBox11.Controls.Add(this.cnGet);
+            this.groupBox11.Controls.Add(this.label263);
+            this.groupBox11.Controls.Add(this.label262);
+            this.groupBox11.Controls.Add(this.label261);
+            this.groupBox11.Controls.Add(this.label260);
+            this.groupBox11.Controls.Add(this.label259);
+            this.groupBox11.Controls.Add(this.label258);
+            this.groupBox11.Location = new System.Drawing.Point(19, 21);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(469, 324);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Get Comms Notes";
+            // 
+            // label258
+            // 
+            this.label258.AutoSize = true;
+            this.label258.Location = new System.Drawing.Point(16, 22);
+            this.label258.Name = "label258";
+            this.label258.Size = new System.Drawing.Size(60, 13);
+            this.label258.TabIndex = 0;
+            this.label258.Text = "Booking ID";
+            // 
+            // label259
+            // 
+            this.label259.AutoSize = true;
+            this.label259.Location = new System.Drawing.Point(16, 56);
+            this.label259.Name = "label259";
+            this.label259.Size = new System.Drawing.Size(58, 13);
+            this.label259.TabIndex = 1;
+            this.label259.Text = "Contact ID";
+            // 
+            // label260
+            // 
+            this.label260.AutoSize = true;
+            this.label260.Location = new System.Drawing.Point(16, 90);
+            this.label260.Name = "label260";
+            this.label260.Size = new System.Drawing.Size(56, 13);
+            this.label260.TabIndex = 2;
+            this.label260.Text = "Enquiry ID";
+            // 
+            // label261
+            // 
+            this.label261.AutoSize = true;
+            this.label261.Location = new System.Drawing.Point(16, 125);
+            this.label261.Name = "label261";
+            this.label261.Size = new System.Drawing.Size(34, 13);
+            this.label261.TabIndex = 3;
+            this.label261.Text = "Type ";
+            // 
+            // label262
+            // 
+            this.label262.AutoSize = true;
+            this.label262.Location = new System.Drawing.Point(17, 160);
+            this.label262.Name = "label262";
+            this.label262.Size = new System.Drawing.Size(59, 13);
+            this.label262.TabIndex = 4;
+            this.label262.Text = "Date From ";
+            // 
+            // label263
+            // 
+            this.label263.AutoSize = true;
+            this.label263.Location = new System.Drawing.Point(16, 192);
+            this.label263.Name = "label263";
+            this.label263.Size = new System.Drawing.Size(46, 13);
+            this.label263.TabIndex = 5;
+            this.label263.Text = "Date To";
+            // 
+            // cnGet
+            // 
+            this.cnGet.Location = new System.Drawing.Point(353, 258);
+            this.cnGet.Name = "cnGet";
+            this.cnGet.Size = new System.Drawing.Size(75, 23);
+            this.cnGet.TabIndex = 6;
+            this.cnGet.Text = "GET";
+            this.cnGet.UseVisualStyleBackColor = true;
+            this.cnGet.Click += new System.EventHandler(this.cnGet_Click);
+            // 
+            // cnBookingId
+            // 
+            this.cnBookingId.Location = new System.Drawing.Point(120, 19);
+            this.cnBookingId.Name = "cnBookingId";
+            this.cnBookingId.Size = new System.Drawing.Size(308, 20);
+            this.cnBookingId.TabIndex = 7;
+            // 
+            // cnContactId
+            // 
+            this.cnContactId.Location = new System.Drawing.Point(120, 53);
+            this.cnContactId.Name = "cnContactId";
+            this.cnContactId.Size = new System.Drawing.Size(308, 20);
+            this.cnContactId.TabIndex = 8;
+            // 
+            // cnEnquiryId
+            // 
+            this.cnEnquiryId.Location = new System.Drawing.Point(120, 87);
+            this.cnEnquiryId.Name = "cnEnquiryId";
+            this.cnEnquiryId.Size = new System.Drawing.Size(308, 20);
+            this.cnEnquiryId.TabIndex = 9;
+            // 
+            // cnTypeId
+            // 
+            this.cnTypeId.Location = new System.Drawing.Point(120, 122);
+            this.cnTypeId.Name = "cnTypeId";
+            this.cnTypeId.Size = new System.Drawing.Size(308, 20);
+            this.cnTypeId.TabIndex = 10;
+            this.cnTypeId.Text = "1 - Booking, 2 - Contact, 3 - Enquiry";
+            // 
+            // cnDateFrom
+            // 
+            this.cnDateFrom.Location = new System.Drawing.Point(120, 157);
+            this.cnDateFrom.Name = "cnDateFrom";
+            this.cnDateFrom.Size = new System.Drawing.Size(308, 20);
+            this.cnDateFrom.TabIndex = 11;
+            this.cnDateFrom.Text = "2020-01-01";
+            // 
+            // cnDateTo
+            // 
+            this.cnDateTo.Location = new System.Drawing.Point(120, 189);
+            this.cnDateTo.Name = "cnDateTo";
+            this.cnDateTo.Size = new System.Drawing.Size(308, 20);
+            this.cnDateTo.TabIndex = 12;
+            this.cnDateTo.Text = "2020-01-31";
+            // 
+            // label264
+            // 
+            this.label264.AutoSize = true;
+            this.label264.Location = new System.Drawing.Point(20, 223);
+            this.label264.Name = "label264";
+            this.label264.Size = new System.Drawing.Size(94, 13);
+            this.label264.TabIndex = 13;
+            this.label264.Text = "Comms Note Type";
+            // 
+            // cnCommsNotesTypeId
+            // 
+            this.cnCommsNotesTypeId.Location = new System.Drawing.Point(120, 223);
+            this.cnCommsNotesTypeId.Name = "cnCommsNotesTypeId";
+            this.cnCommsNotesTypeId.Size = new System.Drawing.Size(308, 20);
+            this.cnCommsNotesTypeId.TabIndex = 14;
+            this.cnCommsNotesTypeId.Text = "1 - Call, 2 - Email, 3 - Note, 4 - Task, 5 - Letter, 6- Mailing Label";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.cnPostApiUrl);
+            this.groupBox12.Controls.Add(this.cnPost);
+            this.groupBox12.Controls.Add(this.cnPostPreviewJsonBtn);
+            this.groupBox12.Controls.Add(this.cnPostPreviewJson);
+            this.groupBox12.Controls.Add(this.cnPostBillId);
+            this.groupBox12.Controls.Add(this.cnPostTaskId);
+            this.groupBox12.Controls.Add(this.cnPostTypeId);
+            this.groupBox12.Controls.Add(this.cnPostNotes);
+            this.groupBox12.Controls.Add(this.cnPostSubject);
+            this.groupBox12.Controls.Add(this.cnPostContactId);
+            this.groupBox12.Controls.Add(this.cnPostEnquiryId);
+            this.groupBox12.Controls.Add(this.cnPostBookingId);
+            this.groupBox12.Controls.Add(this.cnPostRepId);
+            this.groupBox12.Controls.Add(this.cnPostCreatedDate);
+            this.groupBox12.Controls.Add(this.label274);
+            this.groupBox12.Controls.Add(this.label273);
+            this.groupBox12.Controls.Add(this.label272);
+            this.groupBox12.Controls.Add(this.label271);
+            this.groupBox12.Controls.Add(this.label270);
+            this.groupBox12.Controls.Add(this.label269);
+            this.groupBox12.Controls.Add(this.label268);
+            this.groupBox12.Controls.Add(this.label267);
+            this.groupBox12.Controls.Add(this.label266);
+            this.groupBox12.Controls.Add(this.label265);
+            this.groupBox12.Location = new System.Drawing.Point(503, 21);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(645, 324);
+            this.groupBox12.TabIndex = 1;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Push Comms Note";
+            // 
+            // label265
+            // 
+            this.label265.AutoSize = true;
+            this.label265.Location = new System.Drawing.Point(9, 22);
+            this.label265.Name = "label265";
+            this.label265.Size = new System.Drawing.Size(70, 13);
+            this.label265.TabIndex = 0;
+            this.label265.Text = "Created Date";
+            // 
+            // label266
+            // 
+            this.label266.AutoSize = true;
+            this.label266.Location = new System.Drawing.Point(9, 49);
+            this.label266.Name = "label266";
+            this.label266.Size = new System.Drawing.Size(41, 13);
+            this.label266.TabIndex = 1;
+            this.label266.Text = "Rep ID";
+            // 
+            // label267
+            // 
+            this.label267.AutoSize = true;
+            this.label267.Location = new System.Drawing.Point(9, 75);
+            this.label267.Name = "label267";
+            this.label267.Size = new System.Drawing.Size(60, 13);
+            this.label267.TabIndex = 2;
+            this.label267.Text = "Booking ID";
+            // 
+            // label268
+            // 
+            this.label268.AutoSize = true;
+            this.label268.Location = new System.Drawing.Point(9, 101);
+            this.label268.Name = "label268";
+            this.label268.Size = new System.Drawing.Size(56, 13);
+            this.label268.TabIndex = 3;
+            this.label268.Text = "Enquiry ID";
+            // 
+            // label269
+            // 
+            this.label269.AutoSize = true;
+            this.label269.Location = new System.Drawing.Point(9, 128);
+            this.label269.Name = "label269";
+            this.label269.Size = new System.Drawing.Size(58, 13);
+            this.label269.TabIndex = 4;
+            this.label269.Text = "Contact ID";
+            // 
+            // label270
+            // 
+            this.label270.AutoSize = true;
+            this.label270.Location = new System.Drawing.Point(9, 157);
+            this.label270.Name = "label270";
+            this.label270.Size = new System.Drawing.Size(43, 13);
+            this.label270.TabIndex = 5;
+            this.label270.Text = "Subject";
+            // 
+            // label271
+            // 
+            this.label271.AutoSize = true;
+            this.label271.Location = new System.Drawing.Point(9, 189);
+            this.label271.Name = "label271";
+            this.label271.Size = new System.Drawing.Size(35, 13);
+            this.label271.TabIndex = 6;
+            this.label271.Text = "Notes";
+            // 
+            // label272
+            // 
+            this.label272.AutoSize = true;
+            this.label272.Location = new System.Drawing.Point(9, 215);
+            this.label272.Name = "label272";
+            this.label272.Size = new System.Drawing.Size(45, 13);
+            this.label272.TabIndex = 7;
+            this.label272.Text = "Type ID";
+            // 
+            // label273
+            // 
+            this.label273.AutoSize = true;
+            this.label273.Location = new System.Drawing.Point(9, 242);
+            this.label273.Name = "label273";
+            this.label273.Size = new System.Drawing.Size(45, 13);
+            this.label273.TabIndex = 8;
+            this.label273.Text = "Task ID";
+            // 
+            // label274
+            // 
+            this.label274.AutoSize = true;
+            this.label274.Location = new System.Drawing.Point(9, 269);
+            this.label274.Name = "label274";
+            this.label274.Size = new System.Drawing.Size(34, 13);
+            this.label274.TabIndex = 9;
+            this.label274.Text = "Bill ID";
+            // 
+            // cnPostCreatedDate
+            // 
+            this.cnPostCreatedDate.Location = new System.Drawing.Point(85, 19);
+            this.cnPostCreatedDate.Name = "cnPostCreatedDate";
+            this.cnPostCreatedDate.Size = new System.Drawing.Size(305, 20);
+            this.cnPostCreatedDate.TabIndex = 10;
+            this.cnPostCreatedDate.Text = "2020-01-01 or empty";
+            // 
+            // cnPostRepId
+            // 
+            this.cnPostRepId.Location = new System.Drawing.Point(85, 46);
+            this.cnPostRepId.Name = "cnPostRepId";
+            this.cnPostRepId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostRepId.TabIndex = 11;
+            // 
+            // cnPostBookingId
+            // 
+            this.cnPostBookingId.Location = new System.Drawing.Point(85, 72);
+            this.cnPostBookingId.Name = "cnPostBookingId";
+            this.cnPostBookingId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostBookingId.TabIndex = 12;
+            // 
+            // cnPostEnquiryId
+            // 
+            this.cnPostEnquiryId.Location = new System.Drawing.Point(85, 98);
+            this.cnPostEnquiryId.Name = "cnPostEnquiryId";
+            this.cnPostEnquiryId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostEnquiryId.TabIndex = 13;
+            this.cnPostEnquiryId.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // cnPostContactId
+            // 
+            this.cnPostContactId.Location = new System.Drawing.Point(85, 124);
+            this.cnPostContactId.Name = "cnPostContactId";
+            this.cnPostContactId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostContactId.TabIndex = 14;
+            // 
+            // cnPostSubject
+            // 
+            this.cnPostSubject.Location = new System.Drawing.Point(85, 154);
+            this.cnPostSubject.Name = "cnPostSubject";
+            this.cnPostSubject.Size = new System.Drawing.Size(305, 20);
+            this.cnPostSubject.TabIndex = 15;
+            // 
+            // cnPostNotes
+            // 
+            this.cnPostNotes.Location = new System.Drawing.Point(85, 186);
+            this.cnPostNotes.Name = "cnPostNotes";
+            this.cnPostNotes.Size = new System.Drawing.Size(305, 20);
+            this.cnPostNotes.TabIndex = 16;
+            // 
+            // cnPostTypeId
+            // 
+            this.cnPostTypeId.Location = new System.Drawing.Point(85, 212);
+            this.cnPostTypeId.Name = "cnPostTypeId";
+            this.cnPostTypeId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostTypeId.TabIndex = 17;
+            this.cnPostTypeId.Text = "1 - Call, 2 - Email, 3 - Note, 4 - Task, 5 - Letter, 6- Mailing Label";
+            // 
+            // cnPostTaskId
+            // 
+            this.cnPostTaskId.Location = new System.Drawing.Point(85, 239);
+            this.cnPostTaskId.Name = "cnPostTaskId";
+            this.cnPostTaskId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostTaskId.TabIndex = 18;
+            // 
+            // cnPostBillId
+            // 
+            this.cnPostBillId.Location = new System.Drawing.Point(85, 266);
+            this.cnPostBillId.Name = "cnPostBillId";
+            this.cnPostBillId.Size = new System.Drawing.Size(305, 20);
+            this.cnPostBillId.TabIndex = 19;
+            // 
+            // cnPostPreviewJson
+            // 
+            this.cnPostPreviewJson.Location = new System.Drawing.Point(397, 20);
+            this.cnPostPreviewJson.Name = "cnPostPreviewJson";
+            this.cnPostPreviewJson.Size = new System.Drawing.Size(242, 239);
+            this.cnPostPreviewJson.TabIndex = 20;
+            this.cnPostPreviewJson.Text = "";
+            // 
+            // cnPostPreviewJsonBtn
+            // 
+            this.cnPostPreviewJsonBtn.Location = new System.Drawing.Point(533, 266);
+            this.cnPostPreviewJsonBtn.Name = "cnPostPreviewJsonBtn";
+            this.cnPostPreviewJsonBtn.Size = new System.Drawing.Size(106, 21);
+            this.cnPostPreviewJsonBtn.TabIndex = 21;
+            this.cnPostPreviewJsonBtn.Text = "Preview JSON";
+            this.cnPostPreviewJsonBtn.UseVisualStyleBackColor = true;
+            this.cnPostPreviewJsonBtn.Click += new System.EventHandler(this.cnPostPreviewJsonBtn_Click);
+            // 
+            // cnPost
+            // 
+            this.cnPost.Location = new System.Drawing.Point(408, 289);
+            this.cnPost.Name = "cnPost";
+            this.cnPost.Size = new System.Drawing.Size(75, 23);
+            this.cnPost.TabIndex = 22;
+            this.cnPost.Text = "POST";
+            this.cnPost.UseVisualStyleBackColor = true;
+            this.cnPost.Click += new System.EventHandler(this.cnPost_Click);
+            // 
+            // cnPostApiUrl
+            // 
+            this.cnPostApiUrl.Location = new System.Drawing.Point(223, 292);
+            this.cnPostApiUrl.Name = "cnPostApiUrl";
+            this.cnPostApiUrl.Size = new System.Drawing.Size(166, 20);
+            this.cnPostApiUrl.TabIndex = 23;
+            this.cnPostApiUrl.Text = "/apis/commsnotes";
+            // 
+            // cnCommsNotesUrl
+            // 
+            this.cnCommsNotesUrl.Location = new System.Drawing.Point(120, 259);
+            this.cnCommsNotesUrl.Name = "cnCommsNotesUrl";
+            this.cnCommsNotesUrl.Size = new System.Drawing.Size(220, 20);
+            this.cnCommsNotesUrl.TabIndex = 15;
+            this.cnCommsNotesUrl.Text = "/apis/commsnotes";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7587,6 +8037,11 @@
             this.tabBatchJson.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8277,6 +8732,49 @@
         private System.Windows.Forms.Label label257;
         private System.Windows.Forms.Label label256;
         private System.Windows.Forms.Label label255;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox cnCommsNotesTypeId;
+        private System.Windows.Forms.Label label264;
+        private System.Windows.Forms.TextBox cnDateTo;
+        private System.Windows.Forms.TextBox cnDateFrom;
+        private System.Windows.Forms.TextBox cnTypeId;
+        private System.Windows.Forms.TextBox cnEnquiryId;
+        private System.Windows.Forms.TextBox cnContactId;
+        private System.Windows.Forms.TextBox cnBookingId;
+        private System.Windows.Forms.Button cnGet;
+        private System.Windows.Forms.Label label263;
+        private System.Windows.Forms.Label label262;
+        private System.Windows.Forms.Label label261;
+        private System.Windows.Forms.Label label260;
+        private System.Windows.Forms.Label label259;
+        private System.Windows.Forms.Label label258;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox cnPostNotes;
+        private System.Windows.Forms.TextBox cnPostSubject;
+        private System.Windows.Forms.TextBox cnPostContactId;
+        private System.Windows.Forms.TextBox cnPostEnquiryId;
+        private System.Windows.Forms.TextBox cnPostBookingId;
+        private System.Windows.Forms.TextBox cnPostRepId;
+        private System.Windows.Forms.TextBox cnPostCreatedDate;
+        private System.Windows.Forms.Label label274;
+        private System.Windows.Forms.Label label273;
+        private System.Windows.Forms.Label label272;
+        private System.Windows.Forms.Label label271;
+        private System.Windows.Forms.Label label270;
+        private System.Windows.Forms.Label label269;
+        private System.Windows.Forms.Label label268;
+        private System.Windows.Forms.Label label267;
+        private System.Windows.Forms.Label label266;
+        private System.Windows.Forms.Label label265;
+        private System.Windows.Forms.TextBox cnPostBillId;
+        private System.Windows.Forms.TextBox cnPostTaskId;
+        private System.Windows.Forms.TextBox cnPostTypeId;
+        private System.Windows.Forms.TextBox cnPostApiUrl;
+        private System.Windows.Forms.Button cnPost;
+        private System.Windows.Forms.Button cnPostPreviewJsonBtn;
+        private System.Windows.Forms.RichTextBox cnPostPreviewJson;
+        private System.Windows.Forms.TextBox cnCommsNotesUrl;
     }
 }
 
